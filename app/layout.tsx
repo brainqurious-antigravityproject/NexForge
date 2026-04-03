@@ -3,6 +3,7 @@ import './globals.css'; // Global styles
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import WhatsAppWidget from '@/components/ui/WhatsAppWidget';
+import Chatbot from '@/components/ui/Chatbot';
 
 export const metadata: Metadata = {
   title: 'NexForge | B2B Digital Agency',
@@ -19,6 +20,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </main>
         <Footer />
         <WhatsAppWidget />
+        <Chatbot />
       </body>
     </html>
   );

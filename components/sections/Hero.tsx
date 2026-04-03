@@ -239,7 +239,7 @@ export default function Hero(props: Partial<HeroProps>) {
         className="absolute right-0 top-0 w-full h-full lg:w-[45%] md:w-[40%] z-0 pointer-events-none" 
       />
 
-      <div className="relative z-10 flex flex-col items-center md:items-start text-center md:text-left w-[80%] max-w-none mx-auto">
+      <div className="relative z-10 flex flex-col items-center md:items-start text-center md:text-left w-full md:w-[80%] max-w-none mx-auto">
         <div className="w-full lg:w-[60%] md:w-[65%] flex flex-col items-center md:items-start pr-0 md:pr-8">
           {/* Badge */}
           {badge && (

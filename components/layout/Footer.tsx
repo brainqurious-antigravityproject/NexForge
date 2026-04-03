@@ -8,7 +8,7 @@ export default function Footer() {
     <footer className="w-full flex flex-col">
       {/* SECTION B — Main Footer Grid */}
       <section className="w-full bg-[#000000] pt-16 pb-8 px-6">
-        <div className="w-[80%] max-w-none mx-auto">
+        <div className="w-full md:w-[80%] max-w-none mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-12 lg:gap-8">
             
             {/* Col 1: Brand */}
