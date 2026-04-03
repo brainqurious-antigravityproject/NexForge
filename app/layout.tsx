@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import './globals.css'; // Global styles
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
+import WhatsAppWidget from '@/components/ui/WhatsAppWidget';
 
 export const metadata: Metadata = {
   title: 'NexForge | B2B Digital Agency',
@@ -17,6 +18,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           {children}
         </main>
         <Footer />
+        <WhatsAppWidget />
       </body>
     </html>
   );

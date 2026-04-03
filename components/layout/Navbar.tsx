@@ -6,9 +6,9 @@ import { usePathname } from 'next/navigation';
 import { NavItem } from '@/types';
 
 const navItems: NavItem[] = [
+  { label: 'Home', href: '/' },
   { label: 'Services', href: '/services' },
   { label: 'Case Studies', href: '/case-studies' },
-  { label: 'Process', href: '/process' },
   { label: 'Pricing', href: '/pricing' },
   { label: 'Blog', href: '/blog' },
 ];
@@ -72,7 +72,7 @@ export default function Navbar() {
             : 'translate-y-0'
         }`}
       >
-        <div className="max-w-[1200px] mx-auto px-6 h-full flex items-center justify-between">
+        <div className="w-[80%] max-w-none mx-auto px-6 h-full flex items-center justify-between">
           
           {/* LEFT — SVG Logo + Brand Name */}
           <Link 

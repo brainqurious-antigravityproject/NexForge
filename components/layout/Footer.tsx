@@ -1,101 +1,14 @@
 'use client';
 
-import React, { useState } from 'react';
+import React from 'react';
 import Link from 'next/link';
-import { NewsletterFormData, NewsletterStatus } from '@/types';
 
 export default function Footer() {
-  const [email, setEmail] = useState('');
-  const [status, setStatus] = useState<NewsletterStatus>('idle');
-  const [errorMessage, setErrorMessage] = useState('');
-
-  const handleSubscribe = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!email) return;
-
-    setStatus('loading');
-    setErrorMessage('');
-
-    try {
-      const response = await fetch('/api/newsletter', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email } as NewsletterFormData),
-      });
-
-      if (!response.ok) {
-        throw new Error('Subscription failed');
-      }
-
-      setStatus('success');
-      setEmail('');
-    } catch (error) {
-      setStatus('error');
-      setErrorMessage('Failed to subscribe. Please try again.');
-    }
-  };
-
   return (
     <footer className="w-full flex flex-col">
-      {/* SECTION A — Newsletter Strip */}
-      <section className="w-full bg-[#0a0a0a] border-y border-white/[0.06] py-12 px-6">
-        <div className="max-w-[960px] mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
-          <div className="flex-1">
-            <h3 className="font-[family-name:var(--font-display)] font-semibold text-[#e8e8f0] text-xl mb-2">
-              Stay Ahead of the Curve
-            </h3>
-            <p className="text-[#8888a0] text-sm">
-              Textile industry insights, tech updates, and case studies — monthly.
-            </p>
-          </div>
-
-          <div className="w-full md:w-auto md:min-w-[400px]">
-            {status === 'success' ? (
-              <div className="flex items-center gap-2 text-[#22c55e] font-medium py-3">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-5 h-5">
-                  <polyline points="20 6 9 17 4 12" />
-                </svg>
-                ✓ You&apos;re subscribed!
-              </div>
-            ) : (
-              <form onSubmit={handleSubscribe} className="flex flex-col gap-2">
-                <div className="flex gap-2">
-                  <input
-                    type="email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    placeholder="Enter your email"
-                    required
-                    disabled={status === 'loading'}
-                    className="bg-[#111111] border border-white/[0.08] text-[#e8e8f0] placeholder:text-[#44445a] rounded-lg px-4 py-3 flex-1 focus:border-[#b5ff3e]/40 focus:outline-none min-w-0 disabled:opacity-50 transition-colors"
-                  />
-                  <button
-                    type="submit"
-                    disabled={status === 'loading'}
-                    className="bg-[#b5ff3e] text-[#000000] font-semibold px-6 py-3 rounded-lg hover:bg-[#00e5e5] transition-colors whitespace-nowrap disabled:opacity-70 flex items-center justify-center min-w-[120px]"
-                  >
-                    {status === 'loading' ? (
-                      <svg className="animate-spin h-5 w-5 text-[#000000]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                        <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                      </svg>
-                    ) : (
-                      'Subscribe'
-                    )}
-                  </button>
-                </div>
-                {status === 'error' && (
-                  <p className="text-[#ef4444] text-xs pl-1">{errorMessage}</p>
-                )}
-              </form>
-            )}
-          </div>
-        </div>
-      </section>
-
       {/* SECTION B — Main Footer Grid */}
       <section className="w-full bg-[#000000] pt-16 pb-8 px-6">
-        <div className="max-w-[1200px] mx-auto">
+        <div className="w-[80%] max-w-none mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-12 lg:gap-8">
             
             {/* Col 1: Brand */}

@@ -71,7 +71,7 @@ export default function Hero(props: Partial<HeroProps>) {
 
     const isMobile = window.innerWidth < 768;
     const particleCount = isMobile ? 1500 : 3000;
-    const radius = 224; // Decreased by 20% from 280
+    const radius = 269; // Increased by 20% from 224
 
     const geometry = new THREE.BufferGeometry();
     const positions = new Float32Array(particleCount * 3);
@@ -236,11 +236,11 @@ export default function Hero(props: Partial<HeroProps>) {
     <section className="relative min-h-screen flex flex-col justify-center pt-[calc(72px+2rem)] pb-16 px-6 overflow-hidden bg-[#000000]">
       <canvas 
         ref={canvasRef} 
-        className="absolute right-0 top-0 w-full h-full lg:w-[60%] md:w-[50%] z-0 pointer-events-none" 
+        className="absolute right-0 top-0 w-full h-full lg:w-[45%] md:w-[40%] z-0 pointer-events-none" 
       />
 
-      <div className="relative z-10 flex flex-col items-center md:items-start text-center md:text-left w-full max-w-[1200px] mx-auto">
-        <div className="w-full lg:w-[40%] md:w-[50%] flex flex-col items-center md:items-start pr-0 md:pr-8">
+      <div className="relative z-10 flex flex-col items-center md:items-start text-center md:text-left w-[80%] max-w-none mx-auto">
+        <div className="w-full lg:w-[60%] md:w-[65%] flex flex-col items-center md:items-start pr-0 md:pr-8">
           {/* Badge */}
           {badge && (
             <div
@@ -254,7 +254,7 @@ export default function Hero(props: Partial<HeroProps>) {
 
           {/* Headline */}
           <h1
-            className={`font-[family-name:var(--font-display)] font-bold text-[length:var(--text-3xl)] text-[#e8e8f0] tracking-[-0.02em] leading-[1.15] ${animClass} ${stateClass}`}
+            className={`font-[family-name:var(--font-display)] font-bold text-[length:calc(var(--text-3xl)*0.9)] text-[#e8e8f0] tracking-[-0.02em] leading-[1.15] ${animClass} ${stateClass}`}
             style={{ transitionDelay: '100ms' }}
           >
             {renderHeadline()}
@@ -262,7 +262,7 @@ export default function Hero(props: Partial<HeroProps>) {
 
           {/* Subheadline */}
           <p
-            className={`font-[family-name:var(--font-body)] text-[length:var(--text-base)] text-[#8888a0] mt-6 leading-relaxed ${animClass} ${stateClass}`}
+            className={`font-[family-name:var(--font-body)] text-[length:calc(var(--text-base)*0.9)] text-[#8888a0] mt-6 leading-relaxed ${animClass} ${stateClass}`}
             style={{ transitionDelay: '200ms' }}
           >
             {subheadline}
