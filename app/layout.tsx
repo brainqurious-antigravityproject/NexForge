@@ -2,7 +2,6 @@ import type { Metadata } from 'next';
 import './globals.css'; // Global styles
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
-import WhatsAppWidget from '@/components/ui/WhatsAppWidget';
 import Chatbot from '@/components/ui/Chatbot';
 
 export const metadata: Metadata = {
@@ -19,7 +18,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           {children}
         </main>
         <Footer />
-        <WhatsAppWidget />
         <Chatbot />
       </body>
     </html>

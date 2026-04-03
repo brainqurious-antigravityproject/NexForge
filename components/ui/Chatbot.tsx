@@ -28,12 +28,24 @@ export default function Chatbot() {
       {/* Chat Toggle Button */}
       <button
         onClick={() => setIsOpen(true)}
-        className={`fixed bottom-24 right-6 z-50 bg-[#b5ff3e] text-[#000000] w-14 h-14 rounded-full shadow-lg hover:scale-110 active:scale-95 transition-transform duration-300 flex items-center justify-center ${isOpen ? 'hidden' : 'flex'}`}
+        className={`fixed bottom-6 right-6 z-50 bg-[#111111] border border-white/[0.08] p-1.5 rounded-full shadow-2xl hover:scale-105 active:scale-95 transition-transform duration-300 items-center gap-2 ${isOpen ? 'hidden' : 'flex'}`}
         aria-label="Open Chat"
       >
-        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
-        </svg>
+        {/* Avatar Icon */}
+        <div className="w-12 h-12 rounded-full overflow-hidden bg-[#1a1a1a] flex items-center justify-center flex-shrink-0">
+          <img 
+            src="https://api.dicebear.com/7.x/avataaars/svg?seed=Felix&backgroundColor=1a1a1a" 
+            alt="Support Agent" 
+            className="w-full h-full object-cover"
+          />
+        </div>
+        
+        {/* Up Chevron Icon */}
+        <div className="w-12 h-12 rounded-full bg-[#b5ff3e] flex items-center justify-center text-[#000000] flex-shrink-0">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+            <polyline points="18 15 12 9 6 15"></polyline>
+          </svg>
+        </div>
       </button>
 
       {/* Chat Window */}
