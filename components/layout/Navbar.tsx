@@ -18,7 +18,6 @@ export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [scrollDirection, setScrollDirection] = useState<'up' | 'down'>('up');
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [theme, setTheme] = useState<'dark' | 'light'>('dark');
   const lastScrollY = useRef(0);
 
   useEffect(() => {
@@ -52,12 +51,6 @@ export default function Navbar() {
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [isMobileMenuOpen]);
-
-  const toggleTheme = () => {
-    const newTheme = theme === 'dark' ? 'light' : 'dark';
-    setTheme(newTheme);
-    document.documentElement.setAttribute('data-theme', newTheme);
-  };
 
   return (
     <>
@@ -121,22 +114,6 @@ export default function Navbar() {
 
           {/* RIGHT — Action cluster (Desktop) */}
           <div className="hidden md:flex items-center gap-4">
-            <button 
-              onClick={toggleTheme} 
-              className="w-10 h-10 flex items-center justify-center rounded-full hover:bg-white/[0.05] transition-colors text-[#e8e8f0]"
-              aria-label="Toggle theme"
-            >
-              {theme === 'dark' ? (
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <circle cx="12" cy="12" r="4"/>
-                  <path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/>
-                </svg>
-              ) : (
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/>
-                </svg>
-              )}
-            </button>
             <Link 
               href="/quote" 
               className="border border-[#b5ff3e]/[0.18] text-[#b5ff3e] text-sm font-medium px-5 py-2 rounded-full hover:bg-[#b5ff3e]/[0.08] hover:shadow-[var(--glow-sm)] transition-all duration-300"
@@ -194,26 +171,6 @@ export default function Navbar() {
             })}
             
             <div className="pt-6 pb-4 flex flex-col gap-6">
-              <div className="flex items-center justify-between">
-                <span className="text-[#8888a0] text-sm">Theme</span>
-                <button 
-                  onClick={toggleTheme} 
-                  className="w-11 h-11 flex items-center justify-center rounded-full border border-white/[0.08] text-[#e8e8f0] hover:bg-white/[0.05] transition-colors"
-                  aria-label="Toggle theme"
-                >
-                  {theme === 'dark' ? (
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <circle cx="12" cy="12" r="4"/>
-                      <path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/>
-                    </svg>
-                  ) : (
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/>
-                    </svg>
-                  )}
-                </button>
-              </div>
-              
               <Link 
                 href="/quote" 
                 onClick={() => setIsMobileMenuOpen(false)}

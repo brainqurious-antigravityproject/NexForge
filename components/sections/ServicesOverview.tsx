@@ -56,16 +56,6 @@ const services: Service[] = [
     timeline: '3–5 weeks',
     startingPrice: 'From ₹5L',
     icon: 'MessageSquare'
-  },
-  {
-    id: 'design-system',
-    title: 'Design Systems',
-    description: 'Component libraries and design tokens that keep your brand consistent across every product and team.',
-    category: 'design-system',
-    features: ['Figma + code tokens', 'Storybook docs', 'Accessibility AA', 'Dark + light modes'],
-    timeline: '3–4 weeks',
-    startingPrice: 'From ₹4L',
-    icon: 'Palette'
   }
 ];
 
@@ -202,6 +192,16 @@ export default function ServicesOverview() {
             <RegularServiceCard key={service.id} service={service} />
           ))}
 
+        </div>
+
+        {/* Section CTA */}
+        <div className="mt-16 flex justify-center">
+          <Link 
+            href="#contact" 
+            className="flex items-center justify-center min-h-[48px] px-8 py-4 bg-[#b5ff3e] text-[#000000] rounded-full hover:bg-[#00e5e5] hover:shadow-[var(--glow-sm)] active:scale-95 transition-all duration-300 text-[length:var(--text-sm)] font-semibold"
+          >
+            Book a Call →
+          </Link>
         </div>
       </div>
     </section>

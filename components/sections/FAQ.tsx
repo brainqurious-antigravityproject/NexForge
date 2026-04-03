@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import Link from 'next/link';
 import { FaqItem } from '@/types';
 import { useScrollReveal } from '@/hooks/useScrollReveal';
 
@@ -148,6 +149,16 @@ export default function FAQ() {
               onToggle={() => setOpenId(openId === item.id ? null : item.id)}
             />
           ))}
+        </div>
+
+        {/* Section CTA */}
+        <div className="mt-16 flex justify-center">
+          <Link 
+            href="#contact" 
+            className="flex items-center justify-center min-h-[48px] px-8 py-4 bg-[#b5ff3e] text-[#000000] rounded-full hover:bg-[#00e5e5] hover:shadow-[var(--glow-sm)] active:scale-95 transition-all duration-300 text-[length:var(--text-sm)] font-semibold"
+          >
+            Book a Call →
+          </Link>
         </div>
 
       </div>

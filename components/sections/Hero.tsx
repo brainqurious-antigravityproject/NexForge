@@ -71,7 +71,7 @@ export default function Hero(props: Partial<HeroProps>) {
 
     const isMobile = window.innerWidth < 768;
     const particleCount = isMobile ? 1500 : 3000;
-    const radius = 280;
+    const radius = 224; // Decreased by 20% from 280
 
     const geometry = new THREE.BufferGeometry();
     const positions = new Float32Array(particleCount * 3);
@@ -236,11 +236,11 @@ export default function Hero(props: Partial<HeroProps>) {
     <section className="relative min-h-screen flex flex-col justify-center pt-[calc(72px+2rem)] pb-16 px-6 overflow-hidden bg-[#000000]">
       <canvas 
         ref={canvasRef} 
-        className="absolute right-0 top-0 w-full h-full md:w-1/2 z-0 pointer-events-none" 
+        className="absolute right-0 top-0 w-full h-full lg:w-[60%] md:w-[50%] z-0 pointer-events-none" 
       />
 
       <div className="relative z-10 flex flex-col items-center md:items-start text-center md:text-left w-full max-w-[1200px] mx-auto">
-        <div className="w-full md:w-[60%] flex flex-col items-center md:items-start pr-0 md:pr-8">
+        <div className="w-full lg:w-[40%] md:w-[50%] flex flex-col items-center md:items-start pr-0 md:pr-8">
           {/* Badge */}
           {badge && (
             <div
@@ -296,10 +296,10 @@ export default function Hero(props: Partial<HeroProps>) {
               {stats.map((stat, i) => (
                 <React.Fragment key={i}>
                   <div className="flex flex-col items-center md:items-start">
-                    <span className="font-[family-name:var(--font-display)] font-bold text-[#b5ff3e] text-2xl">
+                    <span className="font-[family-name:var(--font-display)] font-bold text-[#b5ff3e] text-2xl whitespace-nowrap">
                       {stat.value}
                     </span>
-                    <span className="font-[family-name:var(--font-body)] text-[#44445a] text-[length:var(--text-xs)] uppercase tracking-widest mt-1">
+                    <span className="font-[family-name:var(--font-body)] text-[#8888a0] text-[length:var(--text-xs)] uppercase tracking-widest mt-1">
                       {stat.label}
                     </span>
                   </div>
