@@ -275,13 +275,13 @@ export default function Hero(props: Partial<HeroProps>) {
           >
             <Link
               href={ctaPrimary.href}
-              className="flex items-center justify-center min-h-[48px] bg-[#b5ff3e] text-[#000000] font-semibold px-8 py-4 rounded-full hover:bg-[#00e5e5] hover:shadow-[var(--glow-md)] active:scale-95 active:bg-[#00c8c8] transition-all duration-300 text-[length:var(--text-sm)]"
+              className="flex items-center justify-center min-h-[48px] bg-[#b5ff3e] text-[#000000] font-semibold px-8 py-4 rounded-full hover:bg-[#c4ff66] hover:shadow-[var(--glow-md)] active:scale-95 active:bg-[#a3e635] transition-all duration-300 text-[length:var(--text-sm)]"
             >
               {ctaPrimary.label}
             </Link>
             <Link
               href={ctaSecondary.href}
-              className="flex items-center justify-center min-h-[48px] border border-white/[0.08] text-[#e8e8f0] px-8 py-4 rounded-full hover:border-white/[0.16] hover:text-[#b5ff3e] active:scale-95 active:bg-white/[0.05] transition-all duration-300 text-[length:var(--text-sm)]"
+              className="flex items-center justify-center min-h-[48px] border border-[#b5ff3e]/[0.18] text-[#b5ff3e] px-8 py-4 rounded-full hover:bg-[#b5ff3e]/[0.08] hover:shadow-[var(--glow-sm)] active:scale-95 transition-all duration-300 text-[length:var(--text-sm)]"
             >
               {ctaSecondary.label}
             </Link>

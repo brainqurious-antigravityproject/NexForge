@@ -125,7 +125,7 @@ export default function Navbar() {
 
           {/* MOBILE — Hamburger Menu Button */}
           <button
-            className="md:hidden w-11 h-11 flex flex-col items-center justify-center gap-1.5 z-50"
+            className="md:hidden w-11 h-11 flex flex-col items-center justify-center gap-1.5 z-50 border border-dotted border-[#d5f208]"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-expanded={isMobileMenuOpen}
             aria-label={isMobileMenuOpen ? "Close navigation" : "Open navigation"}
