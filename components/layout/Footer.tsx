@@ -19,10 +19,10 @@ export default function Footer() {
                   <rect x="16" y="12" width="14" height="14" transform="rotate(45 16 12)" stroke="#00c8c8" strokeWidth="1.5" fill="none" />
                 </svg>
                 <span className="font-[family-name:var(--font-display)] font-semibold text-[#e8e8f0] text-xl tracking-tight">
-                  NexForge
+                  Sitecraf
                 </span>
               </Link>
-              <p className="text-[#44445a] text-sm max-w-[200px]">
+              <p className="text-[#66667a] text-sm max-w-[200px]">
                 Engineering digital products for textile brands since 2021.
               </p>
               <div className="flex items-center gap-3 mt-2">
@@ -42,12 +42,12 @@ export default function Footer() {
             <div className="flex flex-col">
               <h4 className="text-[#e8e8f0] text-xs uppercase tracking-widest font-semibold mb-5">Services</h4>
               <nav className="flex flex-col">
-                <Link href="/services/saas" className="text-[#44445a] text-sm hover:text-[#8888a0] transition-colors block mb-3">SaaS Development</Link>
-                <Link href="/services/web-apps" className="text-[#44445a] text-sm hover:text-[#8888a0] transition-colors block mb-3">Web Applications</Link>
-                <Link href="/services/ai" className="text-[#44445a] text-sm hover:text-[#8888a0] transition-colors block mb-3">AI Integration</Link>
-                <Link href="/services/ecommerce" className="text-[#44445a] text-sm hover:text-[#8888a0] transition-colors block mb-3">B2B E-commerce</Link>
-                <Link href="/services/chatbots" className="text-[#44445a] text-sm hover:text-[#8888a0] transition-colors block mb-3">AI Chatbots</Link>
-                <Link href="/services/design-systems" className="text-[#44445a] text-sm hover:text-[#8888a0] transition-colors block mb-3">Design Systems</Link>
+                <Link href="/services/saas" className="text-[#66667a] text-sm hover:text-[#8888a0] transition-colors block mb-3">SaaS Development</Link>
+                <Link href="/services/web-apps" className="text-[#66667a] text-sm hover:text-[#8888a0] transition-colors block mb-3">Web Applications</Link>
+                <Link href="/services/ai" className="text-[#66667a] text-sm hover:text-[#8888a0] transition-colors block mb-3">AI Integration</Link>
+                <Link href="/services/ecommerce" className="text-[#66667a] text-sm hover:text-[#8888a0] transition-colors block mb-3">B2B E-commerce</Link>
+                <Link href="/services/chatbots" className="text-[#66667a] text-sm hover:text-[#8888a0] transition-colors block mb-3">AI Chatbots</Link>
+                <Link href="/services/design-systems" className="text-[#66667a] text-sm hover:text-[#8888a0] transition-colors block mb-3">Design Systems</Link>
               </nav>
             </div>
 
@@ -55,12 +55,12 @@ export default function Footer() {
             <div className="flex flex-col">
               <h4 className="text-[#e8e8f0] text-xs uppercase tracking-widest font-semibold mb-5">Industries</h4>
               <nav className="flex flex-col">
-                <Link href="/industries/manufacturers" className="text-[#44445a] text-sm hover:text-[#8888a0] transition-colors block mb-3">Textile Manufacturers</Link>
-                <Link href="/industries/yarn-fibre" className="text-[#44445a] text-sm hover:text-[#8888a0] transition-colors block mb-3">Yarn & Fibre</Link>
-                <Link href="/industries/home-textiles" className="text-[#44445a] text-sm hover:text-[#8888a0] transition-colors block mb-3">Home Textiles</Link>
-                <Link href="/industries/apparel" className="text-[#44445a] text-sm hover:text-[#8888a0] transition-colors block mb-3">Apparel Brands</Link>
-                <Link href="/industries/exporters" className="text-[#44445a] text-sm hover:text-[#8888a0] transition-colors block mb-3">Fabric Exporters</Link>
-                <Link href="/industries/retail" className="text-[#44445a] text-sm hover:text-[#8888a0] transition-colors block mb-3">Retail Chains</Link>
+                <Link href="/industries/manufacturers" className="text-[#66667a] text-sm hover:text-[#8888a0] transition-colors block mb-3">Textile Manufacturers</Link>
+                <Link href="/industries/yarn-fibre" className="text-[#66667a] text-sm hover:text-[#8888a0] transition-colors block mb-3">Yarn & Fibre</Link>
+                <Link href="/industries/home-textiles" className="text-[#66667a] text-sm hover:text-[#8888a0] transition-colors block mb-3">Home Textiles</Link>
+                <Link href="/industries/apparel" className="text-[#66667a] text-sm hover:text-[#8888a0] transition-colors block mb-3">Apparel Brands</Link>
+                <Link href="/industries/exporters" className="text-[#66667a] text-sm hover:text-[#8888a0] transition-colors block mb-3">Fabric Exporters</Link>
+                <Link href="/industries/retail" className="text-[#66667a] text-sm hover:text-[#8888a0] transition-colors block mb-3">Retail Chains</Link>
               </nav>
             </div>
 
@@ -68,12 +68,12 @@ export default function Footer() {
             <div className="flex flex-col">
               <h4 className="text-[#e8e8f0] text-xs uppercase tracking-widest font-semibold mb-5">Company</h4>
               <nav className="flex flex-col">
-                <Link href="/about" className="text-[#44445a] text-sm hover:text-[#8888a0] transition-colors block mb-3">About NexForge</Link>
-                <Link href="/case-studies" className="text-[#44445a] text-sm hover:text-[#8888a0] transition-colors block mb-3">Case Studies</Link>
-                <Link href="/process" className="text-[#44445a] text-sm hover:text-[#8888a0] transition-colors block mb-3">Our Process</Link>
-                <Link href="/blog" className="text-[#44445a] text-sm hover:text-[#8888a0] transition-colors block mb-3">Blog</Link>
-                <Link href="/careers" className="text-[#44445a] text-sm hover:text-[#8888a0] transition-colors block mb-3">Careers</Link>
-                <Link href="/press" className="text-[#44445a] text-sm hover:text-[#8888a0] transition-colors block mb-3">Press Kit</Link>
+                <Link href="/about" className="text-[#66667a] text-sm hover:text-[#8888a0] transition-colors block mb-3">About Sitecraf</Link>
+                <Link href="/case-studies" className="text-[#66667a] text-sm hover:text-[#8888a0] transition-colors block mb-3">Case Studies</Link>
+                <Link href="/process" className="text-[#66667a] text-sm hover:text-[#8888a0] transition-colors block mb-3">Our Process</Link>
+                <Link href="/blog" className="text-[#66667a] text-sm hover:text-[#8888a0] transition-colors block mb-3">Blog</Link>
+                <Link href="/careers" className="text-[#66667a] text-sm hover:text-[#8888a0] transition-colors block mb-3">Careers</Link>
+                <Link href="/press" className="text-[#66667a] text-sm hover:text-[#8888a0] transition-colors block mb-3">Press Kit</Link>
               </nav>
             </div>
 
@@ -81,7 +81,7 @@ export default function Footer() {
             <div className="flex flex-col">
               <h4 className="text-[#e8e8f0] text-xs uppercase tracking-widest font-semibold mb-5">Contact</h4>
               <address className="flex flex-col not-italic gap-3">
-                <a href="mailto:hello@nexforge.in" className="text-[#8888a0] text-sm hover:text-[#e8e8f0] transition-colors">hello@nexforge.in</a>
+                <a href="mailto:hello@sitecraf.in" className="text-[#8888a0] text-sm hover:text-[#e8e8f0] transition-colors">hello@sitecraf.in</a>
                 <a href="tel:+919876543210" className="text-[#8888a0] text-sm hover:text-[#e8e8f0] transition-colors">+91 98765 43210</a>
                 <span className="text-[#8888a0] text-sm">Ahmedabad, Gujarat</span>
                 <span className="text-[#8888a0] text-sm">Mon–Fri, 10am–7pm IST</span>
@@ -92,15 +92,15 @@ export default function Footer() {
 
           {/* SECTION C — Bottom Bar */}
           <div className="border-t border-white/[0.05] mt-12 pt-6 flex flex-col md:flex-row items-center justify-between gap-4">
-            <p className="text-[#44445a] text-xs text-center md:text-left">
-              © 2026 NexForge Technologies Pvt. Ltd. All rights reserved.
+            <p className="text-[#66667a] text-xs text-center md:text-left">
+              © 2026 Sitecraf Technologies Pvt. Ltd. All rights reserved.
             </p>
             <div className="flex items-center gap-4">
-              <Link href="/privacy" className="text-[#44445a] text-xs hover:text-[#8888a0] transition-colors">Privacy Policy</Link>
-              <Link href="/terms" className="text-[#44445a] text-xs hover:text-[#8888a0] transition-colors">Terms of Service</Link>
-              <Link href="/cookies" className="text-[#44445a] text-xs hover:text-[#8888a0] transition-colors">Cookie Policy</Link>
+              <Link href="/privacy" className="text-[#66667a] text-xs hover:text-[#8888a0] transition-colors">Privacy Policy</Link>
+              <Link href="/terms" className="text-[#66667a] text-xs hover:text-[#8888a0] transition-colors">Terms of Service</Link>
+              <Link href="/cookies" className="text-[#66667a] text-xs hover:text-[#8888a0] transition-colors">Cookie Policy</Link>
             </div>
-            <p className="text-[#44445a] text-xs text-center md:text-right">
+            <p className="text-[#66667a] text-xs text-center md:text-right">
               Built with Next.js 15 + Vercel
             </p>
           </div>

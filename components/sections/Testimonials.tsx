@@ -11,7 +11,7 @@ const testimonials: Testimonial[] = [
     role: 'Operations Director',
     company: 'Vardhman Textiles',
     industry: 'Yarn Manufacturing',
-    quote: 'NexForge completely transformed our order management. The B2B portal they built reduced our processing time by 85%. Their understanding of the textile supply chain is unmatched.',
+    quote: 'Sitecraf completely transformed our order management. The B2B portal they built reduced our processing time by 85%. Their understanding of the textile supply chain is unmatched.',
     rating: 5,
     projectType: 'web-app',
     avatarInitials: 'RK',
@@ -35,7 +35,7 @@ const testimonials: Testimonial[] = [
     role: 'Supply Chain Manager',
     company: 'Welspun India',
     industry: 'Home Textiles',
-    quote: 'We needed a custom QA analytics platform integrated with our factory sensors. NexForge delivered a robust, scalable solution in just 10 weeks. Highly recommended.',
+    quote: 'We needed a custom QA analytics platform integrated with our factory sensors. Sitecraf delivered a robust, scalable solution in just 10 weeks. Highly recommended.',
     rating: 5,
     projectType: 'ai-integration',
     avatarInitials: 'AD',
@@ -71,7 +71,7 @@ const testimonials: Testimonial[] = [
     role: 'Managing Director',
     company: 'Garden Silk Mills',
     industry: 'Silk & Synthetics',
-    quote: 'NexForge built a design system that unified our internal tools. Their attention to detail and focus on production-ready code sets them apart from typical agencies.',
+    quote: 'Sitecraf built a design system that unified our internal tools. Their attention to detail and focus on production-ready code sets them apart from typical agencies.',
     rating: 5,
     projectType: 'design-system',
     avatarInitials: 'SP',
@@ -113,7 +113,7 @@ function TestimonialCard({ testimonial }: { testimonial: Testimonial }) {
           <span className="font-[family-name:var(--font-body)] text-[#8888a0] text-[length:var(--text-xs)]">
             {testimonial.role}, {testimonial.company}
           </span>
-          <span className="font-[family-name:var(--font-body)] text-[#44445a] text-[length:var(--text-xs)] uppercase tracking-widest mt-1">
+          <span className="font-[family-name:var(--font-body)] text-[#66667a] text-[length:var(--text-xs)] uppercase tracking-widest mt-1">
             {testimonial.industry}
           </span>
         </div>

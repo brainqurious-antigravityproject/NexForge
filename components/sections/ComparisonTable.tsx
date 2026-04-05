@@ -5,16 +5,16 @@ import { ComparisonRow } from '@/types';
 import { useScrollReveal } from '@/hooks/useScrollReveal';
 
 const rows: ComparisonRow[] = [
-  { feature: 'Time to first working build', nexforge: '6–10 weeks', freelancer: '8–16 weeks', inHouse: '4–9 months', largeAgency: '3–6 months' },
-  { feature: 'Production-ready architecture', nexforge: true, freelancer: false, inHouse: false, largeAgency: true },
-  { feature: 'Fixed-price contracts available', nexforge: true, freelancer: false, inHouse: false, largeAgency: false },
-  { feature: 'Dedicated senior engineer', nexforge: true, freelancer: true, inHouse: false, largeAgency: false },
-  { feature: 'TypeScript + tested codebase', nexforge: true, freelancer: false, inHouse: false, largeAgency: true },
-  { feature: 'Full IP ownership from day 1', nexforge: true, freelancer: true, inHouse: true, largeAgency: false },
-  { feature: 'Post-launch support included', nexforge: '30 days', freelancer: false, inHouse: true, largeAgency: '₹ extra' },
-  { feature: 'Textile industry experience', nexforge: true, freelancer: false, inHouse: false, largeAgency: false },
-  { feature: 'Transparent progress (GitHub)', nexforge: true, freelancer: false, inHouse: true, largeAgency: false },
-  { feature: 'Average total cost', nexforge: '₹15L–₹50L', freelancer: '₹8L–₹30L', inHouse: '₹60L–₹120L/yr', largeAgency: '₹40L–₹150L' }
+  { feature: 'Time to first working build', sitecraf: '6–10 weeks', freelancer: '8–16 weeks', inHouse: '4–9 months', largeAgency: '3–6 months' },
+  { feature: 'Production-ready architecture', sitecraf: true, freelancer: false, inHouse: false, largeAgency: true },
+  { feature: 'Fixed-price contracts available', sitecraf: true, freelancer: false, inHouse: false, largeAgency: false },
+  { feature: 'Dedicated senior engineer', sitecraf: true, freelancer: true, inHouse: false, largeAgency: false },
+  { feature: 'TypeScript + tested codebase', sitecraf: true, freelancer: false, inHouse: false, largeAgency: true },
+  { feature: 'Full IP ownership from day 1', sitecraf: true, freelancer: true, inHouse: true, largeAgency: false },
+  { feature: 'Post-launch support included', sitecraf: '30 days', freelancer: false, inHouse: true, largeAgency: '₹ extra' },
+  { feature: 'Textile industry experience', sitecraf: true, freelancer: false, inHouse: false, largeAgency: false },
+  { feature: 'Transparent progress (GitHub)', sitecraf: true, freelancer: false, inHouse: true, largeAgency: false },
+  { feature: 'Average total cost', sitecraf: '₹15L–₹50L', freelancer: '₹8L–₹30L', inHouse: '₹60L–₹120L/yr', largeAgency: '₹40L–₹150L' }
 ];
 
 const renderCellContent = (value: string | boolean) => {
@@ -41,7 +41,7 @@ function ComparisonTableRow({ row, index }: { row: ComparisonRow, index: number 
         {row.feature}
       </td>
       <td className="px-6 py-4 text-center bg-[#b5ff3e]/[0.04] border-x border-[#b5ff3e]/[0.12] group-hover:bg-[#b5ff3e]/[0.08] transition-colors duration-200">
-        {renderCellContent(row.nexforge)}
+        {renderCellContent(row.sitecraf)}
       </td>
       <td className="px-6 py-4 text-center">
         {renderCellContent(row.freelancer)}
@@ -64,7 +64,7 @@ export default function ComparisonTable() {
         {/* Header */}
         <div className="mb-12">
           <span className="block text-[#b5ff3e] text-[length:var(--text-xs)] uppercase tracking-widest mb-3">
-            Why NexForge
+            Why Sitecraf
           </span>
           <h2 className="font-[family-name:var(--font-display)] font-bold text-[#e8e8f0] text-[length:var(--text-xl)]">
             How We Stack Up
@@ -82,19 +82,19 @@ export default function ComparisonTable() {
               {/* Header Row */}
               <thead>
                 <tr className="bg-[#111111]">
-                  <th className="text-[#44445a] text-[length:var(--text-xs)] uppercase tracking-widest px-6 py-4 font-normal">
+                  <th className="text-[#66667a] text-[length:var(--text-xs)] uppercase tracking-widest px-6 py-4 font-normal">
                     Feature
                   </th>
                   <th className="text-[#b5ff3e] text-[length:var(--text-xs)] uppercase tracking-widest px-6 py-4 text-center bg-[#b5ff3e]/[0.04] border-x border-[#b5ff3e]/[0.12] font-normal">
-                    NexForge ★
+                    Sitecraf ★
                   </th>
-                  <th className="text-[#44445a] text-[length:var(--text-xs)] uppercase tracking-widest px-6 py-4 text-center font-normal">
+                  <th className="text-[#66667a] text-[length:var(--text-xs)] uppercase tracking-widest px-6 py-4 text-center font-normal">
                     Freelancer
                   </th>
-                  <th className="text-[#44445a] text-[length:var(--text-xs)] uppercase tracking-widest px-6 py-4 text-center font-normal">
+                  <th className="text-[#66667a] text-[length:var(--text-xs)] uppercase tracking-widest px-6 py-4 text-center font-normal">
                     In-House Team
                   </th>
-                  <th className="text-[#44445a] text-[length:var(--text-xs)] uppercase tracking-widest px-6 py-4 text-center font-normal">
+                  <th className="text-[#66667a] text-[length:var(--text-xs)] uppercase tracking-widest px-6 py-4 text-center font-normal">
                     Large Agency
                   </th>
                 </tr>
@@ -111,7 +111,7 @@ export default function ComparisonTable() {
         </div>
 
         {/* Bottom Note */}
-        <p className="mt-6 text-[#44445a] text-[length:var(--text-xs)] text-center font-[family-name:var(--font-body)]">
+        <p className="mt-6 text-[#66667a] text-[length:var(--text-xs)] text-center font-[family-name:var(--font-body)]">
           ★ Based on average across 12 client audits, 2023–2025
         </p>
 

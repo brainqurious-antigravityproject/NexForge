@@ -56,33 +56,33 @@ export default function WebDevDeepDive() {
 
           <div className="flex flex-col gap-6">
             <div className="bg-[#111111] border border-white/[0.08] p-6 rounded-2xl flex items-center gap-6">
-              <div className="w-16 h-16 rounded-full bg-red-500/10 flex items-center justify-center flex-shrink-0">
-                <span className="text-red-500 font-bold text-xl">₹2,000/mo</span>
+              <div className="min-w-[100px] h-12 px-4 rounded-full bg-red-500/10 flex items-center justify-center flex-shrink-0">
+                <span className="text-red-500 font-bold text-lg whitespace-nowrap">₹2,000/mo</span>
               </div>
               <div>
-                <h4 className="text-[#e8e8f0] font-medium">Typical Shopify cost</h4>
-                <p className="text-[#8888a0] text-sm mt-1">For showcase sites</p>
+                <h4 className="text-[#e8e8f0] font-medium leading-tight">Typical Shopify cost</h4>
+                <p className="text-[#8888a0] text-sm mt-1 leading-tight">For showcase sites</p>
               </div>
             </div>
 
             <div className="bg-[#111111] border border-[#b5ff3e]/[0.18] p-6 rounded-2xl flex items-center gap-6 relative overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-r from-[#b5ff3e]/[0.05] to-transparent pointer-events-none" />
-              <div className="w-16 h-16 rounded-full bg-[#b5ff3e]/20 flex items-center justify-center flex-shrink-0 relative z-10">
-                <span className="text-[#b5ff3e] font-bold text-xl">₹450/mo</span>
+              <div className="min-w-[100px] h-12 px-4 rounded-full bg-[#b5ff3e]/20 flex items-center justify-center flex-shrink-0 relative z-10">
+                <span className="text-[#b5ff3e] font-bold text-lg whitespace-nowrap">₹450/mo</span>
               </div>
               <div className="relative z-10">
-                <h4 className="text-[#e8e8f0] font-medium">Wix Studio equivalent</h4>
-                <p className="text-[#8888a0] text-sm mt-1">Monthly cost</p>
+                <h4 className="text-[#e8e8f0] font-medium leading-tight">Wix Studio equivalent</h4>
+                <p className="text-[#8888a0] text-sm mt-1 leading-tight">Monthly cost</p>
               </div>
             </div>
 
             <div className="bg-[#111111] border border-white/[0.08] p-6 rounded-2xl flex items-center gap-6">
-              <div className="w-16 h-16 rounded-full bg-[#00c8c8]/10 flex items-center justify-center flex-shrink-0">
-                <span className="text-[#00c8c8] font-bold text-xl">₹18,600/yr</span>
+              <div className="min-w-[100px] h-12 px-4 rounded-full bg-[#00c8c8]/10 flex items-center justify-center flex-shrink-0">
+                <span className="text-[#00c8c8] font-bold text-lg whitespace-nowrap">₹18,600/yr</span>
               </div>
               <div>
-                <h4 className="text-[#e8e8f0] font-medium">Your annual savings</h4>
-                <p className="text-[#8888a0] text-sm mt-1">After migration</p>
+                <h4 className="text-[#e8e8f0] font-medium leading-tight">Your annual savings</h4>
+                <p className="text-[#8888a0] text-sm mt-1 leading-tight">After migration</p>
               </div>
             </div>
           </div>

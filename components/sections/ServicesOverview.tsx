@@ -42,7 +42,7 @@ const services: Service[] = [
   {
     id: 'ai-image-generation',
     title: 'AI Image Generation',
-    description: 'Need product photos, website banners, or marketing creatives but don\'t have a photography budget? I generate studio-quality images from your raw product photos — fast, affordable, and brand-consistent. Specialised in home furnishing, fabric, and lifestyle brands.',
+    description: "Need product photos, website banners, or marketing creatives but don't have a photography budget? I generate studio-quality images from your raw product photos — fast, affordable, and brand-consistent. Specialised in home furnishing, fabric, and lifestyle brands.",
     category: 'ai-integration',
     features: [
       'Website banners from fabric photos',
@@ -57,7 +57,7 @@ const services: Service[] = [
   {
     id: 'ai-chatbot',
     title: 'AI Chatbot for Your Website',
-    description: 'An intelligent chatbot trained on your business — products, pricing, FAQs, contact details. Handles visitor queries 24/7 in Hindi, Hinglish, or English. Captures leads even when you\'re offline.',
+    description: "An intelligent chatbot trained on your business — products, pricing, FAQs, contact details. Handles visitor queries 24/7 in Hindi, Hinglish, or English. Captures leads even when you're offline.",
     category: 'chatbot',
     features: [
       'Hindi, Hinglish & English support',
@@ -108,15 +108,15 @@ function FeaturedServiceCard({ service }: { service: Service }) {
           {service.features.map((feature, idx) => (
             <div key={idx} className="flex items-center gap-2">
               <div className="w-1 h-1 rounded-full bg-[#b5ff3e]/40 flex-shrink-0" />
-              <span className="text-[#44445a] text-[length:var(--text-xs)]">{feature}</span>
+              <span className="text-[#66667a] text-[length:var(--text-xs)]">{feature}</span>
             </div>
           ))}
         </div>
 
         <div className="mt-auto pt-6 flex items-center justify-between">
           <div className="flex flex-col gap-1">
-            <span className="text-[#44445a] text-[length:var(--text-xs)]">Timeline: {service.timeline}</span>
-            <span className="text-[#44445a] text-[length:var(--text-xs)]">Starts at: {service.startingPrice}</span>
+            <span className="text-[#66667a] text-[length:var(--text-xs)]">Timeline: {service.timeline}</span>
+            <span className="text-[#66667a] text-[length:var(--text-xs)]">Starts at: {service.startingPrice}</span>
           </div>
           <Link 
             href={`/services/${service.id}`}
@@ -166,18 +166,18 @@ function RegularServiceCard({ service }: { service: Service }) {
         {service.features.slice(0, 3).map((feature, idx) => (
           <div key={idx} className="flex items-center gap-2">
             <div className="w-1 h-1 rounded-full bg-[#b5ff3e]/40 flex-shrink-0" />
-            <span className="text-[#44445a] text-[length:var(--text-xs)] truncate">{feature}</span>
+            <span className="text-[#66667a] text-[length:var(--text-xs)] truncate">{feature}</span>
           </div>
         ))}
         {service.features.length > 3 && (
           <div className="flex items-center gap-2">
             <div className="w-1 h-1 rounded-full bg-transparent flex-shrink-0" />
-            <span className="text-[#44445a] text-[length:var(--text-xs)] italic">+ {service.features.length - 3} more</span>
+            <span className="text-[#66667a] text-[length:var(--text-xs)] italic">+ {service.features.length - 3} more</span>
           </div>
         )}
       </div>
 
-      <div className="flex justify-between mt-5 pt-4 border-t border-white/[0.05] text-[#44445a] text-[length:var(--text-xs)]">
+      <div className="flex justify-between mt-5 pt-4 border-t border-white/[0.05] text-[#66667a] text-[length:var(--text-xs)]">
         <span>{service.timeline}</span>
         <span>{service.startingPrice}</span>
       </div>
@@ -193,7 +193,6 @@ export default function ServicesOverview() {
     <section id="services" className="py-24 bg-[#000000] px-6">
       <div className="max-w-[1200px] mx-auto">
         
-        {/* Section Header */}
         <div className="mb-12">
           <span className="block text-[#b5ff3e] text-[length:var(--text-xs)] uppercase tracking-widest mb-3">
             What I Build

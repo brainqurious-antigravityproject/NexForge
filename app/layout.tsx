@@ -5,7 +5,7 @@ import Footer from '@/components/layout/Footer';
 import Chatbot from '@/components/ui/Chatbot';
 
 export const metadata: Metadata = {
-  title: 'NexForge | B2B Digital Agency',
+  title: 'Sitecraf | B2B Digital Agency',
   description: 'B2B digital agency website targeting textile brands.',
 };
 

@@ -66,7 +66,7 @@ export interface CaseStudy {
 // ─── Comparison ──────────────────────────────────────────
 export interface ComparisonRow {
   feature: string;
-  nexforge: string | boolean;
+  sitecraf: string | boolean;
   freelancer: string | boolean;
   inHouse: string | boolean;
   largeAgency: string | boolean;

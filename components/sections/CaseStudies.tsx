@@ -67,7 +67,7 @@ function FeaturedCaseStudyCard({ featured }: { featured: CaseStudy }) {
           <span className="bg-[#b5ff3e]/[0.08] text-[#b5ff3e] text-[length:var(--text-xs)] px-3 py-1 rounded-full font-medium">
             {featured.client}
           </span>
-          <span className="text-[#44445a] text-[length:var(--text-xs)] uppercase tracking-widest">
+          <span className="text-[#66667a] text-[length:var(--text-xs)] uppercase tracking-widest">
             {featured.industry}
           </span>
         </div>
@@ -86,7 +86,7 @@ function FeaturedCaseStudyCard({ featured }: { featured: CaseStudy }) {
               {tag}
             </span>
           ))}
-          <span className="text-[#44445a] text-[length:var(--text-xs)] ml-2">
+          <span className="text-[#66667a] text-[length:var(--text-xs)] ml-2">
             ⏱ {featured.duration}
           </span>
         </div>
@@ -100,7 +100,7 @@ function FeaturedCaseStudyCard({ featured }: { featured: CaseStudy }) {
       </div>
       
       <div className="bg-[#111111] border-t lg:border-t-0 lg:border-l border-white/[0.06] p-8 lg:p-12 lg:w-2/5 flex flex-col justify-center gap-8">
-        <h4 className="text-[#44445a] text-[length:var(--text-xs)] uppercase tracking-widest font-[family-name:var(--font-body)]">
+        <h4 className="text-[#66667a] text-[length:var(--text-xs)] uppercase tracking-widest font-[family-name:var(--font-body)]">
           Key Outcomes
         </h4>
         <div className="flex flex-col gap-8">
@@ -136,8 +136,8 @@ function RegularCaseStudyCard({ study }: { study: CaseStudy }) {
         <span className="text-[#e8e8f0] font-medium text-[length:var(--text-sm)]">
           {study.client}
         </span>
-        <span className="w-1 h-1 rounded-full bg-[#44445a]" />
-        <span className="text-[#44445a] text-[length:var(--text-xs)] uppercase tracking-widest">
+        <span className="w-1 h-1 rounded-full bg-[#66667a]" />
+        <span className="text-[#66667a] text-[length:var(--text-xs)] uppercase tracking-widest">
           {study.industry}
         </span>
       </div>
@@ -161,7 +161,7 @@ function RegularCaseStudyCard({ study }: { study: CaseStudy }) {
                 {result.trend === 'up' ? '↑' : '↓'}
               </span>
             </div>
-            <span className="font-[family-name:var(--font-body)] text-[#44445a] text-[length:var(--text-xs)] mt-1">
+            <span className="font-[family-name:var(--font-body)] text-[#66667a] text-[length:var(--text-xs)] mt-1">
               {result.metric}
             </span>
           </div>
@@ -176,7 +176,7 @@ function RegularCaseStudyCard({ study }: { study: CaseStudy }) {
             </span>
           ))}
           {study.tags.length > 2 && (
-            <span className="text-[#44445a] text-[length:var(--text-xs)] px-1 py-1">
+            <span className="text-[#66667a] text-[length:var(--text-xs)] px-1 py-1">
               +{study.tags.length - 2}
             </span>
           )}

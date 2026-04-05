@@ -8,50 +8,50 @@ import { useScrollReveal } from '@/hooks/useScrollReveal';
 const faqItems: FaqItem[] = [
   {
     id: '1',
-    question: 'How long does a typical project take?',
-    answer: 'Most of our projects are delivered within 6 to 10 weeks. This includes discovery, design, development, testing, and deployment. Complex enterprise integrations may take up to 12-16 weeks.',
+    question: 'Do I need to be a large business to work with you?',
+    answer: 'Not at all. I work with small and medium-sized Indian businesses — local service providers, manufacturers, exporters, and D2C brands. Whether you need a simple ₹15,000 showcase website or a ₹60,000 custom build with chatbot, I have an option for your budget.',
     category: 'process'
   },
   {
     id: '2',
-    question: 'Do you offer fixed-price contracts?',
-    answer: 'Yes, we prefer fixed-price contracts for well-scoped projects. After our initial discovery phase, we provide a detailed proposal with a guaranteed price and timeline.',
+    question: 'My business is already on Shopify. Should I move to Wix Studio?',
+    answer: 'If you are using Shopify only to showcase your products and not actively selling online, then yes — Wix Studio can do everything your site currently does at ₹450/month vs ₹2,000+/month. I handle the migration and preserve your entire design. If you are actively selling through Shopify, then staying on Shopify makes more sense.',
     category: 'pricing'
   },
   {
     id: '3',
-    question: 'What technologies do you use?',
-    answer: 'We specialize in modern web technologies: Next.js, React, TypeScript, and Tailwind CSS for the frontend. For the backend, we use Node.js, Python, PostgreSQL, and serverless architectures on AWS or Vercel.',
+    question: 'Can you add an AI chatbot to my existing website?',
+    answer: 'Yes. If your website is on Shopify, Wix, or is a custom-coded site, I can add a chatbot that answers your visitor queries in Hindi, Hinglish, or English — trained on your product details, pricing, and FAQs. It captures leads even at 2am when you are offline.',
     category: 'tech'
   },
   {
     id: '4',
-    question: 'What happens after launch?',
-    answer: 'Every project includes 30 days of post-launch support to ensure a smooth transition. We also offer ongoing maintenance and retainer packages for continuous feature development.',
-    category: 'support'
+    question: 'I need product images for my website but don\'t have a photographer. What can you do?',
+    answer: 'I can generate studio-quality product images and website banners using AI — from just your raw product photographs. I have generated 400+ images for home furnishing and fabric brands. Pricing is per-batch and significantly cheaper than a studio photoshoot.',
+    category: 'tech'
   },
   {
     id: '5',
-    question: 'Who owns the intellectual property (IP)?',
-    answer: 'You do. Upon final payment, full ownership of the codebase, designs, and all related intellectual property is transferred to you. We do not hold your code hostage.',
-    category: 'process'
+    question: 'Do you charge GST on your invoices?',
+    answer: 'No. I am currently below the GST registration threshold, which means there is no GST added to your invoice. The price I quote is the final amount you pay — no additional tax, no hidden charges.',
+    category: 'pricing'
   },
   {
     id: '6',
-    question: 'How much does a custom web app cost?',
-    answer: 'Our projects typically range from ₹15L to ₹50L depending on complexity, features, and timeline. We offer transparent pricing and will give you a clear estimate after our first call.',
+    question: 'How much does a website cost?',
+    answer: 'Platform websites (Wix Studio / Shopify) start from ₹15,000. Custom coded websites start from ₹20,000. Add-ons like AI chatbot start from ₹12,000 and AI image generation from ₹5,000 per batch. All prices are fixed and quoted upfront — no surprises.',
     category: 'pricing'
   },
   {
     id: '7',
-    question: 'Can you integrate with our existing ERP?',
-    answer: 'Absolutely. We have extensive experience integrating with legacy ERPs, CRMs, and custom databases common in the textile industry via REST APIs, SOAP, or direct database connections.',
-    category: 'tech'
+    question: 'Who will I be communicating with during the project?',
+    answer: 'Directly with me — the person who is building your website. There is no account manager or middleman. You can reach me on WhatsApp, email, or call. Most project updates happen on WhatsApp because that is what works best for Indian clients.',
+    category: 'process'
   },
   {
     id: '8',
-    question: 'Will I have a dedicated project manager?',
-    answer: 'Yes, you will be assigned a dedicated senior engineer who acts as your technical lead and project manager. You will communicate directly with the person building your product.',
+    question: 'What if I need changes after the website launches?',
+    answer: 'Two weeks of post-launch support is included in every project at no extra cost. After that, I am available for changes on an hourly or per-task basis. Maintenance retainer packages are also available if you need ongoing updates.',
     category: 'support'
   }
 ];
@@ -105,8 +105,28 @@ export default function FAQ() {
     { id: 'support', label: 'Support' }
   ];
 
+  // FAQ Schema for SEO
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqItems.map(item => ({
+      "@type": "Question",
+      "name": item.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": item.answer
+      }
+    }))
+  };
+
   return (
     <section id="faq" className="py-24 bg-[#0a0a0a] px-6 border-t border-white/[0.05]">
+      {/* FAQ Schema Markup */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      
       <div className="max-w-[800px] mx-auto">
         
         {/* Header */}
@@ -115,10 +135,10 @@ export default function FAQ() {
             Frequently Asked Questions
           </span>
           <h2 className="font-[family-name:var(--font-display)] font-bold text-[#e8e8f0] text-[length:var(--text-xl)]">
-            Common Questions Answered
+            Your Questions, Answered Honestly
           </h2>
           <p className="font-[family-name:var(--font-body)] text-[#8888a0] mt-4 leading-relaxed">
-            Everything you need to know about working with us.
+            No fluff. No vague agency answers.
           </p>
         </div>
 

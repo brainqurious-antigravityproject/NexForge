@@ -68,7 +68,7 @@ export default function Chatbot() {
                 </svg>
               </div>
               <div>
-                <h3 className="text-[#e8e8f0] text-sm font-semibold">NexForge Assistant</h3>
+                <h3 className="text-[#e8e8f0] text-sm font-semibold">Sitecraf Assistant</h3>
                 <p className="text-[#22c55e] text-xs flex items-center gap-1">
                   <span className="w-1.5 h-1.5 rounded-full bg-[#22c55e] animate-pulse"></span> Online
                 </p>

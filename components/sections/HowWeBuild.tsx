@@ -132,7 +132,7 @@ export default function HowWeBuild() {
                   }`}
                 >
                   <div className="bg-[#0a0a0a] border border-white/[0.08] rounded-xl p-6 w-full max-w-[480px] hover:border-[#b5ff3e]/[0.18] transition-colors duration-300">
-                    <span className="text-[#44445a] text-[length:var(--text-xs)] uppercase tracking-widest">
+                    <span className="text-[#66667a] text-[length:var(--text-xs)] uppercase tracking-widest">
                       Step 0{step.step}
                     </span>
                     <h3 className="font-[family-name:var(--font-display)] font-semibold text-[#e8e8f0] text-[length:var(--text-base)] mt-1">
@@ -148,7 +148,7 @@ export default function HowWeBuild() {
                     
                     <ul className="mt-4 space-y-2">
                       {step.deliverables.map((item, i) => (
-                        <li key={i} className="text-[#44445a] text-[length:var(--text-xs)] flex items-start gap-2">
+                        <li key={i} className="text-[#66667a] text-[length:var(--text-xs)] flex items-start gap-2">
                           <span className="text-[#b5ff3e]/60 flex-shrink-0">→</span>
                           <span>{item}</span>
                         </li>

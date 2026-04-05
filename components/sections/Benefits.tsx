@@ -132,7 +132,7 @@ export default function Benefits() {
                   <div className="font-[family-name:var(--font-display)] font-bold text-[#b5ff3e] text-2xl">
                     {benefit.stat.value}
                   </div>
-                  <div className="font-[family-name:var(--font-body)] text-[#44445a] text-[length:var(--text-xs)] mt-1 uppercase tracking-wider">
+                  <div className="font-[family-name:var(--font-body)] text-[#66667a] text-[length:var(--text-xs)] mt-1 uppercase tracking-wider">
                     {benefit.stat.label}
                   </div>
                 </div>
@@ -163,7 +163,7 @@ export default function Benefits() {
                   <div className="font-[family-name:var(--font-display)] font-bold text-[#b5ff3e] text-xl">
                     {benefit.stat.value}
                   </div>
-                  <div className="font-[family-name:var(--font-body)] text-[#44445a] text-[length:var(--text-xs)] mt-1 uppercase tracking-wider">
+                  <div className="font-[family-name:var(--font-body)] text-[#66667a] text-[length:var(--text-xs)] mt-1 uppercase tracking-wider">
                     {benefit.stat.label}
                   </div>
                 </div>

@@ -89,7 +89,7 @@ export default function Navbar() {
               <rect x="16" y="12" width="14" height="14" transform="rotate(45 16 12)" stroke="#00c8c8" strokeWidth="1.5" fill="none" />
             </svg>
             <span className="font-[family-name:var(--font-display)] font-semibold text-[#e8e8f0] text-xl tracking-tight">
-              NexForge
+              Sitecraf
             </span>
           </Link>
 
