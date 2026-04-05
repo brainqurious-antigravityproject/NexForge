@@ -61,11 +61,12 @@ export default function Footer() {
             <div className="flex flex-col">
               <h4 className="text-[#e8e8f0] text-xs uppercase tracking-widest font-semibold mb-5">Quick Links</h4>
               <nav className="flex flex-col">
-                <Link href="/#process" className="text-[#66667a] text-sm hover:text-[#8888a0] transition-colors block mb-3">How I Work</Link>
-                <Link href="/#case-studies" className="text-[#66667a] text-sm hover:text-[#8888a0] transition-colors block mb-3">Projects</Link>
-                <Link href="/#comparison" className="text-[#66667a] text-sm hover:text-[#8888a0] transition-colors block mb-3">Why Sitecraf</Link>
-                <Link href="/#faq" className="text-[#66667a] text-sm hover:text-[#8888a0] transition-colors block mb-3">FAQ</Link>
-                <Link href="/#contact" className="text-[#66667a] text-sm hover:text-[#8888a0] transition-colors block mb-3">Contact</Link>
+                <Link href="/" className="text-[#66667a] text-sm hover:text-[#8888a0] transition-colors block mb-3">Home</Link>
+                <Link href="/about" className="text-[#66667a] text-sm hover:text-[#8888a0] transition-colors block mb-3">About Us</Link>
+                <Link href="/services" className="text-[#66667a] text-sm hover:text-[#8888a0] transition-colors block mb-3">Services</Link>
+                <Link href="/case-studies" className="text-[#66667a] text-sm hover:text-[#8888a0] transition-colors block mb-3">Case Studies</Link>
+                <Link href="/pricing" className="text-[#66667a] text-sm hover:text-[#8888a0] transition-colors block mb-3">Pricing</Link>
+                <Link href="/blog" className="text-[#66667a] text-sm hover:text-[#8888a0] transition-colors block mb-3">Blog</Link>
               </nav>
             </div>
 
