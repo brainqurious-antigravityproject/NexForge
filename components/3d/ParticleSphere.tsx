@@ -1,193 +1,92 @@
 'use client';
 
-import React, { useEffect, useRef } from 'react';
-import * as THREE from 'three';
+import React, { useEffect, useRef, useState } from 'react';
+import createGlobe from 'cobe';
 
 export default function ParticleSphere() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
+  const globeRef = useRef<ReturnType<typeof createGlobe> | null>(null);
+  const phiRef = useRef(0);
+  const [failed, setFailed] = useState(false);
 
   useEffect(() => {
-    if (!canvasRef.current) return;
-
     const canvas = canvasRef.current;
-    let renderer: THREE.WebGLRenderer | null = null;
-    let animationFrameId: number;
+    if (!canvas) return;
+
+    const size = Math.min(
+      canvas.parentElement?.clientWidth ?? 500,
+      canvas.parentElement?.clientHeight ?? 700,
+      700
+    );
 
     try {
-      renderer = new THREE.WebGLRenderer({ 
-        canvas, 
-        alpha: true, 
-        antialias: true,
-        powerPreference: 'high-performance',
-        failIfMajorPerformanceCaveat: true
+      globeRef.current = createGlobe(canvas, {
+        devicePixelRatio: Math.min(window.devicePixelRatio, 2),
+        width: size * 2,
+        height: size * 2,
+        phi: 0,
+        theta: 0.25,
+        dark: 1,
+        diffuse: 1.8,
+        mapSamples: 18000,
+        mapBrightness: 7,
+        mapBaseBrightness: 0.02,
+        baseColor: [0.12, 0.12, 0.12],
+        glowColor: [0.71, 1, 0.24],   // lime green glow — matches #b5ff3e
+        markerColor: [0.71, 1, 0.24], // lime green markers
+        markers: [
+          { location: [28.61, 77.21], size: 0.06 },  // New Delhi ← your city
+          { location: [19.07, 72.88], size: 0.04 },  // Mumbai
+          { location: [51.51, -0.13], size: 0.04 },  // London
+          { location: [40.71, -74.01], size: 0.04 }, // New York
+          { location: [25.20, 55.27], size: 0.04 },  // Dubai
+          { location: [1.35, 103.82], size: 0.03 },  // Singapore
+        ],
+        opacity: 0.92,
+        scale: 1,
+        offset: [0, 0],
+        // @ts-expect-error - onRender is missing from cobe types but is a valid option
+        onRender: (state: Record<string, any>) => {
+          state.phi = phiRef.current;
+          phiRef.current += 0.003;
+        },
       });
     } catch (e) {
-      console.error('WebGL initialization failed:', e);
+      console.warn('COBE globe failed:', e);
+      setTimeout(() => setFailed(true), 0);
       return;
     }
 
-    if (!renderer) return;
-
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-    renderer.setClearColor(0x000000, 0);
-
-    const scene = new THREE.Scene();
-    scene.background = null;
-
-    const camera = new THREE.PerspectiveCamera(60, canvas.clientWidth / canvas.clientHeight, 0.1, 1000);
-    camera.position.z = 600;
-
-    const isMobile = window.innerWidth < 768;
-    const particleCount = isMobile ? 1500 : 3000;
-    const radius = 280;
-
-    const geometry = new THREE.BufferGeometry();
-    const positions = new Float32Array(particleCount * 3);
-
-    for (let i = 0; i < particleCount; i++) {
-      const u = Math.random();
-      const v = Math.random();
-      const theta = u * 2.0 * Math.PI;
-      const phi = Math.acos(2.0 * v - 1.0);
-
-      positions[i * 3] = radius * Math.sin(phi) * Math.cos(theta);
-      positions[i * 3 + 1] = radius * Math.sin(phi) * Math.sin(theta);
-      positions[i * 3 + 2] = radius * Math.cos(phi);
-    }
-
-    geometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
-
-    const material = new THREE.PointsMaterial({
-      color: 0xffffff,
-      size: 1.2,
-      transparent: true,
-      opacity: 0.7,
-      sizeAttenuation: true
-    });
-
-    const sphere = new THREE.Points(geometry, material);
-    scene.add(sphere);
-
-    // Connection lines
-    const linePositions = [];
-    const connections = new Int32Array(particleCount);
-    
-    for (let i = 0; i < particleCount; i++) {
-      let connectionsCount = 0;
-      for (let j = i + 1; j < particleCount; j++) {
-        if (connectionsCount >= 3) break;
-        if (connections[j] >= 3) continue;
-
-        const dx = positions[i * 3] - positions[j * 3];
-        const dy = positions[i * 3 + 1] - positions[j * 3 + 1];
-        const dz = positions[i * 3 + 2] - positions[j * 3 + 2];
-        const distSq = dx * dx + dy * dy + dz * dz;
-
-        if (distSq < 45 * 45) {
-          linePositions.push(
-            positions[i * 3], positions[i * 3 + 1], positions[i * 3 + 2],
-            positions[j * 3], positions[j * 3 + 1], positions[j * 3 + 2]
-          );
-          connectionsCount++;
-          connections[j]++;
-        }
-      }
-    }
-
-    const lineGeometry = new THREE.BufferGeometry();
-    lineGeometry.setAttribute('position', new THREE.Float32BufferAttribute(linePositions, 3));
-    const lineMaterial = new THREE.LineBasicMaterial({
-      color: 0xffffff,
-      transparent: true,
-      opacity: 0.15
-    });
-    const linesMesh = new THREE.LineSegments(lineGeometry, lineMaterial);
-    scene.add(linesMesh);
-
-    let targetX = 0;
-    let targetY = 0;
-    
-    const handleMouseMove = (event: MouseEvent) => {
+    // Mouse tilt
+    let mouseX = 0;
+    const handleMouseMove = (e: MouseEvent) => {
       if (window.innerWidth < 768) return;
-      const x = (event.clientX / window.innerWidth) * 2 - 1;
-      const y = -(event.clientY / window.innerHeight) * 2 + 1;
-      targetX = x;
-      targetY = y;
+      mouseX = (e.clientX / window.innerWidth - 0.5) * 0.6;
     };
-
-    const handleResize = () => {
-      if (!canvasRef.current || !renderer) return;
-      const width = canvasRef.current.clientWidth;
-      const height = canvasRef.current.clientHeight;
-      if (width === 0 || height === 0) return;
-      renderer.setSize(width, height, false);
-      camera.aspect = width / height;
-      camera.updateProjectionMatrix();
-    };
-
-    const onContextLost = (event: Event) => {
-      event.preventDefault();
-      if (animationFrameId) cancelAnimationFrame(animationFrameId);
-    };
-
-    const onContextRestored = () => {
-      window.location.reload();
-    };
-
-    canvas.addEventListener('webglcontextlost', onContextLost, false);
-    canvas.addEventListener('webglcontextrestored', onContextRestored, false);
-    window.addEventListener('mousemove', handleMouseMove);
-    window.addEventListener('resize', handleResize);
-    
-    // Ensure layout is complete before initial resize
-    setTimeout(handleResize, 0);
-
-    const animate = () => {
-      animationFrameId = requestAnimationFrame(animate);
-
-      sphere.rotation.y += 0.0008;
-      sphere.rotation.x += 0.0003;
-      
-      linesMesh.rotation.y = sphere.rotation.y;
-      linesMesh.rotation.x = sphere.rotation.x;
-
-      if (window.innerWidth >= 768) {
-        sphere.rotation.y += (targetX - sphere.rotation.y) * 0.02;
-        sphere.rotation.x += (targetY - sphere.rotation.x) * 0.02;
-        linesMesh.rotation.y = sphere.rotation.y;
-        linesMesh.rotation.x = sphere.rotation.x;
-      }
-
-      if (renderer) {
-        renderer.render(scene, camera);
-      }
-    };
-
-    animate();
+    window.addEventListener('mousemove', handleMouseMove, { passive: true });
 
     return () => {
-      canvas.removeEventListener('webglcontextlost', onContextLost);
-      canvas.removeEventListener('webglcontextrestored', onContextRestored);
       window.removeEventListener('mousemove', handleMouseMove);
-      window.removeEventListener('resize', handleResize);
-      cancelAnimationFrame(animationFrameId);
-      
-      if (renderer) {
-        renderer.dispose();
-        renderer.forceContextLoss();
-      }
-      geometry.dispose();
-      material.dispose();
-      lineGeometry.dispose();
-      lineMaterial.dispose();
-      scene.clear();
+      globeRef.current?.destroy();
     };
   }, []);
 
+  // Subtle CSS fallback if COBE also fails (extremely rare)
+  if (failed) {
+    return (
+      <div className="absolute right-0 top-0 w-full h-full lg:w-[45%] md:w-[40%] z-0 pointer-events-none">
+        <div className="absolute inset-0 rounded-full opacity-10"
+          style={{ background: 'radial-gradient(circle, rgba(181,255,62,0.15) 0%, transparent 70%)' }} />
+      </div>
+    );
+  }
+
   return (
-    <canvas 
-      ref={canvasRef} 
-      className="absolute right-0 top-0 w-full h-full lg:w-[45%] md:w-[40%] z-0 pointer-events-none opacity-30 md:opacity-100" 
-    />
+    <div className="absolute right-0 top-0 w-full h-full lg:w-[45%] md:w-[40%] z-0 pointer-events-none flex items-center justify-center opacity-30 md:opacity-100">
+      <canvas
+        ref={canvasRef}
+        style={{ width: '100%', height: '100%', maxWidth: '700px', maxHeight: '700px', aspectRatio: '1/1' }}
+      />
+    </div>
   );
 }
