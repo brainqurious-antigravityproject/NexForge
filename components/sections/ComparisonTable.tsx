@@ -5,16 +5,16 @@ import { ComparisonRow } from '@/types';
 import { useScrollReveal } from '@/hooks/useScrollReveal';
 
 const rows: ComparisonRow[] = [
-  { feature: 'Time to first working build', sitecraf: '6–10 weeks', freelancer: '8–16 weeks', inHouse: '4–9 months', largeAgency: '3–6 months' },
-  { feature: 'Production-ready architecture', sitecraf: true, freelancer: false, inHouse: false, largeAgency: true },
-  { feature: 'Fixed-price contracts available', sitecraf: true, freelancer: false, inHouse: false, largeAgency: false },
-  { feature: 'Dedicated senior engineer', sitecraf: true, freelancer: true, inHouse: false, largeAgency: false },
-  { feature: 'TypeScript + tested codebase', sitecraf: true, freelancer: false, inHouse: false, largeAgency: true },
-  { feature: 'Full IP ownership from day 1', sitecraf: true, freelancer: true, inHouse: true, largeAgency: false },
-  { feature: 'Post-launch support included', sitecraf: '30 days', freelancer: false, inHouse: true, largeAgency: '₹ extra' },
-  { feature: 'Textile industry experience', sitecraf: true, freelancer: false, inHouse: false, largeAgency: false },
-  { feature: 'Transparent progress (GitHub)', sitecraf: true, freelancer: false, inHouse: true, largeAgency: false },
-  { feature: 'Average total cost', sitecraf: '₹15L–₹50L', freelancer: '₹8L–₹30L', inHouse: '₹60L–₹120L/yr', largeAgency: '₹40L–₹150L' }
+  { feature: 'Time to first working website', sitecraf: '2–3 weeks', freelancer: '4–10 weeks', inHouse: '1–2 weeks', largeAgency: '6–12 weeks' },
+  { feature: 'Fixed-price quote upfront', sitecraf: true, freelancer: false, inHouse: false, largeAgency: false },
+  { feature: 'Mobile-first & SEO optimised', sitecraf: true, freelancer: false, inHouse: false, largeAgency: true },
+  { feature: 'AI chatbot available as add-on', sitecraf: true, freelancer: false, inHouse: false, largeAgency: true },
+  { feature: 'AI image generation for your site', sitecraf: true, freelancer: false, inHouse: false, largeAgency: false },
+  { feature: '100% code & content ownership', sitecraf: true, freelancer: true, inHouse: true, largeAgency: false },
+  { feature: 'Post-launch support included', sitecraf: '2 weeks', freelancer: false, inHouse: true, largeAgency: '₹ extra' },
+  { feature: 'Custom booking / calendar flow', sitecraf: true, freelancer: false, inHouse: false, largeAgency: true },
+  { feature: 'Hindi / Hinglish chatbot capable', sitecraf: true, freelancer: false, inHouse: false, largeAgency: false },
+  { feature: 'Typical project cost', sitecraf: '₹15K–₹60K', freelancer: '₹5K–₹20K', inHouse: '₹500–₹5K/mo', largeAgency: '₹1L–₹5L+' }
 ];
 
 const renderCellContent = (value: string | boolean) => {
@@ -67,10 +67,10 @@ export default function ComparisonTable() {
             Why Sitecraf
           </span>
           <h2 className="font-[family-name:var(--font-display)] font-bold text-[#e8e8f0] text-[length:var(--text-xl)]">
-            How We Stack Up
+            How I Compare
           </h2>
           <p className="font-[family-name:var(--font-body)] text-[#8888a0] mt-3 max-w-2xl leading-relaxed">
-            An honest comparison so you can make the right decision for your business.
+            An honest breakdown so you can make the right choice for your business and budget.
           </p>
         </div>
 
@@ -89,13 +89,13 @@ export default function ComparisonTable() {
                     Sitecraf ★
                   </th>
                   <th className="text-[#66667a] text-[length:var(--text-xs)] uppercase tracking-widest px-6 py-4 text-center font-normal">
-                    Freelancer
+                    Cheap Freelancer
                   </th>
                   <th className="text-[#66667a] text-[length:var(--text-xs)] uppercase tracking-widest px-6 py-4 text-center font-normal">
-                    In-House Team
+                    DIY Website Builder
                   </th>
                   <th className="text-[#66667a] text-[length:var(--text-xs)] uppercase tracking-widest px-6 py-4 text-center font-normal">
-                    Large Agency
+                    Web Agency
                   </th>
                 </tr>
               </thead>
@@ -112,7 +112,7 @@ export default function ComparisonTable() {
 
         {/* Bottom Note */}
         <p className="mt-6 text-[#66667a] text-[length:var(--text-xs)] text-center font-[family-name:var(--font-body)]">
-          ★ Based on average across 12 client audits, 2023–2025
+          ★ Comparison based on typical market rates in India, 2025. DIY = Wix free plan / Canva websites.
         </p>
 
       </div>

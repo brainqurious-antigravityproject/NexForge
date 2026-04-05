@@ -2,57 +2,58 @@
 
 import React, { useEffect, useRef, useState } from 'react';
 import { ProcessStep } from '@/types';
+import { Phone, FileText, Palette, Code, Rocket } from 'lucide-react';
 
 const steps: ProcessStep[] = [
   {
     step: 1,
-    title: 'Discovery & Scoping',
-    description: 'We spend 1 week learning your business, users, and existing systems. You get a detailed scope document — not a vague proposal.',
-    duration: '1 week',
-    deliverables: ['Scope document', 'User story map', 'Technical risk assessment', 'Fixed-price quote'],
-    icon: 'Search'
+    title: 'Free Discovery Call (30 mins)',
+    description: 'We talk about your business, what you need, and what budget you have in mind. No hard sell. I listen first, then recommend the right solution for your situation.',
+    duration: '30 minutes',
+    deliverables: ['Clear understanding of your requirement', 'Platform recommendation', 'Rough timeline estimate', 'No obligation'],
+    icon: 'Phone'
   },
   {
     step: 2,
-    title: 'System Design',
-    description: 'Architecture decisions happen before code. Database schema, API contracts, component hierarchy, and deployment plan — all agreed before we write a line.',
-    duration: '3–5 days',
-    deliverables: ['System architecture diagram', 'DB schema draft', 'API contract (OpenAPI)', 'Tech stack decision doc'],
-    icon: 'Blueprint'
+    title: 'Written Quote & Scope',
+    description: 'I send you a clear written proposal — exactly what will be built, what is NOT included, timeline, and fixed price. No ambiguity before we start.',
+    duration: 'Within 48 hours',
+    deliverables: ['Fixed-price quote', 'Scope of work document', 'Timeline with milestones', 'Payment schedule (50/50)'],
+    icon: 'FileText'
   },
   {
     step: 3,
-    title: 'Design System & UI',
-    description: 'We build your design tokens, component library, and all page layouts in Figma. You approve before we build — no surprises.',
-    duration: '1–2 weeks',
-    deliverables: ['Figma design file', 'Design tokens', 'Responsive component specs', 'Prototype walkthrough'],
+    title: 'Design & Content Setup',
+    description: 'I set up the design direction, collect your content (logo, text, photos), and show you a visual mockup before coding begins. You approve before I build.',
+    duration: '3–5 days',
+    deliverables: ['Visual mockup / wireframe', 'Content checklist sent to you', 'Platform account setup', 'Design approval from you'],
     icon: 'Palette'
   },
   {
     step: 4,
-    title: 'Build & Ship Iterations',
-    description: 'Two-week sprints with a working preview URL after every sprint. You test on real devices throughout — not just at the end.',
-    duration: '4–10 weeks',
-    deliverables: ['Working preview per sprint', 'Sprint review call', 'Weekly progress report', 'GitHub access'],
+    title: 'Build & Review',
+    description: 'I build the website and share a live preview link. You review on your phone and laptop and give feedback. Two revision rounds are included.',
+    duration: '1–3 weeks',
+    deliverables: ['Live preview link', 'Mobile + desktop review', 'Two revision rounds', 'Progress updates via WhatsApp'],
     icon: 'Code'
   },
   {
     step: 5,
-    title: 'QA & Hardening',
-    description: 'Full test suite, accessibility audit, performance profiling, and security review. We fix every issue before the production deploy.',
-    duration: '1 week',
-    deliverables: ['Jest test coverage report', 'Lighthouse scores', 'Security audit report', 'Cross-device test matrix'],
-    icon: 'Shield'
-  },
-  {
-    step: 6,
     title: 'Launch & Handover',
-    description: 'Production deploy with zero downtime. Full handover package so your team owns the product from day one.',
-    duration: '2–3 days',
-    deliverables: ['Production deployment', 'Admin training session', 'Full documentation', '30-day support included'],
+    description: 'Your site goes live on your domain. I hand over all logins, show you how to manage content, and stay available for 2 weeks post-launch for any questions.',
+    duration: '1–2 days',
+    deliverables: ['Live on your domain', 'All login credentials', 'Basic training on managing content', '2-week support window'],
     icon: 'Rocket'
   }
 ];
+
+const IconMap: Record<string, React.ElementType> = {
+  Phone,
+  FileText,
+  Palette,
+  Code,
+  Rocket
+};
 
 export default function HowWeBuild() {
   const [activeSteps, setActiveSteps] = useState<number[]>([]);
@@ -88,13 +89,13 @@ export default function HowWeBuild() {
         {/* Header */}
         <div className="text-center mb-20">
           <span className="block text-[#b5ff3e] text-[length:var(--text-xs)] uppercase tracking-widest mb-3">
-            Our Process
+            How I Work
           </span>
           <h2 className="font-[family-name:var(--font-display)] font-bold text-[#e8e8f0] text-[length:var(--text-xl)]">
-            From Discovery to Deploy in 6 Steps
+            From First Call to Live Website in 5 Steps
           </h2>
           <p className="font-[family-name:var(--font-body)] text-[#8888a0] mt-3 max-w-2xl mx-auto leading-relaxed">
-            A battle-tested process used across 48+ product builds.
+            A simple, transparent process — no jargon, no surprises.
           </p>
         </div>
 
@@ -132,9 +133,16 @@ export default function HowWeBuild() {
                   }`}
                 >
                   <div className="bg-[#0a0a0a] border border-white/[0.08] rounded-xl p-6 w-full max-w-[480px] hover:border-[#b5ff3e]/[0.18] transition-colors duration-300">
-                    <span className="text-[#66667a] text-[length:var(--text-xs)] uppercase tracking-widest">
-                      Step 0{step.step}
-                    </span>
+                    <div className="flex items-center justify-between mb-4">
+                      <span className="text-[#66667a] text-[length:var(--text-xs)] uppercase tracking-widest">
+                        Step 0{step.step}
+                      </span>
+                      {IconMap[step.icon] && (
+                        <div className="text-[#b5ff3e]/40">
+                          {React.createElement(IconMap[step.icon], { size: 18 })}
+                        </div>
+                      )}
+                    </div>
                     <h3 className="font-[family-name:var(--font-display)] font-semibold text-[#e8e8f0] text-[length:var(--text-base)] mt-1">
                       {step.title}
                     </h3>

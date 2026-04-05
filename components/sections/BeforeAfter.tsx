@@ -7,13 +7,13 @@ import Image from 'next/image';
 const imagePairs = [
   {
     id: 1,
-    source: 'https://images.unsplash.com/photo-1584552190146-5251361793ce?q=80&w=800&auto=format&fit=crop',
+    source: 'https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?q=80&w=800&auto=format&fit=crop',
     generated: 'https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?q=80&w=800&auto=format&fit=crop',
     alt: 'AI generated banner image for home furnishing brand India'
   },
   {
     id: 2,
-    source: 'https://images.unsplash.com/photo-1580828326061-4b1c85352e80?q=80&w=800&auto=format&fit=crop',
+    source: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?q=80&w=800&auto=format&fit=crop',
     generated: 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?q=80&w=800&auto=format&fit=crop',
     alt: 'sofa fabric banner image generation India'
   },
