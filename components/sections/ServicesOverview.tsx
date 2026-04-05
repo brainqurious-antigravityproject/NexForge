@@ -93,7 +93,7 @@ function FeaturedServiceCard({ service }: { service: Service }) {
       ref={revealRef as any}
       className="md:col-span-2 bg-[#0a0a0a] border border-[#b5ff3e]/[0.18] rounded-2xl p-8 flex flex-col lg:flex-row gap-8 anim-reveal card-hover"
     >
-      <div className="flex-1 flex flex-col">
+      <div className="flex flex-col">
         <div className="w-10 h-10 bg-[#b5ff3e]/[0.08] rounded-lg flex items-center justify-center mb-4">
           <span className="text-[#b5ff3e] text-[length:var(--text-xs)] font-mono">{service.icon}</span>
         </div>
@@ -125,21 +125,6 @@ function FeaturedServiceCard({ service }: { service: Service }) {
             View Details →
           </Link>
         </div>
-      </div>
-      
-      {/* Code Mockup Column */}
-      <div className="hidden lg:flex flex-1 items-center justify-center">
-        <pre className="bg-[#111111] text-[#b5ff3e] text-[length:var(--text-xs)] p-6 rounded-xl border border-white/[0.05] w-full overflow-x-auto">
-          <code>
-{`model Tenant {
-  id        String   @id @default(cuid())
-  name      String
-  tier      PlanTier @default(STARTER)
-  users     User[]
-  createdAt DateTime @default(now())
-}`}
-          </code>
-        </pre>
       </div>
     </div>
   );

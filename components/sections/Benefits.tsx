@@ -3,65 +3,86 @@
 import React, { useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { Benefit } from '@/types';
+import { 
+  IndianRupee, 
+  Zap, 
+  Key, 
+  Languages, 
+  Server, 
+  User, 
+  Headphones, 
+  Sparkles 
+} from 'lucide-react';
 
 const benefits: Benefit[] = [
   {
-    id: 'domain',
-    icon: 'Factory',
-    title: 'Textile Industry DNA',
-    description: 'We have spent 4+ years building exclusively for the textile industry. We know the difference between a warp and weft — and more importantly, we understand your buyer relationships, ERP constraints, and margin pressures.',
-    stat: { value: '48+', label: 'textile products shipped' }
-  },
-  {
-    id: 'senior',
-    icon: 'Award',
-    title: 'Senior Engineers Only',
-    description: 'Every project is led by a senior full-stack engineer with 6+ years of experience. We do not use junior developers on client work. The person scoping your project is the person building it.',
-    stat: { value: '6+ yrs', label: 'avg. engineer experience' }
+    id: 'cost-honest',
+    icon: 'IndianRupee',
+    title: 'Transparent Pricing. No Surprises.',
+    description: 'Every project gets a clear written quote before work starts. The price you see is the price you pay — no hidden revisions charges, no scope creep invoices, no GST added on top because I am below the registration threshold. What I quote is the final amount.',
+    stat: { value: '₹0', label: 'hidden charges, ever' }
   },
   {
     id: 'speed',
     icon: 'Zap',
-    title: 'Ship in Weeks, Not Months',
-    description: 'Our opinionated tech stack, pre-built patterns, and battle-tested boilerplate means we write less boilerplate and more product. Your first working deploy happens in week 6, not month 6.',
-    stat: { value: '6 wks', label: 'avg. first deploy' }
-  },
-  {
-    id: 'fixed',
-    icon: 'Lock',
-    title: 'Fixed-Price Contracts',
-    description: 'We scope before we quote. Once agreed, the price does not change unless the scope changes. No surprise invoices, no hourly billing ambiguity.',
-    stat: undefined
-  },
-  {
-    id: 'transparent',
-    icon: 'GitBranch',
-    title: 'Full Transparency',
-    description: 'You get GitHub access from day one. Every commit, every PR, every deployment is visible to you. We write a weekly progress update every Friday without exception.',
-    stat: undefined
+    title: 'First Delivery in 3 Weeks or Less',
+    description: 'Most projects deliver a working first version in 2–3 weeks. I use pre-built components, modern frameworks, and AI-assisted development to move fast — without cutting corners on quality.',
+    stat: { value: '3 wks', label: 'average first delivery' }
   },
   {
     id: 'ownership',
     icon: 'Key',
-    title: '100% IP Ownership',
-    description: 'Every line of code, every design file, every database schema — it is yours from day one. No licence fees, no lock-in, no "we own the platform" clauses.',
+    title: '100% Ownership From Day One',
+    description: 'Every file, every image, every line of code is yours the moment it is delivered. No platform lock-in. No recurring "licence fees". No "we host it so we own it" clauses. Full transfer, always.',
+    stat: undefined
+  },
+  {
+    id: 'multilingual',
+    icon: 'Languages',
+    title: 'Builds That Work for Indian Audiences',
+    description: 'Chatbots in Hindi, Hinglish, and English. Forms that accept Indian phone numbers. Pricing in INR. WhatsApp integration as standard. Everything is built for how Indian businesses and their customers actually operate.',
+    stat: undefined
+  },
+  {
+    id: 'zero-hosting',
+    icon: 'Server',
+    title: 'Near-Zero Hosting Cost for Custom Sites',
+    description: 'Custom websites I build are deployed on Vercel — which is free for the traffic levels most small and medium businesses see. You pay for the domain, not for hosting. That is a saving most web developers will not tell you about.',
+    stat: { value: '₹0/mo', label: 'hosting for custom sites' }
+  },
+  {
+    id: 'single-contact',
+    icon: 'User',
+    title: 'One Person. Full Accountability.',
+    description: 'There is no project manager between you and the person building your website. You communicate directly with me. Every decision, every update, every question — handled by the same person who wrote your code.',
     stat: undefined
   },
   {
     id: 'support',
     icon: 'Headphones',
-    title: '30 Days Post-Launch Support',
-    description: 'We do not disappear after deploy. 30 days of bug fixes, minor adjustments, and handover support is included in every project. No extra charge.',
+    title: '2-Week Post-Launch Support Included',
+    description: 'After your site goes live, I stay available for 2 weeks to fix any bugs, make small adjustments, and help you get comfortable managing the platform. No extra charge for this period.',
     stat: undefined
   },
   {
-    id: 'retention',
-    icon: 'RefreshCw',
-    title: 'Clients Come Back',
-    description: 'Our 94% client retention rate is not a marketing claim — it comes from clients returning for their second, third, and fourth products. We build things that last.',
-    stat: { value: '94%', label: 'client retention rate' }
+    id: 'ai-advantage',
+    icon: 'Sparkles',
+    title: 'AI-Native Builds',
+    description: 'Every project I scope considers where AI can make your business faster — whether that is an automated chatbot, AI-generated product images, or smart form routing. You get modern technology at freelancer pricing.',
+    stat: undefined
   }
 ];
+
+const IconMap: Record<string, React.ElementType> = {
+  IndianRupee,
+  Zap,
+  Key,
+  Languages,
+  Server,
+  User,
+  Headphones,
+  Sparkles
+};
 
 export default function Benefits() {
   const sectionRef = useRef<HTMLElement>(null);
@@ -96,13 +117,13 @@ export default function Benefits() {
         {/* Header */}
         <div className="mb-16">
           <span className="block text-[#b5ff3e] text-[length:var(--text-xs)] uppercase tracking-widest mb-3">
-            Why Work With Us
+            Why Work With Me
           </span>
           <h2 className="font-[family-name:var(--font-display)] font-bold text-[#e8e8f0] text-[length:var(--text-xl)]">
-            Built Different, By Design
+            Freelancer Speed. Professional Quality.
           </h2>
           <p className="font-[family-name:var(--font-body)] text-[#8888a0] mt-3 max-w-2xl leading-relaxed">
-            Eight reasons why 94% of our clients come back for their next product.
+            Eight reasons Indian business owners choose to work with me over expensive agencies and unreliable freelancers.
           </p>
         </div>
 
@@ -119,7 +140,11 @@ export default function Benefits() {
               style={{ transitionDelay: `${index * 100}ms` }}
             >
               <div className="w-10 h-10 bg-[#b5ff3e]/[0.08] rounded-lg flex items-center justify-center mb-6">
-                <span className="text-[#b5ff3e] text-[10px] font-mono">{benefit.icon}</span>
+                {IconMap[benefit.icon] ? (
+                  React.createElement(IconMap[benefit.icon], { size: 20, className: "text-[#b5ff3e]" })
+                ) : (
+                  <span className="text-[#b5ff3e] text-[10px] font-mono">{benefit.icon}</span>
+                )}
               </div>
               <h3 className="font-[family-name:var(--font-display)] font-semibold text-[#e8e8f0] text-xl mb-3">
                 {benefit.title}
@@ -150,7 +175,11 @@ export default function Benefits() {
               style={{ transitionDelay: `${(index + 2) * 100}ms` }}
             >
               <div className="w-10 h-10 bg-[#b5ff3e]/[0.08] rounded-lg flex items-center justify-center mb-5">
-                <span className="text-[#b5ff3e] text-[10px] font-mono">{benefit.icon}</span>
+                {IconMap[benefit.icon] ? (
+                  React.createElement(IconMap[benefit.icon], { size: 18, className: "text-[#b5ff3e]" })
+                ) : (
+                  <span className="text-[#b5ff3e] text-[10px] font-mono">{benefit.icon}</span>
+                )}
               </div>
               <h3 className="font-[family-name:var(--font-display)] font-semibold text-[#e8e8f0] text-lg mb-2">
                 {benefit.title}
