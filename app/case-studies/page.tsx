@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'Case Studies — Real Projects by Sitecraf',
-    description: '6 projects across security, fashion, healthcare, AI nutrition, and portfolio — built by Sitecraf, New Delhi.',
+    description: '25+ projects across security, fashion, healthcare, AI nutrition, and portfolio — built by Sitecraf, New Delhi.',
     type: 'website',
     locale: 'en_IN',
   },
@@ -45,7 +45,7 @@ export default function CaseStudiesPage() {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               <div className="flex flex-col">
                 <span className="text-[#b5ff3e] font-bold text-2xl font-[family-name:var(--font-display)]">6 Projects</span>
-                <span className="text-[#8888a0] text-xs uppercase tracking-widest mt-1">Showcased</span>
+                <span className="text-[#8888a0] text-xs uppercase tracking-widest mt-1">Delivered</span>
               </div>
               <div className="flex flex-col">
                 <span className="text-[#b5ff3e] font-bold text-2xl font-[family-name:var(--font-display)]">5 Industries</span>
