@@ -29,7 +29,7 @@ export default function Chatbot() {
       {/* Chat Toggle Button */}
       <button
         onClick={() => setIsOpen(true)}
-        className={`fixed bottom-6 right-6 z-50 bg-[#111111] border border-dotted border-[#b5ff3e] p-1.5 rounded-full shadow-2xl hover:scale-105 active:scale-95 transition-transform duration-300 items-center gap-2 ${isOpen ? 'hidden' : 'flex'}`}
+        className={`fixed bottom-6 right-6 z-50 bg-[#111111] border border-dashed border-[#b5ff3e] p-1.5 rounded-full shadow-2xl hover:scale-105 active:scale-95 transition-transform duration-300 items-center gap-2 ${isOpen ? 'hidden' : 'flex'}`}
         aria-label="Open Chat"
       >
         {/* Avatar Icon */}
