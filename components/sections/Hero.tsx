@@ -15,14 +15,14 @@ const ParticleSphere = dynamic(
 
 const defaultProps: HeroProps = {
   badge: "Website · AI Chatbot · Image Generation · Automation",
-  headline: "We Build Websites & AI Tools That Grow Your Business",
-  highlightWord: "Grow",
-  subheadline: "Custom websites, platform migrations, AI chatbots, and image generation — built for Indian B2B brands that want a professional online presence without paying agency prices.",
+  headline: "Professional Website Development Company in Delhi",
+  highlightWord: "Delhi",
+  subheadline: "From WordPress and Shopify to custom Next.js solutions — we design, develop, and launch fast, mobile-optimised, SEO and AEO-ready websites for businesses across every industry. Transparent pricing. Full ownership. No agency overhead.",
   ctaPrimary: { label: "See Our Work →", href: "#case-studies" },
   ctaSecondary: { label: "Get a Free Quote", href: "#contact" },
   stats: [
     { value: "10+", label: "Projects Delivered" },
-    { value: "3 Wks", label: "Avg. First Delivery" },
+    { value: "2 Wks", label: "Avg. First Delivery" },
     { value: "100%", label: "IP Ownership Yours" },
     { value: "₹0", label: "Hidden Charges" }
   ]
