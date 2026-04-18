@@ -36,10 +36,6 @@ export interface Service {
   icon: string;
   isHighlighted?: boolean;
   isFeatured?: boolean;
-  hostingNote?: {
-    label: string;
-    points: string[];
-  };
 }
 
 // ─── Process Steps ───────────────────────────────────────
@@ -88,16 +84,12 @@ export interface Benefit {
 // ─── Testimonials ────────────────────────────────────────
 export interface Testimonial {
   id: string;
-  author: string;
+  quote: string;
+  name: string;
   role: string;
   company: string;
-  industry: string;
-  quote: string;
-  rating: 1 | 2 | 3 | 4 | 5;
-  projectType: ServiceCategory;
-  avatarInitials: string;
-  avatarColor: string;
-  isHighlighted?: boolean;
+  location: string;
+  projectType: string;
 }
 
 // ─── FAQ ─────────────────────────────────────────────────

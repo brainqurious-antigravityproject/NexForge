@@ -21,17 +21,7 @@ const services: Service[] = [
     timeline: '2–4 weeks',
     startingPrice: 'From ₹12,000',
     icon: 'Layout',
-    isHighlighted: true,
-    hostingNote: {
-      label: "Web Hosting & Managed Servers",
-      points: [
-        "Managed hosting on Hostinger, SiteGround, or AWS",
-        "99.9% uptime SLA with daily backups",
-        "SSL, CDN, and security hardening included",
-        "Server setup, migration, and ongoing management",
-        "Shared hosting from ₹3,000/yr to VPS and dedicated servers"
-      ]
-    }
+    isHighlighted: true
   },
   {
     id: 'custom-website',
@@ -107,25 +97,6 @@ function FeaturedServiceCard({ service }: { service: Service }) {
           ))}
         </div>
 
-        {service.hostingNote && (
-          <>
-            <hr className="hosting-divider" />
-            <div className="hosting-note">
-              <p className="hosting-label">
-                {service.hostingNote.label}
-              </p>
-              <ul className="hosting-points">
-                {service.hostingNote.points.map((point, idx) => (
-                  <li key={idx} className="hosting-point">
-                    <span className="hosting-dot" aria-hidden="true">•</span>
-                    <span>{point}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </>
-        )}
-
         <div className="mt-auto pt-6 flex items-center justify-between">
           <div className="flex flex-col gap-1">
             <span className="text-[#66667a] text-[length:var(--text-xs)]">Timeline: {service.timeline}</span>
@@ -174,25 +145,6 @@ function RegularServiceCard({ service }: { service: Service }) {
           </div>
         )}
       </div>
-
-      {service.hostingNote && (
-        <>
-          <hr className="hosting-divider" />
-          <div className="hosting-note">
-            <p className="hosting-label">
-              {service.hostingNote.label}
-            </p>
-            <ul className="hosting-points">
-              {service.hostingNote.points.map((point, idx) => (
-                <li key={idx} className="hosting-point">
-                  <span className="hosting-dot" aria-hidden="true">•</span>
-                  <span>{point}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </>
-      )}
 
       <div className="flex justify-between mt-5 pt-4 border-t border-white/[0.05] text-[#66667a] text-[length:var(--text-xs)]">
         <span>{service.timeline}</span>

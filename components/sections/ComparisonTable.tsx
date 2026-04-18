@@ -55,13 +55,6 @@ const rows: ComparisonRow[] = [
     largeAgency: false
   },
   {
-    feature: 'Web hosting & server management',
-    sitecraf: true,
-    freelancer: false,
-    inHouse: false,
-    largeAgency: true
-  },
-  {
     feature: 'Typical project cost',
     sitecraf: '₹12K–₹80K+',
     freelancer: '₹5K–₹25K',
