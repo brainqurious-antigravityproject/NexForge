@@ -67,6 +67,21 @@ const services: Service[] = [
     timeline: 'Add-on: 3–7 days',
     startingPrice: 'From ₹8,000',
     icon: 'Zap'
+  },
+  {
+    id: 'ai-images',
+    title: 'AI Image Generation',
+    description: 'Studio-quality product photos and lifestyle visuals generated from your raw images. Perfect for website banners and social media without a professional shoot.',
+    category: 'ai-integration',
+    features: [
+      'Lifestyle backgrounds & settings',
+      'High-resolution WebP exports',
+      'Brand-consistent visual style',
+      'Batch processing for catalogs'
+    ],
+    timeline: '2–5 days',
+    startingPrice: 'From ₹5,000',
+    icon: 'Camera'
   }
 ];
 
