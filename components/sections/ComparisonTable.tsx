@@ -5,16 +5,83 @@ import { ComparisonRow } from '@/types';
 import { useScrollReveal } from '@/hooks/useScrollReveal';
 
 const rows: ComparisonRow[] = [
-  { feature: 'Time to first working website', sitecraf: '2–3 weeks', freelancer: '4–10 weeks', inHouse: '1–2 weeks', largeAgency: '6–12 weeks' },
-  { feature: 'Fixed-price quote upfront', sitecraf: true, freelancer: false, inHouse: false, largeAgency: false },
-  { feature: 'Mobile-first & SEO optimised', sitecraf: true, freelancer: false, inHouse: false, largeAgency: true },
-  { feature: 'AI chatbot available as add-on', sitecraf: true, freelancer: false, inHouse: false, largeAgency: true },
-  { feature: 'AI image generation for your site', sitecraf: true, freelancer: false, inHouse: false, largeAgency: false },
-  { feature: '100% code & content ownership', sitecraf: true, freelancer: true, inHouse: true, largeAgency: false },
-  { feature: 'Post-launch support included', sitecraf: '2 weeks', freelancer: false, inHouse: true, largeAgency: '₹ extra' },
-  { feature: 'Custom booking / calendar flow', sitecraf: true, freelancer: false, inHouse: false, largeAgency: true },
-  { feature: 'Hindi / Hinglish chatbot capable', sitecraf: true, freelancer: false, inHouse: false, largeAgency: false },
-  { feature: 'Typical project cost', sitecraf: '₹15K–₹60K', freelancer: '₹5K–₹20K', inHouse: '₹500–₹5K/mo', largeAgency: '₹1L–₹5L+' }
+  {
+    feature: 'Time to first working website',
+    sitecraf: '2–3 weeks',
+    freelancer: '4–10 weeks',
+    inHouse: '1–2 weeks',
+    largeAgency: '6–12 weeks'
+  },
+  {
+    feature: 'Fixed-price quote upfront',
+    sitecraf: true,
+    freelancer: false,
+    inHouse: false,
+    largeAgency: false
+  },
+  {
+    feature: 'Mobile-first, SEO & AEO optimised',
+    sitecraf: true,
+    freelancer: false,
+    inHouse: false,
+    largeAgency: true
+  },
+  {
+    feature: 'WordPress, Shopify, Wix, Webflow & Next.js',
+    sitecraf: true,
+    freelancer: false,
+    inHouse: false,
+    largeAgency: true
+  },
+  {
+    feature: 'AI chatbot available as add-on',
+    sitecraf: true,
+    freelancer: false,
+    inHouse: false,
+    largeAgency: true
+  },
+  {
+    feature: 'AI image generation for your site',
+    sitecraf: true,
+    freelancer: false,
+    inHouse: false,
+    largeAgency: false
+  },
+  {
+    feature: '100% code & asset ownership',
+    sitecraf: true,
+    freelancer: false,
+    inHouse: true,
+    largeAgency: false
+  },
+  {
+    feature: 'Web hosting & server management',
+    sitecraf: true,
+    freelancer: false,
+    inHouse: false,
+    largeAgency: true
+  },
+  {
+    feature: 'Typical project cost',
+    sitecraf: '₹12K–₹80K+',
+    freelancer: '₹5K–₹25K',
+    inHouse: '₹40K–₹2L+',
+    largeAgency: '₹80K–₹5L+'
+  },
+  {
+    feature: 'Post-launch support included',
+    sitecraf: true,
+    freelancer: false,
+    inHouse: true,
+    largeAgency: false
+  },
+  {
+    feature: 'WhatsApp & CRM integrations',
+    sitecraf: true,
+    freelancer: false,
+    inHouse: false,
+    largeAgency: true
+  },
 ];
 
 const renderCellContent = (value: string | boolean) => {
@@ -67,10 +134,10 @@ export default function ComparisonTable() {
             Why Sitecraf
           </span>
           <h2 className="font-[family-name:var(--font-display)] font-bold text-[#e8e8f0] text-[length:var(--text-xl)]">
-            How I Compare
+            Sitecraf vs Freelancer vs In-House vs Agency
           </h2>
           <p className="font-[family-name:var(--font-body)] text-[#8888a0] mt-3 max-w-2xl leading-relaxed">
-            An honest breakdown so you can make the right choice for your business and budget.
+            Every option has trade-offs. Here is an honest comparison — so you can choose what actually fits your business, budget, and timeline.
           </p>
         </div>
 

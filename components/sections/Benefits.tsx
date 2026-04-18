@@ -19,56 +19,56 @@ const benefits: Benefit[] = [
     id: 'cost-honest',
     icon: 'IndianRupee',
     title: 'Transparent Pricing. No Surprises.',
-    description: 'Every project gets a clear written quote before work starts. The price you see is the price you pay — no hidden revisions charges, no scope creep invoices, no GST added on top because I am below the registration threshold. What I quote is the final amount.',
+    description: 'Every project gets a clear written quote before work starts. The price you see is the price you pay — no hidden revision charges, no scope creep invoices. What we quote is the final amount, regardless of platform or project type.',
     stat: { value: '₹0', label: 'hidden charges, ever' }
   },
   {
     id: 'speed',
     icon: 'Zap',
     title: 'First Delivery in 3 Weeks or Less',
-    description: 'Most projects deliver a working first version in 2–3 weeks. I use pre-built components, modern frameworks, and AI-assisted development to move fast — without cutting corners on quality.',
+    description: 'Most projects deliver a working first version in 2–3 weeks. We use pre-built components, modern frameworks, and AI-assisted development to move fast — without cutting corners on quality, whether it is WordPress, Shopify, or custom Next.js.',
     stat: { value: '3 wks', label: 'average first delivery' }
   },
   {
     id: 'ownership',
     icon: 'Key',
     title: '100% Ownership From Day One',
-    description: 'Every file, every image, every line of code is yours the moment it is delivered. No platform lock-in. No recurring "licence fees". No "we host it so we own it" clauses. Full transfer, always.',
+    description: 'Every file, every image, every line of code is yours the moment it is delivered. No platform lock-in. No recurring licence fees. No "we host it so we own it" clauses. Full transfer, always — on every platform we build.',
     stat: undefined
   },
   {
     id: 'multilingual',
     icon: 'Languages',
-    title: 'Builds That Work for Indian Audiences',
-    description: 'Chatbots in Hindi, Hinglish, and English. Forms that accept Indian phone numbers. Pricing in INR. WhatsApp integration as standard. Everything is built for how Indian businesses and their customers actually operate.',
+    title: 'Built for Indian Businesses — Local & Global',
+    description: 'Chatbots in Hindi, Hinglish, and English. Forms that work on slow connections. WhatsApp integration as standard. Pricing in INR. Built for how Indian businesses and their customers actually operate — whether you serve a local market or customers abroad.',
     stat: undefined
   },
   {
     id: 'zero-hosting',
     icon: 'Server',
-    title: 'Near-Zero Hosting Cost for Custom Sites',
-    description: 'Custom websites I build are deployed on Vercel — which is free for the traffic levels most small and medium businesses see. You pay for the domain, not for hosting. That is a saving most web developers will not tell you about.',
+    title: 'Right Platform. Right Cost.',
+    description: 'We match the platform to your goals — not to our preferred stack. WordPress for SEO-driven sites, Shopify for stores, Wix Studio for fast editable builds, custom Next.js for performance-critical projects. No over-engineering, no unnecessary costs.',
     stat: { value: '₹0/mo', label: 'hosting for custom sites' }
   },
   {
     id: 'single-contact',
     icon: 'User',
-    title: 'One Person. Full Accountability.',
-    description: 'There is no project manager between you and the person building your website. You communicate directly with me. Every decision, every update, every question — handled by the same person who wrote your code.',
+    title: 'One Team. Full Accountability.',
+    description: 'There is no project manager between you and the people building your website. You communicate directly with us. Every decision, every update, every question — handled by the same team that wrote your code and designed your site.',
     stat: undefined
   },
   {
     id: 'support',
     icon: 'Headphones',
     title: '2-Week Post-Launch Support Included',
-    description: 'After your site goes live, I stay available for 2 weeks to fix any bugs, make small adjustments, and help you get comfortable managing the platform. No extra charge for this period.',
+    description: 'After your site goes live, we stay available for 2 weeks to fix any bugs, make small adjustments, and help you get comfortable managing the platform — whether that is WordPress, Shopify, or any other. No extra charge for this period.',
     stat: undefined
   },
   {
     id: 'ai-advantage',
     icon: 'Sparkles',
-    title: 'AI-Native Builds',
-    description: 'Every project I scope considers where AI can make your business faster — whether that is an automated chatbot, AI-generated product images, or smart form routing. You get modern technology at freelancer pricing.',
+    title: 'SEO, AEO & Performance Built In',
+    description: 'Every website we deliver is mobile-first, fast-loading, and structured for both search engines and answer engines. SEO and AEO are not add-ons — they are part of how we build, from page structure and metadata to Core Web Vitals and schema markup.',
     stat: undefined
   }
 ];
@@ -117,13 +117,13 @@ export default function Benefits() {
         {/* Header */}
         <div className="mb-16">
           <span className="block text-[#b5ff3e] text-[length:var(--text-xs)] uppercase tracking-widest mb-3">
-            Why Work With Me
+            Why Work With Us
           </span>
           <h2 className="font-[family-name:var(--font-display)] font-bold text-[#e8e8f0] text-[length:var(--text-xl)]">
-            Freelancer Speed. Professional Quality.
+            Why Businesses Choose Sitecraf
           </h2>
           <p className="font-[family-name:var(--font-body)] text-[#8888a0] mt-3 max-w-2xl leading-relaxed">
-            Eight reasons Indian business owners choose to work with me over expensive agencies and unreliable freelancers.
+            Every promise below applies regardless of which platform you choose or which industry you are in.
           </p>
         </div>
 

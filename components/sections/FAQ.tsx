@@ -9,49 +9,49 @@ const faqItems: FaqItem[] = [
   {
     id: '1',
     question: 'Do I need to be a large business to work with you?',
-    answer: 'Not at all. I work with small and medium-sized Indian businesses — local service providers, manufacturers, exporters, and D2C brands. Whether you need a simple ₹15,000 showcase website or a ₹60,000 custom build with chatbot, I have an option for your budget.',
+    answer: 'Not at all. We work with small and medium-sized Indian businesses — local service providers, manufacturers, exporters, and D2C brands. Whether you need a simple ₹12,000 showcase website on Wix Studio or a ₹60,000+ custom Next.js build with chatbot, we have an option for your budget and your platform.',
     category: 'process'
   },
   {
     id: '2',
-    question: 'My business is already on Shopify. Should I move to Wix Studio?',
-    answer: 'If you are using Shopify only to showcase your products and not actively selling online, then yes — Wix Studio can do everything your site currently does at ₹450/month vs ₹2,000+/month. I handle the migration and preserve your entire design. If you are actively selling through Shopify, then staying on Shopify makes more sense.',
-    category: 'pricing'
+    question: 'Which platform should I choose — WordPress, Shopify, Wix, or custom?',
+    answer: 'It depends entirely on what your business needs. WordPress is best for SEO-driven content sites and service businesses. Shopify is best for online stores and D2C brands selling products. Wix Studio is best for fast, editable business websites. Custom Next.js is best when you need maximum performance, custom features, or AEO-first structure. We recommend the right platform after understanding your goals — not based on which one earns us more.',
+    category: 'process'
   },
   {
     id: '3',
     question: 'Can you add an AI chatbot to my existing website?',
-    answer: 'Yes. If your website is on Shopify, Wix, or is a custom-coded site, I can add a chatbot that answers your visitor queries in Hindi, Hinglish, or English — trained on your product details, pricing, and FAQs. It captures leads even at 2am when you are offline.',
+    answer: 'Yes. If your website is on WordPress, Shopify, Wix, or is a custom-coded site, we can add a chatbot that answers your visitor queries in Hindi, Hinglish, or English — trained on your product details, pricing, and FAQs. It captures leads even at 2am when your team is offline.',
     category: 'tech'
   },
   {
     id: '4',
-    question: 'I need product images for my website but don\'t have a photographer. What can you do?',
-    answer: 'I can generate studio-quality product images and website banners using AI — from just your raw product photographs. I have generated 400+ images for home furnishing and fabric brands. Pricing is per-batch and significantly cheaper than a studio photoshoot.',
+    question: 'What is AEO and why does it matter for my website?',
+    answer: 'AEO stands for Answer Engine Optimization — the practice of structuring your website so that AI tools like ChatGPT, Perplexity, Google AI Overviews, and voice assistants can find, understand, and cite your business as a direct answer. As more people search through AI rather than traditional search, AEO ensures your website is visible in that new layer of discovery. We build AEO-ready structure into every project — schema markup, clear question-and-answer content, and structured data that answer engines can parse.',
     category: 'tech'
   },
   {
     id: '5',
-    question: 'Do you charge GST on your invoices?',
-    answer: 'No. I am currently below the GST registration threshold, which means there is no GST added to your invoice. The price I quote is the final amount you pay — no additional tax, no hidden charges.',
-    category: 'pricing'
+    question: 'I need product images but do not have a photographer. What can you do?',
+    answer: 'We can generate studio-quality product images and website banners using AI — from just your raw product photographs. We have generated 400+ images for home furnishing, fabric, and consumer product brands. Pricing is per-batch and significantly cheaper than a studio photoshoot.',
+    category: 'tech'
   },
   {
     id: '6',
     question: 'How much does a website cost?',
-    answer: 'Platform websites (Wix Studio / Shopify) start from ₹15,000. Custom coded websites start from ₹20,000. Add-ons like AI chatbot start from ₹12,000 and AI image generation from ₹5,000 per batch. All prices are fixed and quoted upfront — no surprises.',
+    answer: 'Wix Studio websites start from ₹10,000. WordPress websites start from ₹12,000. Shopify stores start from ₹18,000. Webflow sites start from ₹20,000. Custom Next.js websites start from ₹22,000. Add-ons like AI chatbot start from ₹12,000 and AI image generation from ₹5,000 per batch. All prices are fixed and quoted upfront — no surprises, no GST added on top.',
     category: 'pricing'
   },
   {
     id: '7',
     question: 'Who will I be communicating with during the project?',
-    answer: 'Directly with me — the person who is building your website. There is no account manager or middleman. You can reach me on WhatsApp, email, or call. Most project updates happen on WhatsApp because that is what works best for Indian clients.',
+    answer: 'Directly with our team — the people building your website. There is no account manager or middleman. You can reach us on WhatsApp, email, or call. Most project updates happen on WhatsApp because that is what works best for Indian clients.',
     category: 'process'
   },
   {
     id: '8',
     question: 'What if I need changes after the website launches?',
-    answer: 'Two weeks of post-launch support is included in every project at no extra cost. After that, I am available for changes on an hourly or per-task basis. Maintenance retainer packages are also available if you need ongoing updates.',
+    answer: 'Two weeks of post-launch support is included in every project at no extra cost — regardless of platform. After that, we are available for changes on an hourly or per-task basis. Maintenance retainer packages are also available if you need ongoing updates, content changes, or security management.',
     category: 'support'
   }
 ];
@@ -138,7 +138,7 @@ export default function FAQ() {
             Your Questions, Answered Honestly
           </h2>
           <p className="font-[family-name:var(--font-body)] text-[#8888a0] mt-4 leading-relaxed">
-            No fluff. No vague agency answers.
+            Plain answers on platforms, pricing, AEO, and what to expect when you work with us.
           </p>
         </div>
 

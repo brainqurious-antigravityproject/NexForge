@@ -7,6 +7,7 @@ import CaseStudies from '@/components/sections/CaseStudies';
 import BeforeAfter from '@/components/sections/BeforeAfter';
 import Benefits from '@/components/sections/Benefits';
 import HowWeBuild from '@/components/sections/HowWeBuild';
+import HostingSection from '@/components/sections/HostingSection';
 import ComparisonTable from '@/components/sections/ComparisonTable';
 import Testimonials from '@/components/sections/Testimonials';
 import FAQ from '@/components/sections/FAQ';
@@ -24,6 +25,7 @@ export default function Home() {
       <BeforeAfter />
       <Benefits />
       <HowWeBuild />
+      <HostingSection />
       <ComparisonTable />
       <Testimonials />
       <FAQ />

@@ -5,9 +5,9 @@ import Link from 'next/link';
 
 const posts = [
   {
-    slug: "shopify-vs-wix-studio-for-b2b-brands",
-    title: "Shopify vs Wix Studio for B2B Brands: Which One Actually Saves You Money?",
-    excerpt: "If you only need a professional catalogue website, Shopify may be costing you far more than necessary. Here's when Wix Studio is the smarter move.",
+    slug: "shopify-vs-wix-studio-for-indian-businesses",
+    title: "Shopify vs Wix Studio for Indian Businesses: Which One Actually Saves You Money?",
+    excerpt: "If you only need a professional catalogue website, Shopify may be costing you far more than necessary. Here is when Wix Studio is the smarter move for Indian service businesses and B2B brands.",
     category: "Platforms",
     readTime: "6 min read",
     date: "April 2026",
@@ -29,83 +29,59 @@ const posts = [
     image: "https://picsum.photos/seed/smallbizseo/800/600"
   },
   {
-    slug: "what-is-generative-engine-optimization",
-    title: "What Is GEO? A Straightforward Guide for Business Owners",
-    excerpt: "Search is changing. This guide explains generative engine optimization in plain English and how to make your website easier for AI engines to trust.",
-    category: "GEO",
+    slug: "what-is-aeo-answer-engine-optimization",
+    title: "What Is AEO? A Straightforward Guide for Business Owners",
+    excerpt: "Search is changing. This guide explains Answer Engine Optimization in plain English and how to make your website easier for AI tools like ChatGPT, Perplexity, and Google AI Overviews to find and cite your business.",
+    category: "AEO",
     readTime: "5 min read",
     date: "April 2026",
     featured: false,
-    seoTag: "GEO",
+    seoTag: "AEO",
     author: "Sitecraf",
-    image: "https://picsum.photos/seed/geoai/800/600"
+    image: "https://picsum.photos/seed/aeoguide/800/600"
   },
   {
     slug: "when-an-ai-chatbot-is-worth-it",
     title: "When an AI Chatbot Is Actually Worth It for a Small Business",
-    excerpt: "Not every business needs a chatbot. But if you lose leads after business hours, it can quietly become your best salesperson.",
-    category: "AI Chatbots",
-    readTime: "6 min read",
-    date: "April 2026",
-    featured: false,
-    seoTag: "Leads",
-    author: "Sitecraf",
-    image: "https://picsum.photos/seed/chatbotlead/800/600"
-  },
-  {
-    slug: "custom-coded-vs-template-websites",
-    title: "Custom-Coded vs Template Websites: What Are You Really Paying For?",
-    excerpt: "A cheaper website can cost more later if it is slow, hard to edit, or impossible to scale. Here's the practical difference.",
-    category: "Web Development",
-    readTime: "8 min read",
-    date: "April 2026",
-    featured: false,
-    seoTag: "Decision Guide",
-    author: "Sitecraf",
-    image: "https://picsum.photos/seed/customvstemplate/800/600"
-  },
-  {
-    slug: "how-ai-images-help-fabric-brands",
-    title: "How AI Images Help Fabric & Home Furnishing Brands Sell Better",
-    excerpt: "If you manage 100+ fabric collections, traditional photoshoots become expensive fast. AI-generated visuals can reduce cost and speed up catalog creation.",
-    category: "AI Images",
+    excerpt: "Not every business needs a chatbot. This guide explains exactly when it makes commercial sense — and when it is just unnecessary complexity.",
+    category: "AI Tools",
     readTime: "5 min read",
     date: "April 2026",
     featured: false,
-    seoTag: "Visual Commerce",
+    seoTag: "AI",
     author: "Sitecraf",
-    image: "https://picsum.photos/seed/fabricai/800/600"
+    image: "https://picsum.photos/seed/aichatbot/800/600"
   },
   {
-    slug: "website-cost-in-india-2026",
-    title: "How Much Should a Business Website Cost in India in 2026?",
-    excerpt: "From cheap freelancers to premium agencies, pricing varies wildly. Here's how to judge value, not just the lowest quote.",
-    category: "Pricing",
-    readTime: "7 min read",
-    date: "April 2026",
-    featured: false,
-    seoTag: "Pricing",
-    author: "Sitecraf",
-    image: "https://picsum.photos/seed/costindia/800/600"
-  },
-  {
-    slug: "before-you-hire-a-web-developer",
-    title: "9 Questions to Ask Before You Hire a Web Developer",
-    excerpt: "A polished proposal means nothing if you ask the wrong questions. Use this checklist before signing any web project.",
-    category: "Hiring",
+    slug: "wordpress-vs-nextjs-for-seo",
+    title: "WordPress vs Next.js for SEO: Which Wins for Indian Businesses?",
+    excerpt: "Both can rank well. But the right choice depends on your content volume, technical resources, and how much control you want over performance and structured data.",
+    category: "Platforms",
     readTime: "6 min read",
     date: "April 2026",
     featured: false,
-    seoTag: "Buyer Guide",
+    seoTag: "SEO",
     author: "Sitecraf",
-    image: "https://picsum.photos/seed/hiredeveloper/800/600"
+    image: "https://picsum.photos/seed/wpvsnextjs/800/600"
+  },
+  {
+    slug: "core-web-vitals-guide-india",
+    title: "Core Web Vitals Explained for Indian Business Owners",
+    excerpt: "Google uses page experience as a ranking signal. Here is what LCP, INP, and CLS actually mean — and what a website developer in Delhi can do to fix them on your site.",
+    category: "Performance",
+    readTime: "5 min read",
+    date: "April 2026",
+    featured: false,
+    seoTag: "Performance",
+    author: "Sitecraf",
+    image: "https://picsum.photos/seed/corevitals/800/600"
   }
 ];
 
 const categories = [
   "All",
   "SEO",
-  "GEO",
+  "AEO",
   "Platforms",
   "Web Development",
   "AI Chatbots",
@@ -144,11 +120,11 @@ export default function BlogClient() {
             Articles That Help You Build <span className="text-[#b5ff3e]">Smarter</span> Online
           </h1>
           <p className="font-[family-name:var(--font-body)] text-[#8888a0] text-lg max-w-3xl leading-relaxed mb-8 anim-reveal is-visible" style={{ animationDelay: '200ms' }}>
-            Straightforward writing on websites, SEO, GEO, AI chatbots, automation, and digital growth — created for Indian business owners who want clarity, not jargon.
+            Straightforward writing on websites, SEO, AEO, AI chatbots, automation, and digital growth — created for Indian business owners who want clarity, not jargon.
           </p>
           <div className="flex flex-wrap justify-center gap-3 anim-reveal is-visible" style={{ animationDelay: '300ms' }}>
             <span className="bg-[#0a0a0a] border border-white/[0.06] rounded-full px-3 py-1.5 text-[#8888a0] text-xs">SEO-ready</span>
-            <span className="bg-[#0a0a0a] border border-white/[0.06] rounded-full px-3 py-1.5 text-[#8888a0] text-xs">GEO-friendly</span>
+            <span className="bg-[#0a0a0a] border border-white/[0.06] rounded-full px-3 py-1.5 text-[#8888a0] text-xs">AEO-friendly</span>
             <span className="bg-[#0a0a0a] border border-white/[0.06] rounded-full px-3 py-1.5 text-[#8888a0] text-xs">Written for decision-makers</span>
           </div>
         </div>
@@ -281,7 +257,7 @@ export default function BlogClient() {
         </div>
       </section>
 
-      {/* SECTION 5 — GEO / SEO Value Strip */}
+      {/* SECTION 5 — AEO / SEO Value Strip */}
       <section aria-label="Why This Blog Exists" className="w-full py-16 px-6 bg-[#0a0a0a]">
         <div className="w-full md:w-[80%] max-w-none mx-auto text-center md:text-left">
           <div className="text-[#b5ff3e] text-[length:var(--text-xs)] uppercase tracking-widest mb-4 anim-reveal is-visible">
