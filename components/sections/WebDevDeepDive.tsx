@@ -11,7 +11,7 @@ export default function WebDevDeepDive() {
           <span className="block text-[#b5ff3e] text-[length:var(--text-xs)] uppercase tracking-widest mb-3">
             Save ₹18,000 Every Year
           </span>
-          <h2 className="font-[family-name:var(--font-display)] font-bold text-[#e8e8f0] text-[length:var(--text-xl)]">
+          <h2 className="heading-section font-[family-name:var(--font-display)] text-[#e8e8f0]">
             Still on Shopify Just to Showcase Your Brand?
           </h2>
         </div>
@@ -29,7 +29,7 @@ export default function WebDevDeepDive() {
             </p>
 
             <div className="mb-8">
-              <h4 className="text-[#e8e8f0] font-semibold mb-4 text-sm uppercase tracking-wider">Who this is for:</h4>
+              <h4 className="heading-sub text-[#e8e8f0] mb-4 uppercase tracking-wider">Who this is for:</h4>
               <ul className="space-y-3">
                 <li className="flex items-start gap-3 text-[#8888a0] text-sm">
                   <span className="text-[#b5ff3e] mt-0.5">✓</span> Home furnishing & fabric manufacturers with a Shopify site
@@ -60,7 +60,7 @@ export default function WebDevDeepDive() {
                 <span className="text-red-500 font-bold text-lg whitespace-nowrap">₹2,000/mo</span>
               </div>
               <div>
-                <h4 className="text-[#e8e8f0] font-medium leading-tight">Typical Shopify cost</h4>
+                <h4 className="heading-sub text-[#e8e8f0] leading-tight">Typical Shopify cost</h4>
                 <p className="text-[#8888a0] text-sm mt-1 leading-tight">For showcase sites</p>
               </div>
             </div>
@@ -71,7 +71,7 @@ export default function WebDevDeepDive() {
                 <span className="text-[#b5ff3e] font-bold text-lg whitespace-nowrap">₹450/mo</span>
               </div>
               <div className="relative z-10">
-                <h4 className="text-[#e8e8f0] font-medium leading-tight">Wix Studio equivalent</h4>
+                <h4 className="heading-sub text-[#e8e8f0] leading-tight">Wix Studio equivalent</h4>
                 <p className="text-[#8888a0] text-sm mt-1 leading-tight">Monthly cost</p>
               </div>
             </div>
@@ -81,7 +81,7 @@ export default function WebDevDeepDive() {
                 <span className="text-[#00c8c8] font-bold text-lg whitespace-nowrap">₹18,600/yr</span>
               </div>
               <div>
-                <h4 className="text-[#e8e8f0] font-medium leading-tight">Your annual savings</h4>
+                <h4 className="heading-sub text-[#e8e8f0] leading-tight">Your annual savings</h4>
                 <p className="text-[#8888a0] text-sm mt-1 leading-tight">After migration</p>
               </div>
             </div>

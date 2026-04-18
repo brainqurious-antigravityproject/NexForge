@@ -6,7 +6,7 @@ const oneTimePackages = [
   {
     id: "platform-site",
     name: "Platform Website",
-    subtitle: "Shopify · Wix Studio · Webflow",
+    subtitle: "Shopify · Wix Studio",
     price: "₹15,000",
     priceNote: "One-time. No monthly fee.",
     timeline: "1–3 weeks",
@@ -257,7 +257,7 @@ export default function PricingClient() {
                     <span className="bg-[#b5ff3e] text-[#000000] rounded-full px-3 py-1 text-xs font-semibold">
                       {oneTimePackages[1].badge}
                     </span>
-                    <h3 className="font-[family-name:var(--font-display)] font-bold text-[#e8e8f0] text-2xl mt-3">
+                    <h3 className="heading-sub font-[family-name:var(--font-display)] text-[#e8e8f0] mt-3">
                       {oneTimePackages[1].name}
                     </h3>
                     <p className="text-[#8888a0] text-sm mt-1">{oneTimePackages[1].subtitle}</p>
@@ -314,7 +314,7 @@ export default function PricingClient() {
                     ) : (
                       <div className="h-6"></div> /* Spacer if no badge to keep alignment */
                     )}
-                    <h3 className="font-[family-name:var(--font-display)] font-semibold text-[#e8e8f0] text-xl mt-2">{pkg.name}</h3>
+                    <h3 className="heading-sub font-[family-name:var(--font-display)] text-[#e8e8f0] mt-2">{pkg.name}</h3>
                     <p className="text-[#66667a] text-xs uppercase tracking-widest mt-1">{pkg.subtitle}</p>
                   </div>
 
@@ -358,7 +358,7 @@ export default function PricingClient() {
                     <span className="inline-block px-2.5 py-1 rounded-md text-xs border text-[#a86fdf] border-[#a86fdf]/20 bg-[#a86fdf]/[0.08]">
                       {oneTimePackages[4].badge}
                     </span>
-                    <h3 className="font-[family-name:var(--font-display)] font-bold text-[#e8e8f0] text-2xl mt-3">
+                    <h3 className="heading-sub font-[family-name:var(--font-display)] text-[#e8e8f0] mt-3">
                       {oneTimePackages[4].name}
                     </h3>
                     <p className="text-[#66667a] text-sm mt-1">{oneTimePackages[4].subtitle}</p>
@@ -408,7 +408,7 @@ export default function PricingClient() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
                 {retainers.map((plan, idx) => (
                   <div key={idx} className="bg-[#0a0a0a] border border-white/[0.08] rounded-2xl p-8 flex flex-col h-full">
-                    <h3 className="font-[family-name:var(--font-display)] font-semibold text-[#e8e8f0] text-xl">{plan.name}</h3>
+                    <h3 className="heading-sub font-[family-name:var(--font-display)] text-[#e8e8f0]">{plan.name}</h3>
                     <div className="text-[#b5ff3e] font-bold text-2xl mt-3">{plan.price}</div>
                     <p className="text-[#8888a0] text-sm mt-3">{plan.description}</p>
                     
@@ -436,7 +436,7 @@ export default function PricingClient() {
       <section aria-label="What's Included" className="w-full py-14 px-6 bg-[#0a0a0a] text-center">
         <div className="w-full anim-reveal is-visible">
           <span className="text-[#b5ff3e] text-xs uppercase tracking-widest block mb-2">Every Project, No Exceptions</span>
-          <h2 className="font-[family-name:var(--font-display)] font-bold text-[#e8e8f0] text-[length:var(--text-xl)] mb-10">
+          <h2 className="heading-section font-[family-name:var(--font-display)] text-[#e8e8f0] mb-10">
             What you always get — regardless of package
           </h2>
 
@@ -485,7 +485,7 @@ export default function PricingClient() {
       <section aria-label="Comparison Table" className="w-full py-20 px-6 bg-[#000000]">
         <div className="w-full md:w-[80%] max-w-none mx-auto anim-reveal is-visible">
           <span className="block text-[#b5ff3e] text-xs uppercase tracking-widest mb-2">How We Compare</span>
-          <h2 className="font-[family-name:var(--font-display)] font-bold text-[#e8e8f0] text-3xl mb-3">
+          <h2 className="heading-section font-[family-name:var(--font-display)] text-[#e8e8f0] mb-3">
             Why Sitecraf beats the alternatives
           </h2>
           <p className="text-[#8888a0] text-lg max-w-2xl">
@@ -555,7 +555,7 @@ export default function PricingClient() {
       <section aria-label="Pricing FAQs" className="w-full py-20 px-6 bg-[#0a0a0a]">
         <div className="w-full md:w-[80%] max-w-none mx-auto anim-reveal is-visible">
           <span className="block text-[#b5ff3e] text-xs uppercase tracking-widest mb-2">Pricing FAQs</span>
-          <h2 className="font-[family-name:var(--font-display)] font-bold text-[#e8e8f0] text-3xl mb-10">
+          <h2 className="heading-section font-[family-name:var(--font-display)] text-[#e8e8f0] mb-10">
             Every pricing question — answered
           </h2>
 
@@ -563,7 +563,7 @@ export default function PricingClient() {
             {faqs.map((faq, idx) => (
               <div key={idx} className="border-b border-white/[0.05] py-5 cursor-pointer" onClick={() => setOpenFaq(openFaq === idx ? null : idx)}>
                 <div className="flex justify-center items-center relative">
-                  <h3 className={`font-semibold font-[family-name:var(--font-display)] text-base transition-colors text-center pr-8 pl-8 ${openFaq === idx ? 'text-[#b5ff3e]' : 'text-[#e8e8f0] hover:text-[#b5ff3e]'}`}>
+                  <h3 className={`heading-sub font-[family-name:var(--font-display)] transition-colors text-center pr-8 pl-8 ${openFaq === idx ? 'text-[#b5ff3e]' : 'text-[#e8e8f0] hover:text-[#b5ff3e]'}`}>
                     {faq.q}
                   </h3>
                   <svg className={`absolute right-0 w-4 h-4 text-[#66667a] transition-transform duration-300 flex-shrink-0 ${openFaq === idx ? 'rotate-180' : 'rotate-0'}`} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -585,7 +585,7 @@ export default function PricingClient() {
       <section aria-label="Not Sure Which Plan" className="w-full py-16 px-6 bg-[#b5ff3e]">
         <div className="w-full md:w-[80%] max-w-none mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-8 anim-reveal is-visible">
           <div className="flex-1">
-            <h2 className="font-[family-name:var(--font-display)] font-bold text-[length:var(--text-2xl)] text-[#000000]">
+            <h2 className="heading-section font-[family-name:var(--font-display)] text-[#000000]">
               Still not sure? Let&apos;s figure it out together.
             </h2>
             <p className="text-[#000000]/70 mt-3 max-w-md">

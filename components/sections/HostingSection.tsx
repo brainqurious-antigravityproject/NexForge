@@ -16,7 +16,7 @@ export default function HostingSection() {
           <span className="text-[#b5ff3e] text-[length:var(--text-xs)] uppercase tracking-widest mb-3 block">
             Infrastructure
           </span>
-          <h2 className="font-[family-name:var(--font-display)] font-bold text-[#e8e8f0] text-[length:var(--text-xl)]">
+          <h2 className="heading-section font-[family-name:var(--font-display)] text-[#e8e8f0]">
             Web Hosting Built for Performance & Reliability
           </h2>
           <p className="font-[family-name:var(--font-body)] text-[#8888a0] mt-3 max-w-2xl leading-relaxed">
@@ -40,7 +40,7 @@ export default function HostingSection() {
               </svg>
             </div>
             <div>
-              <h3 className="font-[family-name:var(--font-display)] font-semibold text-[#e8e8f0] text-[length:var(--text-base)]">
+              <h3 className="heading-sub font-[family-name:var(--font-display)] text-[#e8e8f0]">
                 Managed Dedicated Servers
               </h3>
               <p className="font-[family-name:var(--font-body)] text-[#8888a0] text-[length:var(--text-sm)] leading-relaxed mt-2">
@@ -70,7 +70,7 @@ export default function HostingSection() {
               </svg>
             </div>
             <div>
-              <h3 className="font-[family-name:var(--font-display)] font-semibold text-[#e8e8f0] text-[length:var(--text-base)]">
+              <h3 className="heading-sub font-[family-name:var(--font-display)] text-[#e8e8f0]">
                 Fast Load Times & Maximum Uptime
               </h3>
               <p className="font-[family-name:var(--font-body)] text-[#8888a0] text-[length:var(--text-sm)] leading-relaxed mt-2">
@@ -102,7 +102,7 @@ export default function HostingSection() {
               </svg>
             </div>
             <div>
-              <h3 className="font-[family-name:var(--font-display)] font-semibold text-[#e8e8f0] text-[length:var(--text-base)]">
+              <h3 className="heading-sub font-[family-name:var(--font-display)] text-[#e8e8f0]">
                 Bundled with Website Projects
               </h3>
               <p className="font-[family-name:var(--font-body)] text-[#8888a0] text-[length:var(--text-sm)] leading-relaxed mt-2">
@@ -147,7 +147,7 @@ export default function HostingSection() {
         {/* ZONE 3 — CTA Banner */}
         <div className="mt-8 bg-[#0a0a0a] border border-[#b5ff3e]/[0.18] rounded-2xl px-8 py-7 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
           <div>
-            <h3 className="font-[family-name:var(--font-display)] font-semibold text-[#e8e8f0] text-[length:var(--text-base)]">
+            <h3 className="heading-sub font-[family-name:var(--font-display)] text-[#e8e8f0]">
               Need hosting for your website?
             </h3>
             <p className="font-[family-name:var(--font-body)] text-[#8888a0] text-[length:var(--text-sm)] mt-1 max-w-lg">

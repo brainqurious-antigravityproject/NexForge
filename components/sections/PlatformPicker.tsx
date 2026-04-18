@@ -58,23 +58,6 @@ const platforms = [
     badge: 'Fastest Launch'
   },
   {
-    id: 'webflow',
-    name: 'Webflow',
-    logo: 'https://cdn.simpleicons.org/webflow/b5ff3e',
-    tagline: 'Best for design-first brands & agencies',
-    description: 'A powerful visual development platform combining design freedom with a built-in CMS. Ideal for brands where visual identity is a priority and where content needs to be structured and scalable.',
-    bestFor: [
-      'Creative agencies & studios',
-      'Brand-driven business websites',
-      'CMS-powered marketing sites',
-      'Design-forward portfolios'
-    ],
-    notIdealFor: 'Non-technical teams that need very simple day-to-day editing or businesses on a tight budget',
-    startingAt: '₹20,000',
-    timeline: '2–4 weeks',
-    badge: 'Design-First'
-  },
-  {
     id: 'nextjs',
     name: 'Next.js (Custom)',
     logo: 'https://cdn.simpleicons.org/nextdotjs/b5ff3e',
@@ -107,7 +90,7 @@ export default function PlatformPicker() {
           <span className="text-[#b5ff3e] text-[length:var(--text-xs)] uppercase tracking-widest mb-3 block anim-reveal is-visible">
             Platform Guidance
           </span>
-          <h2 className="font-[family-name:var(--font-display)] font-bold text-[#e8e8f0] text-[length:var(--text-xl)] anim-reveal is-visible">
+          <h2 className="heading-section font-[family-name:var(--font-display)] text-[#e8e8f0] anim-reveal is-visible">
             Which Platform Is Right for Your Business?
           </h2>
           <p className="font-[family-name:var(--font-body)] text-[#8888a0] mt-3 max-w-2xl anim-reveal is-visible">
@@ -147,7 +130,7 @@ export default function PlatformPicker() {
                 
                 {/* Middle */}
                 <div className="flex flex-col gap-0.5">
-                  <span className={`font-[family-name:var(--font-display)] font-semibold text-[length:var(--text-sm)] ${
+                  <span className={`heading-sub font-[family-name:var(--font-display)] ${
                     activePlatform === platform.id ? 'text-[#e8e8f0]' : 'text-[#8888a0]'
                   }`}>
                     {platform.name}
@@ -176,7 +159,7 @@ export default function PlatformPicker() {
               {/* BLOCK 1 — Platform identity row */}
               <div className="flex items-center gap-4">
                 <Image src={active.logo} alt={active.name} width={40} height={40} className="object-contain flex-shrink-0" />
-                <h3 className="font-[family-name:var(--font-display)] font-bold text-[#e8e8f0] text-[length:var(--text-lg)]">
+                <h3 className="heading-sub font-[family-name:var(--font-display)] text-[#e8e8f0]">
                   {active.name}
                 </h3>
                 <span className="bg-[#b5ff3e]/[0.12] text-[#b5ff3e] text-[length:var(--text-xs)] px-3 py-1.5 rounded-full font-medium ml-auto whitespace-nowrap">

@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 type Project = {
   id: string;
@@ -315,7 +316,7 @@ export default function CaseStudiesClient() {
                   </div>
 
                   {/* Title */}
-                  <h3 className="font-[family-name:var(--font-display)] font-semibold text-xl text-[#e8e8f0] mb-4">
+                  <h3 className="heading-sub font-[family-name:var(--font-display)] text-[#e8e8f0] mb-4">
                     {project.headline}
                   </h3>
 
@@ -362,7 +363,7 @@ export default function CaseStudiesClient() {
         <div className="w-full md:w-[80%] max-w-none mx-auto">
           <div className="mb-12 anim-reveal is-visible">
             <span className="block text-[#b5ff3e] text-[length:var(--text-xs)] uppercase tracking-widest mb-3">AI Image Generation</span>
-            <h2 className="font-[family-name:var(--font-display)] font-bold text-3xl md:text-4xl text-[#e8e8f0] mb-4">Studio-quality visuals from raw product photos</h2>
+            <h2 className="heading-section font-[family-name:var(--font-display)] text-[#e8e8f0] mb-4">Studio-quality visuals from raw product photos</h2>
             <p className="font-[family-name:var(--font-body)] text-[#8888a0] text-lg max-w-2xl">
               We generate lifestyle banners, product photos, and collection visuals using AI — at a fraction of traditional photography cost. Specialised in home furnishing, fabric, and lifestyle brands.
             </p>
@@ -385,13 +386,14 @@ export default function CaseStudiesClient() {
 
           <div className="columns-2 md:columns-3 lg:columns-4 gap-4 anim-reveal is-visible" style={{ animationDelay: '200ms' }}>
             {galleryImages.map((image, i) => (
-              <div key={i} className="break-inside-avoid mb-4 rounded-xl overflow-hidden bg-[#111111] relative group cursor-pointer">
-                <img
+              <div key={i} className="break-inside-avoid mb-4 rounded-xl overflow-hidden bg-[#111111] relative group cursor-pointer aspect-square sm:aspect-auto">
+                <Image
                   src={image.src}
                   alt={image.alt}
                   data-placeholder="true"
+                  width={600}
+                  height={600}
                   className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
-                  loading="lazy"
                 />
                 <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
                   <span className="text-[#e8e8f0] text-sm font-medium">
@@ -414,7 +416,7 @@ export default function CaseStudiesClient() {
       {/* SECTION 4 — CTA Banner */}
       <section aria-label="Call to Action" className="w-full py-16 px-6 bg-[#b5ff3e] flex flex-col items-center text-center">
         <div className="w-full md:w-[80%] max-w-none mx-auto flex flex-col items-center anim-reveal is-visible">
-          <h2 className="font-[family-name:var(--font-display)] font-bold text-[length:var(--text-2xl)] text-[#000000] mb-4 text-center">
+          <h2 className="heading-section font-[family-name:var(--font-display)] text-[#000000] mb-4 text-center">
             Seen enough? Let&apos;s build yours.
           </h2>
           <p className="text-[#000000]/70 text-[length:var(--text-base)] max-w-xl mx-auto text-center mt-4">
@@ -501,7 +503,7 @@ export default function CaseStudiesClient() {
 
               {/* RIGHT COLUMN */}
               <div className="w-full md:w-[40%] p-4 md:p-6 overflow-y-auto flex flex-col gap-6">
-                <h2 className="font-[family-name:var(--font-display)] font-bold text-[#e8e8f0] text-lg">
+                <h2 className="heading-sub font-[family-name:var(--font-display)] text-[#e8e8f0]">
                   {selectedProject.headline}
                 </h2>
 

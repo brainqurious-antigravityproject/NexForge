@@ -15,7 +15,7 @@ const faqItems: FaqItem[] = [
   {
     id: '2',
     question: 'Which platform should I choose — WordPress, Shopify, Wix, or custom?',
-    answer: 'It depends entirely on what your business needs. WordPress is best for SEO-driven content sites and service businesses. Shopify is best for online stores and D2C brands selling products. Wix Studio is best for fast, editable business websites. Custom Next.js is best when you need maximum performance, custom features, or AEO-first structure. We recommend the right platform after understanding your goals — not based on which one earns us more.',
+    answer: 'It depends entirely on what your business needs. WordPress is best for SEO-driven content sites and service businesses. Shopify is best for online stores and D2C brands selling products. Wix Studio is best for fast, editable business websites with a lower budget. Custom Next.js is best when you need maximum performance, custom features, or AEO and GEO-first structure. We recommend the right platform after understanding your goals — not based on which one earns us more.',
     category: 'process'
   },
   {
@@ -26,8 +26,8 @@ const faqItems: FaqItem[] = [
   },
   {
     id: '4',
-    question: 'What is AEO and why does it matter for my website?',
-    answer: 'AEO stands for Answer Engine Optimization — the practice of structuring your website so that AI tools like ChatGPT, Perplexity, Google AI Overviews, and voice assistants can find, understand, and cite your business as a direct answer. As more people search through AI rather than traditional search, AEO ensures your website is visible in that new layer of discovery. We build AEO-ready structure into every project — schema markup, clear question-and-answer content, and structured data that answer engines can parse.',
+    question: 'What are SEO, AEO, and GEO — and do I need all three?',
+    answer: 'SEO (Search Engine Optimization) helps your website rank in Google and Bing search results. AEO (Answer Engine Optimization) helps AI tools like Perplexity, Google AI Overviews, and voice assistants cite your business as a direct answer. GEO (Generative Engine Optimization) helps large language models like ChatGPT, Gemini, and Copilot mention and recommend your business when users ask for suggestions. All three matter because search behaviour is splitting across these three channels. We build AEO and GEO-ready structure into every website we deliver — schema markup, Q&A content, clear entity signals, and fast Core Web Vitals.',
     category: 'tech'
   },
   {
@@ -39,7 +39,7 @@ const faqItems: FaqItem[] = [
   {
     id: '6',
     question: 'How much does a website cost?',
-    answer: 'Wix Studio websites start from ₹10,000. WordPress websites start from ₹12,000. Shopify stores start from ₹18,000. Webflow sites start from ₹20,000. Custom Next.js websites start from ₹22,000. Add-ons like AI chatbot start from ₹12,000 and AI image generation from ₹5,000 per batch. All prices are fixed and quoted upfront — no surprises, no GST added on top.',
+    answer: 'Wix Studio websites start from ₹10,000. WordPress websites start from ₹12,000. Shopify stores start from ₹18,000. Custom Next.js websites start from ₹22,000. Add-ons like AI chatbot start from ₹12,000 and AI image generation from ₹5,000 per batch. All prices are fixed and quoted upfront — no surprises, no GST added on top.',
     category: 'pricing'
   },
   {
@@ -69,9 +69,9 @@ function FaqAccordion({ item, isOpen, onToggle }: { item: FaqItem, isOpen: boole
         onClick={onToggle}
         aria-expanded={isOpen}
       >
-        <span className="font-[family-name:var(--font-display)] font-medium text-[#e8e8f0] text-[length:var(--text-base)] pr-8 group-hover:text-[#b5ff3e] active:text-[#b5ff3e] transition-colors">
+        <h3 className="heading-sub font-[family-name:var(--font-display)] transition-colors pr-8 group-hover:text-[#b5ff3e] active:text-[#b5ff3e] text-[#e8e8f0]">
           {item.question}
-        </span>
+        </h3>
         <span className={`flex-shrink-0 w-6 h-6 rounded-full border border-white/[0.2] flex items-center justify-center transition-transform duration-300 ${isOpen ? 'rotate-180 bg-[#b5ff3e] border-[#b5ff3e] text-black' : 'text-[#8888a0] group-hover:border-[#b5ff3e] group-hover:text-[#b5ff3e]'}`}>
           <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
@@ -134,7 +134,7 @@ export default function FAQ() {
           <span className="block text-[#b5ff3e] text-[length:var(--text-xs)] uppercase tracking-widest mb-3">
             Frequently Asked Questions
           </span>
-          <h2 className="font-[family-name:var(--font-display)] font-bold text-[#e8e8f0] text-[length:var(--text-xl)]">
+          <h2 className="heading-section font-[family-name:var(--font-display)] text-[#e8e8f0]">
             Your Questions, Answered Honestly
           </h2>
           <p className="font-[family-name:var(--font-body)] text-[#8888a0] mt-4 leading-relaxed">

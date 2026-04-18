@@ -91,7 +91,7 @@ export default function HowWeBuild() {
           <span className="block text-[#b5ff3e] text-[length:var(--text-xs)] uppercase tracking-widest mb-3">
             How I Work
           </span>
-          <h2 className="font-[family-name:var(--font-display)] font-bold text-[#e8e8f0] text-[length:var(--text-xl)]">
+          <h2 className="heading-section font-[family-name:var(--font-display)] text-[#e8e8f0]">
             From First Call to Live Website in 5 Steps
           </h2>
           <p className="font-[family-name:var(--font-body)] text-[#8888a0] mt-3 max-w-2xl mx-auto leading-relaxed">
@@ -143,7 +143,7 @@ export default function HowWeBuild() {
                         </div>
                       )}
                     </div>
-                    <h3 className="font-[family-name:var(--font-display)] font-semibold text-[#e8e8f0] text-[length:var(--text-base)] mt-1">
+                    <h3 className="heading-sub font-[family-name:var(--font-display)] text-[#e8e8f0] mt-1">
                       {step.title}
                     </h3>
                     <p className="font-[family-name:var(--font-body)] text-[#8888a0] text-[length:var(--text-sm)] mt-3 leading-relaxed">

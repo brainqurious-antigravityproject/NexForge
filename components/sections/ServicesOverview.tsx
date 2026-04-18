@@ -8,14 +8,13 @@ import { useScrollReveal } from '@/hooks/useScrollReveal';
 const services: Service[] = [
   {
     id: 'platform-website',
-    title: 'Platform Website (WordPress / Shopify / Wix Studio / Webflow)',
-    description: 'The right platform for your business depends on your goals — not just your budget. We build on WordPress for content-rich and SEO-driven sites, Shopify for e-commerce, Wix Studio for fast-editable business websites, and Webflow for pixel-perfect design control. Every build is mobile-first, performance-optimised, and handed over with 100% ownership.',
+    title: 'Platform Website (WordPress / Shopify / Wix Studio)',
+    description: 'The right platform for your business depends on your goals — not just your budget. We build on WordPress for content-rich and SEO-driven sites, Shopify for e-commerce, and Wix Studio for fast-editable business websites. Every build is mobile-first, performance-optimised, and handed over with 100% ownership.',
     category: 'web-app',
     features: [
       'WordPress — SEO-ready, plugin-powered',
       'Shopify — optimised store & checkout',
       'Wix Studio — fast, editable, affordable',
-      'Webflow — design-driven, CMS-powered',
       'Mobile-first on every platform',
       'Platform migration with design preserved'
     ],
@@ -112,7 +111,7 @@ function FeaturedServiceCard({ service }: { service: Service }) {
         <div className="w-10 h-10 bg-[#b5ff3e]/[0.08] rounded-lg flex items-center justify-center mb-4">
           <span className="text-[#b5ff3e] text-[length:var(--text-xs)] font-mono">{service.icon}</span>
         </div>
-        <h3 className="font-[family-name:var(--font-display)] font-semibold text-[#e8e8f0] text-[length:var(--text-lg)]">
+        <h3 className="heading-sub font-[family-name:var(--font-display)] text-[#e8e8f0]">
           {service.title}
         </h3>
         <p className="font-[family-name:var(--font-body)] text-[#8888a0] text-[length:var(--text-sm)] mt-2 leading-relaxed">
@@ -155,7 +154,7 @@ function RegularServiceCard({ service }: { service: Service }) {
       <div className="w-10 h-10 bg-[#b5ff3e]/[0.08] rounded-lg flex items-center justify-center mb-4">
         <span className="text-[#b5ff3e] text-[length:var(--text-xs)] font-mono">{service.icon}</span>
       </div>
-      <h3 className="font-[family-name:var(--font-display)] font-semibold text-[#e8e8f0] text-[length:var(--text-base)]">
+      <h3 className="heading-sub font-[family-name:var(--font-display)] text-[#e8e8f0]">
         {service.title}
       </h3>
       <p className="font-[family-name:var(--font-body)] text-[#8888a0] text-[length:var(--text-sm)] mt-2 leading-relaxed flex-1">
@@ -197,7 +196,7 @@ export default function ServicesOverview() {
           <span className="block text-[#b5ff3e] text-[length:var(--text-xs)] uppercase tracking-widest mb-3">
             What I Build
           </span>
-          <h2 className="font-[family-name:var(--font-display)] font-bold text-[#e8e8f0] text-[length:var(--text-xl)]">
+          <h2 className="heading-section font-[family-name:var(--font-display)] text-[#e8e8f0]">
             What We Build
           </h2>
           <p className="font-[family-name:var(--font-body)] text-[#8888a0] mt-3 max-w-2xl">

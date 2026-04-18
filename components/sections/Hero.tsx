@@ -17,7 +17,7 @@ const defaultProps: HeroProps = {
   badge: "Website · AI Chatbot · Image Generation · Automation",
   headline: "Professional Website Development Company in Delhi",
   highlightWord: "Delhi",
-  subheadline: "From WordPress and Shopify to custom Next.js solutions — we design, develop, and launch fast, mobile-optimised, SEO and AEO-ready websites for businesses across every industry. Transparent pricing. Full ownership. No agency overhead.",
+  subheadline: "From WordPress and Shopify to custom Next.js solutions — we design, develop, and launch fast, mobile-optimised, SEO, AEO, and GEO-ready websites for businesses across every industry. Transparent pricing. Full ownership. No agency overhead.",
   ctaPrimary: { label: "See Our Work →", href: "#case-studies" },
   ctaSecondary: { label: "Get a Free Quote", href: "#contact" },
   stats: [
@@ -82,7 +82,7 @@ export default function Hero(props: Partial<HeroProps>) {
 
           {/* Headline */}
           <h1
-            className={`font-[family-name:var(--font-display)] font-bold text-[length:calc(var(--text-3xl)*0.9)] text-[#e8e8f0] tracking-[-0.02em] leading-[1.15] ${animClass} ${stateClass}`}
+            className={`heading-section font-[family-name:var(--font-display)] text-[#e8e8f0] ${animClass} ${stateClass}`}
             style={{ transitionDelay: '100ms' }}
           >
             {renderHeadline()}

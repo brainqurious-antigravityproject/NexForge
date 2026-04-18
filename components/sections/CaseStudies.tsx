@@ -72,7 +72,7 @@ function FeaturedCaseStudyCard({ featured }: { featured: CaseStudy }) {
           </span>
         </div>
         
-        <h3 className="font-[family-name:var(--font-display)] font-bold text-[#e8e8f0] text-2xl md:text-3xl mb-4 leading-tight">
+        <h3 className="heading-sub font-[family-name:var(--font-display)] text-[#e8e8f0] mb-4 leading-tight">
           {featured.title}
         </h3>
         
@@ -100,7 +100,7 @@ function FeaturedCaseStudyCard({ featured }: { featured: CaseStudy }) {
       </div>
       
       <div className="bg-[#111111] border-t lg:border-t-0 lg:border-l border-white/[0.06] p-8 lg:p-12 lg:w-2/5 flex flex-col justify-center gap-8">
-        <h4 className="text-[#66667a] text-[length:var(--text-xs)] uppercase tracking-widest font-[family-name:var(--font-body)]">
+        <h4 className="heading-sub text-[#66667a] uppercase tracking-widest font-[family-name:var(--font-body)]">
           Key Outcomes
         </h4>
         <div className="flex flex-col gap-8">
@@ -142,7 +142,7 @@ function RegularCaseStudyCard({ study }: { study: CaseStudy }) {
         </span>
       </div>
       
-      <h3 className="font-[family-name:var(--font-display)] font-semibold text-[#e8e8f0] text-xl mb-3">
+      <h3 className="heading-sub font-[family-name:var(--font-display)] text-[#e8e8f0] mb-3">
         {study.title}
       </h3>
       
@@ -209,7 +209,7 @@ export default function CaseStudies() {
             <span className="block text-[#b5ff3e] text-[length:var(--text-xs)] uppercase tracking-widest mb-3">
               Projects
             </span>
-            <h2 className="font-[family-name:var(--font-display)] font-bold text-[#e8e8f0] text-[length:var(--text-xl)]">
+            <h2 className="heading-section font-[family-name:var(--font-display)] text-[#e8e8f0]">
               Real Work. Real Results.
             </h2>
             <p className="font-[family-name:var(--font-body)] text-[#8888a0] mt-3 leading-relaxed">

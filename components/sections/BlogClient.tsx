@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const posts = [
   {
@@ -75,6 +76,18 @@ const posts = [
     seoTag: "Performance",
     author: "Sitecraf",
     image: "https://picsum.photos/seed/corevitals/800/600"
+  },
+  {
+    slug: "what-is-geo-generative-engine-optimization",
+    title: "What Is GEO? How to Get ChatGPT and Gemini to Recommend Your Business",
+    excerpt: "GEO (Generative Engine Optimization) is the emerging practice of making your business visible inside ChatGPT, Gemini, and Copilot responses — not just on Google. Here is what it means for Indian businesses and how it differs from SEO and AEO.",
+    category: "GEO",
+    readTime: "5 min read",
+    date: "April 2026",
+    featured: false,
+    seoTag: "GEO",
+    author: "Sitecraf",
+    image: "https://picsum.photos/seed/geochatgpt/800/600"
   }
 ];
 
@@ -82,6 +95,7 @@ const categories = [
   "All",
   "SEO",
   "AEO",
+  "GEO",
   "Platforms",
   "Web Development",
   "AI Chatbots",
@@ -116,11 +130,11 @@ export default function BlogClient() {
           <div className="text-[#b5ff3e] text-[length:var(--text-xs)] uppercase tracking-widest mb-6 anim-reveal is-visible">
             Insights & Guides
           </div>
-          <h1 className="font-[family-name:var(--font-display)] font-bold text-4xl md:text-5xl text-[#e8e8f0] tracking-tight leading-tight mb-6 anim-reveal is-visible" style={{ animationDelay: '100ms' }}>
+          <h1 className="heading-section font-[family-name:var(--font-display)] text-[#e8e8f0] tracking-tight leading-tight mb-6 anim-reveal is-visible" style={{ animationDelay: '100ms' }}>
             Articles That Help You Build <span className="text-[#b5ff3e]">Smarter</span> Online
           </h1>
           <p className="font-[family-name:var(--font-body)] text-[#8888a0] text-lg max-w-3xl leading-relaxed mb-8 anim-reveal is-visible" style={{ animationDelay: '200ms' }}>
-            Straightforward writing on websites, SEO, AEO, AI chatbots, automation, and digital growth — created for Indian business owners who want clarity, not jargon.
+            Straightforward writing on websites, SEO, AEO, and GEO, AI chatbots, automation, and digital growth — created for Indian business owners who want clarity, not jargon.
           </p>
           <div className="flex flex-wrap justify-center gap-3 anim-reveal is-visible" style={{ animationDelay: '300ms' }}>
             <span className="bg-[#0a0a0a] border border-white/[0.06] rounded-full px-3 py-1.5 text-[#8888a0] text-xs">SEO-ready</span>
@@ -138,11 +152,12 @@ export default function BlogClient() {
           <div className="w-full md:w-[80%] max-w-none mx-auto">
             <div className="bg-[#0a0a0a] border border-[#b5ff3e]/[0.18] rounded-3xl overflow-hidden flex flex-col lg:flex-row anim-reveal is-visible">
               <div className="w-full lg:w-1/2 h-64 lg:h-auto relative">
-                <img 
+                <Image 
                   src={featuredPost.image} 
                   alt={featuredPost.title} 
-                  className="w-full h-full object-cover absolute inset-0"
-                  loading="lazy"
+                  fill
+                  className="object-cover absolute inset-0"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
                 />
               </div>
               <div className="w-full lg:w-1/2 p-8 lg:p-12 flex flex-col justify-center">
@@ -152,7 +167,7 @@ export default function BlogClient() {
                   <span className="text-[#66667a] text-xs">{featuredPost.date}</span>
                   <span className="bg-[#b5ff3e] text-[#000000] text-[10px] font-bold px-2 py-0.5 rounded-sm uppercase tracking-wider ml-auto">Updated for 2026</span>
                 </div>
-                <h2 className="font-[family-name:var(--font-display)] font-bold text-2xl lg:text-3xl text-[#e8e8f0] mb-4 leading-tight">
+                <h2 className="heading-sub font-[family-name:var(--font-display)] text-[#e8e8f0] mb-4 leading-tight">
                   {featuredPost.title}
                 </h2>
                 <p className="font-[family-name:var(--font-body)] text-[#8888a0] text-base mb-6 leading-relaxed">
@@ -165,7 +180,7 @@ export default function BlogClient() {
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-[#b5ff3e] mt-0.5">•</span>
-                    <span><strong className="text-[#e8e8f0] font-medium">What you'll learn:</strong> When Shopify is overkill, when Wix Studio wins, and when custom code is worth it</span>
+                    <span><strong className="text-[#e8e8f0] font-medium">What you&apos;ll learn:</strong> When Shopify is overkill, when Wix Studio wins, and when custom code is worth it</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-[#b5ff3e] mt-0.5">•</span>
@@ -223,11 +238,12 @@ export default function BlogClient() {
             {filteredPosts.map((post, index) => (
               <Link href={`/blog/${post.slug}`} key={post.slug} className="group flex flex-col h-full bg-[#0a0a0a] border border-white/[0.08] rounded-2xl overflow-hidden hover:border-white/[0.16] hover:-translate-y-1 transition-all duration-300 anim-reveal is-visible" style={{ animationDelay: `${index * 100}ms` }}>
                 <div className="w-full aspect-[16/10] relative overflow-hidden">
-                  <img 
+                  <Image 
                     src={post.image} 
                     alt={post.title} 
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                    loading="lazy"
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
                 <div className="p-6 flex flex-col flex-1">
@@ -235,7 +251,7 @@ export default function BlogClient() {
                     <span className="bg-[#111111] border border-white/[0.08] text-[#e8e8f0] text-xs px-3 py-1 rounded-full">{post.category}</span>
                     <span className="text-[#66667a] text-xs">{post.readTime}</span>
                   </div>
-                  <h3 className="font-[family-name:var(--font-display)] font-semibold text-[#e8e8f0] text-xl mb-3 group-hover:text-[#b5ff3e] transition-colors">
+                  <h3 className="heading-sub font-[family-name:var(--font-display)] text-[#e8e8f0] mb-3 group-hover:text-[#b5ff3e] transition-colors">
                     {post.title}
                   </h3>
                   <p className="font-[family-name:var(--font-body)] text-[#8888a0] text-sm leading-relaxed mb-6 flex-1">
@@ -263,7 +279,7 @@ export default function BlogClient() {
           <div className="text-[#b5ff3e] text-[length:var(--text-xs)] uppercase tracking-widest mb-4 anim-reveal is-visible">
             Why This Blog Exists
           </div>
-          <h2 className="font-[family-name:var(--font-display)] font-bold text-3xl md:text-4xl text-[#e8e8f0] mb-6 anim-reveal is-visible">
+          <h2 className="heading-section font-[family-name:var(--font-display)] text-[#e8e8f0] mb-6 anim-reveal is-visible">
             Built for humans first — and easier for search engines to trust
           </h2>
           <p className="font-[family-name:var(--font-body)] text-[#8888a0] text-lg max-w-3xl mb-12 anim-reveal is-visible">
@@ -272,19 +288,19 @@ export default function BlogClient() {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 anim-reveal is-visible">
             <div className="bg-[#111111] border border-white/[0.06] rounded-2xl p-6 text-left hover:border-white/[0.12] transition-colors">
-              <h3 className="font-[family-name:var(--font-display)] font-bold text-xl text-[#e8e8f0] mb-3">Clear structure</h3>
+              <h3 className="heading-sub font-[family-name:var(--font-display)] text-[#e8e8f0] mb-3">Clear structure</h3>
               <p className="font-[family-name:var(--font-body)] text-[#8888a0] text-sm leading-relaxed">
                 Short paragraphs, strong headings, and direct answers make articles easier to read and easier to summarize.
               </p>
             </div>
             <div className="bg-[#111111] border border-white/[0.06] rounded-2xl p-6 text-left hover:border-white/[0.12] transition-colors">
-              <h3 className="font-[family-name:var(--font-display)] font-bold text-xl text-[#e8e8f0] mb-3">Specific expertise</h3>
+              <h3 className="heading-sub font-[family-name:var(--font-display)] text-[#e8e8f0] mb-3">Specific expertise</h3>
               <p className="font-[family-name:var(--font-body)] text-[#8888a0] text-sm leading-relaxed">
                 We write about websites, SEO, AI chatbots, and growth strategy from actual project experience — not recycled generic advice.
               </p>
             </div>
             <div className="bg-[#111111] border border-white/[0.06] rounded-2xl p-6 text-left hover:border-white/[0.12] transition-colors">
-              <h3 className="font-[family-name:var(--font-display)] font-bold text-xl text-[#e8e8f0] mb-3">Commercial clarity</h3>
+              <h3 className="heading-sub font-[family-name:var(--font-display)] text-[#e8e8f0] mb-3">Commercial clarity</h3>
               <p className="font-[family-name:var(--font-body)] text-[#8888a0] text-sm leading-relaxed">
                 Every guide is written to help a business owner make a better decision, not just attract empty traffic.
               </p>
@@ -301,7 +317,7 @@ export default function BlogClient() {
               <div className="text-[#b5ff3e] text-[length:var(--text-xs)] uppercase tracking-widest mb-4">
                 Stay Updated
               </div>
-              <h2 className="font-[family-name:var(--font-display)] font-bold text-3xl md:text-4xl text-[#e8e8f0] mb-6">
+              <h2 className="heading-section font-[family-name:var(--font-display)] text-[#e8e8f0] mb-6">
                 Get useful ideas — not spam
               </h2>
               <p className="font-[family-name:var(--font-body)] text-[#8888a0] text-base leading-relaxed mb-8">
@@ -357,8 +373,8 @@ export default function BlogClient() {
                   <div className="w-12 h-12 bg-[#b5ff3e]/[0.1] rounded-full flex items-center justify-center mx-auto mb-4 text-[#b5ff3e]">
                     <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>
                   </div>
-                  <h3 className="font-[family-name:var(--font-display)] font-bold text-xl text-[#e8e8f0] mb-2">Thanks — you're on the list.</h3>
-                  <p className="font-[family-name:var(--font-body)] text-[#8888a0] text-sm">You'll hear from us when something genuinely useful is published.</p>
+                  <h3 className="heading-sub font-[family-name:var(--font-display)] text-[#e8e8f0] mb-2">Thanks — you&apos;re on the list.</h3>
+                  <p className="font-[family-name:var(--font-body)] text-[#8888a0] text-sm">You&apos;ll hear from us when something genuinely useful is published.</p>
                 </div>
               )}
               
@@ -377,11 +393,11 @@ export default function BlogClient() {
       {/* SECTION 7 — Bottom CTA Banner */}
       <section aria-label="Call to Action" className="w-full py-16 px-6 bg-[#b5ff3e] text-center">
         <div className="w-full md:w-[80%] max-w-none mx-auto anim-reveal is-visible">
-          <h2 className="font-[family-name:var(--font-display)] font-bold text-3xl md:text-4xl text-[#000000] mb-4">
+          <h2 className="heading-section font-[family-name:var(--font-display)] text-[#000000] mb-4">
             Need help applying this to your business?
           </h2>
           <p className="font-[family-name:var(--font-body)] text-[#000000]/70 text-lg max-w-2xl mx-auto mb-10 leading-relaxed">
-            Reading is useful. Execution is better. If you want help with your website, SEO, chatbot, or automation setup, let's talk.
+            Reading is useful. Execution is better. If you want help with your website, SEO, chatbot, or automation setup, let&apos;s talk.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <a href="https://wa.me/919599143235" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center bg-[#000000] text-[#b5ff3e] rounded-full px-8 py-4 font-semibold hover:bg-[#111111] hover:shadow-lg transition-all active:scale-95">

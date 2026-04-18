@@ -34,7 +34,7 @@ export default function AboutPage() {
             <span className="w-1.5 h-1.5 rounded-full bg-[#b5ff3e] animate-pulse" />
             About Sitecraf
           </div>
-          <h1 className="font-[family-name:var(--font-display)] font-bold text-[length:calc(var(--text-3xl)*0.9)] md:text-[length:var(--text-3xl)] text-[#e8e8f0] tracking-[-0.02em] leading-[1.15] mb-6 anim-reveal is-visible" style={{ animationDelay: '100ms' }}>
+          <h1 className="heading-section font-[family-name:var(--font-display)] text-[#e8e8f0] mb-6 anim-reveal is-visible" style={{ animationDelay: '100ms' }}>
             The Studio Behind Your Digital Growth
           </h1>
           <p className="font-[family-name:var(--font-body)] text-[length:calc(var(--text-base)*0.9)] md:text-[length:var(--text-base)] text-[#8888a0] max-w-2xl leading-relaxed mb-10 anim-reveal is-visible" style={{ animationDelay: '200ms' }}>
@@ -52,7 +52,7 @@ export default function AboutPage() {
       <section aria-label="Our Story" className="w-full py-20 px-6 bg-[#0a0a0a]">
         <div className="w-full md:w-[80%] max-w-none mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div className="flex flex-col">
-            <h2 className="font-[family-name:var(--font-display)] font-bold text-3xl md:text-4xl text-[#e8e8f0] mb-8 anim-reveal is-visible">
+            <h2 className="heading-section font-[family-name:var(--font-display)] text-[#e8e8f0] mb-8 anim-reveal is-visible">
               We started Sitecraf because Indian B2B brands deserved better
             </h2>
             <div className="font-[family-name:var(--font-body)] text-[#8888a0] space-y-6 text-base leading-relaxed anim-reveal is-visible" style={{ animationDelay: '100ms' }}>
@@ -93,7 +93,7 @@ export default function AboutPage() {
       <section aria-label="How We're Different" className="w-full py-20 px-6 bg-[#000000]">
         <div className="w-full md:w-[80%] max-w-none mx-auto">
           <div className="text-center md:text-left mb-16 anim-reveal is-visible">
-            <h2 className="font-[family-name:var(--font-display)] font-bold text-3xl md:text-4xl text-[#e8e8f0] mb-4">
+            <h2 className="heading-section font-[family-name:var(--font-display)] text-[#e8e8f0] mb-4">
               Not an agency. Not a freelancer. Something better.
             </h2>
             <p className="font-[family-name:var(--font-body)] text-[#8888a0] text-lg max-w-2xl">
@@ -109,7 +109,7 @@ export default function AboutPage() {
                   <path d="M12 2L2 12l10 10 10-10L12 2z" />
                 </svg>
               </div>
-              <h3 className="font-[family-name:var(--font-display)] font-bold text-xl text-[#e8e8f0] mb-3">
+              <h3 className="heading-sub font-[family-name:var(--font-display)] text-[#e8e8f0] mb-3">
                 You talk to the person doing the work
               </h3>
               <p className="font-[family-name:var(--font-body)] text-[#8888a0] leading-relaxed">
@@ -124,7 +124,7 @@ export default function AboutPage() {
                   <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
                 </svg>
               </div>
-              <h3 className="font-[family-name:var(--font-display)] font-bold text-xl text-[#e8e8f0] mb-3">
+              <h3 className="heading-sub font-[family-name:var(--font-display)] text-[#e8e8f0] mb-3">
                 Flat pricing. Zero surprises.
               </h3>
               <p className="font-[family-name:var(--font-body)] text-[#8888a0] leading-relaxed">
@@ -140,7 +140,7 @@ export default function AboutPage() {
                   <path d="M7 11V7a5 5 0 0 1 10 0v4" />
                 </svg>
               </div>
-              <h3 className="font-[family-name:var(--font-display)] font-bold text-xl text-[#e8e8f0] mb-3">
+              <h3 className="heading-sub font-[family-name:var(--font-display)] text-[#e8e8f0] mb-3">
                 Your IP. Always.
               </h3>
               <p className="font-[family-name:var(--font-body)] text-[#8888a0] leading-relaxed">
@@ -155,7 +155,7 @@ export default function AboutPage() {
       <section aria-label="Who We Serve" className="w-full py-20 px-6 bg-[#0a0a0a]">
         <div className="w-full md:w-[80%] max-w-none mx-auto">
           <div className="text-center md:text-left mb-12 anim-reveal is-visible">
-            <h2 className="font-[family-name:var(--font-display)] font-bold text-3xl md:text-4xl text-[#e8e8f0] mb-4">
+            <h2 className="heading-section font-[family-name:var(--font-display)] text-[#e8e8f0] mb-4">
               Built for Indian B2B brands that mean business
             </h2>
             <p className="font-[family-name:var(--font-body)] text-[#8888a0] text-lg max-w-3xl">
@@ -194,7 +194,7 @@ export default function AboutPage() {
       {/* SECTION 5 — CTA Banner */}
       <section aria-label="Call to Action" className="w-full py-16 px-6 bg-[#b5ff3e] flex flex-col items-center text-center">
         <div className="w-full md:w-[80%] max-w-none mx-auto flex flex-col items-center anim-reveal is-visible">
-          <h2 className="font-[family-name:var(--font-display)] font-bold text-3xl md:text-4xl text-[#000000] mb-4">
+          <h2 className="heading-section font-[family-name:var(--font-display)] text-[#000000] mb-4">
             Ready to build something that actually converts?
           </h2>
           <p className="font-[family-name:var(--font-body)] text-[#000000]/70 text-lg max-w-2xl mb-10">

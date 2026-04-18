@@ -47,7 +47,7 @@ export default function Footer() {
 
             {/* Col 2: Services */}
             <div className="flex flex-col">
-              <h4 className="text-[#e8e8f0] text-xs uppercase tracking-widest font-semibold mb-5">Services</h4>
+              <h4 className="heading-sub text-[#e8e8f0] uppercase tracking-widest mb-5">Services</h4>
               <nav className="flex flex-col">
                 <Link href="/#services" className="text-[#66667a] text-sm hover:text-[#8888a0] transition-colors block mb-3">Platform Website (Shopify / Wix Studio)</Link>
                 <Link href="/#services" className="text-[#66667a] text-sm hover:text-[#8888a0] transition-colors block mb-3">Custom Coded Website</Link>
@@ -59,7 +59,7 @@ export default function Footer() {
 
             {/* Col 3: Quick Links */}
             <div className="flex flex-col">
-              <h4 className="text-[#e8e8f0] text-xs uppercase tracking-widest font-semibold mb-5">Quick Links</h4>
+              <h4 className="heading-sub text-[#e8e8f0] uppercase tracking-widest mb-5">Quick Links</h4>
               <nav className="flex flex-col">
                 <Link href="/" className="text-[#66667a] text-sm hover:text-[#8888a0] transition-colors block mb-3">Home</Link>
                 <Link href="/about" className="text-[#66667a] text-sm hover:text-[#8888a0] transition-colors block mb-3">About Us</Link>
@@ -72,7 +72,7 @@ export default function Footer() {
 
             {/* Col 4: Social */}
             <div className="flex flex-col lg:col-span-2">
-              <h4 className="text-[#e8e8f0] text-xs uppercase tracking-widest font-semibold mb-5">Social</h4>
+              <h4 className="heading-sub text-[#e8e8f0] uppercase tracking-widest mb-5">Social</h4>
               <div className="flex items-center gap-3">
                 <a href="https://linkedin.com/company/sitecraf" target="_blank" rel="noopener noreferrer" className="w-10 h-10 border border-white/[0.08] rounded-full flex items-center justify-center text-[#8888a0] hover:border-[#b5ff3e]/30 hover:text-[#b5ff3e] transition-colors" aria-label="LinkedIn">
                   <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>

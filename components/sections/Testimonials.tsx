@@ -132,7 +132,7 @@ export default function Testimonials() {
           <span className="block text-[#b5ff3e] text-[length:var(--text-xs)] uppercase tracking-widest mb-3">
             What Our Clients Say
           </span>
-          <h2 className="font-[family-name:var(--font-display)] font-bold text-[#e8e8f0] text-[length:var(--text-xl)]">
+          <h2 className="heading-section font-[family-name:var(--font-display)] text-[#e8e8f0]">
             Success Stories from Textile Leaders
           </h2>
           <p className="font-[family-name:var(--font-body)] text-[#8888a0] mt-4 leading-relaxed">

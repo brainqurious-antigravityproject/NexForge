@@ -6,7 +6,6 @@ const technologies = [
   { name: "WooCommerce",  icon: "https://cdn.simpleicons.org/woocommerce/8888a0"   },
   { name: "Shopify",      icon: "https://cdn.simpleicons.org/shopify/8888a0"       },
   { name: "Wix Studio",   icon: "https://cdn.simpleicons.org/wix/8888a0"           },
-  { name: "Webflow",      icon: "https://cdn.simpleicons.org/webflow/8888a0"       },
   { name: "Next.js",      icon: "https://cdn.simpleicons.org/nextdotjs/8888a0"     },
   { name: "React",        icon: "https://cdn.simpleicons.org/react/8888a0"         },
   { name: "Tailwind CSS", icon: "https://cdn.simpleicons.org/tailwindcss/8888a0"   },

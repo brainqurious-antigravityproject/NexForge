@@ -15,7 +15,10 @@ export const metadata = {
     'affordable website development India freelancer',
     'AI image generation India',
     'B2B website development New Delhi',
-    'Sitecraf'
+    'Sitecraf',
+    'GEO',
+    'generative engine optimization',
+    'GEO for Indian businesses'
   ],
   openGraph: {
     title: 'Sitecraf — Websites & AI Tools for Indian B2B Brands',

@@ -62,7 +62,9 @@ export default function Navbar() {
       </a>
 
       <header
-        className={`fixed top-0 left-0 right-0 z-50 h-[72px] transition-all duration-300 ease-[var(--t-base)] bg-transparent ${
+        className={`fixed top-0 left-0 right-0 z-50 h-[72px] transition-all duration-300 ease-[var(--t-base)] ${
+          isScrolled ? 'bg-[#000000]/80 backdrop-blur-md border-b border-white/[0.05]' : 'bg-transparent'
+        } ${
           scrollDirection === 'down' && isScrolled 
             ? '-translate-y-full' 
             : 'translate-y-0'
@@ -120,7 +122,7 @@ export default function Navbar() {
 
           {/* MOBILE — Hamburger Menu Button */}
           <button
-            className="md:hidden w-11 h-11 flex flex-col items-center justify-center gap-1.5 z-50 border border-dotted border-[#d5f208]"
+            className="md:hidden w-11 h-11 flex flex-col items-center justify-center gap-1.5 z-50 rounded-lg hover:bg-white/[0.05] transition-colors"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-expanded={isMobileMenuOpen}
             aria-label={isMobileMenuOpen ? "Close navigation" : "Open navigation"}

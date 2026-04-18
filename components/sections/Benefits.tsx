@@ -67,8 +67,8 @@ const benefits: Benefit[] = [
   {
     id: 'ai-advantage',
     icon: 'Sparkles',
-    title: 'SEO, AEO & Performance Built In',
-    description: 'Every website we deliver is mobile-first, fast-loading, and structured for both search engines and answer engines. SEO and AEO are not add-ons — they are part of how we build, from page structure and metadata to Core Web Vitals and schema markup.',
+    title: 'SEO, AEO & GEO Built In',
+    description: 'Every website we build is optimised for all three layers of modern search: SEO for Google rankings, AEO for direct AI answers (Perplexity, AI Overviews), and GEO so ChatGPT, Gemini, and Copilot recommend your business when users ask for suggestions.',
     stat: undefined
   }
 ];
@@ -119,7 +119,7 @@ export default function Benefits() {
           <span className="block text-[#b5ff3e] text-[length:var(--text-xs)] uppercase tracking-widest mb-3">
             Why Work With Us
           </span>
-          <h2 className="font-[family-name:var(--font-display)] font-bold text-[#e8e8f0] text-[length:var(--text-xl)]">
+          <h2 className="heading-section font-[family-name:var(--font-display)] text-[#e8e8f0]">
             Why Businesses Choose Sitecraf
           </h2>
           <p className="font-[family-name:var(--font-body)] text-[#8888a0] mt-3 max-w-2xl leading-relaxed">
@@ -146,7 +146,7 @@ export default function Benefits() {
                   <span className="text-[#b5ff3e] text-[10px] font-mono">{benefit.icon}</span>
                 )}
               </div>
-              <h3 className="font-[family-name:var(--font-display)] font-semibold text-[#e8e8f0] text-xl mb-3">
+              <h3 className="heading-sub font-[family-name:var(--font-display)] text-[#e8e8f0] mb-3">
                 {benefit.title}
               </h3>
               <p className="font-[family-name:var(--font-body)] text-[#8888a0] text-[length:var(--text-sm)] leading-relaxed flex-1">
@@ -181,7 +181,7 @@ export default function Benefits() {
                   <span className="text-[#b5ff3e] text-[10px] font-mono">{benefit.icon}</span>
                 )}
               </div>
-              <h3 className="font-[family-name:var(--font-display)] font-semibold text-[#e8e8f0] text-lg mb-2">
+              <h3 className="heading-sub font-[family-name:var(--font-display)] text-[#e8e8f0] mb-2">
                 {benefit.title}
               </h3>
               <p className="font-[family-name:var(--font-body)] text-[#8888a0] text-[length:var(--text-sm)] leading-relaxed flex-1">

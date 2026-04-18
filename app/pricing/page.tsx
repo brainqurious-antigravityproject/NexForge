@@ -33,7 +33,7 @@ export default function PricingPage() {
             Transparent Pricing
           </div>
           
-          <h1 className="font-[family-name:var(--font-display)] font-bold text-[length:var(--text-3xl)] text-[#e8e8f0] tracking-[-0.02em] leading-[1.15] anim-reveal is-visible" style={{ animationDelay: '100ms' }}>
+          <h1 className="heading-section font-[family-name:var(--font-display)] text-[#e8e8f0] anim-reveal is-visible" style={{ animationDelay: '100ms' }}>
             Flat Prices. <span className="text-[#b5ff3e]">No Surprises.</span> Ever.
           </h1>
           

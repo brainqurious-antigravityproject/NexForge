@@ -27,7 +27,7 @@ const rows: ComparisonRow[] = [
     largeAgency: true
   },
   {
-    feature: 'WordPress, Shopify, Wix, Webflow & Next.js',
+    feature: 'WordPress, Shopify, Wix & Next.js',
     sitecraf: true,
     freelancer: false,
     inHouse: false,
@@ -133,7 +133,7 @@ export default function ComparisonTable() {
           <span className="block text-[#b5ff3e] text-[length:var(--text-xs)] uppercase tracking-widest mb-3">
             Why Sitecraf
           </span>
-          <h2 className="font-[family-name:var(--font-display)] font-bold text-[#e8e8f0] text-[length:var(--text-xl)]">
+          <h2 className="heading-section font-[family-name:var(--font-display)] text-[#e8e8f0]">
             Sitecraf vs Freelancer vs In-House vs Agency
           </h2>
           <p className="font-[family-name:var(--font-body)] text-[#8888a0] mt-3 max-w-2xl leading-relaxed">

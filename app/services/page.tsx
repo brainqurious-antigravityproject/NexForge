@@ -34,7 +34,7 @@ export default function ServicesPage() {
             What We Build
           </div>
           
-          <h1 className="font-[family-name:var(--font-display)] font-bold text-[length:var(--text-3xl)] text-[#e8e8f0] tracking-[-0.02em] leading-[1.15] anim-reveal is-visible" style={{ animationDelay: '100ms' }}>
+          <h1 className="heading-section font-[family-name:var(--font-display)] text-[#e8e8f0] mb-6 anim-reveal is-visible" style={{ animationDelay: '100ms' }}>
             Everything Your Business Needs to <span className="text-[#b5ff3e]">Win</span> Online
           </h1>
           
@@ -70,7 +70,7 @@ export default function ServicesPage() {
         <div className="w-full md:w-[80%] max-w-none mx-auto">
           <div className="mb-12 anim-reveal is-visible">
             <span className="block text-[#b5ff3e] text-[length:var(--text-xs)] uppercase tracking-widest mb-3">Our Services</span>
-            <h2 className="font-[family-name:var(--font-display)] font-bold text-3xl md:text-4xl text-[#e8e8f0] mb-4">Five ways we help Indian businesses grow</h2>
+            <h2 className="heading-section font-[family-name:var(--font-display)] text-[#e8e8f0] mb-4">Five ways we help Indian businesses grow</h2>
             <p className="font-[family-name:var(--font-body)] text-[#8888a0] text-lg max-w-2xl">
               Each service is scoped, quoted, and delivered separately. Pick one or combine them — no bundle pressure.
             </p>
@@ -91,7 +91,7 @@ export default function ServicesPage() {
                       <line x1="9" y1="21" x2="9" y2="9"></line>
                     </svg>
                   </div>
-                  <h3 className="font-[family-name:var(--font-display)] font-semibold text-2xl text-[#e8e8f0] mb-3">Platform Website (Shopify / Wix Studio)</h3>
+                  <h3 className="heading-sub font-[family-name:var(--font-display)] text-[#e8e8f0] mb-3">Platform Website (Shopify / Wix Studio)</h3>
                   <p className="text-[#8888a0] mb-6">Best for: Manufacturers, exporters, B2B showcase sites. Shopify → Wix Studio migration saves ₹18,600/yr (₹2,000/mo Shopify vs ₹450/mo Wix Studio).</p>
                   <ul className="space-y-3 mb-8">
                     {['Shopify → Wix Studio migration, identical design preserved', 'Save ₹18,000+ per year on platform subscription', 'New platform websites from scratch', 'Editable by your team after delivery'].map((feature, i) => (
@@ -143,7 +143,7 @@ export default function ServicesPage() {
                     <polyline points="8 6 2 12 8 18"></polyline>
                   </svg>
                 </div>
-                <h3 className="font-[family-name:var(--font-display)] font-semibold text-xl text-[#e8e8f0] mb-3">Custom Coded Website</h3>
+                <h3 className="heading-sub font-[family-name:var(--font-display)] text-[#e8e8f0] mb-3">Custom Coded Website</h3>
                 <p className="text-[#8888a0] mb-6 flex-grow">Best for: Businesses needing SEO performance &amp; custom functionality. Next.js or plain HTML/CSS, deployed free on Vercel.</p>
                 <ul className="space-y-3 mb-8">
                   {['Next.js / HTML + CSS builds, no templates', 'Mobile-first & SEO optimised', 'Deployed free on Vercel (near-zero hosting cost)', '100% code ownership transferred on delivery'].map((feature, i) => (
@@ -177,7 +177,7 @@ export default function ServicesPage() {
                     <polyline points="21 15 16 10 5 21"></polyline>
                   </svg>
                 </div>
-                <h3 className="font-[family-name:var(--font-display)] font-semibold text-xl text-[#e8e8f0] mb-3">AI Image Generation</h3>
+                <h3 className="heading-sub font-[family-name:var(--font-display)] text-[#e8e8f0] mb-3">AI Image Generation</h3>
                 <p className="text-[#8888a0] mb-6 flex-grow">Best for: Home furnishing, fabric, lifestyle brands. Studio-quality images from raw product photos — no photography budget needed.</p>
                 <ul className="space-y-3 mb-8">
                   {['Website banners from fabric/product photos', 'Product photography alternative', 'Brand-consistent style across all images', 'Bulk generation available'].map((feature, i) => (
@@ -217,7 +217,7 @@ export default function ServicesPage() {
                     <path d="M8 11h8"></path>
                   </svg>
                 </div>
-                <h3 className="font-[family-name:var(--font-display)] font-semibold text-xl text-[#e8e8f0] mb-3">AI Chatbot</h3>
+                <h3 className="heading-sub font-[family-name:var(--font-display)] text-[#e8e8f0] mb-3">AI Chatbot</h3>
                 <p className="text-[#8888a0] mb-6 flex-grow">Trained on YOUR business — handles queries 24/7 in Hindi, Hinglish, and English.</p>
                 <ul className="space-y-3 mb-8">
                   {['Hindi, Hinglish & English support (unique in India)', 'Trained on your products, pricing, FAQs, contact details', 'Lead capture & qualification while you\'re offline', 'Easy website widget — embed in 1 line of code'].map((feature, i) => (
@@ -252,7 +252,7 @@ export default function ServicesPage() {
                     <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
                   </svg>
                 </div>
-                <h3 className="font-[family-name:var(--font-display)] font-semibold text-xl text-[#e8e8f0] mb-3">Automation &amp; API Integrations</h3>
+                <h3 className="heading-sub font-[family-name:var(--font-display)] text-[#e8e8f0] mb-3">Automation &amp; API Integrations</h3>
                 <p className="text-[#8888a0] mb-6 flex-grow">Connect website with WhatsApp, CRM, Google Sheets, payment gateways, booking calendars.</p>
                 <ul className="space-y-3 mb-8">
                   {['WhatsApp + email lead notifications', 'Calendar & booking integrations', 'CRM / Google Sheets sync', 'Payment gateway setup (Razorpay, Stripe)'].map((feature, i) => (
@@ -286,7 +286,7 @@ export default function ServicesPage() {
         <div className="w-full md:w-[80%] max-w-none mx-auto">
           <div className="mb-12 anim-reveal is-visible">
             <span className="block text-[#b5ff3e] text-[length:var(--text-xs)] uppercase tracking-widest mb-3">Save ₹18,600 Every Year</span>
-            <h2 className="font-[family-name:var(--font-display)] font-bold text-3xl md:text-4xl text-[#e8e8f0] mb-4">Still paying Shopify rates just to show your catalogue?</h2>
+            <h2 className="heading-section font-[family-name:var(--font-display)] text-[#e8e8f0] mb-4">Still paying Shopify rates just to show your catalogue?</h2>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -347,7 +347,7 @@ export default function ServicesPage() {
         <div className="w-full md:w-[80%] max-w-none mx-auto">
           <div className="mb-16 text-center md:text-left anim-reveal is-visible">
             <span className="block text-[#b5ff3e] text-[length:var(--text-xs)] uppercase tracking-widest mb-3">Our Process</span>
-            <h2 className="font-[family-name:var(--font-display)] font-bold text-3xl md:text-4xl text-[#e8e8f0] mb-4">From first call to live website — here&apos;s exactly what happens</h2>
+            <h2 className="heading-section font-[family-name:var(--font-display)] text-[#e8e8f0] mb-4">From first call to live website — here&apos;s exactly what happens</h2>
             <p className="font-[family-name:var(--font-body)] text-[#8888a0] text-lg max-w-2xl">
               No surprises. No delays. No ghosting after payment.
             </p>
@@ -368,7 +368,7 @@ export default function ServicesPage() {
                 <div className="bg-[#0a0a0a] border border-white/[0.06] rounded-2xl p-6 md:p-8 flex-grow relative overflow-hidden">
                   <div className="absolute -right-4 -top-8 text-[#b5ff3e]/5 font-bold text-9xl select-none pointer-events-none">01</div>
                   <span className="block text-[#b5ff3e] text-xs uppercase tracking-widest mb-2">Step 01</span>
-                  <h3 className="font-[family-name:var(--font-display)] font-semibold text-xl text-[#e8e8f0] mb-3">Free Discovery Call</h3>
+                  <h3 className="heading-sub font-[family-name:var(--font-display)] text-[#e8e8f0] mb-3">Free Discovery Call</h3>
                   <div className="inline-block bg-[#111111] text-[#8888a0] rounded-full px-3 py-1 text-xs mb-4">30 mins</div>
                   <p className="text-[#8888a0] mb-4">No hard sell. Listen first, recommend right solution.</p>
                   <ul className="space-y-2">
@@ -393,7 +393,7 @@ export default function ServicesPage() {
                 <div className="bg-[#0a0a0a] border border-white/[0.06] rounded-2xl p-6 md:p-8 flex-grow relative overflow-hidden">
                   <div className="absolute -right-4 -top-8 text-[#b5ff3e]/5 font-bold text-9xl select-none pointer-events-none">02</div>
                   <span className="block text-[#b5ff3e] text-xs uppercase tracking-widest mb-2">Step 02</span>
-                  <h3 className="font-[family-name:var(--font-display)] font-semibold text-xl text-[#e8e8f0] mb-3">Written Quote &amp; Scope</h3>
+                  <h3 className="heading-sub font-[family-name:var(--font-display)] text-[#e8e8f0] mb-3">Written Quote &amp; Scope</h3>
                   <div className="inline-block bg-[#111111] text-[#8888a0] rounded-full px-3 py-1 text-xs mb-4">Within 48 hours</div>
                   <p className="text-[#8888a0] mb-4">Fixed price. Exact scope. No ambiguity. 50/50 payment.</p>
                   <ul className="space-y-2">
@@ -414,7 +414,7 @@ export default function ServicesPage() {
                 <div className="bg-[#0a0a0a] border border-white/[0.06] rounded-2xl p-6 md:p-8 flex-grow relative overflow-hidden">
                   <div className="absolute -right-4 -top-8 text-[#b5ff3e]/5 font-bold text-9xl select-none pointer-events-none">03</div>
                   <span className="block text-[#b5ff3e] text-xs uppercase tracking-widest mb-2">Step 03</span>
-                  <h3 className="font-[family-name:var(--font-display)] font-semibold text-xl text-[#e8e8f0] mb-3">Design &amp; Content Setup</h3>
+                  <h3 className="heading-sub font-[family-name:var(--font-display)] text-[#e8e8f0] mb-3">Design &amp; Content Setup</h3>
                   <div className="inline-block bg-[#111111] text-[#8888a0] rounded-full px-3 py-1 text-xs mb-4">3–5 days</div>
                   <p className="text-[#8888a0] mb-4">Visual mockup shown before coding begins. You approve first.</p>
                   <ul className="space-y-2">
@@ -436,7 +436,7 @@ export default function ServicesPage() {
                 <div className="bg-[#0a0a0a] border border-white/[0.06] rounded-2xl p-6 md:p-8 flex-grow relative overflow-hidden">
                   <div className="absolute -right-4 -top-8 text-[#b5ff3e]/5 font-bold text-9xl select-none pointer-events-none">04</div>
                   <span className="block text-[#b5ff3e] text-xs uppercase tracking-widest mb-2">Step 04</span>
-                  <h3 className="font-[family-name:var(--font-display)] font-semibold text-xl text-[#e8e8f0] mb-3">Build &amp; Review</h3>
+                  <h3 className="heading-sub font-[family-name:var(--font-display)] text-[#e8e8f0] mb-3">Build &amp; Review</h3>
                   <div className="inline-block bg-[#111111] text-[#8888a0] rounded-full px-3 py-1 text-xs mb-4">1–3 weeks</div>
                   <p className="text-[#8888a0] mb-4">Live preview link. Two revision rounds. WhatsApp updates.</p>
                   <ul className="space-y-2">
@@ -459,7 +459,7 @@ export default function ServicesPage() {
                 <div className="bg-[#0a0a0a] border border-white/[0.06] rounded-2xl p-6 md:p-8 flex-grow relative overflow-hidden">
                   <div className="absolute -right-4 -top-8 text-[#b5ff3e]/5 font-bold text-9xl select-none pointer-events-none">05</div>
                   <span className="block text-[#b5ff3e] text-xs uppercase tracking-widest mb-2">Step 05</span>
-                  <h3 className="font-[family-name:var(--font-display)] font-semibold text-xl text-[#e8e8f0] mb-3">Launch &amp; Handover</h3>
+                  <h3 className="heading-sub font-[family-name:var(--font-display)] text-[#e8e8f0] mb-3">Launch &amp; Handover</h3>
                   <div className="inline-block bg-[#111111] text-[#8888a0] rounded-full px-3 py-1 text-xs mb-4">1–2 days</div>
                   <p className="text-[#8888a0] mb-4">Live on your domain. All logins handed over. 2-week support.</p>
                   <ul className="space-y-2">
@@ -515,7 +515,7 @@ export default function ServicesPage() {
         <div className="w-full md:w-[80%] max-w-none mx-auto">
           <div className="mb-12 text-center md:text-left anim-reveal is-visible">
             <span className="block text-[#b5ff3e] text-[length:var(--text-xs)] uppercase tracking-widest mb-3">Common Questions</span>
-            <h2 className="font-[family-name:var(--font-display)] font-bold text-3xl md:text-4xl text-[#e8e8f0]">Answered honestly</h2>
+            <h2 className="heading-section font-[family-name:var(--font-display)] text-[#e8e8f0]">Answered honestly</h2>
           </div>
 
           <div className="flex flex-col anim-reveal is-visible" style={{ animationDelay: '100ms' }}>
@@ -597,7 +597,7 @@ export default function ServicesPage() {
       {/* SECTION 7 — CTA Banner (Lead Conversion) */}
       <section aria-label="Call to Action" className="w-full py-16 px-6 bg-[#b5ff3e] flex flex-col items-center text-center">
         <div className="w-full md:w-[80%] max-w-none mx-auto flex flex-col items-center anim-reveal is-visible">
-          <h2 className="font-[family-name:var(--font-display)] font-bold text-[length:var(--text-2xl)] text-[#000000] mb-4">
+          <h2 className="heading-section font-[family-name:var(--font-display)] text-[#000000] mb-4">
             Not sure which service you need?
           </h2>
           <p className="text-[#000000]/70 text-[length:var(--text-base)] max-w-xl mx-auto mt-4">
