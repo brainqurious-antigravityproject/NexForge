@@ -62,7 +62,7 @@ export default function ParticleSphere() {
           offset: [0, 0],
           onRender: (state: Record<string, unknown>) => {
             state.phi = phiRef.current;
-            phiRef.current += 0.0036; // Increased speed by 20%
+            phiRef.current += 0.003;
           },
         });
       } catch (e) {
