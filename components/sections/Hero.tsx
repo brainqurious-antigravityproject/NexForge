@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import Link from 'next/link';
 import dynamic from 'next/dynamic';
 import { HeroProps } from '@/types';
@@ -67,11 +67,9 @@ export default function Hero(props: Partial<HeroProps>) {
   const stateClass = "is-visible";
 
   return (
-    <section className="relative min-h-screen flex flex-col justify-center pt-[calc(72px+2rem)] pb-16 px-6 overflow-hidden bg-[#000000]">
-      <ParticleSphere />
-
-      <div className="relative z-10 flex flex-col items-center md:items-start text-center md:text-left w-full md:w-[80%] max-w-none mx-auto">
-        <div className="w-full lg:w-[60%] md:w-[65%] flex flex-col items-center md:items-start pr-0 md:pr-8">
+    <section id="hero" className="hero-section">
+      <div className="hero-inner">
+        <div className="hero-content">
           {/* Badge */}
           {badge && (
             <div
@@ -142,6 +140,11 @@ export default function Hero(props: Partial<HeroProps>) {
               ))}
             </div>
           )}
+        </div>
+
+        {/* Globe visual — purely decorative */}
+        <div className="hero-visual" aria-hidden="true">
+          <ParticleSphere />
         </div>
       </div>
     </section>

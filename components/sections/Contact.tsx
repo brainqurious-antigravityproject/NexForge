@@ -56,6 +56,7 @@ export default function Contact() {
         </div>
 
         <div className="grid grid-cols-1 gap-8">
+          {/* Note: Do not use non-deterministic attributes here. Hydration mismatches can occur if browser extensions inject attributes like fdprocessedid. */}
           {/* Form */}
           <form onSubmit={handleSubmit} className="flex flex-col gap-6 bg-[#111111] p-8 rounded-2xl border border-white/[0.08] relative overflow-hidden">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

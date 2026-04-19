@@ -825,5 +825,93 @@ nav {
   }
 }
 
+/* Change 12 — Hero globe alignment */
+.hero-section {
+  position: relative;
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: calc(var(--nav-height) + 2rem) var(--space-6) var(--space-16);
+  overflow: hidden;
+  background: var(--color-bg);
+}
 
+.hero-inner {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+}
 
+.hero-content {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+.hero-visual {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: var(--space-8);
+  pointer-events: none;
+}
+
+.hero-globe {
+  width: 65vw;
+  max-width: 300px;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.4;
+  overflow: hidden;
+}
+
+/* md breakpoint (768px+) — desktop layout */
+@media (min-width: 768px) {
+  .hero-inner {
+    width: 80%;
+  }
+
+  .hero-content {
+    align-items: flex-start;
+    text-align: left;
+    width: 65%;
+    padding-right: var(--space-8);
+  }
+
+  .hero-visual {
+    position: absolute;
+    top: 50%;
+    right: -5%;
+    transform: translateY(-50%);
+    width: 45%;
+    margin-top: 0;
+  }
+
+  .hero-globe {
+    width: 100%;
+    max-width: none;
+    opacity: 1;
+    overflow: visible;
+  }
+}
+
+/* lg breakpoint (1024px+) — wider globe */
+@media (min-width: 1024px) {
+  .hero-content {
+    width: 60%;
+  }
+
+  .hero-visual {
+    width: 50%;
+    right: -8%;
+  }
+}

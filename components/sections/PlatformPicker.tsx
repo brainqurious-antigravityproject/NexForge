@@ -104,6 +104,7 @@ export default function PlatformPicker() {
           className="mt-12 flex flex-col lg:flex-row gap-6 anim-reveal is-visible"
         >
           {/* LEFT — Tab selector */}
+          {/* Note: Do not use non-deterministic attributes here. Hydration mismatches can occur if browser extensions inject attributes like fdprocessedid. */}
           <div className="w-full lg:w-[38%] flex flex-col gap-2">
             {platforms.map(platform => (
               <button

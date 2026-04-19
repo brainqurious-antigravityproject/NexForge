@@ -143,6 +143,7 @@ export default function FAQ() {
         </div>
 
         {/* Category Filter */}
+        {/* Note: Do not use non-deterministic attributes here. Hydration mismatches can occur if browser extensions inject attributes like fdprocessedid. */}
         <div className="flex flex-wrap justify-center gap-2 mb-12">
           {categories.map(cat => (
             <button

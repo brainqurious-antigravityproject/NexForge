@@ -102,7 +102,7 @@ export default function ParticleSphere() {
 
   if (failed) {
     return (
-      <div className="absolute right-0 top-0 w-full h-full lg:w-[45%] md:w-[40%] z-0 pointer-events-none">
+      <div className="hero-globe">
         <div
           className="absolute inset-0"
           style={{
@@ -115,7 +115,7 @@ export default function ParticleSphere() {
   }
 
   return (
-    <div className="absolute right-0 top-0 w-full h-[50vh] md:h-full lg:w-[45%] md:w-[40%] mt-24 md:mt-0 z-0 pointer-events-none flex items-center justify-center opacity-40 md:opacity-100 overflow-hidden">
+    <div className="hero-globe">
       <canvas
         ref={canvasRef}
         style={{
