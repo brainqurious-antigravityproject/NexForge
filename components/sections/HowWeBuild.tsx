@@ -1,7 +1,6 @@
-'use client';
-
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function HowWeBuild() {
   return (
@@ -24,6 +23,13 @@ export default function HowWeBuild() {
         <div className="why-work-card">
           {/* Visual Panel */}
           <div className="why-work-visual">
+            <Image 
+              src="/design_engineer.webp" 
+              alt="Design and Engineering" 
+              fill 
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, 40vw"
+            />
             <div className="why-work-visual-overlay" />
           </div>
 

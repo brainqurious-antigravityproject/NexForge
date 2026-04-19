@@ -502,7 +502,7 @@ nav {
   background: linear-gradient(135deg, #f59e0b 0%, #ec4899 50%, #6366f1 100%);
   position: relative;
   overflow: hidden;
-  min-height: 320px;
+  aspect-ratio: 4 / 5;
 }
 
 .why-work-visual-overlay {
@@ -624,7 +624,7 @@ nav {
   }
   
   .why-work-visual {
-    min-height: 200px;
+    aspect-ratio: 1 / 1;
   }
   
   .why-work-columns {
