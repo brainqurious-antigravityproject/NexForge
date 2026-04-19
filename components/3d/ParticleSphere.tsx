@@ -13,19 +13,24 @@ export default function ParticleSphere() {
     const canvas = canvasRef.current;
     if (!canvas) return;
 
-    // ── FIX: Wait for layout to paint before reading size ───────
-    const init = () => {
+    let rafId: number;
+
+    const initGlobe = () => {
+      if (globeRef.current) {
+        globeRef.current.destroy();
+        globeRef.current = null;
+      }
+
       const parent = canvas.parentElement;
       const w = parent?.offsetWidth || 600;
       const h = parent?.offsetHeight || 600;
       
       const isMobile = window.innerWidth < 768;
-      const sizeMult = isMobile ? 0.65 : 1.3; // 1.3 * 0.5 = 0.65 (50% reduction)
+      const sizeMult = isMobile ? 0.65 : 1.3;
       const size = Math.min(w, h, 700) * sizeMult;
 
-      // Guard: if size is still 0 somehow, retry
       if (size < 10) {
-        setTimeout(init, 100);
+        rafId = requestAnimationFrame(initGlobe);
         return;
       }
 
@@ -34,7 +39,7 @@ export default function ParticleSphere() {
           devicePixelRatio: Math.min(window.devicePixelRatio, 2),
           width: size * 2,
           height: size * 2,
-          phi: 0,
+          phi: phiRef.current,
           theta: 0.25,
           dark: 1,
           diffuse: 1.8,
@@ -57,7 +62,7 @@ export default function ParticleSphere() {
           offset: [0, 0],
           onRender: (state: Record<string, unknown>) => {
             state.phi = phiRef.current;
-            phiRef.current += 0.003;
+            phiRef.current += 0.0036; // Increased speed by 20%
           },
         });
       } catch (e) {
@@ -66,20 +71,32 @@ export default function ParticleSphere() {
       }
     };
 
-    // requestAnimationFrame guarantees layout has painted
-    const rafId = requestAnimationFrame(init);
+    rafId = requestAnimationFrame(initGlobe);
 
     const handleMouseMove = (e: MouseEvent) => {
       if (window.innerWidth < 768) return;
       phiRef.current += (e.movementX / window.innerWidth) * 0.5;
     };
 
+    let resizeTimeout: NodeJS.Timeout;
+    const handleResize = () => {
+      clearTimeout(resizeTimeout);
+      resizeTimeout = setTimeout(() => {
+        initGlobe();
+      }, 200);
+    };
+
     window.addEventListener('mousemove', handleMouseMove, { passive: true });
+    window.addEventListener('resize', handleResize, { passive: true });
 
     return () => {
       cancelAnimationFrame(rafId);
+      clearTimeout(resizeTimeout);
       window.removeEventListener('mousemove', handleMouseMove);
-      globeRef.current?.destroy();
+      window.removeEventListener('resize', handleResize);
+      if (globeRef.current) {
+        globeRef.current.destroy();
+      }
     };
   }, []);
 
@@ -98,7 +115,7 @@ export default function ParticleSphere() {
   }
 
   return (
-    <div className="absolute right-0 top-0 w-full h-full lg:w-[45%] md:w-[40%] z-0 pointer-events-none flex items-center justify-center opacity-40 md:opacity-100 overflow-hidden">
+    <div className="absolute right-0 top-0 w-full h-[50vh] md:h-full lg:w-[45%] md:w-[40%] mt-24 md:mt-0 z-0 pointer-events-none flex items-center justify-center opacity-40 md:opacity-100 overflow-hidden">
       <canvas
         ref={canvasRef}
         style={{

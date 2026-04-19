@@ -39,44 +39,18 @@ export default function Hero(props: Partial<HeroProps>) {
     stats
   } = { ...defaultProps, ...props };
 
-  const [isMounted, setIsMounted] = useState(false);
-  const [displayText, setDisplayText] = useState('');
-
-  useEffect(() => {
-    const timer = setTimeout(() => setIsMounted(true), 50);
-    return () => clearTimeout(timer);
-  }, []);
-
-  useEffect(() => {
-    if (!isMounted) return;
-    
-    let i = 0;
-    const timer = setInterval(() => {
-      if (i <= headline.length) {
-        setDisplayText(headline.slice(0, i));
-        i++;
-      } else {
-        clearInterval(timer);
-      }
-    }, 40);
-    
-    return () => clearInterval(timer);
-  }, [headline, isMounted]);
-
   const renderHeadline = () => {
-    if (!highlightWord) return displayText;
-    const index = displayText.indexOf(highlightWord.substring(0, Math.min(highlightWord.length, Math.max(0, displayText.length - headline.indexOf(highlightWord)))));
+    if (!highlightWord) return <>{headline}</>;
     
-    // Check if the highlightWord is starting to appear
     const highlightStartIndex = headline.indexOf(highlightWord);
     
-    if (displayText.length <= highlightStartIndex) {
-      return displayText;
+    if (highlightStartIndex === -1) {
+      return <>{headline}</>;
     }
 
-    const beforeHighlight = displayText.substring(0, highlightStartIndex);
-    const highlightedPart = displayText.substring(highlightStartIndex, highlightStartIndex + highlightWord.length);
-    const afterHighlight = displayText.substring(highlightStartIndex + highlightWord.length);
+    const beforeHighlight = headline.substring(0, highlightStartIndex);
+    const highlightedPart = headline.substring(highlightStartIndex, highlightStartIndex + highlightWord.length);
+    const afterHighlight = headline.substring(highlightStartIndex + highlightWord.length);
 
     return (
       <>
@@ -88,7 +62,9 @@ export default function Hero(props: Partial<HeroProps>) {
   };
 
   const animClass = "anim-reveal";
-  const stateClass = isMounted ? "is-visible" : "";
+  // Apply is-visible statically to allow immediate SSR painting, preventing the "blank screen" bug.
+  // The content will render immediately instead of being opacity: 0 while JS loads.
+  const stateClass = "is-visible";
 
   return (
     <section className="relative min-h-screen flex flex-col justify-center pt-[calc(72px+2rem)] pb-16 px-6 overflow-hidden bg-[#000000]">
