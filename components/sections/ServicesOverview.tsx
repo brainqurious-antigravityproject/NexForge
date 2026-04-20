@@ -139,6 +139,13 @@ export default function ServicesOverview() {
             </article>
           ))}
         </div>
+
+        {/* CTA Button */}
+        <div className="flex justify-center mt-16 pb-8 md:pb-0">
+          <a href="tel:+919599143235" className="inline-flex items-center justify-center min-h-[48px] bg-[#b5ff3e] text-[#000000] font-semibold px-8 py-4 rounded-full hover:bg-[#c4ff66] hover:shadow-[var(--glow-md)] active:scale-[0.98] transition-all duration-300 text-[length:var(--text-sm)] w-full md:w-auto">
+            Book a Free Call
+          </a>
+        </div>
       </div>
     </section>
   );

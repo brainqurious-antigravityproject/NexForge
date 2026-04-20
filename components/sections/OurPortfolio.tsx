@@ -405,6 +405,13 @@ export default function OurPortfolio() {
           ))}
         </div>
 
+        {/* CTA Button */}
+        <div className="flex justify-center mt-12 pt-6">
+          <a href="tel:+919599143235" className="inline-flex items-center justify-center min-h-[48px] border border-[#b5ff3e]/30 bg-[#000000] text-[#b5ff3e] font-semibold px-8 py-4 rounded-full hover:bg-[#b5ff3e]/[0.08] hover:shadow-[var(--glow-sm)] active:scale-[0.98] transition-all duration-300 text-[length:var(--text-sm)] w-full md:w-auto">
+            Book a Free Call
+          </a>
+        </div>
+
       </div>
     </section>
   );

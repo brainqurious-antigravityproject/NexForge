@@ -101,7 +101,7 @@ export default function HowWeBuild() {
 
             {/* CTAs */}
             <div className="why-work-ctas">
-              <Link href="#pricing" className="why-work-cta-secondary">
+              <Link href="/pricing" className="why-work-cta-secondary">
                 See Pricing
               </Link>
               <Link href="#contact" className="why-work-cta-primary">

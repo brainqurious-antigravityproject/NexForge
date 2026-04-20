@@ -9,7 +9,7 @@ const defaultProps: HeroProps = {
   headline: "Professional Website Development Company in Delhi",
   highlightWord: "Delhi",
   subheadline: "From WordPress and Shopify to custom Next.js solutions — we design, develop, and launch fast, mobile-optimised, SEO, AEO, and GEO-ready websites for businesses across every industry. Transparent pricing. Full ownership. No agency overhead.",
-  ctaPrimary: { label: "See Our Work →", href: "#case-studies" },
+  ctaPrimary: { label: "See Our Work →", href: "#our-portfolio" },
   ctaSecondary: { label: "Get a Free Quote", href: "#contact" },
   stats: [
     { value: "10+", label: "Projects Delivered" },

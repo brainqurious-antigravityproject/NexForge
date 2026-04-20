@@ -57,7 +57,7 @@ export default function OurWork() {
   const prev = () => setActiveIndex((prev) => (prev - 1 + projects.length) % projects.length);
 
   return (
-    <section id="case-studies" className="py-24 bg-[#000000] px-6 overflow-hidden relative">
+    <section id="our-work" className="py-24 bg-[#000000] px-6 overflow-hidden relative">
       <div className="max-w-[1200px] mx-auto relative z-10">
         
         {/* Header */}

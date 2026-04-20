@@ -9,7 +9,7 @@ const navItems: NavItem[] = [
   { label: 'Home', href: '/' },
   { label: 'About Us', href: '/about' },
   { label: 'Services', href: '/services' },
-  { label: 'Case Studies', href: '/case-studies' },
+  { label: 'Portfolio', href: '/#our-portfolio' },
   { label: 'Pricing', href: '/pricing' },
 ];
 
@@ -112,12 +112,12 @@ export default function Navbar() {
 
           {/* RIGHT — Action cluster (Desktop) */}
           <div className="hidden md:flex items-center gap-[18.4px]">
-            <Link 
-              href="/quote" 
+            <a 
+              href="tel:+919599143235" 
               className="border border-[#b5ff3e]/[0.18] text-[#b5ff3e] text-sm font-medium px-5 py-2 rounded-full hover:bg-[#b5ff3e]/[0.08] hover:shadow-[var(--glow-sm)] transition-all duration-300"
             >
-              Get a Quote
-            </Link>
+              Book a Free Call
+            </a>
           </div>
 
           {/* MOBILE — Hamburger Menu Button */}
@@ -169,13 +169,13 @@ export default function Navbar() {
             })}
             
             <div className="pt-6 pb-4 flex flex-col gap-6">
-              <Link 
-                href="/quote" 
+              <a 
+                href="tel:+919599143235" 
                 onClick={() => setIsMobileMenuOpen(false)}
                 className="w-full text-center border border-[#b5ff3e]/[0.18] text-[#b5ff3e] font-medium px-6 py-4 rounded-full hover:bg-[#b5ff3e]/[0.08] active:scale-[0.98] active:bg-[#b5ff3e]/[0.12] transition-all duration-300"
               >
-                Get a Quote
-              </Link>
+                Book a Free Call
+              </a>
             </div>
           </div>
         </div>

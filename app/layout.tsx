@@ -3,6 +3,7 @@ import './globals.css'; // Global styles
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import Chatbot from '@/components/ui/Chatbot';
+import WhatsAppWidget from '@/components/ui/WhatsAppWidget';
 
 export const metadata = {
   title: 'Sitecraf — Website Development, AI Chatbot & Image Generation for B2B Brands',
@@ -77,6 +78,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </main>
         <Footer />
         <Chatbot />
+        <WhatsAppWidget />
       </body>
     </html>
   );

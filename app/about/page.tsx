@@ -41,7 +41,7 @@ export default function AboutPage() {
             We are a New Delhi-based digital studio — not a 50-person agency. Just sharp execution, transparent pricing, and work that actually converts visitors into clients.
           </p>
           <div className="anim-reveal is-visible" style={{ animationDelay: '300ms' }}>
-            <Link href="/case-studies" className="inline-flex items-center justify-center min-h-[48px] bg-[#b5ff3e] text-[#000000] font-semibold px-8 py-4 rounded-full hover:bg-[#c4ff66] hover:shadow-[var(--glow-md)] active:scale-95 transition-all duration-300 text-[length:var(--text-sm)]">
+            <Link href="/#our-portfolio" className="inline-flex items-center justify-center min-h-[48px] bg-[#b5ff3e] text-[#000000] font-semibold px-8 py-4 rounded-full hover:bg-[#c4ff66] hover:shadow-[var(--glow-md)] active:scale-95 transition-all duration-300 text-[length:var(--text-sm)]">
               See Our Work →
             </Link>
           </div>
