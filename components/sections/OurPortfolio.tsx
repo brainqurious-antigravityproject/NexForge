@@ -361,7 +361,7 @@ export default function OurPortfolio() {
                           src={project.mobileImage}
                           alt={`${project.title} Mobile`}
                           fill
-                          className="object-cover"
+                          className="object-cover object-top"
                         />
                       ) : (
                         <>

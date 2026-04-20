@@ -27,7 +27,7 @@ export default function HowWeBuild() {
               src="/design_engineer.webp" 
               alt="Design and Engineering" 
               fill 
-              className="object-cover"
+              className="object-contain"
               sizes="(max-width: 768px) 100vw, 40vw"
             />
             <div className="why-work-visual-overlay" />
