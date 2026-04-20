@@ -78,7 +78,7 @@ export default function Hero(props: Partial<HeroProps>) {
   const statsContent = stats && stats.length > 0 && (
     <div
       className={`grid grid-cols-2 md:flex md:flex-row items-center justify-center md:justify-start gap-8 md:gap-12 md:mt-16 pt-8 md:pt-12 border-t border-white/[0.06] w-full ${animClass} ${stateClass}`}
-      style={{ transitionDelay: '400ms' }}
+      style={{ transitionDelay: '200ms' }}
     >
       {stats.map((stat, i) => (
         <React.Fragment key={i}>
@@ -167,7 +167,7 @@ export default function Hero(props: Partial<HeroProps>) {
           <div className="hero-video-frame">
             <video
               className="hero-video"
-              src="/hero_section_robot.webm"
+              src="/hero_section_robot.mp4"
               autoPlay
               loop
               muted

@@ -22,7 +22,7 @@ const portfolioProjects: PortfolioProject[] = [
       'Mobile-optimized reading experience',
     ],
     techStack: 'Next.js · Tailwind CSS · Vercel',
-    accentColor: 'var(--color-primary-highlight)', 
+    accentColor: 'var(--color-primary-highlight)',
   },
   {
     id: 'd2c-launch',
@@ -34,7 +34,7 @@ const portfolioProjects: PortfolioProject[] = [
       'Sub-second mobile rendering',
     ],
     techStack: 'WordPress · Elementor',
-    accentColor: 'var(--color-surface)', 
+    accentColor: 'var(--color-surface)',
   },
   {
     id: 'urban-goods',
@@ -46,7 +46,7 @@ const portfolioProjects: PortfolioProject[] = [
       'Integrated WhatsApp sales support',
     ],
     techStack: 'Shopify · Custom Theme · Razorpay',
-    accentColor: 'var(--color-border)', 
+    accentColor: 'var(--color-border)',
   },
   {
     id: 'exportco-catalogue',
@@ -58,7 +58,7 @@ const portfolioProjects: PortfolioProject[] = [
       'Dynamic product filtering',
     ],
     techStack: 'Wix Studio · Custom Sections',
-    accentColor: 'var(--color-text-faint)', 
+    accentColor: 'var(--color-text-faint)',
   },
 ];
 
@@ -79,11 +79,11 @@ export default function OurPortfolio() {
 
   return (
     <section id="our-portfolio" className="our-portfolio-section">
-      <div 
-        className="our-portfolio-inner" 
-        style={{ 
-          maxWidth: '1200px', 
-          margin: '0 auto', 
+      <div
+        className="our-portfolio-inner"
+        style={{
+          maxWidth: '1200px',
+          margin: '0 auto',
           padding: 'clamp(4rem, 10vw, 8rem) 1.5rem',
           display: 'flex',
           flexDirection: 'column',
@@ -95,9 +95,9 @@ export default function OurPortfolio() {
           <span className="text-[length:var(--text-xs)] uppercase tracking-widest text-[#b5ff3e] block mb-3 font-semibold">
             Our Work
           </span>
-          <h2 
-            className="our-portfolio-heading heading-section" 
-            style={{ 
+          <h2
+            className="our-portfolio-heading heading-section"
+            style={{
               fontFamily: 'var(--font-display)',
               color: 'var(--color-text)',
               marginBottom: '1rem',
@@ -108,12 +108,12 @@ export default function OurPortfolio() {
           >
             Our Portfolio
           </h2>
-          <p 
-            className="our-portfolio-subheading" 
-            style={{ 
-              fontSize: 'var(--text-base)', 
-              color: 'var(--color-text-muted)', 
-              maxWidth: '60ch', 
+          <p
+            className="our-portfolio-subheading"
+            style={{
+              fontSize: 'var(--text-base)',
+              color: 'var(--color-text-muted)',
+              maxWidth: '60ch',
               margin: '0 auto',
               lineHeight: 1.6
             }}
@@ -151,7 +151,7 @@ export default function OurPortfolio() {
                   flex: '0 0 100%',
                   minWidth: 0,
                   display: 'flex',
-                  flexDirection: 'column', 
+                  flexDirection: 'column',
                   gap: '3rem',
                   padding: 'clamp(1.5rem, 5vw, 3rem)',
                   backgroundColor: 'var(--color-surface)',
@@ -160,21 +160,20 @@ export default function OurPortfolio() {
                   boxShadow: 'var(--shadow-md)'
                 }}
               >
-                <div className="flex flex-col lg:flex-row gap-12 w-full">
-                  
+                <div className="flex flex-col lg:flex-row gap-10 lg:gap-12 w-full">
+
                   {/* LEFT SIDE: Project Details (~30% on desktop) */}
-                  <div 
-                    className="our-portfolio-left" 
-                    style={{ 
-                      flex: '1 1 300px', 
-                      display: 'flex', 
-                      flexDirection: 'column', 
-                      justifyContent: 'center' 
+                  <div
+                    className="our-portfolio-left w-full lg:w-[35%]"
+                    style={{
+                      display: 'flex',
+                      flexDirection: 'column',
+                      justifyContent: 'center'
                     }}
                   >
-                    <h3 
+                    <h3
                       className="our-portfolio-project-title heading-sub"
-                      style={{ 
+                      style={{
                         fontFamily: 'var(--font-display)',
                         color: 'var(--color-text)',
                         marginBottom: '1rem',
@@ -183,24 +182,24 @@ export default function OurPortfolio() {
                     >
                       {project.title}
                     </h3>
-                    
-                    <p 
+
+                    <p
                       className="our-portfolio-project-desc"
-                      style={{ 
-                        fontSize: 'var(--text-sm)', 
-                        color: 'var(--color-text-muted)', 
+                      style={{
+                        fontSize: 'var(--text-sm)',
+                        color: 'var(--color-text-muted)',
                         lineHeight: 1.6,
                         marginBottom: '1.5rem'
                       }}
                     >
                       {project.description}
                     </p>
-                    
-                    <ul 
+
+                    <ul
                       className="our-portfolio-project-points"
-                      style={{ 
-                        listStyle: 'none', 
-                        padding: 0, 
+                      style={{
+                        listStyle: 'none',
+                        padding: 0,
                         margin: '0 0 2rem 0',
                         display: 'flex',
                         flexDirection: 'column',
@@ -208,8 +207,8 @@ export default function OurPortfolio() {
                       }}
                     >
                       {project.points.map((point, idx) => (
-                        <li 
-                          key={idx} 
+                        <li
+                          key={idx}
                           className="our-portfolio-project-point"
                           style={{
                             fontSize: '13px',
@@ -225,7 +224,7 @@ export default function OurPortfolio() {
                       ))}
                     </ul>
 
-                    <div 
+                    <div
                       className="our-portfolio-project-tech"
                       style={{
                         paddingTop: '1.5rem',
@@ -242,52 +241,54 @@ export default function OurPortfolio() {
                   </div>
 
                   {/* RIGHT SIDE: Mockups (~70% on desktop) */}
-                  <div 
-                    className="our-portfolio-right" 
-                    style={{ 
-                      flex: '2 1 500px', 
+                  <div
+                    className="our-portfolio-right w-full lg:w-[65%] mt-4 md:mt-20 lg:mt-0"
+                    style={{
                       position: 'relative',
                       display: 'flex',
                       alignItems: 'center',
                       justifyContent: 'flex-start',
-                      paddingRight: '10%' // Padding to make room for mobile frame overlap
+                      paddingRight: '12%',
+                      paddingBottom: '3rem' // Extra space at bottom so phone doesn't overflow card
                     }}
                   >
                     {/* Placeholder Laptop Frame */}
-                    <div 
+                    <div
                       className="mockup-laptop"
                       style={{
                         width: '100%',
                         aspectRatio: '16/10',
                         backgroundColor: 'var(--color-surface-2)',
                         border: '8px solid var(--color-bg)',
-                        borderRadius: '12px 12px 0 0',
+                        borderRadius: '12px',
                         position: 'relative',
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center',
                         overflow: 'hidden',
-                        boxShadow: 'var(--shadow-md)'
+                        boxShadow: 'var(--shadow-md)',
+                        zIndex: 5
                       }}
                     >
                       <div style={{ position: 'absolute', inset: 0, background: project.accentColor, opacity: 0.05 }} />
-                      <span style={{ position: 'relative', color: 'var(--color-text-faint)', fontWeight: 600, letterSpacing: '0.05em' }}>
+                      <span style={{ position: 'relative', color: 'var(--color-text-faint)', fontWeight: 600, letterSpacing: '0.05em', fontSize: 'var(--text-xs)' }}>
                         Desktop View
                       </span>
                     </div>
 
                     {/* Placeholder Mobile Frame */}
-                    <div 
+                    <div
                       className="mockup-phone"
                       style={{
                         position: 'absolute',
-                        bottom: '-10%',
+                        bottom: '0%', // Aligned with the bottom padding of container
                         right: '0%',
-                        width: '26%',
-                        minWidth: '120px',
+                        width: '24%',
+                        minWidth: '94px',
+                        maxWidth: '160px',
                         aspectRatio: '9/19',
                         backgroundColor: 'var(--color-surface)',
-                        border: '6px solid var(--color-bg)',
+                        border: '5px solid var(--color-bg)',
                         borderRadius: '20px',
                         display: 'flex',
                         alignItems: 'center',
@@ -298,7 +299,7 @@ export default function OurPortfolio() {
                       }}
                     >
                       <div style={{ position: 'absolute', inset: 0, background: project.accentColor, opacity: 0.1 }} />
-                      <span style={{ position: 'relative', color: 'var(--color-text-faint)', fontSize: '0.75rem', fontWeight: 600, textAlign: 'center', padding: '0.5rem' }}>
+                      <span style={{ position: 'relative', color: 'var(--color-text-faint)', fontSize: '0.65rem', fontWeight: 600, textAlign: 'center', padding: '0.5rem' }}>
                         Mobile View
                       </span>
                     </div>
@@ -311,11 +312,11 @@ export default function OurPortfolio() {
         </div>
 
         {/* Minimal Progress Dots (Purely visual indicator) */}
-        <div 
-          className="our-portfolio-dots" 
-          style={{ 
-            display: 'flex', 
-            justifyContent: 'center', 
+        <div
+          className="our-portfolio-dots"
+          style={{
+            display: 'flex',
+            justifyContent: 'center',
             gap: '0.5rem',
             marginTop: '1rem'
           }}
