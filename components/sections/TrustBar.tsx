@@ -3,7 +3,6 @@ import {
   siWordpress,
   siWoocommerce,
   siShopify,
-  siWix,
   siNextdotjs,
   siReact,
   siTailwindcss,
@@ -12,15 +11,14 @@ import {
 } from 'simple-icons';
 
 const technologies = [
-  { name: "WordPress",    iconPath: siWordpress.path     },
-  { name: "WooCommerce",  iconPath: siWoocommerce.path   },
-  { name: "Shopify",      iconPath: siShopify.path       },
-  { name: "Wix Studio",   iconPath: siWix.path           },
-  { name: "Next.js",      iconPath: siNextdotjs.path     },
-  { name: "React",        iconPath: siReact.path         },
-  { name: "Tailwind CSS", iconPath: siTailwindcss.path   },
-  { name: "Vercel",       iconPath: siVercel.path        },
-  { name: "TypeScript",   iconPath: siTypescript.path    }
+  { name: "WordPress",    iconPath: siWordpress.path    },
+  { name: "Shopify",      iconPath: siShopify.path      },
+  { name: "WooCommerce",  iconPath: siWoocommerce.path  },
+  { name: "Next.js",      iconPath: siNextdotjs.path    },
+  { name: "React",        iconPath: siReact.path        },
+  { name: "Tailwind CSS", iconPath: siTailwindcss.path  },
+  { name: "TypeScript",   iconPath: siTypescript.path   },
+  { name: "Vercel",       iconPath: siVercel.path       },
 ];
 
 export default function TrustBar() {
@@ -28,7 +26,7 @@ export default function TrustBar() {
     <section className="w-full bg-[#0a0a0a] border-y border-white/[0.05] py-6">
       <div className="flex flex-col md:flex-row items-center gap-6 md:gap-10 w-full md:w-[80%] max-w-none mx-auto px-6">
         <span className="flex-shrink-0 text-[#66667a] text-[length:var(--text-xs)] uppercase tracking-[0.12em] whitespace-nowrap">
-          Platforms & Technologies
+          Built with industry-leading platforms
         </span>
         
         <div 

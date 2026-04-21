@@ -6,11 +6,11 @@ import { usePathname } from 'next/navigation';
 import { NavItem } from '@/types';
 
 const navItems: NavItem[] = [
-  { label: 'Home', href: '/' },
-  { label: 'About Us', href: '/about' },
   { label: 'Services', href: '/services' },
   { label: 'Portfolio', href: '/#our-portfolio' },
   { label: 'Pricing', href: '/pricing' },
+  { label: 'Blog', href: '/blog' },
+  { label: 'About', href: '/about' },
 ];
 
 export default function Navbar() {
@@ -113,10 +113,10 @@ export default function Navbar() {
           {/* RIGHT — Action cluster (Desktop) */}
           <div className="hidden md:flex items-center gap-[18.4px]">
             <a 
-              href="tel:+919599143235" 
+              href="#contact" 
               className="border border-[#b5ff3e]/[0.18] text-[#b5ff3e] text-sm font-medium px-5 py-2 rounded-full hover:bg-[#b5ff3e]/[0.08] hover:shadow-[var(--glow-sm)] transition-all duration-300"
             >
-              Book a Free Call
+              Get a Free Quote
             </a>
           </div>
 
@@ -170,11 +170,11 @@ export default function Navbar() {
             
             <div className="pt-6 pb-4 flex flex-col gap-6">
               <a 
-                href="tel:+919599143235" 
+                href="#contact" 
                 onClick={() => setIsMobileMenuOpen(false)}
                 className="w-full text-center border border-[#b5ff3e]/[0.18] text-[#b5ff3e] font-medium px-6 py-4 rounded-full hover:bg-[#b5ff3e]/[0.08] active:scale-[0.98] active:bg-[#b5ff3e]/[0.12] transition-all duration-300"
               >
-                Book a Free Call
+                Get a Free Quote
               </a>
             </div>
           </div>
