@@ -9,14 +9,14 @@ const rows: ComparisonRow[] = [
     feature: 'Time to first working website',
     sitecraf: '2–3 weeks',
     freelancer: '4–10 weeks',
-    inHouse: '1–2 weeks',
+    inHouse: '1–2 days',
     largeAgency: '6–12 weeks'
   },
   {
     feature: 'Fixed-price quote upfront',
     sitecraf: true,
     freelancer: false,
-    inHouse: false,
+    inHouse: true,
     largeAgency: false
   },
   {
@@ -38,27 +38,20 @@ const rows: ComparisonRow[] = [
     sitecraf: true,
     freelancer: false,
     inHouse: false,
-    largeAgency: true
+    largeAgency: false
   },
   {
-    feature: 'AI image generation for your site',
+    feature: 'No vendor lock-in',
     sitecraf: true,
     freelancer: false,
     inHouse: false,
-    largeAgency: false
-  },
-  {
-    feature: '100% code & asset ownership',
-    sitecraf: true,
-    freelancer: false,
-    inHouse: true,
-    largeAgency: false
+    largeAgency: true
   },
   {
     feature: 'Typical project cost',
     sitecraf: '₹6K–₹60K+',
     freelancer: '₹5K–₹25K',
-    inHouse: '₹40K–₹2L+',
+    inHouse: 'Free–₹5K',
     largeAgency: '₹80K–₹5L+'
   },
   {
@@ -74,6 +67,13 @@ const rows: ComparisonRow[] = [
     freelancer: false,
     inHouse: false,
     largeAgency: true
+  },
+  {
+    feature: 'Dedicated point of contact',
+    sitecraf: true,
+    freelancer: true,
+    inHouse: false,
+    largeAgency: false
   },
 ];
 
@@ -124,13 +124,13 @@ export default function ComparisonTable() {
         {/* Header */}
         <div className="mb-12 text-center flex flex-col items-center">
           <span className="block text-[#b5ff3e] text-[length:var(--text-xs)] uppercase tracking-widest mb-3">
-            Why Sitecraf
+            HONEST COMPARISON
           </span>
           <h2 className="heading-section font-[family-name:var(--font-display)] text-[#e8e8f0]">
-            Sitecraf vs Freelancer vs In-House vs Agency
+            Why Businesses Choose Us Over Every Other Option
           </h2>
           <p className="font-[family-name:var(--font-body)] text-[#8888a0] mt-3 max-w-2xl leading-relaxed mx-auto">
-            Every option has trade-offs. Here is an honest comparison — so you can choose what actually fits your business, budget, and timeline.
+            Freelancers, DIY builders, big agencies — each has real trade-offs. Here's how we compare, honestly.
           </p>
         </div>
 
@@ -152,7 +152,7 @@ export default function ComparisonTable() {
                     Cheap Freelancer
                   </th>
                   <th className="text-[#66667a] text-[length:var(--text-xs)] uppercase tracking-widest px-6 py-4 text-center font-normal">
-                    DIY Website Builder
+                    DIY Builder (Wix/Canva)
                   </th>
                   <th className="text-[#66667a] text-[length:var(--text-xs)] uppercase tracking-widest px-6 py-4 text-center font-normal">
                     Web Agency
@@ -172,7 +172,7 @@ export default function ComparisonTable() {
 
         {/* Bottom Note */}
         <p className="mt-6 text-[#66667a] text-[length:var(--text-xs)] text-center font-[family-name:var(--font-body)]">
-          ★ Comparison based on typical market rates in India, 2025. DIY = Wix free plan / Canva websites.
+          ★ Comparison based on typical market rates in India, 2026. DIY = Wix free plan / Canva websites.
         </p>
 
       </div>

@@ -8,50 +8,50 @@ import { useScrollReveal } from '@/hooks/useScrollReveal';
 const faqItems: FaqItem[] = [
   {
     id: '1',
-    question: 'Do I need to be a large business to work with you?',
-    answer: 'Not at all. We work with small and medium-sized Indian businesses — local service providers, manufacturers, exporters, and D2C brands. Whether you need a simple ₹10,000 showcase website on Wix Studio or a ₹60,000+ custom Next.js build with chatbot, we have an option for your budget and your platform.',
+    question: "How do I know you won't take my advance and go silent?",
+    answer: "We get it — half the horror stories Indian business owners share about web developers involve exactly this. Here's how we've structured things to protect you: we don't ask for full payment upfront. Work starts with a 50% advance, and the remaining payment is due only after you've reviewed and approved the completed website. You see the site before we see the final payment. We also give you a fixed delivery timeline in writing before work begins — not a vague estimate.",
     category: 'process'
   },
   {
     id: '2',
-    question: 'Which platform should I choose — WordPress, Shopify, Wix, or custom?',
-    answer: 'It depends entirely on what your business needs. WordPress is best for SEO-driven content sites and service businesses. Shopify is best for online stores and D2C brands selling products. Wix Studio is best for fast, editable business websites with a lower budget. Custom Next.js is best when you need maximum performance, custom features, or AEO and GEO-first structure. We recommend the right platform after understanding your goals — not based on which one earns us more.',
+    question: "What do I need to provide before you can start building?",
+    answer: "Three things: your business details (what you do, who you serve, your location), any logos or brand assets you have (even a rough one is fine — we can work with it), and your content or a rough idea of what pages you need. That's it. You don't need a written brief, a wireframe, or prior website experience. We ask a structured set of questions during onboarding that pulls out everything we need. Most clients are surprised by how little effort is required from their side.",
     category: 'process'
   },
   {
     id: '3',
-    question: 'Can you add an AI chatbot to my existing website?',
-    answer: 'Yes. If your website is on WordPress, Shopify, Wix, or is a custom-coded site, we can add a chatbot that answers your visitor queries in Hindi, Hinglish, or English — trained on your product details, pricing, and FAQs. It captures leads even at 2am when your team is offline.',
-    category: 'tech'
-  },
-  {
-    id: '4',
-    question: 'What are SEO, AEO, and GEO — and do I need all three?',
-    answer: 'SEO (Search Engine Optimization) helps your website rank in Google and Bing search results. AEO (Answer Engine Optimization) helps AI tools like Perplexity, Google AI Overviews, and voice assistants cite your business as a direct answer. GEO (Generative Engine Optimization) helps large language models like ChatGPT, Gemini, and Copilot mention and recommend your business when users ask for suggestions. All three matter because search behaviour is splitting across these three channels. We build AEO and GEO-ready structure into every website we deliver — schema markup, Q&A content, clear entity signals, and fast Core Web Vitals.',
-    category: 'tech'
-  },
-  {
-    id: '5',
-    question: 'I need product images but do not have a photographer. What can you do?',
-    answer: 'We can generate studio-quality product images and website banners using AI — from just your raw product photographs. We have generated 400+ images for home furnishing, fabric, and consumer product brands. Pricing is per-batch and significantly cheaper than a studio photoshoot.',
-    category: 'tech'
-  },
-  {
-    id: '6',
-    question: 'How much does a website cost?',
-    answer: 'WordPress websites start from ₹6,000. Wix Studio websites start from ₹10,000. Shopify stores start from ₹15,000. Custom Next.js websites start from ₹10,000. Add-ons like AI chatbot start from ₹12,000 and AI image generation from ₹5,000 per batch. All prices are fixed and quoted upfront — no surprises, no GST added on top.',
-    category: 'pricing'
-  },
-  {
-    id: '7',
-    question: 'Who will I be communicating with during the project?',
-    answer: 'Directly with our team — the people building your website. There is no account manager or middleman. You can reach us on WhatsApp, email, or call. Most project updates happen on WhatsApp because that is what works best for Indian clients.',
+    question: "Your timeline says 2–3 weeks. Is that realistic or just marketing?",
+    answer: "It's realistic — with one condition: the timeline depends on how quickly you review and give feedback. Our build side is fast; the main delay in most projects is waiting on client approvals. We send you a clear feedback schedule during onboarding. If you respond within 24–48 hours at each stage, 2–3 weeks is very achievable. We've launched projects in under 12 days when clients were responsive. We've also had projects stretch to 6 weeks when feedback came in slowly. The timeline is a shared responsibility.",
     category: 'process'
   },
   {
+    id: '4',
+    question: "How much does a website cost — give me a real number.",
+    answer: "WordPress websites start from ₹6,000. Wix Studio websites start from ₹10,000. Shopify stores start from ₹15,000. Custom Next.js websites start from ₹15,000. AI chatbot add-on starts from ₹12,000. AI-generated product images from ₹5,000 per batch. All prices are fixed and quoted in writing before work begins — no surprise invoices, no GST added on top. The final quote depends on the number of pages and features you need. Most small business websites land between ₹8,000–₹25,000.",
+    category: 'pricing'
+  },
+  {
+    id: '5',
+    question: "What's included in the price — and what costs extra?",
+    answer: "Every project includes: design, development, mobile responsiveness, basic SEO setup, and two weeks of post-launch support. What costs extra: copywriting (we can write your content, priced separately), domain registration, hosting subscription fees (for platforms like Shopify or Wix that charge monthly), and add-ons like AI chatbot or image generation. We tell you about every extra cost before we start — nothing gets added silently mid-project.",
+    category: 'pricing'
+  },
+  {
+    id: '6',
+    question: "I'm not technical. Can I update the website myself after it launches?",
+    answer: "Yes — and this is something we specifically design for. On WordPress and Wix Studio, you can edit text, swap images, add blog posts, and update prices without touching a single line of code. We record a short walkthrough video of your specific website after launch so you know exactly how to make the most common changes. For Next.js custom builds, minor content updates are handled by us — or we can set up a headless CMS so your team can self-manage.",
+    category: 'tech'
+  },
+  {
+    id: '7',
+    question: "What are SEO, AEO, and GEO — and why does my business need them?",
+    answer: "SEO helps your website rank in Google search results. AEO (Answer Engine Optimization) helps AI tools like Perplexity and Google AI Overviews cite your business as a direct answer to questions. GEO (Generative Engine Optimization) helps ChatGPT, Gemini, and Copilot mention your business when users ask for recommendations. Search behaviour is splitting across all three channels — Google alone is no longer enough. We build AEO and GEO-ready structure into every website: schema markup, Q&A content, clear entity signals, and fast Core Web Vitals. You don't need to understand the technical details — we handle it.",
+    category: 'tech'
+  },
+  {
     id: '8',
-    question: 'What if I need changes after the website launches?',
-    answer: 'Two weeks of post-launch support is included in every project at no extra cost — regardless of platform. After that, we are available for changes on an hourly or per-task basis. Maintenance retainer packages are also available if you need ongoing updates, content changes, or security management.',
+    question: "What happens if something breaks after the website goes live?",
+    answer: "Two weeks of post-launch support is included in every project at no extra charge. If something breaks — a form stops working, a page looks wrong on a specific device, an image doesn't load — we fix it, no questions asked, within that window. After two weeks, we're still available for changes and fixes on a per-task basis. For businesses that want ongoing maintenance, we offer monthly retainer packages that cover security updates, content changes, and performance monitoring.",
     category: 'support'
   }
 ];
@@ -139,7 +139,7 @@ export default function FAQ() {
             Your Questions, Answered Honestly
           </h2>
           <p className="font-[family-name:var(--font-body)] text-[#8888a0] mt-4 leading-relaxed">
-            Plain answers on platforms, pricing, AEO, and what to expect when you work with us.
+            The questions every Indian business owner actually asks — answered without the agency jargon.
           </p>
         </div>
 
