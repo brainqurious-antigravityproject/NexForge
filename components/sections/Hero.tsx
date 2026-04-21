@@ -5,17 +5,17 @@ import Link from 'next/link';
 import { HeroProps } from '@/types';
 
 const defaultProps: HeroProps = {
-  badge: "Website • AI Chatbot • Image Generation • Automation",
-  headline: "Professional Website Development Company in Delhi",
-  highlightWord: "Delhi",
-  subheadline: "From WordPress and Shopify to custom Next.js solutions — we design, develop, and launch fast, mobile-optimised, SEO, AEO, and GEO-ready websites for businesses across every industry. Transparent pricing. Full ownership. No agency overhead.",
-  ctaPrimary: { label: "See Our Work →", href: "#our-portfolio" },
-  ctaSecondary: { label: "Get a Free Quote", href: "#contact" },
+  badge: "Websites • AI Chatbots • Automation • Built in Delhi",
+  headline: "Websites That Win Clients — Built in 2 Weeks",
+  highlightWord: "2 Weeks",
+  subheadline: "We build fast, conversion-ready websites for Indian businesses — on WordPress, Shopify, or custom Next.js. You get full IP ownership, transparent fixed pricing, and a live site in as little as 2 weeks. No retainers. No surprises.",
+  ctaPrimary: { label: "Get a Free Quote →", href: "#contact" },
+  ctaSecondary: { label: "See Our Work", href: "#our-portfolio" },
   stats: [
-    { value: "10+", label: "Projects Delivered" },
-    { value: "2 Wks", label: "Avg. First Delivery" },
+    { value: "2 Wks", label: "Avg. Launch Time" },
     { value: "100%", label: "IP Ownership Yours" },
-    { value: "₹0", label: "Hidden Charges" }
+    { value: "₹0", label: "Hidden Charges" },
+    { value: "24/7", label: "Post-Launch Support" }
   ]
 };
 
