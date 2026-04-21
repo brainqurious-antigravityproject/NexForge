@@ -9,7 +9,7 @@ const faqItems: FaqItem[] = [
   {
     id: '1',
     question: 'Do I need to be a large business to work with you?',
-    answer: 'Not at all. We work with small and medium-sized Indian businesses — local service providers, manufacturers, exporters, and D2C brands. Whether you need a simple ₹12,000 showcase website on Wix Studio or a ₹60,000+ custom Next.js build with chatbot, we have an option for your budget and your platform.',
+    answer: 'Not at all. We work with small and medium-sized Indian businesses — local service providers, manufacturers, exporters, and D2C brands. Whether you need a simple ₹10,000 showcase website on Wix Studio or a ₹60,000+ custom Next.js build with chatbot, we have an option for your budget and your platform.',
     category: 'process'
   },
   {
@@ -39,7 +39,7 @@ const faqItems: FaqItem[] = [
   {
     id: '6',
     question: 'How much does a website cost?',
-    answer: 'Wix Studio websites start from ₹10,000. WordPress websites start from ₹12,000. Shopify stores start from ₹18,000. Custom Next.js websites start from ₹22,000. Add-ons like AI chatbot start from ₹12,000 and AI image generation from ₹5,000 per batch. All prices are fixed and quoted upfront — no surprises, no GST added on top.',
+    answer: 'WordPress websites start from ₹6,000. Wix Studio websites start from ₹10,000. Shopify stores start from ₹15,000. Custom Next.js websites start from ₹10,000. Add-ons like AI chatbot start from ₹12,000 and AI image generation from ₹5,000 per batch. All prices are fixed and quoted upfront — no surprises, no GST added on top.',
     category: 'pricing'
   },
   {

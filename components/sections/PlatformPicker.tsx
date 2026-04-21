@@ -19,7 +19,7 @@ const platforms = [
       'SEO-driven content strategies'
     ],
     notIdealFor: 'Businesses that want a fully hosted, zero-maintenance platform or a complex product store out of the box',
-    startingAt: '₹12,000',
+    startingAt: '₹6,000',
     timeline: '2–3 weeks',
     badge: 'Most Popular'
   },
@@ -36,7 +36,7 @@ const platforms = [
       'Multi-currency or international selling'
     ],
     notIdealFor: 'Non-e-commerce businesses — you would be paying for store features you will never use',
-    startingAt: '₹18,000',
+    startingAt: '₹15,000',
     timeline: '2–4 weeks',
     badge: 'E-Commerce'
   },
@@ -54,7 +54,7 @@ const platforms = [
     ],
     notIdealFor: 'High-traffic sites, complex custom functionality, or businesses that need deep SEO control',
     startingAt: '₹10,000',
-    timeline: '1–2 weeks',
+    timeline: '2-3 weeks',
     badge: 'Fastest Launch'
   },
   {
@@ -70,7 +70,7 @@ const platforms = [
       'Complex integrations & APIs'
     ],
     notIdealFor: 'Businesses with very simple requirements or those needing a very fast, low-budget turnaround',
-    startingAt: '₹22,000',
+    startingAt: '₹10,000',
     timeline: '3–5 weeks',
     badge: 'Max Performance'
   }

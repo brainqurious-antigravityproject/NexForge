@@ -56,7 +56,7 @@ const rows: ComparisonRow[] = [
   },
   {
     feature: 'Typical project cost',
-    sitecraf: '₹12K–₹80K+',
+    sitecraf: '₹6K–₹60K+',
     freelancer: '₹5K–₹25K',
     inHouse: '₹40K–₹2L+',
     largeAgency: '₹80K–₹5L+'

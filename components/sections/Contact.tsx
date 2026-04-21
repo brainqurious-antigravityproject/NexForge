@@ -91,11 +91,12 @@ export default function Contact() {
                   className="bg-[#000000] border border-white/[0.08] rounded-lg px-4 py-3 text-[#e8e8f0] focus:border-[#b5ff3e]/40 focus:outline-none transition-colors appearance-none cursor-pointer"
                 >
                   <option value="" disabled>Select a service</option>
-                  <option value="web-dev">Website Development</option>
-                  <option value="migration">Platform Migration (Shopify → Wix)</option>
+                  <option value="wordpress">WordPress Website</option>
+                  <option value="wix-studio">Wix Studio Website</option>
+                  <option value="shopify">Shopify E-commerce</option>
+                  <option value="nextjs">Custom Next.js Web App</option>
                   <option value="chatbot">AI Chatbot</option>
                   <option value="ai-images">AI Image Generation</option>
-                  <option value="automation">Automation / Integration</option>
                   <option value="advice">Not sure — need advice</option>
                 </select>
               </div>
@@ -108,10 +109,10 @@ export default function Contact() {
                   className="bg-[#000000] border border-white/[0.08] rounded-lg px-4 py-3 text-[#e8e8f0] focus:border-[#b5ff3e]/40 focus:outline-none transition-colors appearance-none cursor-pointer"
                 >
                   <option value="" disabled>Select budget range</option>
-                  <option value="under-20k">Under ₹20,000</option>
+                  <option value="under-10k">Under ₹10,000</option>
+                  <option value="10k-20k">₹10,000–₹20,000</option>
                   <option value="20k-50k">₹20,000–₹50,000</option>
-                  <option value="50k-1l">₹50,000–₹1,00,000</option>
-                  <option value="above-1l">Above ₹1L</option>
+                  <option value="above-50k">Above ₹50,000</option>
                 </select>
               </div>
             </div>

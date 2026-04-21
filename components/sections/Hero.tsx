@@ -116,7 +116,7 @@ export default function Hero(props: Partial<HeroProps>) {
           {/* Headline */}
           <h1
             className={`heading-section grid font-[family-name:var(--font-display)] text-[#e8e8f0] text-[length:calc(var(--heading-section)*1.44)] md:text-[length:calc(var(--heading-section)*1.2)] ${animClass} ${stateClass}`}
-            style={{ transitionDelay: '100ms' }}
+            style={{ transitionDelay: '0ms' }}
           >
             {/* Invisible placeholder for grid height constraints */}
             <span className="invisible col-start-1 row-start-1" aria-hidden="true">
