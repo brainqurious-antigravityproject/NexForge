@@ -77,13 +77,13 @@ export default function Hero(props: Partial<HeroProps>) {
 
   const statsContent = stats && stats.length > 0 && (
     <div
-      className={`grid grid-cols-2 md:flex md:flex-row items-center justify-center md:justify-start gap-8 md:gap-12 md:mt-16 pt-8 md:pt-12 border-t border-white/[0.06] w-full ${animClass} ${stateClass}`}
+      className={`grid grid-cols-2 place-items-center md:flex md:flex-row md:items-center justify-center md:justify-start gap-y-10 gap-x-4 md:gap-12 md:mt-16 pt-8 md:pt-12 border-t border-white/[0.06] w-full ${animClass} ${stateClass}`}
       style={{ transitionDelay: '200ms' }}
     >
       {stats.map((stat, i) => (
         <React.Fragment key={i}>
-          <div className="flex flex-col items-center md:items-start">
-            <span className="font-[family-name:var(--font-display)] font-bold text-[#b5ff3e] text-2xl whitespace-nowrap">
+          <div className="flex flex-col items-center md:items-start text-center md:text-left w-full">
+            <span className="font-[family-name:var(--font-display)] font-bold text-[#b5ff3e] text-[32px] md:text-2xl whitespace-nowrap mb-1">
               {stat.value}
             </span>
             <span className="font-[family-name:var(--font-body)] text-[#8888a0] text-[length:var(--text-xs)] uppercase tracking-widest mt-1">

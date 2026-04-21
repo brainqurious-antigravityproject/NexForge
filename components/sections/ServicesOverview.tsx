@@ -17,12 +17,12 @@ type ServiceCard = {
 const serviceCards: ServiceCard[] = [
   {
     id: 'portfolio',
-    title: 'Portfolio Design',
-    lead: 'Showcase your craft with clarity and credibility.',
+    title: 'Business Websites',
+    lead: 'Your business deserves a website that works as hard as you do.',
     points: [
-      'Clean responsive layouts',
-      'Case study structure',
-      'Easy content updates'
+      'Mobile-first, SEO-ready from day one',
+      'Built on WordPress, Next.js, or Wix Studio',
+      'Launched in as little as 2 weeks'
     ],
     icon: Layout,
     accent: 'portfolio',
@@ -31,7 +31,7 @@ const serviceCards: ServiceCard[] = [
   {
     id: 'landing',
     title: 'Landing Pages',
-    lead: 'Turn traffic into conversations with high-impact conversion.',
+    lead: 'Turn ad spend into leads with pages built to convert.',
     points: [
       'Conversion-led architecture',
       'A/B test readiness',
@@ -57,7 +57,7 @@ const serviceCards: ServiceCard[] = [
   {
     id: 'chatbots',
     title: 'AI Chatbots',
-    lead: 'Capture and qualify leads 24/7 via web and WhatsApp.',
+    lead: 'Never miss a lead — your website handles enquiries around the clock.',
     points: [
       'Multilingual lead capture',
       'Smart routing & qualification',
@@ -69,8 +69,8 @@ const serviceCards: ServiceCard[] = [
   },
   {
     id: 'automation',
-    title: 'Automation & API Integrations',
-    lead: 'Remove manual busywork and connect your digital tools.',
+    title: 'Workflow Automation',
+    lead: 'Stop doing manually what your tools should do automatically.',
     points: [
       'Lead notification workflows',
       'Custom SaaS integrations',
@@ -83,7 +83,7 @@ const serviceCards: ServiceCard[] = [
   {
     id: 'images',
     title: 'AI Image Generation',
-    lead: 'Studio-quality product visuals without the studio cost.',
+    lead: 'Professional product visuals at a fraction of studio cost.',
     points: [
       'E-commerce catalog visuals',
       'Batch photo enhancement',
@@ -101,9 +101,9 @@ export default function ServicesOverview() {
       <div className="what-we-build-inner">
         <header className="what-we-build-header">
           <p className="what-we-build-eyebrow">WHAT WE BUILD</p>
-          <h2 className="what-we-build-heading">Innovative Web Services</h2>
+          <h2 className="what-we-build-heading">Everything Your Business Needs Online — Under One Roof</h2>
           <p className="what-we-build-subheading">
-            For every Indian visionary ready to scale — from first portfolio to full-stack platforms.
+            Websites, stores, chatbots, and automation — built fast, priced fairly, and handed over with full ownership.
           </p>
         </header>
 
@@ -142,8 +142,8 @@ export default function ServicesOverview() {
 
         {/* CTA Button */}
         <div className="flex justify-center mt-16 pb-8 md:pb-0">
-          <a href="tel:+919599143235" className="inline-flex items-center justify-center min-h-[48px] bg-[#b5ff3e] text-[#000000] font-semibold px-8 py-4 rounded-full hover:bg-[#c4ff66] hover:shadow-[var(--glow-md)] active:scale-[0.98] transition-all duration-300 text-[length:var(--text-sm)] w-full md:w-auto">
-            Book a Free Call
+          <a href="#contact" className="inline-flex items-center justify-center min-h-[48px] bg-[#b5ff3e] text-[#000000] font-semibold px-8 py-4 rounded-full hover:bg-[#c4ff66] hover:shadow-[var(--glow-md)] active:scale-[0.98] transition-all duration-300 text-[length:var(--text-sm)] w-full md:w-auto">
+            Discuss Your Project →
           </a>
         </div>
       </div>
