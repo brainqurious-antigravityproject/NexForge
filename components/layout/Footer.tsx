@@ -27,78 +27,9 @@ export default function Footer() {
             Sitecraf
           </span>
           <p className="footer-description" style={{ fontSize: '16px', color: '#8888a0', lineHeight: 1.6, maxWidth: '280px', fontFamily: 'var(--font-body)' }}>
-            We engineer fast, conversion-focused websites for Indian startups and SMEs, leveraging platforms like WordPress, Shopify, Wix Studio, and custom Next.js solutions.
+            Fast websites for growing Indian businesses. WordPress, Shopify, Wix Studio, and custom Next.js — built to convert, not just impress.
           </p>
           
-          {/* Social Icons row */}
-          <div className="footer-socials" style={{ display: 'flex', gap: '0.75rem', marginTop: '0.5rem' }}>
-            <a 
-              href="#" 
-              className="footer-social-link" 
-              aria-label="Visit Sitecraf on LinkedIn"
-              style={{
-                width: '36px',
-                height: '36px',
-                borderRadius: '10px',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                backgroundColor: 'white/[0.05]',
-                border: '0.5px solid #b5ff3e',
-                color: '#8888a0',
-                fontSize: '0.875rem',
-                fontWeight: 600,
-                textDecoration: 'none',
-                transition: 'all 0.2s ease'
-              }}
-            >
-              in
-            </a>
-            <a 
-              href="#" 
-              className="footer-social-link" 
-              aria-label="Visit Sitecraf on Instagram"
-              style={{
-                width: '36px',
-                height: '36px',
-                borderRadius: '10px',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                backgroundColor: 'white/[0.05]',
-                border: '0.5px solid #b5ff3e',
-                color: '#8888a0',
-                fontSize: '0.875rem',
-                fontWeight: 600,
-                textDecoration: 'none',
-                transition: 'all 0.2s ease'
-              }}
-            >
-              ig
-            </a>
-            <a 
-              href="#" 
-              className="footer-social-link" 
-              aria-label="Visit Sitecraf on Twitter (X)"
-              style={{
-                width: '36px',
-                height: '36px',
-                borderRadius: '10px',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                backgroundColor: 'white/[0.05]',
-                border: '0.5px solid #b5ff3e',
-                color: '#8888a0',
-                fontSize: '0.875rem',
-                fontWeight: 600,
-                textDecoration: 'none',
-                transition: 'all 0.2s ease'
-              }}
-            >
-              x
-            </a>
-          </div>
         </div>
 
         {/* 2) SERVICES COLUMN */}
@@ -107,12 +38,12 @@ export default function Footer() {
             Services
           </h3>
           <ul className="footer-list" style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '0.875rem' }}>
-            <li><a href="#" className="footer-link hover:text-[#b5ff3e]" style={{ fontSize: '16px', color: '#8888a0', textDecoration: 'none', transition: 'color 0.2s ease', fontFamily: 'var(--font-body)' }}>Portfolio Design</a></li>
-            <li><a href="#" className="footer-link hover:text-[#b5ff3e]" style={{ fontSize: '16px', color: '#8888a0', textDecoration: 'none', transition: 'color 0.2s ease', fontFamily: 'var(--font-body)' }}>Landing Pages</a></li>
-            <li><a href="#" className="footer-link hover:text-[#b5ff3e]" style={{ fontSize: '16px', color: '#8888a0', textDecoration: 'none', transition: 'color 0.2s ease', fontFamily: 'var(--font-body)' }}>E-Commerce Stores</a></li>
-            <li><a href="#" className="footer-link hover:text-[#b5ff3e]" style={{ fontSize: '16px', color: '#8888a0', textDecoration: 'none', transition: 'color 0.2s ease', fontFamily: 'var(--font-body)' }}>AI Chatbots</a></li>
-            <li><a href="#" className="footer-link hover:text-[#b5ff3e]" style={{ fontSize: '16px', color: '#8888a0', textDecoration: 'none', transition: 'color 0.2s ease', fontFamily: 'var(--font-body)' }}>Automation & API Integrations</a></li>
-            <li><a href="#" className="footer-link hover:text-[#b5ff3e]" style={{ fontSize: '16px', color: '#8888a0', textDecoration: 'none', transition: 'color 0.2s ease', fontFamily: 'var(--font-body)' }}>AI Image Generation</a></li>
+            <li><a href="#services" className="footer-link hover:text-[#b5ff3e]" style={{ fontSize: '16px', color: '#8888a0', textDecoration: 'none', transition: 'color 0.2s ease', fontFamily: 'var(--font-body)' }}>WordPress Websites</a></li>
+            <li><a href="#services" className="footer-link hover:text-[#b5ff3e]" style={{ fontSize: '16px', color: '#8888a0', textDecoration: 'none', transition: 'color 0.2s ease', fontFamily: 'var(--font-body)' }}>Shopify Stores</a></li>
+            <li><a href="#services" className="footer-link hover:text-[#b5ff3e]" style={{ fontSize: '16px', color: '#8888a0', textDecoration: 'none', transition: 'color 0.2s ease', fontFamily: 'var(--font-body)' }}>Wix Studio Websites</a></li>
+            <li><a href="#services" className="footer-link hover:text-[#b5ff3e]" style={{ fontSize: '16px', color: '#8888a0', textDecoration: 'none', transition: 'color 0.2s ease', fontFamily: 'var(--font-body)' }}>Custom Next.js Builds</a></li>
+            <li><a href="#services" className="footer-link hover:text-[#b5ff3e]" style={{ fontSize: '16px', color: '#8888a0', textDecoration: 'none', transition: 'color 0.2s ease', fontFamily: 'var(--font-body)' }}>AI Chatbots</a></li>
+            <li><a href="#services" className="footer-link hover:text-[#b5ff3e]" style={{ fontSize: '16px', color: '#8888a0', textDecoration: 'none', transition: 'color 0.2s ease', fontFamily: 'var(--font-body)' }}>AI Image Generation</a></li>
           </ul>
         </div>
 
@@ -201,7 +132,7 @@ export default function Footer() {
       >
         <div className="md:w-[80%] mx-auto w-full">
           <p style={{ fontSize: '11px', color: '#66667a', margin: 0, textTransform: 'uppercase', letterSpacing: '0.1em', fontFamily: 'var(--font-body)' }}>
-            © {currentYear} Sitecraf. Built with precision in New Delhi.
+            © {currentYear} Sitecraf · New Delhi, India · Built for Indian businesses
           </p>
         </div>
       </div>

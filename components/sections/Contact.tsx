@@ -37,7 +37,7 @@ export default function Contact() {
               <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
             </div>
             <h4 className="heading-sub text-[#e8e8f0]">Email</h4>
-            <a href="mailto:info@sitecraf.com" className="text-[#8888a0] text-sm hover:text-[#b5ff3e] transition-colors">info@sitecraf.com →</a>
+            <a href="mailto:info@sitecraf.in" className="text-[#8888a0] text-sm hover:text-[#b5ff3e] transition-colors">info@sitecraf.in →</a>
           </div>
           <div className="bg-[#111111] p-6 rounded-2xl border border-white/[0.08] flex flex-col items-center text-center gap-3">
             <div className="w-10 h-10 rounded-full bg-[#b5ff3e]/[0.08] border border-[#b5ff3e]/[0.14] flex items-center justify-center text-[#b5ff3e]">
