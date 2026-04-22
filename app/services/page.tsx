@@ -243,13 +243,14 @@ export default function ServicesPage() {
                     </svg>
                   </div>
                   <h3 className="text-[length:var(--text-lg)] font-[family-name:var(--font-display)] font-bold text-[var(--color-text)] mb-2">WordPress Website</h3>
-                  <p className="text-[var(--color-text-muted)] text-[length:var(--text-sm)] mb-6">Best for service businesses, agencies, blogs &amp; SEO-driven brands.</p>
+                  <p className="text-[var(--color-text-muted)] text-[length:var(--text-sm)] mb-2">Best for: service businesses, agencies, blogs &amp; SEO-driven content strategies.</p>
+                  <p className="text-[var(--color-text-muted)] text-[length:var(--text-sm)] mb-6">The world&apos;s most widely used CMS — ideal for any site needing strong SEO control, a large plugin ecosystem, and easy long-term content management.</p>
                   <ul className="space-y-3 mb-6">
                     {[
-                      'Mobile-first, SEO-ready build from day one',
-                      'Easy content management — your team can update it',
-                      '1,000+ plugin ecosystem for any functionality',
-                      '2 weeks post-launch support included'
+                      'Service businesses & agencies',
+                      'Blogs & news portals',
+                      'Portfolio & brochure sites',
+                      'SEO-driven content strategies'
                     ].map((f, i) => (
                       <li key={i} className="flex items-start gap-3 text-[var(--color-text)] text-sm">
                         <span className="w-1.5 h-1.5 rounded-full bg-[var(--color-primary)]/40 mt-1.5 shrink-0" />
@@ -257,13 +258,13 @@ export default function ServicesPage() {
                       </li>
                     ))}
                   </ul>
-                  <p className="text-[var(--color-text-faint)] text-xs italic">NOT for: Businesses needing a fully managed, zero-maintenance solution.</p>
+                  <p className="text-[var(--color-text-faint)] text-xs italic">NOT for: Teams that want a fully managed, no-maintenance solution — though managed WordPress hosting can solve this for most businesses.</p>
                 </div>
                 <div className="flex items-center justify-center">
                   <div className="bg-[var(--color-surface-2)] border border-[var(--color-border)] rounded-2xl p-8 text-center w-full">
                     <span className="block text-[var(--color-text-muted)] text-xs uppercase tracking-widest mb-2">Global Market Share</span>
                     <span className="text-[var(--color-primary)] font-bold text-5xl font-[family-name:var(--font-display)]">43%</span>
-                    <span className="block text-[var(--color-text-muted)] text-sm mt-2">of all websites run on WordPress</span>
+                    <span className="block text-[var(--color-text-muted)] text-sm mt-2">of all websites globally run on WordPress</span>
                   </div>
                 </div>
               </div>
@@ -274,8 +275,8 @@ export default function ServicesPage() {
                     <span className="text-[var(--color-text)] font-medium">2–3 weeks</span>
                   </div>
                   <div>
-                    <span className="block text-[var(--color-text-muted)] text-xs uppercase tracking-widest mb-1">Price</span>
-                    <span className="text-[var(--color-text)] font-medium">From ₹6,000</span>
+                    <span className="block text-[var(--color-text-muted)] text-xs uppercase tracking-widest mb-1">Starting At</span>
+                    <span className="text-[var(--color-text)] font-medium">₹6,000</span>
                   </div>
                 </div>
                 <a href="https://wa.me/919599143235" target="_blank" rel="noopener noreferrer" className="text-[var(--color-primary)] font-medium hover:underline">Get a Quote →</a>
@@ -295,13 +296,14 @@ export default function ServicesPage() {
                     </svg>
                   </div>
                   <h3 className="text-[length:var(--text-lg)] font-[family-name:var(--font-display)] font-bold text-[var(--color-text)] mb-2">Shopify Store</h3>
-                  <p className="text-[var(--color-text-muted)] text-[length:var(--text-sm)] mb-6">Best for D2C brands, product sellers &amp; businesses needing inventory and payments.</p>
+                  <p className="text-[var(--color-text-muted)] text-[length:var(--text-sm)] mb-2">Best for: D2C product brands, online stores &amp; businesses needing inventory, payments &amp; shipping.</p>
+                  <p className="text-[var(--color-text-muted)] text-[length:var(--text-sm)] mb-6">The leading e-commerce platform — built for selling products online, from single-product stores to large catalogues with inventory, payment, and shipping management built in.</p>
                   <ul className="space-y-3 mb-6">
                     {[
-                      'Full product catalogue setup & configuration',
-                      'Payment & shipping fully configured',
-                      'Optimized checkout flow to reduce drop-offs',
-                      'Multi-currency support for international selling'
+                      'D2C product brands',
+                      'Online stores with inventory management',
+                      'Businesses needing payment + shipping',
+                      'Multi-currency or international selling'
                     ].map((f, i) => (
                       <li key={i} className="flex items-start gap-3 text-[var(--color-text)] text-sm">
                         <span className="w-1.5 h-1.5 rounded-full bg-[var(--color-primary)]/40 mt-1.5 shrink-0" />
@@ -309,21 +311,13 @@ export default function ServicesPage() {
                       </li>
                     ))}
                   </ul>
-                  <p className="text-[var(--color-text-faint)] text-xs italic">NOT for: Non-e-commerce businesses — you would pay for store features you never use.</p>
+                  <p className="text-[var(--color-text-faint)] text-xs italic">NOT for: Non-e-commerce businesses — you would be paying for store features you will never use.</p>
                 </div>
-                <div className="flex flex-col justify-center gap-4">
-                  <p className="text-[var(--color-text-muted)] text-xs uppercase tracking-widest mb-2">Already on Shopify but not selling online? Migrate to Wix Studio and save:</p>
-                  <div className="bg-red-500/10 border border-red-500/20 rounded-xl p-4 flex justify-between items-center">
-                    <span className="text-[var(--color-text-muted)] text-sm">Shopify Cost</span>
-                    <span className="text-red-400 font-bold">₹2,000/mo</span>
-                  </div>
-                  <div className="bg-[var(--color-primary)]/[0.08] border border-[var(--color-primary-border)] rounded-xl p-4 flex justify-between items-center">
-                    <span className="text-[var(--color-text-muted)] text-sm">Wix Studio Cost</span>
-                    <span className="text-[var(--color-primary)] font-bold">₹450/mo</span>
-                  </div>
-                  <div className="bg-[#00c8c8]/[0.08] border border-[#00c8c8]/20 rounded-xl p-4 flex justify-between items-center">
-                    <span className="text-[var(--color-text-muted)] text-sm">Annual Saving</span>
-                    <span className="text-[#00c8c8] font-bold">₹18,600/yr</span>
+                <div className="flex items-center justify-center">
+                  <div className="bg-[var(--color-surface-2)] border border-[var(--color-border)] rounded-2xl p-8 text-center w-full">
+                    <span className="block text-[var(--color-text-muted)] text-xs uppercase tracking-widest mb-2">Shopify Powers</span>
+                    <span className="text-[var(--color-primary)] font-bold text-5xl font-[family-name:var(--font-display)]">4.4M</span>
+                    <span className="block text-[var(--color-text-muted)] text-sm mt-2">online stores worldwide — the most trusted e-commerce platform</span>
                   </div>
                 </div>
               </div>
@@ -334,8 +328,8 @@ export default function ServicesPage() {
                     <span className="text-[var(--color-text)] font-medium">2–4 weeks</span>
                   </div>
                   <div>
-                    <span className="block text-[var(--color-text-muted)] text-xs uppercase tracking-widest mb-1">Price</span>
-                    <span className="text-[var(--color-text)] font-medium">From ₹15,000</span>
+                    <span className="block text-[var(--color-text-muted)] text-xs uppercase tracking-widest mb-1">Starting At</span>
+                    <span className="text-[var(--color-text)] font-medium">₹15,000</span>
                   </div>
                 </div>
                 <a href="https://wa.me/919599143235" target="_blank" rel="noopener noreferrer" className="text-[var(--color-primary)] font-medium hover:underline">Get a Quote →</a>
@@ -355,13 +349,14 @@ export default function ServicesPage() {
                     </svg>
                   </div>
                   <h3 className="text-[length:var(--text-lg)] font-[family-name:var(--font-display)] font-bold text-[var(--color-text)] mb-2">Wix Studio Website</h3>
-                  <p className="text-[var(--color-text-muted)] text-[length:var(--text-sm)] mb-6">Best for local businesses, clinics, restaurants &amp; teams who want to self-manage content.</p>
+                  <p className="text-[var(--color-text-muted)] text-[length:var(--text-sm)] mb-2">Best for: local businesses, restaurants, clinics, studios &amp; teams who want to self-manage content.</p>
+                  <p className="text-[var(--color-text-muted)] text-[length:var(--text-sm)] mb-6">A modern visual builder with professional-grade design control. Great for businesses that want a polished, fast-loading website their own team can edit and update without any technical knowledge.</p>
                   <ul className="space-y-3 mb-6">
                     {[
-                      'Visual builder — edit anything without a developer',
-                      'Fast delivery, polished professional design',
-                      'Perfect for service businesses & portfolios',
-                      'Shopify migration available — save ₹18,600/yr'
+                      'Local service businesses',
+                      'Restaurants, clinics & studios',
+                      'Teams who want to self-manage content',
+                      'Fast turnaround projects'
                     ].map((f, i) => (
                       <li key={i} className="flex items-start gap-3 text-[var(--color-text)] text-sm">
                         <span className="w-1.5 h-1.5 rounded-full bg-[var(--color-primary)]/40 mt-1.5 shrink-0" />
@@ -369,13 +364,13 @@ export default function ServicesPage() {
                       </li>
                     ))}
                   </ul>
-                  <p className="text-[var(--color-text-faint)] text-xs italic">NOT for: Businesses needing complex custom functionality or deep API integrations.</p>
+                  <p className="text-[var(--color-text-faint)] text-xs italic">NOT for: Businesses needing complex custom functionality, deep API integrations, or very advanced SEO control.</p>
                 </div>
                 <div className="flex items-center justify-center">
                   <div className="bg-[var(--color-surface-2)] border border-[var(--color-border)] rounded-2xl p-8 text-center w-full">
                     <span className="block text-[var(--color-text-muted)] text-xs uppercase tracking-widest mb-2">Fastest Delivery</span>
-                    <span className="text-[var(--color-primary)] font-bold text-5xl font-[family-name:var(--font-display)]">2 Wks</span>
-                    <span className="block text-[var(--color-text-muted)] text-sm mt-2">live on your domain — fastest of all 4 platforms</span>
+                    <span className="text-[var(--color-primary)] font-bold text-5xl font-[family-name:var(--font-display)]">2–3</span>
+                    <span className="block text-[var(--color-text-muted)] text-sm mt-2">weeks from brief to live — fastest launch of all 4 platforms</span>
                   </div>
                 </div>
               </div>
@@ -386,8 +381,8 @@ export default function ServicesPage() {
                     <span className="text-[var(--color-text)] font-medium">2–3 weeks</span>
                   </div>
                   <div>
-                    <span className="block text-[var(--color-text-muted)] text-xs uppercase tracking-widest mb-1">Price</span>
-                    <span className="text-[var(--color-text)] font-medium">From ₹10,000</span>
+                    <span className="block text-[var(--color-text-muted)] text-xs uppercase tracking-widest mb-1">Starting At</span>
+                    <span className="text-[var(--color-text)] font-medium">₹10,000</span>
                   </div>
                 </div>
                 <a href="https://wa.me/919599143235" target="_blank" rel="noopener noreferrer" className="text-[var(--color-primary)] font-medium hover:underline">Get a Quote →</a>
@@ -407,13 +402,14 @@ export default function ServicesPage() {
                     </svg>
                   </div>
                   <h3 className="text-[length:var(--text-lg)] font-[family-name:var(--font-display)] font-bold text-[var(--color-text)] mb-2">Custom Next.js Website</h3>
-                  <p className="text-[var(--color-text-muted)] text-[length:var(--text-sm)] mb-6">Best for performance-critical sites, custom web apps &amp; AEO-first builds.</p>
+                  <p className="text-[var(--color-text-muted)] text-[length:var(--text-sm)] mb-2">Best for: performance-critical sites, custom web apps, AEO + SEO-first builds &amp; complex integrations.</p>
+                  <p className="text-[var(--color-text-muted)] text-[length:var(--text-sm)] mb-6">Built from scratch with Next.js — no templates, no page builders. The highest performance option for businesses that need custom features, AEO-ready structure, bespoke integrations, or a website that doubles as a web application.</p>
                   <ul className="space-y-3 mb-6">
                     {[
-                      'No templates — built entirely from scratch',
-                      'Near-perfect Google PageSpeed scores',
-                      'Free hosting on Vercel — zero hosting cost, forever',
-                      '100% code ownership — no platform lock-in ever'
+                      'Performance-critical business sites',
+                      'Custom web apps & portals',
+                      'AEO + SEO-first builds',
+                      'Complex integrations & APIs'
                     ].map((f, i) => (
                       <li key={i} className="flex items-start gap-3 text-[var(--color-text)] text-sm">
                         <span className="w-1.5 h-1.5 rounded-full bg-[var(--color-primary)]/40 mt-1.5 shrink-0" />
@@ -421,7 +417,7 @@ export default function ServicesPage() {
                       </li>
                     ))}
                   </ul>
-                  <p className="text-[var(--color-text-faint)] text-xs italic">NOT for: Businesses needing a very fast, low-budget turnaround.</p>
+                  <p className="text-[var(--color-text-faint)] text-xs italic">NOT for: Businesses with very simple requirements or those needing a very fast, low-budget turnaround.</p>
                 </div>
                 <div className="flex items-center justify-center">
                   <div className="bg-[var(--color-surface-2)] border border-[var(--color-border)] rounded-2xl p-8 text-center w-full">
@@ -438,8 +434,8 @@ export default function ServicesPage() {
                     <span className="text-[var(--color-text)] font-medium">3–5 weeks</span>
                   </div>
                   <div>
-                    <span className="block text-[var(--color-text-muted)] text-xs uppercase tracking-widest mb-1">Price</span>
-                    <span className="text-[var(--color-text)] font-medium">From ₹15,000</span>
+                    <span className="block text-[var(--color-text-muted)] text-xs uppercase tracking-widest mb-1">Starting At</span>
+                    <span className="text-[var(--color-text)] font-medium">₹15,000</span>
                   </div>
                 </div>
                 <a href="https://wa.me/919599143235" target="_blank" rel="noopener noreferrer" className="text-[var(--color-primary)] font-medium hover:underline">Get a Quote →</a>
@@ -467,7 +463,7 @@ export default function ServicesPage() {
                     'Hindi, Hinglish & English (unique in India)',
                     'Trained on your products, pricing & FAQs',
                     'Lead capture & qualification while you\'re offline',
-                    '1-line embed widget — on any website'
+                    '1-line embed widget — works on any website'
                   ].map((f, i) => (
                     <li key={i} className="flex items-start gap-3 text-[var(--color-text)] text-sm">
                       <span className="w-1.5 h-1.5 rounded-full bg-[var(--color-primary)]/40 mt-1.5 shrink-0" />
@@ -482,8 +478,8 @@ export default function ServicesPage() {
                       <span className="text-[var(--color-text)] text-sm font-medium">1–3 weeks</span>
                     </div>
                     <div>
-                      <span className="block text-[var(--color-text-muted)] text-[10px] uppercase tracking-widest mb-1">Price</span>
-                      <span className="text-[var(--color-text)] text-sm font-medium">From ₹12,000</span>
+                      <span className="block text-[var(--color-text-muted)] text-[10px] uppercase tracking-widest mb-1">Starting At</span>
+                      <span className="text-[var(--color-text)] text-sm font-medium">₹12,000</span>
                     </div>
                   </div>
                   <a href="https://wa.me/919599143235" target="_blank" rel="noopener noreferrer" className="text-[var(--color-primary)] text-sm font-medium hover:underline">Get a Quote →</a>
@@ -522,8 +518,8 @@ export default function ServicesPage() {
                       <span className="text-[var(--color-text)] text-sm font-medium">3–5 days</span>
                     </div>
                     <div>
-                      <span className="block text-[var(--color-text-muted)] text-[10px] uppercase tracking-widest mb-1">Price</span>
-                      <span className="text-[var(--color-text)] text-sm font-medium">From ₹3,000</span>
+                      <span className="block text-[var(--color-text-muted)] text-[10px] uppercase tracking-widest mb-1">Starting At</span>
+                      <span className="text-[var(--color-text)] text-sm font-medium">₹3,000</span>
                     </div>
                   </div>
                   <a href="https://wa.me/919599143235" target="_blank" rel="noopener noreferrer" className="text-[var(--color-primary)] text-sm font-medium hover:underline">Get a Quote →</a>
@@ -545,7 +541,7 @@ export default function ServicesPage() {
                     </svg>
                   </div>
                   <h3 className="text-[length:var(--text-lg)] font-[family-name:var(--font-display)] font-bold text-[var(--color-text)] mb-2">Automation &amp; API Integrations</h3>
-                  <p className="text-[var(--color-text-muted)] text-[length:var(--text-sm)] mb-6">For businesses where leads go missing or tools don&apos;t talk to each other.</p>
+                  <p className="text-[var(--color-text-muted)] text-[length:var(--text-sm)] mb-6">For businesses where leads go missing or tools don&apos;t talk to each other — connect everything automatically.</p>
                   <ul className="space-y-3 mb-6">
                     {[
                       'WhatsApp + email lead notifications — instant alerts',
@@ -575,8 +571,8 @@ export default function ServicesPage() {
                     <span className="text-[var(--color-text)] font-medium">3–7 days</span>
                   </div>
                   <div>
-                    <span className="block text-[var(--color-text-muted)] text-xs uppercase tracking-widest mb-1">Price</span>
-                    <span className="text-[var(--color-text)] font-medium">From ₹8,000</span>
+                    <span className="block text-[var(--color-text-muted)] text-xs uppercase tracking-widest mb-1">Starting At</span>
+                    <span className="text-[var(--color-text)] font-medium">₹8,000</span>
                   </div>
                 </div>
                 <a href="https://wa.me/919599143235" target="_blank" rel="noopener noreferrer" className="text-[var(--color-primary)] font-medium hover:underline">Get a Quote →</a>
