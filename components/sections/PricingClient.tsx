@@ -709,33 +709,80 @@ export default function PricingClient() {
         </div>
       </section>
 
-      {/* SECTION 5 — FAQ (Pricing-specific) */}
-      <section aria-label="Pricing FAQs" className="w-full py-20 bg-[#0a0a0a]">
-        <div className="max-w-[var(--content-wide)] mx-auto px-6 anim-reveal is-visible">
-          <span className="block text-[#b5ff3e] text-xs uppercase tracking-widest mb-2">Pricing FAQs</span>
-          <h2 className="heading-section font-[family-name:var(--font-display)] text-[#e8e8f0] mb-10">
-            Every pricing question — answered
-          </h2>
+      {/* SECTION 5 — Pricing FAQ */}
+      <section aria-label="Pricing FAQ" className="w-full py-16 px-6 bg-[var(--color-surface)]">
+        <div className="w-full md:w-[80%] max-w-none mx-auto">
 
-          <div className="max-w-3xl mx-auto">
+          {/* Header — left aligned */}
+          <div className="mb-10 anim-reveal is-visible">
+            <span className="block text-[var(--color-primary)] text-[length:var(--text-xs)] uppercase tracking-widest mb-3">
+              Pricing FAQ
+            </span>
+            <h2 className="heading-section font-[family-name:var(--font-display)] text-[var(--color-text)] mb-3">
+              Questions we get asked every week
+            </h2>
+            <p className="font-[family-name:var(--font-body)] text-[var(--color-text-muted)] text-[length:var(--text-base)] max-w-2xl">
+              Honest answers about money, timelines, and what happens if things go wrong.
+            </p>
+          </div>
+
+          {/* FAQ Accordions */}
+          <div className="max-w-3xl flex flex-col divide-y divide-[var(--color-border)] anim-reveal is-visible" style={{ animationDelay: '100ms' }}>
             {faqs.map((faq, idx) => (
-              <div key={idx} className="border-b border-white/[0.05] py-5 cursor-pointer" onClick={() => setOpenFaq(openFaq === idx ? null : idx)}>
-                <div className="flex justify-center items-center relative">
-                  <h3 className={`heading-sub font-[family-name:var(--font-display)] transition-colors text-center pr-8 pl-8 ${openFaq === idx ? 'text-[#b5ff3e]' : 'text-[#e8e8f0] hover:text-[#b5ff3e]'}`}>
+              <div key={idx}>
+                <button
+                  onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
+                  className="w-full flex items-start justify-between gap-6 py-5 text-left"
+                  aria-expanded={openFaq === idx}
+                >
+                  <span className={`font-[family-name:var(--font-body)] font-semibold text-[length:var(--text-base)] leading-snug transition-colors duration-200 ${
+                    openFaq === idx ? 'text-[var(--color-primary)]' : 'text-[var(--color-text)]'
+                  }`}>
                     {faq.q}
-                  </h3>
-                  <svg className={`absolute right-0 w-4 h-4 text-[#66667a] transition-transform duration-300 flex-shrink-0 ${openFaq === idx ? 'rotate-180' : 'rotate-0'}`} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                  </span>
+                  <svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className={`flex-shrink-0 mt-0.5 text-[var(--color-primary)] transition-transform duration-300 ${
+                      openFaq === idx ? 'rotate-180' : 'rotate-0'
+                    }`}
+                  >
+                    <polyline points="6 9 12 15 18 9" />
                   </svg>
-                </div>
-                <div className={`overflow-hidden transition-all duration-300 ${openFaq === idx ? 'max-h-96 opacity-100 mt-3' : 'max-h-0 opacity-0'}`}>
-                  <p className="text-[#8888a0] text-sm leading-relaxed pb-2 text-center">
-                    {faq.a}
-                  </p>
-                </div>
+                </button>
+
+                {openFaq === idx && (
+                  <div className="pb-5">
+                    <p className="font-[family-name:var(--font-body)] text-[var(--color-text-muted)] text-[length:var(--text-sm)] leading-relaxed max-w-2xl">
+                      {faq.a}
+                    </p>
+                  </div>
+                )}
               </div>
             ))}
           </div>
+
+          {/* Inline nudge */}
+          <div className="mt-10 pt-8 border-t border-[var(--color-border)] flex flex-col sm:flex-row items-start sm:items-center gap-4 anim-reveal is-visible" style={{ animationDelay: '200ms' }}>
+            <p className="text-[var(--color-text-muted)] text-[length:var(--text-sm)]">
+              Still have a question not answered above?
+            </p>
+            <a
+              href="https://wa.me/919599143235"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[var(--color-primary)] border border-[var(--color-primary-border)] rounded-full px-5 py-2 text-[length:var(--text-sm)] font-semibold hover:bg-[var(--color-primary)]/[0.08] transition-colors duration-200 flex-shrink-0"
+            >
+              Ask on WhatsApp →
+            </a>
+          </div>
+
         </div>
       </section>
 
