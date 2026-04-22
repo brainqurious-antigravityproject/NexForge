@@ -583,135 +583,144 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* SECTION 4 — How It Works (5-Step Process) */}
+      {/* SECTION 4 — How It Works */}
       <section aria-label="How It Works" className="w-full py-20 px-6 bg-[var(--color-bg)]">
-        <div className="w-full max-w-[var(--content-wide)] mx-auto">
-          <div className="mb-16 text-center md:text-left anim-reveal is-visible">
+        <div className="w-full md:w-[80%] max-w-none mx-auto">
+
+          {/* Header */}
+          <div className="mb-16 anim-reveal is-visible">
             <span className="block text-[var(--color-primary)] text-[length:var(--text-xs)] uppercase tracking-widest mb-3">Our Process</span>
-            <h2 className="heading-section font-[family-name:var(--font-display)] text-[var(--color-text)] mb-4">From first call to live website — here&apos;s exactly what happens</h2>
+            <h2 className="heading-section font-[family-name:var(--font-display)] text-[var(--color-text)] mb-4">
+              From first call to live website
+            </h2>
             <p className="font-[family-name:var(--font-body)] text-[var(--color-text-muted)] text-[length:var(--text-base)] max-w-2xl">
               No surprises. No delays. No ghosting after payment.
             </p>
           </div>
 
-          <div className="relative">
-            {/* Vertical line for desktop */}
-            <div className="hidden md:block absolute left-8 top-8 bottom-8 border-l-2 border-dashed border-[var(--color-border)]"></div>
-            
-            <div className="flex flex-col gap-8">
+          {/* Timeline — horizontal desktop, vertical mobile */}
+          <div className="relative anim-reveal is-visible" style={{ animationDelay: '100ms' }}>
+
+            {/* Connector line — desktop only */}
+            <div className="hidden lg:block absolute top-8 left-[10%] right-[10%] h-px bg-[var(--color-border)]" />
+
+            <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 lg:gap-4">
+
               {/* Step 1 */}
-              <div className="relative flex flex-col md:flex-row gap-6 md:gap-12 anim-reveal is-visible" style={{ animationDelay: '100ms' }}>
-                <div className="hidden md:flex shrink-0 w-16 h-16 bg-[var(--color-surface)] border border-[var(--color-border)] rounded-full items-center justify-center z-10">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#b5ff3e" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-                  </svg>
+              <div className="flex lg:flex-col items-start lg:items-center gap-5 lg:gap-4 lg:text-center">
+                <div className="relative flex-shrink-0">
+                  <div className="w-16 h-16 rounded-full bg-[var(--color-surface)] border border-[var(--color-primary-border)] flex items-center justify-center z-10 relative">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-[var(--color-primary)]">
+                      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                    </svg>
+                  </div>
+                  <span className="absolute -top-2 -right-2 w-5 h-5 rounded-full bg-[var(--color-primary)] text-[#000] text-[10px] font-bold flex items-center justify-center">1</span>
                 </div>
-                <div className="bg-[var(--color-surface)] border border-[var(--color-border)] rounded-2xl p-6 md:p-8 flex-grow relative overflow-hidden">
-                  <div className="absolute -right-4 -top-8 text-[var(--color-primary)]/5 font-bold text-9xl select-none pointer-events-none">01</div>
-                  <span className="block text-[var(--color-primary)] text-xs uppercase tracking-widest mb-2">Step 01</span>
-                  <h3 className="text-[length:var(--text-lg)] font-[family-name:var(--font-display)] font-bold text-[var(--color-text)] mb-3">Free Discovery Call</h3>
-                  <div className="inline-block bg-[var(--color-surface-2)] text-[var(--color-text-muted)] rounded-full px-3 py-1 text-xs mb-4">30 mins</div>
-                  <p className="text-[var(--color-text-muted)] mb-4">No hard sell. Listen first, recommend right solution.</p>
-                  <ul className="space-y-2">
-                    <li className="flex items-center gap-2 text-sm text-[var(--color-text-muted)]"><span className="w-1 h-1 rounded-full bg-[var(--color-primary)]/40" /> Discuss your goals</li>
-                    <li className="flex items-center gap-2 text-sm text-[var(--color-text-muted)]"><span className="w-1 h-1 rounded-full bg-[var(--color-primary)]/40" /> Review current website</li>
-                    <li className="flex items-center gap-2 text-sm text-[var(--color-text-muted)]"><span className="w-1 h-1 rounded-full bg-[var(--color-primary)]/40" /> Honest recommendations</li>
-                  </ul>
+                <div>
+                  <div className="inline-flex items-center bg-[var(--color-surface-2)] text-[var(--color-text-muted)] rounded-full px-2.5 py-0.5 text-[10px] uppercase tracking-widest mb-2">30 min</div>
+                  <h3 className="font-[family-name:var(--font-display)] font-bold text-[var(--color-text)] text-[length:var(--text-base)] mb-1">Free Discovery Call</h3>
+                  <p className="text-[var(--color-text-muted)] text-[length:var(--text-xs)] leading-relaxed">We listen. You explain. We recommend the right solution — no hard sell.</p>
                 </div>
               </div>
 
               {/* Step 2 */}
-              <div className="relative flex flex-col md:flex-row gap-6 md:gap-12 anim-reveal is-visible" style={{ animationDelay: '200ms' }}>
-                <div className="hidden md:flex shrink-0 w-16 h-16 bg-[var(--color-surface)] border border-[var(--color-border)] rounded-full items-center justify-center z-10">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#b5ff3e" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                    <polyline points="14 2 14 8 20 8"></polyline>
-                    <line x1="16" y1="13" x2="8" y2="13"></line>
-                    <line x1="16" y1="17" x2="8" y2="17"></line>
-                    <polyline points="10 9 9 9 8 9"></polyline>
-                  </svg>
+              <div className="flex lg:flex-col items-start lg:items-center gap-5 lg:gap-4 lg:text-center">
+                <div className="relative flex-shrink-0">
+                  <div className="w-16 h-16 rounded-full bg-[var(--color-surface)] border border-[var(--color-border)] flex items-center justify-center z-10 relative">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-[var(--color-primary)]">
+                      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                      <polyline points="14 2 14 8 20 8"/>
+                      <line x1="16" y1="13" x2="8" y2="13"/>
+                      <line x1="16" y1="17" x2="8" y2="17"/>
+                    </svg>
+                  </div>
+                  <span className="absolute -top-2 -right-2 w-5 h-5 rounded-full bg-[var(--color-surface-dynamic)] text-[var(--color-text-muted)] text-[10px] font-bold flex items-center justify-center">2</span>
                 </div>
-                <div className="bg-[var(--color-surface)] border border-[var(--color-border)] rounded-2xl p-6 md:p-8 flex-grow relative overflow-hidden">
-                  <div className="absolute -right-4 -top-8 text-[var(--color-primary)]/5 font-bold text-9xl select-none pointer-events-none">02</div>
-                  <span className="block text-[var(--color-primary)] text-xs uppercase tracking-widest mb-2">Step 02</span>
-                  <h3 className="text-[length:var(--text-lg)] font-[family-name:var(--font-display)] font-bold text-[var(--color-text)] mb-3">Written Quote &amp; Scope</h3>
-                  <div className="inline-block bg-[var(--color-surface-2)] text-[var(--color-text-muted)] rounded-full px-3 py-1 text-xs mb-4">Within 48 hours</div>
-                  <p className="text-[var(--color-text-muted)] mb-4">Fixed price. Exact scope. No ambiguity. 50/50 payment.</p>
-                  <ul className="space-y-2">
-                    <li className="flex items-center gap-2 text-sm text-[var(--color-text-muted)]"><span className="w-1 h-1 rounded-full bg-[var(--color-primary)]/40" /> Detailed proposal</li>
-                    <li className="flex items-center gap-2 text-sm text-[var(--color-text-muted)]"><span className="w-1 h-1 rounded-full bg-[var(--color-primary)]/40" /> Fixed timeline</li>
-                    <li className="flex items-center gap-2 text-sm text-[var(--color-text-muted)]"><span className="w-1 h-1 rounded-full bg-[var(--color-primary)]/40" /> 50% advance payment</li>
-                  </ul>
+                <div>
+                  <div className="inline-flex items-center bg-[var(--color-surface-2)] text-[var(--color-text-muted)] rounded-full px-2.5 py-0.5 text-[10px] uppercase tracking-widest mb-2">48 hrs</div>
+                  <h3 className="font-[family-name:var(--font-display)] font-bold text-[var(--color-text)] text-[length:var(--text-base)] mb-1">Written Quote & Scope</h3>
+                  <p className="text-[var(--color-text-muted)] text-[length:var(--text-xs)] leading-relaxed">Fixed price. Exact deliverables. 50% advance to begin.</p>
                 </div>
               </div>
 
               {/* Step 3 */}
-              <div className="relative flex flex-col md:flex-row gap-6 md:gap-12 anim-reveal is-visible" style={{ animationDelay: '300ms' }}>
-                <div className="hidden md:flex shrink-0 w-16 h-16 bg-[var(--color-surface)] border border-[var(--color-border)] rounded-full items-center justify-center z-10">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#b5ff3e" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path>
-                  </svg>
+              <div className="flex lg:flex-col items-start lg:items-center gap-5 lg:gap-4 lg:text-center">
+                <div className="relative flex-shrink-0">
+                  <div className="w-16 h-16 rounded-full bg-[var(--color-surface)] border border-[var(--color-border)] flex items-center justify-center z-10 relative">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-[var(--color-primary)]">
+                      <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                      <line x1="3" y1="9" x2="21" y2="9"/>
+                      <line x1="9" y1="21" x2="9" y2="9"/>
+                    </svg>
+                  </div>
+                  <span className="absolute -top-2 -right-2 w-5 h-5 rounded-full bg-[var(--color-surface-dynamic)] text-[var(--color-text-muted)] text-[10px] font-bold flex items-center justify-center">3</span>
                 </div>
-                <div className="bg-[var(--color-surface)] border border-[var(--color-border)] rounded-2xl p-6 md:p-8 flex-grow relative overflow-hidden">
-                  <div className="absolute -right-4 -top-8 text-[var(--color-primary)]/5 font-bold text-9xl select-none pointer-events-none">03</div>
-                  <span className="block text-[var(--color-primary)] text-xs uppercase tracking-widest mb-2">Step 03</span>
-                  <h3 className="text-[length:var(--text-lg)] font-[family-name:var(--font-display)] font-bold text-[var(--color-text)] mb-3">Design &amp; Content Setup</h3>
-                  <div className="inline-block bg-[var(--color-surface-2)] text-[var(--color-text-muted)] rounded-full px-3 py-1 text-xs mb-4">3–5 days</div>
-                  <p className="text-[var(--color-text-muted)] mb-4">Visual mockup shown before coding begins. You approve first.</p>
-                  <ul className="space-y-2">
-                    <li className="flex items-center gap-2 text-sm text-[var(--color-text-muted)]"><span className="w-1 h-1 rounded-full bg-[var(--color-primary)]/40" /> Wireframing</li>
-                    <li className="flex items-center gap-2 text-sm text-[var(--color-text-muted)]"><span className="w-1 h-1 rounded-full bg-[var(--color-primary)]/40" /> Content gathering</li>
-                    <li className="flex items-center gap-2 text-sm text-[var(--color-text-muted)]"><span className="w-1 h-1 rounded-full bg-[var(--color-primary)]/40" /> Design approval</li>
-                  </ul>
+                <div>
+                  <div className="inline-flex items-center bg-[var(--color-surface-2)] text-[var(--color-text-muted)] rounded-full px-2.5 py-0.5 text-[10px] uppercase tracking-widest mb-2">3–5 days</div>
+                  <h3 className="font-[family-name:var(--font-display)] font-bold text-[var(--color-text)] text-[length:var(--text-base)] mb-1">Design & Content Setup</h3>
+                  <p className="text-[var(--color-text-muted)] text-[length:var(--text-xs)] leading-relaxed">Visual mockup first. You approve before a single line of code is written.</p>
                 </div>
               </div>
 
               {/* Step 4 */}
-              <div className="relative flex flex-col md:flex-row gap-6 md:gap-12 anim-reveal is-visible" style={{ animationDelay: '400ms' }}>
-                <div className="hidden md:flex shrink-0 w-16 h-16 bg-[var(--color-surface)] border border-[var(--color-border)] rounded-full items-center justify-center z-10">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#b5ff3e" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <polyline points="16 18 22 12 16 6"></polyline>
-                    <polyline points="8 6 2 12 8 18"></polyline>
-                  </svg>
+              <div className="flex lg:flex-col items-start lg:items-center gap-5 lg:gap-4 lg:text-center">
+                <div className="relative flex-shrink-0">
+                  <div className="w-16 h-16 rounded-full bg-[var(--color-surface)] border border-[var(--color-border)] flex items-center justify-center z-10 relative">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-[var(--color-primary)]">
+                      <polyline points="16 18 22 12 16 6"/>
+                      <polyline points="8 6 2 12 8 18"/>
+                    </svg>
+                  </div>
+                  <span className="absolute -top-2 -right-2 w-5 h-5 rounded-full bg-[var(--color-surface-dynamic)] text-[var(--color-text-muted)] text-[10px] font-bold flex items-center justify-center">4</span>
                 </div>
-                <div className="bg-[var(--color-surface)] border border-[var(--color-border)] rounded-2xl p-6 md:p-8 flex-grow relative overflow-hidden">
-                  <div className="absolute -right-4 -top-8 text-[var(--color-primary)]/5 font-bold text-9xl select-none pointer-events-none">04</div>
-                  <span className="block text-[var(--color-primary)] text-xs uppercase tracking-widest mb-2">Step 04</span>
-                  <h3 className="text-[length:var(--text-lg)] font-[family-name:var(--font-display)] font-bold text-[var(--color-text)] mb-3">Build &amp; Review</h3>
-                  <div className="inline-block bg-[var(--color-surface-2)] text-[var(--color-text-muted)] rounded-full px-3 py-1 text-xs mb-4">1–3 weeks</div>
-                  <p className="text-[var(--color-text-muted)] mb-4">Live preview link. Two revision rounds. WhatsApp updates.</p>
-                  <ul className="space-y-2">
-                    <li className="flex items-center gap-2 text-sm text-[var(--color-text-muted)]"><span className="w-1 h-1 rounded-full bg-[var(--color-primary)]/40" /> Development phase</li>
-                    <li className="flex items-center gap-2 text-sm text-[var(--color-text-muted)]"><span className="w-1 h-1 rounded-full bg-[var(--color-primary)]/40" /> Live staging link</li>
-                    <li className="flex items-center gap-2 text-sm text-[var(--color-text-muted)]"><span className="w-1 h-1 rounded-full bg-[var(--color-primary)]/40" /> 2 rounds of revisions</li>
-                  </ul>
+                <div>
+                  <div className="inline-flex items-center bg-[var(--color-surface-2)] text-[var(--color-text-muted)] rounded-full px-2.5 py-0.5 text-[10px] uppercase tracking-widest mb-2">1–3 weeks</div>
+                  <h3 className="font-[family-name:var(--font-display)] font-bold text-[var(--color-text)] text-[length:var(--text-base)] mb-1">Build & Review</h3>
+                  <p className="text-[var(--color-text-muted)] text-[length:var(--text-xs)] leading-relaxed">Live staging link. WhatsApp updates. 2 rounds of revisions included.</p>
                 </div>
               </div>
 
               {/* Step 5 */}
-              <div className="relative flex flex-col md:flex-row gap-6 md:gap-12 anim-reveal is-visible" style={{ animationDelay: '500ms' }}>
-                <div className="hidden md:flex shrink-0 w-16 h-16 bg-[var(--color-surface)] border border-[var(--color-border)] rounded-full items-center justify-center z-10">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#b5ff3e" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2l.5-.5a15.4 15.4 0 0 0 5-5l.5-.5a15.4 15.4 0 0 0-5-5l-.5.5a15.4 15.4 0 0 0-5 5l-.5.5z"></path>
-                    <path d="M12 15l-3-3a22 22 0 0 1-3-3 22 22 0 0 1 3-3 22 22 0 0 1 3 3 22 22 0 0 1 3 3l-3 3z"></path>
-                    <path d="M9 12l-3 3"></path>
-                  </svg>
+              <div className="flex lg:flex-col items-start lg:items-center gap-5 lg:gap-4 lg:text-center">
+                <div className="relative flex-shrink-0">
+                  <div className="w-16 h-16 rounded-full bg-[var(--color-surface)] border border-[var(--color-border)] flex items-center justify-center z-10 relative">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-[var(--color-primary)]">
+                      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                      <polyline points="22 4 12 14.01 9 11.01"/>
+                    </svg>
+                  </div>
+                  <span className="absolute -top-2 -right-2 w-5 h-5 rounded-full bg-[var(--color-surface-dynamic)] text-[var(--color-text-muted)] text-[10px] font-bold flex items-center justify-center">5</span>
                 </div>
-                <div className="bg-[var(--color-surface)] border border-[var(--color-border)] rounded-2xl p-6 md:p-8 flex-grow relative overflow-hidden">
-                  <div className="absolute -right-4 -top-8 text-[var(--color-primary)]/5 font-bold text-9xl select-none pointer-events-none">05</div>
-                  <span className="block text-[var(--color-primary)] text-xs uppercase tracking-widest mb-2">Step 05</span>
-                  <h3 className="text-[length:var(--text-lg)] font-[family-name:var(--font-display)] font-bold text-[var(--color-text)] mb-3">Launch &amp; Handover</h3>
-                  <div className="inline-block bg-[var(--color-surface-2)] text-[var(--color-text-muted)] rounded-full px-3 py-1 text-xs mb-4">1–2 days</div>
-                  <p className="text-[var(--color-text-muted)] mb-4">Live on your domain. All logins handed over. 2-week support.</p>
-                  <ul className="space-y-2">
-                    <li className="flex items-center gap-2 text-sm text-[var(--color-text-muted)]"><span className="w-1 h-1 rounded-full bg-[var(--color-primary)]/40" /> Domain connection</li>
-                    <li className="flex items-center gap-2 text-sm text-[var(--color-text-muted)]"><span className="w-1 h-1 rounded-full bg-[var(--color-primary)]/40" /> Final 50% payment</li>
-                    <li className="flex items-center gap-2 text-sm text-[var(--color-text-muted)]"><span className="w-1 h-1 rounded-full bg-[var(--color-primary)]/40" /> 2 weeks free support</li>
-                  </ul>
+                <div>
+                  <div className="inline-flex items-center bg-[var(--color-surface-2)] text-[var(--color-text-muted)] rounded-full px-2.5 py-0.5 text-[10px] uppercase tracking-widest mb-2">1–2 days</div>
+                  <h3 className="font-[family-name:var(--font-display)] font-bold text-[var(--color-text)] text-[length:var(--text-base)] mb-1">Launch & Handover</h3>
+                  <p className="text-[var(--color-text-muted)] text-[length:var(--text-xs)] leading-relaxed">Live on your domain. All logins handed over. 2 weeks free support.</p>
                 </div>
               </div>
+
             </div>
           </div>
+
+          {/* Bottom trust strip */}
+          <div className="mt-16 bg-[var(--color-surface)] border border-[var(--color-border)] rounded-2xl px-8 py-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 anim-reveal is-visible" style={{ animationDelay: '200ms' }}>
+            <div>
+              <p className="font-[family-name:var(--font-display)] font-semibold text-[var(--color-text)] text-[length:var(--text-base)] mb-1">
+                Ready to start?
+              </p>
+              <p className="text-[var(--color-text-muted)] text-[length:var(--text-sm)] max-w-xl">
+                Step 1 is always free. Book a 30-minute call — we will map out exactly what you need before you spend a rupee.
+              </p>
+            </div>
+            <a
+              href="https://wa.me/919599143235"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex-shrink-0 inline-flex items-center gap-2 bg-[var(--color-primary)] text-[#000000] rounded-full px-6 py-3 font-semibold text-[length:var(--text-sm)] hover:bg-[var(--color-primary-hover)] transition-colors duration-200"
+            >
+              Book a Free Call →
+            </a>
+          </div>
+
         </div>
       </section>
 
