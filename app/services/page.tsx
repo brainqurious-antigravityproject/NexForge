@@ -725,35 +725,69 @@ export default function ServicesPage() {
       </section>
 
       {/* SECTION 5 — Pricing Anchor / Transparency Strip */}
-      <div className="w-full bg-[var(--color-surface)] py-16 px-6 overflow-hidden">
-        <div className="w-full max-w-[var(--content-wide)] mx-auto">
-          <div className="flex flex-wrap justify-center gap-4 pb-4 anim-reveal is-visible">
-            <div className="bg-[var(--color-surface-2)] border border-[var(--color-border)] rounded-xl p-5 flex-1 min-w-[180px]">
-              <div className="text-[var(--color-text)] font-medium mb-2">Platform Website</div>
-              <div className="text-[var(--color-primary)] font-bold text-xl mb-1">From ₹15,000</div>
-              <div className="text-[var(--color-text-muted)] text-xs">1–3 weeks</div>
-            </div>
-            <div className="bg-[var(--color-surface-2)] border border-[var(--color-border)] rounded-xl p-5 flex-1 min-w-[180px]">
-              <div className="text-[var(--color-text)] font-medium mb-2">Custom Website</div>
-              <div className="text-[var(--color-primary)] font-bold text-xl mb-1">From ₹20,000</div>
-              <div className="text-[var(--color-text-muted)] text-xs">2–5 weeks</div>
-            </div>
-            <div className="bg-[var(--color-surface-2)] border border-[var(--color-border)] rounded-xl p-5 flex-1 min-w-[180px]">
-              <div className="text-[var(--color-text)] font-medium mb-2">AI Chatbot</div>
-              <div className="text-[var(--color-primary)] font-bold text-xl mb-1">From ₹12,000</div>
-              <div className="text-[var(--color-text-muted)] text-xs">1–3 weeks</div>
-            </div>
-            <div className="bg-[var(--color-surface-2)] border border-[var(--color-border)] rounded-xl p-5 flex-1 min-w-[180px]">
-              <div className="text-[var(--color-text)] font-medium mb-2">Automation</div>
-              <div className="text-[var(--color-primary)] font-bold text-xl mb-1">From ₹8,000</div>
-              <div className="text-[var(--color-text-muted)] text-xs">3–7 days</div>
-            </div>
+      <section aria-label="Pricing Overview" className="w-full py-16 px-6 bg-[var(--color-surface)]">
+        <div className="w-full md:w-[80%] max-w-none mx-auto">
+
+          {/* Header */}
+          <div className="mb-10 anim-reveal is-visible">
+            <span className="block text-[var(--color-primary)] text-[length:var(--text-xs)] uppercase tracking-widest mb-3">Transparent Pricing</span>
+            <h2 className="heading-section font-[family-name:var(--font-display)] text-[var(--color-text)] mb-3">
+              What does it actually cost?
+            </h2>
+            <p className="font-[family-name:var(--font-body)] text-[var(--color-text-muted)] text-[length:var(--text-base)] max-w-2xl">
+              All prices are fixed. No GST. No hidden charges. No hourly billing. Ever.
+            </p>
           </div>
-          <p className="text-[var(--color-text-muted)] text-sm text-center mt-6 anim-reveal is-visible" style={{ animationDelay: '100ms' }}>
-            All prices are fixed. No GST. No hidden charges. No hourly billing.
+
+          {/* Pricing tiles grid */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 anim-reveal is-visible" style={{ animationDelay: '100ms' }}>
+
+            {[
+              { label: 'WordPress Website', href: '#service-wordpress', price: 'From ₹6,000', timeline: '2–3 weeks', badge: 'Most Popular' },
+              { label: 'Shopify Store', href: '#service-shopify', price: 'From ₹15,000', timeline: '2–4 weeks', badge: 'E-Commerce' },
+              { label: 'Wix Studio Website', href: '#service-wix', price: 'From ₹10,000', timeline: '2–3 weeks', badge: 'Fastest Launch' },
+              { label: 'Custom Next.js', href: '#service-nextjs', price: 'From ₹15,000', timeline: '3–5 weeks', badge: 'Max Performance' },
+              { label: 'AI Chatbot', href: '#service-chatbot', price: 'From ₹12,000', timeline: '1–3 weeks', badge: 'Hindi + English' },
+              { label: 'AI Image Generation', href: '#service-ai-images', price: 'From ₹3,000', timeline: '3–5 days', badge: 'Add-on' },
+              { label: 'Automation & APIs', href: '#service-automation', price: 'From ₹8,000', timeline: '3–7 days', badge: 'Add-on' },
+            ].map((item) => (
+              <a
+                key={item.label}
+                href={item.href}
+                className="group bg-[var(--color-surface-2)] border border-[var(--color-border)] hover:border-[var(--color-primary-border)] hover:bg-[var(--color-primary)]/[0.04] rounded-xl p-5 flex flex-col gap-2 transition-all duration-200"
+              >
+                <div className="flex items-start justify-between gap-2 mb-1">
+                  <span className="font-[family-name:var(--font-body)] text-[var(--color-text)] font-medium text-[length:var(--text-sm)] leading-snug">{item.label}</span>
+                </div>
+                <span className="text-[var(--color-primary)] font-bold text-[length:var(--text-lg)] font-[family-name:var(--font-display)]">{item.price}</span>
+                <div className="flex items-center justify-between mt-auto pt-2 border-t border-[var(--color-border)]">
+                  <span className="text-[var(--color-text-muted)] text-[10px] uppercase tracking-widest">{item.timeline}</span>
+                  <span className="text-[var(--color-primary)] text-[10px] group-hover:translate-x-0.5 transition-transform duration-200">↗</span>
+                </div>
+              </a>
+            ))}
+
+            {/* 8th tile — CTA */}
+            <a
+              href="https://wa.me/919599143235"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-[var(--color-primary)]/[0.08] border border-[var(--color-primary-border)] hover:bg-[var(--color-primary)]/[0.14] rounded-xl p-5 flex flex-col justify-between gap-2 transition-all duration-200"
+            >
+              <span className="font-[family-name:var(--font-display)] font-bold text-[var(--color-primary)] text-[length:var(--text-base)] leading-snug">Need a custom quote?</span>
+              <p className="text-[var(--color-text-muted)] text-[length:var(--text-xs)] leading-relaxed">Message us on WhatsApp — response within 2 hours.</p>
+              <span className="text-[var(--color-primary)] font-semibold text-[length:var(--text-xs)] mt-auto">Get a Quote →</span>
+            </a>
+
+          </div>
+
+          {/* Trust line */}
+          <p className="text-[var(--color-text-faint)] text-[length:var(--text-xs)] mt-8 anim-reveal is-visible" style={{ animationDelay: '200ms' }}>
+            * Starting prices are for standard scope. Complex or custom requirements are quoted separately after the free discovery call.
           </p>
+
         </div>
-      </div>
+      </section>
 
       {/* SECTION 6 — FAQ (Services-specific) */}
       <section aria-label="Services FAQ" className="w-full py-20 px-6 bg-[var(--color-bg)]">
