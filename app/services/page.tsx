@@ -213,7 +213,379 @@ export default function ServicesPage() {
         </div>
       </section>
 
+      {/* SECTION 3 — Individual Service Cards */}
+      <section aria-label="Our Services" className="w-full py-20 px-6 bg-[var(--color-bg)]">
+        <div className="w-full md:w-[80%] max-w-none mx-auto">
 
+          {/* Section Header */}
+          <div className="mb-12 anim-reveal is-visible">
+            <span className="block text-[var(--color-primary)] text-[length:var(--text-xs)] uppercase tracking-widest mb-3">Our Services</span>
+            <h2 className="heading-section font-[family-name:var(--font-display)] text-[var(--color-text)] mb-4">
+              Six ways we help Indian businesses grow
+            </h2>
+            <p className="font-[family-name:var(--font-body)] text-[var(--color-text-muted)] text-[length:var(--text-base)] max-w-2xl">
+              Each service is scoped, quoted, and delivered separately. Pick one or combine them — no bundle pressure.
+            </p>
+          </div>
+
+          <div className="flex flex-col gap-6">
+
+            {/* CARD 1 — WordPress */}
+            <div id="service-wordpress" className="bg-[var(--color-surface)] border border-[var(--color-primary-border)] rounded-2xl p-6 md:p-8 relative anim-reveal is-visible" style={{ animationDelay: '100ms' }}>
+              <div className="absolute top-6 right-6 bg-[var(--color-primary)]/10 text-[var(--color-primary)] text-xs uppercase tracking-widest px-3 py-1 rounded-full border border-[var(--color-primary-border)]">
+                Most Popular
+              </div>
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+                <div>
+                  <div className="w-10 h-10 bg-[var(--color-primary)]/[0.08] rounded-xl flex items-center justify-center mb-6">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-[var(--color-primary)]">
+                      <circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                    </svg>
+                  </div>
+                  <h3 className="text-[length:var(--text-lg)] font-[family-name:var(--font-display)] font-bold text-[var(--color-text)] mb-2">WordPress Website</h3>
+                  <p className="text-[var(--color-text-muted)] text-[length:var(--text-sm)] mb-6">Best for service businesses, agencies, blogs &amp; SEO-driven brands.</p>
+                  <ul className="space-y-3 mb-6">
+                    {[
+                      'Mobile-first, SEO-ready build from day one',
+                      'Easy content management — your team can update it',
+                      '1,000+ plugin ecosystem for any functionality',
+                      '2 weeks post-launch support included'
+                    ].map((f, i) => (
+                      <li key={i} className="flex items-start gap-3 text-[var(--color-text)] text-sm">
+                        <span className="w-1.5 h-1.5 rounded-full bg-[var(--color-primary)]/40 mt-1.5 shrink-0" />
+                        <span>{f}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <p className="text-[var(--color-text-faint)] text-xs italic">NOT for: Businesses needing a fully managed, zero-maintenance solution.</p>
+                </div>
+                <div className="flex items-center justify-center">
+                  <div className="bg-[var(--color-surface-2)] border border-[var(--color-border)] rounded-2xl p-8 text-center w-full">
+                    <span className="block text-[var(--color-text-muted)] text-xs uppercase tracking-widest mb-2">Global Market Share</span>
+                    <span className="text-[var(--color-primary)] font-bold text-5xl font-[family-name:var(--font-display)]">43%</span>
+                    <span className="block text-[var(--color-text-muted)] text-sm mt-2">of all websites run on WordPress</span>
+                  </div>
+                </div>
+              </div>
+              <div className="mt-8 pt-6 border-t border-[var(--color-border)] flex flex-wrap items-center justify-between gap-4">
+                <div className="flex items-center gap-6">
+                  <div>
+                    <span className="block text-[var(--color-text-muted)] text-xs uppercase tracking-widest mb-1">Timeline</span>
+                    <span className="text-[var(--color-text)] font-medium">2–3 weeks</span>
+                  </div>
+                  <div>
+                    <span className="block text-[var(--color-text-muted)] text-xs uppercase tracking-widest mb-1">Price</span>
+                    <span className="text-[var(--color-text)] font-medium">From ₹6,000</span>
+                  </div>
+                </div>
+                <a href="https://wa.me/919599143235" target="_blank" rel="noopener noreferrer" className="text-[var(--color-primary)] font-medium hover:underline">Get a Quote →</a>
+              </div>
+            </div>
+
+            {/* CARD 2 — Shopify */}
+            <div id="service-shopify" className="bg-[var(--color-surface)] border border-[var(--color-border)] rounded-2xl p-6 md:p-8 relative anim-reveal is-visible" style={{ animationDelay: '150ms' }}>
+              <div className="absolute top-6 right-6 bg-[var(--color-primary)]/10 text-[var(--color-primary)] text-xs uppercase tracking-widest px-3 py-1 rounded-full border border-[var(--color-primary-border)]">
+                E-Commerce
+              </div>
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+                <div>
+                  <div className="w-10 h-10 bg-[var(--color-primary)]/[0.08] rounded-xl flex items-center justify-center mb-6">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-[var(--color-primary)]">
+                      <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/>
+                    </svg>
+                  </div>
+                  <h3 className="text-[length:var(--text-lg)] font-[family-name:var(--font-display)] font-bold text-[var(--color-text)] mb-2">Shopify Store</h3>
+                  <p className="text-[var(--color-text-muted)] text-[length:var(--text-sm)] mb-6">Best for D2C brands, product sellers &amp; businesses needing inventory and payments.</p>
+                  <ul className="space-y-3 mb-6">
+                    {[
+                      'Full product catalogue setup & configuration',
+                      'Payment & shipping fully configured',
+                      'Optimized checkout flow to reduce drop-offs',
+                      'Multi-currency support for international selling'
+                    ].map((f, i) => (
+                      <li key={i} className="flex items-start gap-3 text-[var(--color-text)] text-sm">
+                        <span className="w-1.5 h-1.5 rounded-full bg-[var(--color-primary)]/40 mt-1.5 shrink-0" />
+                        <span>{f}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <p className="text-[var(--color-text-faint)] text-xs italic">NOT for: Non-e-commerce businesses — you would pay for store features you never use.</p>
+                </div>
+                <div className="flex flex-col justify-center gap-4">
+                  <p className="text-[var(--color-text-muted)] text-xs uppercase tracking-widest mb-2">Already on Shopify but not selling online? Migrate to Wix Studio and save:</p>
+                  <div className="bg-red-500/10 border border-red-500/20 rounded-xl p-4 flex justify-between items-center">
+                    <span className="text-[var(--color-text-muted)] text-sm">Shopify Cost</span>
+                    <span className="text-red-400 font-bold">₹2,000/mo</span>
+                  </div>
+                  <div className="bg-[var(--color-primary)]/[0.08] border border-[var(--color-primary-border)] rounded-xl p-4 flex justify-between items-center">
+                    <span className="text-[var(--color-text-muted)] text-sm">Wix Studio Cost</span>
+                    <span className="text-[var(--color-primary)] font-bold">₹450/mo</span>
+                  </div>
+                  <div className="bg-[#00c8c8]/[0.08] border border-[#00c8c8]/20 rounded-xl p-4 flex justify-between items-center">
+                    <span className="text-[var(--color-text-muted)] text-sm">Annual Saving</span>
+                    <span className="text-[#00c8c8] font-bold">₹18,600/yr</span>
+                  </div>
+                </div>
+              </div>
+              <div className="mt-8 pt-6 border-t border-[var(--color-border)] flex flex-wrap items-center justify-between gap-4">
+                <div className="flex items-center gap-6">
+                  <div>
+                    <span className="block text-[var(--color-text-muted)] text-xs uppercase tracking-widest mb-1">Timeline</span>
+                    <span className="text-[var(--color-text)] font-medium">2–4 weeks</span>
+                  </div>
+                  <div>
+                    <span className="block text-[var(--color-text-muted)] text-xs uppercase tracking-widest mb-1">Price</span>
+                    <span className="text-[var(--color-text)] font-medium">From ₹15,000</span>
+                  </div>
+                </div>
+                <a href="https://wa.me/919599143235" target="_blank" rel="noopener noreferrer" className="text-[var(--color-primary)] font-medium hover:underline">Get a Quote →</a>
+              </div>
+            </div>
+
+            {/* CARD 3 — Wix Studio */}
+            <div id="service-wix" className="bg-[var(--color-surface)] border border-[var(--color-border)] rounded-2xl p-6 md:p-8 relative anim-reveal is-visible" style={{ animationDelay: '200ms' }}>
+              <div className="absolute top-6 right-6 bg-[var(--color-primary)]/10 text-[var(--color-primary)] text-xs uppercase tracking-widest px-3 py-1 rounded-full border border-[var(--color-primary-border)]">
+                Fastest Launch
+              </div>
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+                <div>
+                  <div className="w-10 h-10 bg-[var(--color-primary)]/[0.08] rounded-xl flex items-center justify-center mb-6">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-[var(--color-primary)]">
+                      <path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/>
+                    </svg>
+                  </div>
+                  <h3 className="text-[length:var(--text-lg)] font-[family-name:var(--font-display)] font-bold text-[var(--color-text)] mb-2">Wix Studio Website</h3>
+                  <p className="text-[var(--color-text-muted)] text-[length:var(--text-sm)] mb-6">Best for local businesses, clinics, restaurants &amp; teams who want to self-manage content.</p>
+                  <ul className="space-y-3 mb-6">
+                    {[
+                      'Visual builder — edit anything without a developer',
+                      'Fast delivery, polished professional design',
+                      'Perfect for service businesses & portfolios',
+                      'Shopify migration available — save ₹18,600/yr'
+                    ].map((f, i) => (
+                      <li key={i} className="flex items-start gap-3 text-[var(--color-text)] text-sm">
+                        <span className="w-1.5 h-1.5 rounded-full bg-[var(--color-primary)]/40 mt-1.5 shrink-0" />
+                        <span>{f}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <p className="text-[var(--color-text-faint)] text-xs italic">NOT for: Businesses needing complex custom functionality or deep API integrations.</p>
+                </div>
+                <div className="flex items-center justify-center">
+                  <div className="bg-[var(--color-surface-2)] border border-[var(--color-border)] rounded-2xl p-8 text-center w-full">
+                    <span className="block text-[var(--color-text-muted)] text-xs uppercase tracking-widest mb-2">Fastest Delivery</span>
+                    <span className="text-[var(--color-primary)] font-bold text-5xl font-[family-name:var(--font-display)]">2 Wks</span>
+                    <span className="block text-[var(--color-text-muted)] text-sm mt-2">live on your domain — fastest of all 4 platforms</span>
+                  </div>
+                </div>
+              </div>
+              <div className="mt-8 pt-6 border-t border-[var(--color-border)] flex flex-wrap items-center justify-between gap-4">
+                <div className="flex items-center gap-6">
+                  <div>
+                    <span className="block text-[var(--color-text-muted)] text-xs uppercase tracking-widest mb-1">Timeline</span>
+                    <span className="text-[var(--color-text)] font-medium">2–3 weeks</span>
+                  </div>
+                  <div>
+                    <span className="block text-[var(--color-text-muted)] text-xs uppercase tracking-widest mb-1">Price</span>
+                    <span className="text-[var(--color-text)] font-medium">From ₹10,000</span>
+                  </div>
+                </div>
+                <a href="https://wa.me/919599143235" target="_blank" rel="noopener noreferrer" className="text-[var(--color-primary)] font-medium hover:underline">Get a Quote →</a>
+              </div>
+            </div>
+
+            {/* CARD 4 — Next.js */}
+            <div id="service-nextjs" className="bg-[var(--color-surface)] border border-[var(--color-border)] rounded-2xl p-6 md:p-8 relative anim-reveal is-visible" style={{ animationDelay: '250ms' }}>
+              <div className="absolute top-6 right-6 bg-[var(--color-primary)]/10 text-[var(--color-primary)] text-xs uppercase tracking-widest px-3 py-1 rounded-full border border-[var(--color-primary-border)]">
+                Max Performance
+              </div>
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+                <div>
+                  <div className="w-10 h-10 bg-[var(--color-primary)]/[0.08] rounded-xl flex items-center justify-center mb-6">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-[var(--color-primary)]">
+                      <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
+                    </svg>
+                  </div>
+                  <h3 className="text-[length:var(--text-lg)] font-[family-name:var(--font-display)] font-bold text-[var(--color-text)] mb-2">Custom Next.js Website</h3>
+                  <p className="text-[var(--color-text-muted)] text-[length:var(--text-sm)] mb-6">Best for performance-critical sites, custom web apps &amp; AEO-first builds.</p>
+                  <ul className="space-y-3 mb-6">
+                    {[
+                      'No templates — built entirely from scratch',
+                      'Near-perfect Google PageSpeed scores',
+                      'Free hosting on Vercel — zero hosting cost, forever',
+                      '100% code ownership — no platform lock-in ever'
+                    ].map((f, i) => (
+                      <li key={i} className="flex items-start gap-3 text-[var(--color-text)] text-sm">
+                        <span className="w-1.5 h-1.5 rounded-full bg-[var(--color-primary)]/40 mt-1.5 shrink-0" />
+                        <span>{f}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <p className="text-[var(--color-text-faint)] text-xs italic">NOT for: Businesses needing a very fast, low-budget turnaround.</p>
+                </div>
+                <div className="flex items-center justify-center">
+                  <div className="bg-[var(--color-surface-2)] border border-[var(--color-border)] rounded-2xl p-8 text-center w-full">
+                    <span className="block text-[var(--color-text-muted)] text-xs uppercase tracking-widest mb-2">Google PageSpeed</span>
+                    <span className="text-[var(--color-primary)] font-bold text-5xl font-[family-name:var(--font-display)]">99/100</span>
+                    <span className="block text-[var(--color-text-muted)] text-sm mt-2">consistently achievable on custom Next.js builds</span>
+                  </div>
+                </div>
+              </div>
+              <div className="mt-8 pt-6 border-t border-[var(--color-border)] flex flex-wrap items-center justify-between gap-4">
+                <div className="flex items-center gap-6">
+                  <div>
+                    <span className="block text-[var(--color-text-muted)] text-xs uppercase tracking-widest mb-1">Timeline</span>
+                    <span className="text-[var(--color-text)] font-medium">3–5 weeks</span>
+                  </div>
+                  <div>
+                    <span className="block text-[var(--color-text-muted)] text-xs uppercase tracking-widest mb-1">Price</span>
+                    <span className="text-[var(--color-text)] font-medium">From ₹15,000</span>
+                  </div>
+                </div>
+                <a href="https://wa.me/919599143235" target="_blank" rel="noopener noreferrer" className="text-[var(--color-primary)] font-medium hover:underline">Get a Quote →</a>
+              </div>
+            </div>
+
+            {/* ROW — AI Chatbot + AI Images side by side */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+              {/* CARD 5 — AI Chatbot */}
+              <div id="service-chatbot" className="bg-[var(--color-surface)] border border-[var(--color-border)] rounded-2xl p-6 md:p-8 flex flex-col relative anim-reveal is-visible" style={{ animationDelay: '300ms' }}>
+                <div className="absolute top-6 right-6 bg-[var(--color-primary)]/10 text-[var(--color-primary)] text-[10px] uppercase tracking-widest px-2 py-1 rounded-full border border-[var(--color-primary-border)]">
+                  Hindi + English
+                </div>
+                <div className="w-10 h-10 bg-[var(--color-primary)]/[0.08] rounded-xl flex items-center justify-center mb-6">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-[var(--color-primary)]">
+                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                    <path d="M8 10h.01M12 10h.01M16 10h.01"/>
+                  </svg>
+                </div>
+                <h3 className="text-[length:var(--text-lg)] font-[family-name:var(--font-display)] font-bold text-[var(--color-text)] mb-2">AI Chatbot</h3>
+                <p className="text-[var(--color-text-muted)] text-[length:var(--text-sm)] mb-6 flex-grow">For businesses losing leads after hours — handles queries 24/7 in Hindi, Hinglish &amp; English.</p>
+                <ul className="space-y-3 mb-8">
+                  {[
+                    'Hindi, Hinglish & English (unique in India)',
+                    'Trained on your products, pricing & FAQs',
+                    'Lead capture & qualification while you\'re offline',
+                    '1-line embed widget — on any website'
+                  ].map((f, i) => (
+                    <li key={i} className="flex items-start gap-3 text-[var(--color-text)] text-sm">
+                      <span className="w-1.5 h-1.5 rounded-full bg-[var(--color-primary)]/40 mt-1.5 shrink-0" />
+                      <span>{f}</span>
+                    </li>
+                  ))}
+                </ul>
+                <div className="pt-6 border-t border-[var(--color-border)] flex flex-wrap items-center justify-between gap-4 mt-auto">
+                  <div className="flex items-center gap-4">
+                    <div>
+                      <span className="block text-[var(--color-text-muted)] text-[10px] uppercase tracking-widest mb-1">Timeline</span>
+                      <span className="text-[var(--color-text)] text-sm font-medium">1–3 weeks</span>
+                    </div>
+                    <div>
+                      <span className="block text-[var(--color-text-muted)] text-[10px] uppercase tracking-widest mb-1">Price</span>
+                      <span className="text-[var(--color-text)] text-sm font-medium">From ₹12,000</span>
+                    </div>
+                  </div>
+                  <a href="https://wa.me/919599143235" target="_blank" rel="noopener noreferrer" className="text-[var(--color-primary)] text-sm font-medium hover:underline">Get a Quote →</a>
+                </div>
+              </div>
+
+              {/* CARD 6 — AI Image Generation */}
+              <div id="service-ai-images" className="bg-[var(--color-surface)] border border-[var(--color-border)] rounded-2xl p-6 md:p-8 flex flex-col relative anim-reveal is-visible" style={{ animationDelay: '350ms' }}>
+                <div className="absolute top-6 right-6 bg-white/5 text-[var(--color-text-muted)] text-[10px] uppercase tracking-widest px-2 py-1 rounded-full border border-[var(--color-border)]">
+                  Add-on Available
+                </div>
+                <div className="w-10 h-10 bg-[var(--color-primary)]/[0.08] rounded-xl flex items-center justify-center mb-6">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-[var(--color-primary)]">
+                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/>
+                  </svg>
+                </div>
+                <h3 className="text-[length:var(--text-lg)] font-[family-name:var(--font-display)] font-bold text-[var(--color-text)] mb-2">AI Image Generation</h3>
+                <p className="text-[var(--color-text-muted)] text-[length:var(--text-sm)] mb-6 flex-grow">For businesses with bad product photos — professional visuals at a fraction of studio cost.</p>
+                <ul className="space-y-3 mb-8">
+                  {[
+                    'E-commerce catalog & product visuals',
+                    'Batch delivery — multiple images at once',
+                    'On-brand styling & background replacement',
+                    'No studio booking, no photographer fees'
+                  ].map((f, i) => (
+                    <li key={i} className="flex items-start gap-3 text-[var(--color-text)] text-sm">
+                      <span className="w-1.5 h-1.5 rounded-full bg-[var(--color-primary)]/40 mt-1.5 shrink-0" />
+                      <span>{f}</span>
+                    </li>
+                  ))}
+                </ul>
+                <div className="pt-6 border-t border-[var(--color-border)] flex flex-wrap items-center justify-between gap-4 mt-auto">
+                  <div className="flex items-center gap-4">
+                    <div>
+                      <span className="block text-[var(--color-text-muted)] text-[10px] uppercase tracking-widest mb-1">Timeline</span>
+                      <span className="text-[var(--color-text)] text-sm font-medium">3–5 days</span>
+                    </div>
+                    <div>
+                      <span className="block text-[var(--color-text-muted)] text-[10px] uppercase tracking-widest mb-1">Price</span>
+                      <span className="text-[var(--color-text)] text-sm font-medium">From ₹3,000</span>
+                    </div>
+                  </div>
+                  <a href="https://wa.me/919599143235" target="_blank" rel="noopener noreferrer" className="text-[var(--color-primary)] text-sm font-medium hover:underline">Get a Quote →</a>
+                </div>
+              </div>
+
+            </div>
+
+            {/* CARD 7 — Automation */}
+            <div id="service-automation" className="bg-[var(--color-surface)] border border-[var(--color-border)] rounded-2xl p-6 md:p-8 relative anim-reveal is-visible" style={{ animationDelay: '400ms' }}>
+              <div className="absolute top-6 right-6 bg-white/5 text-[var(--color-text-muted)] text-xs uppercase tracking-widest px-3 py-1 rounded-full border border-[var(--color-border)]">
+                Add-on Available
+              </div>
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+                <div>
+                  <div className="w-10 h-10 bg-[var(--color-primary)]/[0.08] rounded-xl flex items-center justify-center mb-6">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-[var(--color-primary)]">
+                      <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                    </svg>
+                  </div>
+                  <h3 className="text-[length:var(--text-lg)] font-[family-name:var(--font-display)] font-bold text-[var(--color-text)] mb-2">Automation &amp; API Integrations</h3>
+                  <p className="text-[var(--color-text-muted)] text-[length:var(--text-sm)] mb-6">For businesses where leads go missing or tools don&apos;t talk to each other.</p>
+                  <ul className="space-y-3 mb-6">
+                    {[
+                      'WhatsApp + email lead notifications — instant alerts',
+                      'CRM & Google Sheets sync — zero manual data entry',
+                      'Calendar & booking integrations',
+                      'Payment gateway setup — Razorpay & Stripe'
+                    ].map((f, i) => (
+                      <li key={i} className="flex items-start gap-3 text-[var(--color-text)] text-sm">
+                        <span className="w-1.5 h-1.5 rounded-full bg-[var(--color-primary)]/40 mt-1.5 shrink-0" />
+                        <span>{f}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="flex items-center justify-center">
+                  <div className="bg-[var(--color-surface-2)] border border-[var(--color-border)] rounded-2xl p-8 text-center w-full">
+                    <span className="block text-[var(--color-text-muted)] text-xs uppercase tracking-widest mb-2">Fastest Turnaround</span>
+                    <span className="text-[var(--color-primary)] font-bold text-5xl font-[family-name:var(--font-display)]">3–7</span>
+                    <span className="block text-[var(--color-text-muted)] text-sm mt-2">days from brief to live automation</span>
+                  </div>
+                </div>
+              </div>
+              <div className="mt-8 pt-6 border-t border-[var(--color-border)] flex flex-wrap items-center justify-between gap-4">
+                <div className="flex items-center gap-6">
+                  <div>
+                    <span className="block text-[var(--color-text-muted)] text-xs uppercase tracking-widest mb-1">Timeline</span>
+                    <span className="text-[var(--color-text)] font-medium">3–7 days</span>
+                  </div>
+                  <div>
+                    <span className="block text-[var(--color-text-muted)] text-xs uppercase tracking-widest mb-1">Price</span>
+                    <span className="text-[var(--color-text)] font-medium">From ₹8,000</span>
+                  </div>
+                </div>
+                <a href="https://wa.me/919599143235" target="_blank" rel="noopener noreferrer" className="text-[var(--color-primary)] font-medium hover:underline">Get a Quote →</a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
 
       {/* SECTION 4 — How It Works (5-Step Process) */}
       <section aria-label="How It Works" className="w-full py-20 px-6 bg-[var(--color-bg)]">
