@@ -789,67 +789,110 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* SECTION 6 — FAQ (Services-specific) */}
+      {/* SECTION 6 — FAQ */}
       <section aria-label="Services FAQ" className="w-full py-20 px-6 bg-[var(--color-bg)]">
-        <div className="w-full max-w-[var(--content-wide)] mx-auto">
-          <div className="mb-12 text-center md:text-left anim-reveal is-visible">
+        <div className="w-full md:w-[80%] max-w-none mx-auto">
+
+          <div className="mb-12 anim-reveal is-visible">
             <span className="block text-[var(--color-primary)] text-[length:var(--text-xs)] uppercase tracking-widest mb-3">Common Questions</span>
-            <h2 className="heading-section font-[family-name:var(--font-display)] text-[var(--color-text)]">Answered honestly</h2>
+            <h2 className="heading-section font-[family-name:var(--font-display)] text-[var(--color-text)] mb-3">
+              Questions we get asked every week
+            </h2>
+            <p className="font-[family-name:var(--font-body)] text-[var(--color-text-muted)] text-[length:var(--text-base)] max-w-2xl">
+              Straight answers. No marketing fluff.
+            </p>
           </div>
 
           <div className="flex flex-col anim-reveal is-visible" style={{ animationDelay: '100ms' }}>
+
             <details className="group border-b border-[var(--color-border)] py-5">
               <summary className="text-[var(--color-text)] font-semibold cursor-pointer list-none flex justify-between items-center hover:text-[var(--color-primary)] transition-colors">
-                Do I need to buy a Shopify plan to start the migration?
-                <svg className="w-5 h-5 text-[var(--color-text-muted)] group-hover:text-[var(--color-primary)] transition-transform duration-300 group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                Which platform is right for my business — WordPress, Shopify, Wix Studio, or Next.js?
+                <svg className="w-5 h-5 flex-shrink-0 ml-4 text-[var(--color-text-muted)] group-hover:text-[var(--color-primary)] transition-transform duration-300 group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>
               </summary>
               <p className="text-[var(--color-text-muted)] mt-3 leading-relaxed pt-2">
-                No. You only need your existing Shopify login credentials. We export your content and rebuild it on Wix Studio. You can cancel Shopify after your domain is transferred.
+                Quick rule of thumb: if you sell products online, Shopify. If you want the fastest launch and self-manage content, Wix Studio. If SEO and blogging matter most, WordPress. If you need maximum performance or custom functionality, Next.js. We cover this in detail in the free discovery call — and we will tell you honestly if a cheaper option is the better fit.
               </p>
             </details>
 
             <details className="group border-b border-[var(--color-border)] py-5">
               <summary className="text-[var(--color-text)] font-semibold cursor-pointer list-none flex justify-between items-center hover:text-[var(--color-primary)] transition-colors">
-                What if I need changes after the site goes live?
-                <svg className="w-5 h-5 text-[var(--color-text-muted)] group-hover:text-[var(--color-primary)] transition-transform duration-300 group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                How long does a project take from start to finish?
+                <svg className="w-5 h-5 flex-shrink-0 ml-4 text-[var(--color-text-muted)] group-hover:text-[var(--color-primary)] transition-transform duration-300 group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>
               </summary>
               <p className="text-[var(--color-text-muted)] mt-3 leading-relaxed pt-2">
-                Two revision rounds are included in every project. After that, small changes are ₹500 each. Larger updates are quoted separately. We send a clear price before touching anything.
-              </p>
-            </details>
-
-            <details className="group border-b border-[var(--color-border)] py-5">
-              <summary className="text-[var(--color-text)] font-semibold cursor-pointer list-none flex justify-between items-center hover:text-[var(--color-primary)] transition-colors">
-                Can the AI chatbot speak in Hindi?
-                <svg className="w-5 h-5 text-[var(--color-text-muted)] group-hover:text-[var(--color-primary)] transition-transform duration-300 group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
-              </summary>
-              <p className="text-[var(--color-text-muted)] mt-3 leading-relaxed pt-2">
-                Yes — this is one of our core differentiators. The chatbot handles queries in Hindi, Hinglish, and English. You can set the default language per your audience.
+                Most website projects are delivered in 2–3 weeks. Shopify and Next.js projects take 2–5 weeks depending on complexity. AI Chatbots take 1–3 weeks. Automation integrations are the fastest — usually 3–7 days. Every project gets a fixed timeline in writing before we begin, and we do not move that deadline without notifying you first.
               </p>
             </details>
 
             <details className="group border-b border-[var(--color-border)] py-5">
               <summary className="text-[var(--color-text)] font-semibold cursor-pointer list-none flex justify-between items-center hover:text-[var(--color-primary)] transition-colors">
                 How is payment structured?
-                <svg className="w-5 h-5 text-[var(--color-text-muted)] group-hover:text-[var(--color-primary)] transition-transform duration-300 group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg className="w-5 h-5 flex-shrink-0 ml-4 text-[var(--color-text-muted)] group-hover:text-[var(--color-primary)] transition-transform duration-300 group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>
               </summary>
               <p className="text-[var(--color-text-muted)] mt-3 leading-relaxed pt-2">
-                50% upfront, 50% before the final delivery. No payment before you&apos;ve seen and approved the design. No full upfront payment ever.
+                50% upfront, 50% before final delivery. You do not pay the second half until you have seen and approved the finished website. No full upfront payment. No surprise invoices. Payment via bank transfer, Razorpay, or Wise.
+              </p>
+            </details>
+
+            <details className="group border-b border-[var(--color-border)] py-5">
+              <summary className="text-[var(--color-text)] font-semibold cursor-pointer list-none flex justify-between items-center hover:text-[var(--color-primary)] transition-colors">
+                Will I own the website after delivery?
+                <svg className="w-5 h-5 flex-shrink-0 ml-4 text-[var(--color-text-muted)] group-hover:text-[var(--color-primary)] transition-transform duration-300 group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </summary>
+              <p className="text-[var(--color-text-muted)] mt-3 leading-relaxed pt-2">
+                100%. Every line of code, every design file, every image — transferred to you completely on final payment. No license fees, no retainer required to keep your site running, no dependency on us to make changes. You own it outright.
+              </p>
+            </details>
+
+            <details className="group border-b border-[var(--color-border)] py-5">
+              <summary className="text-[var(--color-text)] font-semibold cursor-pointer list-none flex justify-between items-center hover:text-[var(--color-primary)] transition-colors">
+                Do you provide content and copy for the website?
+                <svg className="w-5 h-5 flex-shrink-0 ml-4 text-[var(--color-text-muted)] group-hover:text-[var(--color-primary)] transition-transform duration-300 group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </summary>
+              <p className="text-[var(--color-text-muted)] mt-3 leading-relaxed pt-2">
+                Basic copywriting is included — we write headings, service descriptions, and CTAs based on your brief. You provide the specifics: your services, pricing, team details, and any photos or brand materials you have. If you need full content strategy or long-form copy, that is quoted separately.
+              </p>
+            </details>
+
+            <details className="group border-b border-[var(--color-border)] py-5">
+              <summary className="text-[var(--color-text)] font-semibold cursor-pointer list-none flex justify-between items-center hover:text-[var(--color-primary)] transition-colors">
+                What if I need changes after the site goes live?
+                <svg className="w-5 h-5 flex-shrink-0 ml-4 text-[var(--color-text-muted)] group-hover:text-[var(--color-primary)] transition-transform duration-300 group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </summary>
+              <p className="text-[var(--color-text-muted)] mt-3 leading-relaxed pt-2">
+                Two revision rounds are included in every project. After launch, you get 2 weeks of free support. After that, small changes are ₹500 each. Larger updates are quoted separately — we always send a clear price before touching anything.
+              </p>
+            </details>
+
+            <details className="group border-b border-[var(--color-border)] py-5">
+              <summary className="text-[var(--color-text)] font-semibold cursor-pointer list-none flex justify-between items-center hover:text-[var(--color-primary)] transition-colors">
+                Can the AI chatbot speak in Hindi?
+                <svg className="w-5 h-5 flex-shrink-0 ml-4 text-[var(--color-text-muted)] group-hover:text-[var(--color-primary)] transition-transform duration-300 group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </summary>
+              <p className="text-[var(--color-text-muted)] mt-3 leading-relaxed pt-2">
+                Yes — this is one of our core differentiators. The chatbot handles queries in Hindi, Hinglish, and English. It detects the visitor&apos;s language automatically and responds accordingly. You can also set a default language based on your audience.
               </p>
             </details>
 
             <details className="group border-b border-[var(--color-border)] py-5">
               <summary className="text-[var(--color-text)] font-semibold cursor-pointer list-none flex justify-between items-center hover:text-[var(--color-primary)] transition-colors">
                 Do you work with international clients?
-                <svg className="w-5 h-5 text-[var(--color-text-muted)] group-hover:text-[var(--color-primary)] transition-transform duration-300 group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg className="w-5 h-5 flex-shrink-0 ml-4 text-[var(--color-text-muted)] group-hover:text-[var(--color-primary)] transition-transform duration-300 group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>
               </summary>
@@ -860,36 +903,104 @@ export default function ServicesPage() {
 
             <details className="group border-b border-[var(--color-border)] py-5">
               <summary className="text-[var(--color-text)] font-semibold cursor-pointer list-none flex justify-between items-center hover:text-[var(--color-primary)] transition-colors">
-                Will I own the website after delivery?
-                <svg className="w-5 h-5 text-[var(--color-text-muted)] group-hover:text-[var(--color-primary)] transition-transform duration-300 group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                Do I need to buy a Shopify plan to start a migration to Wix Studio?
+                <svg className="w-5 h-5 flex-shrink-0 ml-4 text-[var(--color-text-muted)] group-hover:text-[var(--color-primary)] transition-transform duration-300 group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>
               </summary>
               <p className="text-[var(--color-text-muted)] mt-3 leading-relaxed pt-2">
-                100%. Every line of code, every design file, every image — transferred to you completely. No license fees, no retainer required to keep your site running.
+                No. You only need your existing Shopify login credentials. We export your content and rebuild it on Wix Studio. You can cancel your Shopify subscription after your domain is transferred and the new site is live.
               </p>
             </details>
+
           </div>
+
         </div>
       </section>
 
-      {/* SECTION 7 — CTA Banner (Lead Conversion) */}
-      <section aria-label="Call to Action" className="w-full py-16 px-6 bg-[var(--color-primary)] flex flex-col items-center text-center">
-        <div className="w-full max-w-[var(--content-wide)] mx-auto flex flex-col items-center anim-reveal is-visible">
-          <h2 className="heading-section font-[family-name:var(--font-display)] text-[#000000] mb-4">
-            Not sure which service you need?
-          </h2>
-          <p className="text-[#000000]/70 text-[length:var(--text-base)] max-w-xl mx-auto mt-4">
-            Most clients start with a free 30-minute call. No pitch decks. No agency theatrics. Just an honest conversation about what you need, what it&apos;ll cost, and whether we&apos;re the right fit.
-          </p>
-          <div className="mt-8 flex gap-4 justify-center flex-wrap">
-            <a href="https://wa.me/919599143235" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center bg-[var(--color-bg)] text-[var(--color-primary)] rounded-full px-8 py-4 font-semibold hover:bg-[var(--color-surface-2)] transition-colors">
-              Book a Free Call
-            </a>
-            <a href="mailto:support@sitecraf.com" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center border border-[#000000]/20 text-[#000000] rounded-full px-8 py-4 font-semibold hover:bg-[var(--color-bg)]/[0.08] transition-colors">
-              Email Us Instead
-            </a>
+      {/* SECTION 7 — Final CTA */}
+      <section aria-label="Get Started" className="w-full py-20 px-6 bg-[var(--color-surface)]">
+        <div className="w-full md:w-[80%] max-w-none mx-auto">
+
+          <div className="bg-[var(--color-bg)] border border-[var(--color-border)] rounded-2xl px-8 md:px-14 py-14 flex flex-col items-start gap-8 anim-reveal is-visible">
+
+            {/* Badge */}
+            <div className="inline-flex items-center gap-2 border border-[var(--color-primary-border)] bg-[var(--color-primary)]/[0.08] text-[var(--color-primary)] text-[length:var(--text-xs)] uppercase tracking-[0.12em] px-4 py-1.5 rounded-full">
+              <span className="w-1.5 h-1.5 rounded-full bg-[var(--color-primary)] animate-pulse" />
+              Free Discovery Call — No Commitment
+            </div>
+
+            <div className="flex flex-col lg:flex-row items-start lg:items-end justify-between gap-10 w-full">
+
+              {/* Left — Heading + trust */}
+              <div className="max-w-2xl">
+                <h2 className="heading-section font-[family-name:var(--font-display)] text-[var(--color-text)] mb-4">
+                  Not sure yet? That&apos;s exactly what the free call is for.
+                </h2>
+                <p className="font-[family-name:var(--font-body)] text-[var(--color-text-muted)] text-[length:var(--text-base)] leading-relaxed mb-8">
+                  Bring your questions, your budget, your existing website — or just the problem you&apos;re trying to solve. In 30 minutes we&apos;ll tell you exactly what you need, what it costs, and how long it takes. No sales pitch. No obligation to proceed.
+                </p>
+
+                {/* Micro-proof strip */}
+                <div className="flex flex-wrap items-center gap-6">
+                  <div className="flex flex-col">
+                    <span className="text-[var(--color-primary)] font-bold text-xl font-[family-name:var(--font-display)]">2–3 Weeks</span>
+                    <span className="text-[var(--color-text-muted)] text-[length:var(--text-xs)] uppercase tracking-widest">Avg. Delivery</span>
+                  </div>
+                  <div className="w-px h-8 bg-[var(--color-border)]" />
+                  <div className="flex flex-col">
+                    <span className="text-[var(--color-primary)] font-bold text-xl font-[family-name:var(--font-display)]">₹0</span>
+                    <span className="text-[var(--color-text-muted)] text-[length:var(--text-xs)] uppercase tracking-widest">Hidden Fees</span>
+                  </div>
+                  <div className="w-px h-8 bg-[var(--color-border)]" />
+                  <div className="flex flex-col">
+                    <span className="text-[var(--color-primary)] font-bold text-xl font-[family-name:var(--font-display)]">50% After</span>
+                    <span className="text-[var(--color-text-muted)] text-[length:var(--text-xs)] uppercase tracking-widest">You Approve</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Right — CTAs stacked */}
+              <div className="flex flex-col gap-3 w-full lg:w-auto lg:min-w-[220px]">
+                <a
+                  href="https://wa.me/919599143235"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 bg-[var(--color-primary)] text-[#000000] rounded-full px-8 py-4 font-semibold text-[length:var(--text-base)] hover:bg-[var(--color-primary-hover)] transition-colors duration-200 whitespace-nowrap"
+                >
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                  </svg>
+                  Book Free Call on WhatsApp
+                </a>
+                <Link
+                  href="/work"
+                  className="inline-flex items-center justify-center gap-2 border border-[var(--color-border)] text-[var(--color-text-muted)] hover:border-[var(--color-primary-border)] hover:text-[var(--color-primary)] rounded-full px-8 py-4 font-medium text-[length:var(--text-sm)] transition-all duration-200 whitespace-nowrap"
+                >
+                  View Our Work →
+                </Link>
+              </div>
+
+            </div>
+
+            {/* Bottom trust line */}
+            <div className="w-full pt-6 border-t border-[var(--color-border)] flex flex-wrap items-center gap-6 text-[var(--color-text-muted)] text-[length:var(--text-xs)]">
+              <span className="flex items-center gap-2">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-[var(--color-primary)]"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                Response within 2 hours
+              </span>
+              <span className="flex items-center gap-2">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-[var(--color-primary)]"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                Fixed price · no hidden fees
+              </span>
+              <span className="flex items-center gap-2">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-[var(--color-primary)]"><polyline points="20 6 9 17 4 12"/></svg>
+                50% only after you approve the design
+              </span>
+            </div>
+
           </div>
+
         </div>
       </section>
     </main>
