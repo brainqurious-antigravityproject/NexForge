@@ -437,7 +437,9 @@ export default function BlogClient() {
               Chat on WhatsApp →
             </a>
             <a
-              href="#contact"
+              href="https://wa.me/919599143235"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center justify-center border-2 border-[color:var(--color-bg)]/30 text-[color:var(--color-bg)] font-semibold rounded-full px-8 py-4 hover:border-[color:var(--color-bg)]/60 hover:bg-[color:var(--color-bg)]/8 transition-all active:scale-95 whitespace-nowrap text-center"
             >
               Get a Free Quote

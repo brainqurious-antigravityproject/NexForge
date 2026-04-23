@@ -50,14 +50,16 @@ export default function AboutPage() {
 
           {/* CTAs */}
           <div className="flex flex-wrap justify-center gap-4 anim-reveal is-visible" style={{ animationDelay: '300ms' }}>
-            <Link
-              href="/contact"
+            <a
+              href="https://wa.me/919599143235"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center justify-center min-h-[48px] bg-[color:var(--color-primary)] text-[color:var(--color-text-inverse)] font-semibold px-8 py-4 rounded-full hover:bg-[color:var(--color-primary-hover)] hover:shadow-[var(--glow-md)] active:scale-95 transition-all duration-300 text-[length:var(--text-sm)]"
             >
               Get a Free Quote →
-            </Link>
+            </a>
             <Link
-              href="/our-portfolio"
+              href="/#our-portfolio"
               className="inline-flex items-center justify-center min-h-[48px] border border-[color:var(--color-border)] text-[color:var(--color-text-muted)] font-semibold px-8 py-4 rounded-full hover:border-[color:var(--color-primary)]/40 hover:text-[color:var(--color-primary)] active:scale-95 transition-all duration-300 text-[length:var(--text-sm)]"
             >
               See Our Work
@@ -89,7 +91,7 @@ export default function AboutPage() {
 
       {/* SECTION 2 — Our Story */}
       <section aria-label="Our Story" className="w-full py-20 px-6 bg-[color:var(--color-surface)]">
-        <div className="w-full md:w-[80%] max-w-none mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+        <div className="w-full max-w-[var(--content-wide)] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
 
           {/* Left — Narrative */}
           <div className="flex flex-col">
@@ -163,7 +165,7 @@ export default function AboutPage() {
 
       {/* SECTION 3 — What Makes Us Different */}
       <section aria-label="What Makes Us Different" className="w-full py-20 px-6 bg-[color:var(--color-bg)]">
-        <div className="w-full md:w-[80%] max-w-none mx-auto">
+        <div className="w-full max-w-[var(--content-wide)] mx-auto">
 
           {/* Section header */}
           <div className="mb-14 anim-reveal is-visible">
@@ -272,7 +274,7 @@ export default function AboutPage() {
 
       {/* SECTION 4 — Who We Build For */}
       <section aria-label="Who We Build For" className="w-full py-20 px-6 bg-[color:var(--color-surface)]">
-        <div className="w-full md:w-[80%] max-w-none mx-auto">
+        <div className="w-full max-w-[var(--content-wide)] mx-auto">
 
           {/* Section header */}
           <div className="mb-14 anim-reveal is-visible">
@@ -426,7 +428,7 @@ export default function AboutPage() {
 
       {/* SECTION 5 — How We Work */}
       <section aria-label="How We Work" className="w-full py-20 px-6 bg-[color:var(--color-bg)]">
-        <div className="w-full md:w-[80%] max-w-none mx-auto">
+        <div className="w-full max-w-[var(--content-wide)] mx-auto">
 
           {/* Section header */}
           <div className="mb-14 anim-reveal is-visible">
@@ -564,12 +566,14 @@ export default function AboutPage() {
                 Send us a message today and you will have a discovery call booked and a written quote in hand before the end of the week — with zero obligation to proceed.
               </p>
             </div>
-            <Link
-              href="/contact"
+            <a
+              href="https://wa.me/919599143235"
+              target="_blank"
+              rel="noopener noreferrer"
               className="shrink-0 inline-flex items-center justify-center min-h-[44px] bg-[color:var(--color-primary)] text-[color:var(--color-text-inverse)] font-semibold px-6 py-3 rounded-full hover:bg-[color:var(--color-primary-hover)] active:scale-95 transition-all duration-300 text-[length:var(--text-sm)] sm:ml-auto"
             >
               Start the conversation →
-            </Link>
+            </a>
           </div>
 
         </div>
@@ -577,7 +581,7 @@ export default function AboutPage() {
 
       {/* SECTION 6 — Client Voices */}
       <section aria-label="Client Voices" className="w-full py-20 px-6 bg-[color:var(--color-surface)]">
-        <div className="w-full md:w-[80%] max-w-none mx-auto">
+        <div className="w-full max-w-[var(--content-wide)] mx-auto">
 
           {/* Section header */}
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-14 anim-reveal is-visible">
@@ -712,7 +716,7 @@ export default function AboutPage() {
 
       {/* SECTION 7 — Final CTA */}
       <section aria-label="Start Your Project" className="w-full py-20 px-6 bg-[color:var(--color-bg)]">
-        <div className="w-full md:w-[80%] max-w-none mx-auto">
+        <div className="w-full max-w-[var(--content-wide)] mx-auto">
 
           {/* CTA card — dark surface, not full-bleed lime */}
           <div className="relative overflow-hidden bg-[color:var(--color-surface)] border border-[color:var(--color-border)] rounded-3xl px-8 py-16 md:px-16 flex flex-col items-center text-center anim-reveal is-visible">
@@ -752,12 +756,14 @@ export default function AboutPage() {
 
             {/* CTAs */}
             <div className="relative flex flex-wrap justify-center gap-4 mb-12">
-              <Link
-                href="/contact"
+              <a
+                href="https://wa.me/919599143235"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center justify-center min-h-[48px] bg-[color:var(--color-primary)] text-[color:var(--color-text-inverse)] font-semibold px-8 py-4 rounded-full hover:bg-[color:var(--color-primary-hover)] hover:shadow-[var(--glow-md)] active:scale-95 transition-all duration-300 text-[length:var(--text-sm)]"
               >
                 Get a Free Quote →
-              </Link>
+              </a>
               <a
                 href="https://wa.me/919599143235"
                 target="_blank"

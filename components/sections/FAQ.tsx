@@ -176,12 +176,12 @@ export default function FAQ() {
 
         {/* Section CTA */}
         <div className="mt-16 flex justify-center">
-          <Link 
-            href="#contact" 
+          <a 
+            href="tel:+919599143235" 
             className="flex items-center justify-center min-h-[48px] px-8 py-4 bg-[#b5ff3e] text-[#000000] rounded-full hover:bg-[#00e5e5] hover:shadow-[var(--glow-sm)] active:scale-95 transition-all duration-300 text-[length:var(--text-sm)] font-semibold"
           >
             Book a Call →
-          </Link>
+          </a>
         </div>
 
       </div>

@@ -38,12 +38,12 @@ export default function Footer() {
             Services
           </h3>
           <ul className="footer-list" style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '0.875rem' }}>
-            <li><a href="#services" className="footer-link hover:text-[#b5ff3e]" style={{ fontSize: '16px', color: '#8888a0', textDecoration: 'none', transition: 'color 0.2s ease', fontFamily: 'var(--font-body)' }}>WordPress Websites</a></li>
-            <li><a href="#services" className="footer-link hover:text-[#b5ff3e]" style={{ fontSize: '16px', color: '#8888a0', textDecoration: 'none', transition: 'color 0.2s ease', fontFamily: 'var(--font-body)' }}>Shopify Stores</a></li>
-            <li><a href="#services" className="footer-link hover:text-[#b5ff3e]" style={{ fontSize: '16px', color: '#8888a0', textDecoration: 'none', transition: 'color 0.2s ease', fontFamily: 'var(--font-body)' }}>Wix Studio Websites</a></li>
-            <li><a href="#services" className="footer-link hover:text-[#b5ff3e]" style={{ fontSize: '16px', color: '#8888a0', textDecoration: 'none', transition: 'color 0.2s ease', fontFamily: 'var(--font-body)' }}>Custom Next.js Builds</a></li>
-            <li><a href="#services" className="footer-link hover:text-[#b5ff3e]" style={{ fontSize: '16px', color: '#8888a0', textDecoration: 'none', transition: 'color 0.2s ease', fontFamily: 'var(--font-body)' }}>AI Chatbots</a></li>
-            <li><a href="#services" className="footer-link hover:text-[#b5ff3e]" style={{ fontSize: '16px', color: '#8888a0', textDecoration: 'none', transition: 'color 0.2s ease', fontFamily: 'var(--font-body)' }}>AI Image Generation</a></li>
+            <li><Link href="/services#service-wordpress" className="footer-link hover:text-[#b5ff3e]" style={{ fontSize: '16px', color: '#8888a0', textDecoration: 'none', transition: 'color 0.2s ease', fontFamily: 'var(--font-body)' }}>WordPress Websites</Link></li>
+            <li><Link href="/services#service-shopify" className="footer-link hover:text-[#b5ff3e]" style={{ fontSize: '16px', color: '#8888a0', textDecoration: 'none', transition: 'color 0.2s ease', fontFamily: 'var(--font-body)' }}>Shopify Stores</Link></li>
+            <li><Link href="/services#service-wix" className="footer-link hover:text-[#b5ff3e]" style={{ fontSize: '16px', color: '#8888a0', textDecoration: 'none', transition: 'color 0.2s ease', fontFamily: 'var(--font-body)' }}>Wix Studio Websites</Link></li>
+            <li><Link href="/services#service-nextjs" className="footer-link hover:text-[#b5ff3e]" style={{ fontSize: '16px', color: '#8888a0', textDecoration: 'none', transition: 'color 0.2s ease', fontFamily: 'var(--font-body)' }}>Custom Next.js Builds</Link></li>
+            <li><Link href="/services#service-chatbot" className="footer-link hover:text-[#b5ff3e]" style={{ fontSize: '16px', color: '#8888a0', textDecoration: 'none', transition: 'color 0.2s ease', fontFamily: 'var(--font-body)' }}>AI Chatbots</Link></li>
+            <li><Link href="/services#service-ai-images" className="footer-link hover:text-[#b5ff3e]" style={{ fontSize: '16px', color: '#8888a0', textDecoration: 'none', transition: 'color 0.2s ease', fontFamily: 'var(--font-body)' }}>AI Image Generation</Link></li>
           </ul>
         </div>
 
@@ -54,11 +54,11 @@ export default function Footer() {
           </h3>
           <ul className="footer-list" style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '0.875rem' }}>
             <li><Link href="/" className="footer-link hover:text-[#b5ff3e]" style={{ fontSize: '16px', color: '#8888a0', textDecoration: 'none', transition: 'color 0.2s ease', fontFamily: 'var(--font-body)' }}>Home</Link></li>
-            <li><Link href="#our-portfolio" className="footer-link hover:text-[#b5ff3e]" style={{ fontSize: '16px', color: '#8888a0', textDecoration: 'none', transition: 'color 0.2s ease', fontFamily: 'var(--font-body)' }}>Our Portfolio</Link></li>
-            <li><Link href="#how-we-build" className="footer-link hover:text-[#b5ff3e]" style={{ fontSize: '16px', color: '#8888a0', textDecoration: 'none', transition: 'color 0.2s ease', fontFamily: 'var(--font-body)' }}>Services</Link></li>
-            <li><Link href="#pricing" className="footer-link hover:text-[#b5ff3e]" style={{ fontSize: '16px', color: '#8888a0', textDecoration: 'none', transition: 'color 0.2s ease', fontFamily: 'var(--font-body)' }}>Pricing</Link></li>
-            <li><Link href="#blog" className="footer-link hover:text-[#b5ff3e]" style={{ fontSize: '16px', color: '#8888a0', textDecoration: 'none', transition: 'color 0.2s ease', fontFamily: 'var(--font-body)' }}>Blog</Link></li>
-            <li><Link href="#contact" className="footer-link hover:text-[#b5ff3e]" style={{ fontSize: '16px', color: '#8888a0', textDecoration: 'none', transition: 'color 0.2s ease', fontFamily: 'var(--font-body)' }}>Contact</Link></li>
+            <li><Link href="/services" className="footer-link hover:text-[#b5ff3e]" style={{ fontSize: '16px', color: '#8888a0', textDecoration: 'none', transition: 'color 0.2s ease', fontFamily: 'var(--font-body)' }}>Services</Link></li>
+            <li><Link href="/pricing" className="footer-link hover:text-[#b5ff3e]" style={{ fontSize: '16px', color: '#8888a0', textDecoration: 'none', transition: 'color 0.2s ease', fontFamily: 'var(--font-body)' }}>Pricing</Link></li>
+            <li><Link href="/blog" className="footer-link hover:text-[#b5ff3e]" style={{ fontSize: '16px', color: '#8888a0', textDecoration: 'none', transition: 'color 0.2s ease', fontFamily: 'var(--font-body)' }}>Blog</Link></li>
+            <li><Link href="/#our-portfolio" className="footer-link hover:text-[#b5ff3e]" style={{ fontSize: '16px', color: '#8888a0', textDecoration: 'none', transition: 'color 0.2s ease', fontFamily: 'var(--font-body)' }}>Our Portfolio</Link></li>
+            <li><Link href="/#contact" className="footer-link hover:text-[#b5ff3e]" style={{ fontSize: '16px', color: '#8888a0', textDecoration: 'none', transition: 'color 0.2s ease', fontFamily: 'var(--font-body)' }}>Contact</Link></li>
           </ul>
         </div>
 

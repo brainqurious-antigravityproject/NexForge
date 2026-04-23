@@ -974,7 +974,7 @@ export default function ServicesPage() {
                   Book Free Call on WhatsApp
                 </a>
                 <Link
-                  href="/work"
+                  href="/#our-portfolio"
                   className="inline-flex items-center justify-center gap-2 border border-[var(--color-border)] text-[var(--color-text-muted)] hover:border-[var(--color-primary-border)] hover:text-[var(--color-primary)] rounded-full px-8 py-4 font-medium text-[length:var(--text-sm)] transition-all duration-200 whitespace-nowrap"
                 >
                   View Our Work →
