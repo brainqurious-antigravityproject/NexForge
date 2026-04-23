@@ -147,9 +147,9 @@ export default function BlogClient() {
 
       {/* SECTION 2 — Featured Article */}
       {featuredPost && (
-        <section aria-label="Featured Article" className="w-full py-10 px-6 bg-[#000000]">
+        <section aria-label="Featured Article" className="w-full py-16 px-6 bg-[color:var(--color-bg)]">
           <div className="w-full md:w-[80%] max-w-none mx-auto">
-            <div className="bg-[#0a0a0a] border border-[#b5ff3e]/[0.18] rounded-3xl overflow-hidden flex flex-col lg:flex-row anim-reveal is-visible">
+            <div className="bg-[color:var(--color-surface)] border border-[color:var(--color-primary)]/[0.18] rounded-3xl overflow-hidden flex flex-col lg:flex-row anim-reveal is-visible">
               <div className="w-full lg:w-1/2 h-64 lg:h-auto relative">
                 <Image 
                   src={featuredPost.image} 
@@ -161,42 +161,42 @@ export default function BlogClient() {
               </div>
               <div className="w-full lg:w-1/2 p-8 lg:p-12 flex flex-col justify-center">
                 <div className="flex flex-wrap items-center gap-3 mb-6">
-                  <span className="bg-[#111111] border border-white/[0.08] text-[#e8e8f0] text-xs px-3 py-1 rounded-full">{featuredPost.category}</span>
-                  <span className="bg-[#b5ff3e]/[0.1] text-[#b5ff3e] text-xs px-3 py-1 rounded-full">{featuredPost.seoTag}</span>
-                  <span className="text-[#66667a] text-xs">{featuredPost.date}</span>
-                  <span className="bg-[#b5ff3e] text-[#000000] text-[10px] font-bold px-2 py-0.5 rounded-sm uppercase tracking-wider ml-auto">Updated for 2026</span>
+                  <span className="bg-[color:var(--color-surface-offset)] border border-white/[0.08] text-[color:var(--color-text)] text-xs px-3 py-1 rounded-full">{featuredPost.category}</span>
+                  <span className="bg-[color:var(--color-primary)]/[0.1] text-[color:var(--color-primary)] text-xs px-3 py-1 rounded-full">{featuredPost.seoTag}</span>
+                  <span className="text-[color:var(--color-text-muted)] text-xs">{featuredPost.date}</span>
+                  <span className="bg-[color:var(--color-primary)] text-[color:var(--color-bg)] text-[10px] font-bold px-2 py-0.5 rounded-sm uppercase tracking-wider ml-auto">Updated for 2026</span>
                 </div>
-                <h2 className="heading-sub font-[family-name:var(--font-display)] text-[#e8e8f0] mb-4 leading-tight">
+                <h2 className="heading-sub font-[family-name:var(--font-display)] text-[color:var(--color-text)] mb-4 leading-tight">
                   {featuredPost.title}
                 </h2>
-                <p className="font-[family-name:var(--font-body)] text-[#8888a0] text-base mb-6 leading-relaxed">
+                <p className="font-[family-name:var(--font-body)] text-[color:var(--color-text-muted)] text-base mb-6 leading-relaxed">
                   {featuredPost.excerpt}
                 </p>
-                <ul className="space-y-3 mb-8 font-[family-name:var(--font-body)] text-sm text-[#8888a0]">
+                <ul className="space-y-3 mb-8 font-[family-name:var(--font-body)] text-sm text-[color:var(--color-text-muted)]">
                   <li className="flex items-start gap-2">
-                    <span className="text-[#b5ff3e] mt-0.5">•</span>
-                    <span><strong className="text-[#e8e8f0] font-medium">Who this is for:</strong> Manufacturers, exporters, and service businesses comparing platforms</span>
+                    <span className="text-[color:var(--color-primary)] mt-0.5">•</span>
+                    <span><strong className="text-[color:var(--color-text)] font-medium">Who this is for:</strong> Manufacturers, exporters, and service businesses comparing platforms</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-[#b5ff3e] mt-0.5">•</span>
-                    <span><strong className="text-[#e8e8f0] font-medium">What you&apos;ll learn:</strong> When Shopify is overkill, when Wix Studio wins, and when custom code is worth it</span>
+                    <span className="text-[color:var(--color-primary)] mt-0.5">•</span>
+                    <span><strong className="text-[color:var(--color-text)] font-medium">What you&apos;ll learn:</strong> When Shopify is overkill, when Wix Studio wins, and when custom code is worth it</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-[#b5ff3e] mt-0.5">•</span>
-                    <span><strong className="text-[#e8e8f0] font-medium">Why it matters now:</strong> Platform fees quietly eat margins if you only need a catalogue site</span>
+                    <span className="text-[color:var(--color-primary)] mt-0.5">•</span>
+                    <span><strong className="text-[color:var(--color-text)] font-medium">Why it matters now:</strong> Platform fees quietly eat margins if you only need a catalogue site</span>
                   </li>
                 </ul>
                 <div className="flex flex-wrap items-center justify-between gap-4 mt-auto pt-6 border-t border-white/[0.08]">
                   <div className="flex items-center gap-3">
-                    <div className="w-8 h-8 rounded-full bg-[#111111] border border-white/[0.08] flex items-center justify-center text-[#e8e8f0] text-xs font-bold">
+                    <div className="w-8 h-8 rounded-full bg-[color:var(--color-surface-offset)] border border-white/[0.08] flex items-center justify-center text-[color:var(--color-text)] text-xs font-bold">
                       S
                     </div>
                     <div className="flex flex-col">
-                      <span className="text-[#e8e8f0] text-sm font-medium">{featuredPost.author}</span>
-                      <span className="text-[#66667a] text-xs">{featuredPost.readTime}</span>
+                      <span className="text-[color:var(--color-text)] text-sm font-medium">{featuredPost.author}</span>
+                      <span className="text-[color:var(--color-text-muted)] text-xs">{featuredPost.readTime}</span>
                     </div>
                   </div>
-                  <Link href={`/blog/${featuredPost.slug}`} className="inline-flex items-center justify-center bg-[#b5ff3e] text-[#000000] font-semibold px-6 py-3 rounded-full hover:bg-[#c4ff66] transition-colors text-sm">
+                  <Link href={`/blog/${featuredPost.slug}`} className="inline-flex items-center justify-center bg-[color:var(--color-primary)] text-[color:var(--color-bg)] font-semibold px-6 py-3 rounded-full hover:bg-[color:var(--color-primary-hover)] transition-colors text-sm">
                     Read Article →
                   </Link>
                 </div>
