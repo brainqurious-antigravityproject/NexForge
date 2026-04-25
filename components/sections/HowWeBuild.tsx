@@ -24,11 +24,18 @@ export default function HowWeBuild() {
           {/* Visual Panel */}
           <div className="why-work-visual">
             <Image 
-              src="/design_engineer.webp" 
-              alt="Design and Engineering" 
+              src="/design_engineer_mobile.webp" 
+              alt="Design and Engineering Mobile" 
               fill 
-              className="object-contain"
-              sizes="(max-width: 768px) 100vw, 40vw"
+              className="object-contain md:hidden"
+              sizes="(max-width: 768px) 100vw"
+            />
+            <Image 
+              src="/design_engineer_desktop.webp" 
+              alt="Design and Engineering Desktop" 
+              fill 
+              className="object-contain hidden md:block"
+              sizes="40vw"
             />
             <div className="why-work-visual-overlay" />
           </div>
