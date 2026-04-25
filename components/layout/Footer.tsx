@@ -80,8 +80,8 @@ export default function Footer() {
             </li>
             <li style={{ display: 'flex', gap: '0.75rem', alignItems: 'center' }}>
               <svg viewBox="0 0 24 24" width="18" height="18" className="flex-shrink-0 text-[#b5ff3e]" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-              <a href="mailto:info@sitecraf.in" className="footer-link hover:text-[#e8e8f0]" style={{ fontSize: '16px', color: '#8888a0', textDecoration: 'none', fontFamily: 'var(--font-body)', transition: 'color 0.2s ease' }}>
-                info@sitecraf.in
+              <a href="mailto:info@sitecraf.com" className="footer-link hover:text-[#e8e8f0]" style={{ fontSize: '16px', color: '#8888a0', textDecoration: 'none', fontFamily: 'var(--font-body)', transition: 'color 0.2s ease' }}>
+                info@sitecraf.com
               </a>
             </li>
             <li style={{ display: 'flex', gap: '0.75rem', alignItems: 'center', fontSize: '16px', color: '#66667a', fontWeight: 500, fontFamily: 'var(--font-body)', letterSpacing: '0.05em' }}>

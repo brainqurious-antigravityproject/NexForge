@@ -34,7 +34,7 @@ export default function HowWeBuild() {
               src="/design_engineer_desktop.webp" 
               alt="Design and Engineering Desktop" 
               fill 
-              className="object-contain hidden md:block"
+              className="object-cover hidden md:block"
               sizes="40vw"
             />
             <div className="why-work-visual-overlay" />

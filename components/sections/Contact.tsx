@@ -5,11 +5,7 @@ import React, { useState } from 'react';
 export default function Contact() {
   const [status, setStatus] = useState('idle');
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setStatus('loading');
-    setTimeout(() => setStatus('success'), 1000);
-  };
+
 
   return (
     <section id="contact" className="py-24 bg-[#0a0a0a] px-6">
@@ -37,7 +33,7 @@ export default function Contact() {
               <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
             </div>
             <h4 className="heading-sub text-[#e8e8f0]">Email</h4>
-            <a href="mailto:info@sitecraf.in" className="text-[#8888a0] text-sm hover:text-[#b5ff3e] transition-colors">info@sitecraf.in →</a>
+            <a href="mailto:info@sitecraf.com" className="text-[#8888a0] text-sm hover:text-[#b5ff3e] transition-colors">info@sitecraf.com →</a>
           </div>
           <div className="bg-[#111111] p-6 rounded-2xl border border-white/[0.08] flex flex-col items-center text-center gap-3">
             <div className="w-10 h-10 rounded-full bg-[#b5ff3e]/[0.08] border border-[#b5ff3e]/[0.14] flex items-center justify-center text-[#b5ff3e]">
@@ -58,12 +54,37 @@ export default function Contact() {
         <div className="grid grid-cols-1 gap-8">
           {/* Note: Do not use non-deterministic attributes here. Hydration mismatches can occur if browser extensions inject attributes like fdprocessedid. */}
           {/* Form */}
-          <form onSubmit={handleSubmit} className="flex flex-col gap-6 bg-[#111111] p-8 rounded-2xl border border-white/[0.08] relative overflow-hidden">
+          <form 
+            onSubmit={async (e) => {
+              e.preventDefault();
+              setStatus('loading');
+              try {
+                const formData = new FormData(e.currentTarget);
+                const response = await fetch("https://formsubmit.co/ajax/info@sitecraf.com", {
+                  method: "POST",
+                  body: formData
+                });
+                if (response.ok) {
+                  setStatus('success');
+                } else {
+                  setStatus('error');
+                }
+              } catch (err) {
+                setStatus('error');
+              }
+            }} 
+            className="flex flex-col gap-6 bg-[#111111] p-8 rounded-2xl border border-white/[0.08] relative overflow-hidden"
+          >
+            {/* Hidden Config Fields for FormSubmit */}
+            <input type="hidden" name="_subject" value="New Project Inquiry - Sitecraf" />
+            <input type="hidden" name="_template" value="table" />
+            
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="flex flex-col gap-2">
                 <label className="text-[#8888a0] text-sm font-medium">Name</label>
                 <input 
                   type="text" 
+                  name="name"
                   required 
                   suppressHydrationWarning
                   className="bg-[#000000] border border-white/[0.08] rounded-lg px-4 py-3 text-[#e8e8f0] focus:border-[#b5ff3e]/40 focus:outline-none transition-colors" 
@@ -74,6 +95,7 @@ export default function Contact() {
                 <label className="text-[#8888a0] text-sm font-medium">Business</label>
                 <input 
                   type="text" 
+                  name="business"
                   suppressHydrationWarning
                   className="bg-[#000000] border border-white/[0.08] rounded-lg px-4 py-3 text-[#e8e8f0] focus:border-[#b5ff3e]/40 focus:outline-none transition-colors" 
                   placeholder="Business name (optional)"
@@ -85,6 +107,7 @@ export default function Contact() {
               <div className="flex flex-col gap-2">
                 <label className="text-[#8888a0] text-sm font-medium">Service</label>
                 <select 
+                  name="service"
                   required
                   defaultValue=""
                   suppressHydrationWarning
@@ -103,6 +126,7 @@ export default function Contact() {
               <div className="flex flex-col gap-2">
                 <label className="text-[#8888a0] text-sm font-medium">Budget</label>
                 <select 
+                  name="budget"
                   required
                   defaultValue=""
                   suppressHydrationWarning
@@ -120,6 +144,7 @@ export default function Contact() {
             <div className="flex flex-col gap-2">
               <label className="text-[#8888a0] text-sm font-medium">Message</label>
               <textarea 
+                name="message"
                 required 
                 rows={4} 
                 className="bg-[#000000] border border-white/[0.08] rounded-lg px-4 py-3 text-[#e8e8f0] focus:border-[#b5ff3e]/40 focus:outline-none transition-colors resize-y"
@@ -134,7 +159,7 @@ export default function Contact() {
                 suppressHydrationWarning
                 className="w-full bg-[#b5ff3e] text-[#000000] font-semibold px-8 py-4 rounded-lg hover:bg-[#c4ff66] hover:shadow-[var(--glow-sm)] active:scale-[0.98] transition-all duration-300 disabled:opacity-70"
               >
-                {status === 'loading' ? 'Sending...' : status === 'success' ? 'Sent! We\'ll reply within 4 hours ✓' : 'Send Message →'}
+                {status === 'loading' ? 'Sending...' : status === 'success' ? 'Sent! We\'ll reply within 4 hours ✓' : status === 'error' ? 'Error. Please try again.' : 'Send Message →'}
               </button>
               
               <p className="text-[#66667a] text-[length:var(--text-xs)] text-center font-medium">
