@@ -11,7 +11,7 @@ export default function Contact() {
   };
 
   const validatePhone = (phone: string) => {
-    return /^\d{10}$/.test(phone.replace(/\D/g, ''));
+    return /^\d{10}$/.test(phone);
   };
 
 
@@ -79,7 +79,7 @@ export default function Contact() {
                 newErrors.email = 'Please enter a valid email address';
               }
               if (!validatePhone(phone)) {
-                newErrors.phone = 'Please enter a valid 10-digit phone number';
+                newErrors.phone = 'Please enter a valid 10-digit number';
               }
 
               if (Object.keys(newErrors).length > 0) {
@@ -87,6 +87,9 @@ export default function Contact() {
                 setStatus('idle');
                 return;
               }
+
+              // Append country code for the email
+              formData.set('phone', `+91 ${phone}`);
 
               try {
                 const response = await fetch("https://formsubmit.co/ajax/info@sitecraf.com", {
@@ -147,14 +150,23 @@ export default function Contact() {
               </div>
               <div className="flex flex-col gap-2">
                 <label className="text-[#8888a0] text-sm font-medium">Phone</label>
-                <input
-                  type="tel"
-                  name="phone"
-                  required
-                  suppressHydrationWarning
-                  className={`bg-[#000000] border ${errors.phone ? 'border-red-500' : 'border-white/[0.08]'} rounded-lg px-4 py-3 text-[#e8e8f0] focus:border-[#b5ff3e]/40 focus:outline-none transition-colors`}
-                  placeholder="Your phone number"
-                />
+                <div className="relative flex items-center">
+                  <span className="absolute left-4 text-[#e8e8f0] font-medium border-r border-white/[0.1] pr-3 py-1">
+                    +91
+                  </span>
+                  <input
+                    type="tel"
+                    name="phone"
+                    required
+                    maxLength={10}
+                    onInput={(e) => {
+                      e.currentTarget.value = e.currentTarget.value.replace(/\D/g, '');
+                    }}
+                    suppressHydrationWarning
+                    className={`w-full bg-[#000000] border ${errors.phone ? 'border-red-500' : 'border-white/[0.08]'} rounded-lg pl-16 pr-4 py-3 text-[#e8e8f0] focus:border-[#b5ff3e]/40 focus:outline-none transition-colors`}
+                    placeholder="99999 00000"
+                  />
+                </div>
                 {errors.phone && <span className="text-red-500 text-xs mt-1">{errors.phone}</span>}
               </div>
             </div>
