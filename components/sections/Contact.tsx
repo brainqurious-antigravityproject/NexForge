@@ -4,6 +4,15 @@ import React, { useState } from 'react';
 
 export default function Contact() {
   const [status, setStatus] = useState('idle');
+  const [errors, setErrors] = useState<{ [key: string]: string }>({});
+
+  const validateEmail = (email: string) => {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  };
+
+  const validatePhone = (phone: string) => {
+    return /^\d{10}$/.test(phone.replace(/\D/g, ''));
+  };
 
 
 
@@ -57,9 +66,29 @@ export default function Contact() {
           <form
             onSubmit={async (e) => {
               e.preventDefault();
+              setErrors({});
               setStatus('loading');
+
+              const form = e.currentTarget;
+              const formData = new FormData(form);
+              const email = formData.get('email') as string;
+              const phone = formData.get('phone') as string;
+              const newErrors: { [key: string]: string } = {};
+
+              if (!validateEmail(email)) {
+                newErrors.email = 'Please enter a valid email address';
+              }
+              if (!validatePhone(phone)) {
+                newErrors.phone = 'Please enter a valid 10-digit phone number';
+              }
+
+              if (Object.keys(newErrors).length > 0) {
+                setErrors(newErrors);
+                setStatus('idle');
+                return;
+              }
+
               try {
-                const formData = new FormData(e.currentTarget);
                 const response = await fetch("https://formsubmit.co/ajax/info@sitecraf.com", {
                   method: "POST",
                   body: formData
@@ -111,9 +140,10 @@ export default function Contact() {
                   name="email"
                   required
                   suppressHydrationWarning
-                  className="bg-[#000000] border border-white/[0.08] rounded-lg px-4 py-3 text-[#e8e8f0] focus:border-[#b5ff3e]/40 focus:outline-none transition-colors"
+                  className={`bg-[#000000] border ${errors.email ? 'border-red-500' : 'border-white/[0.08]'} rounded-lg px-4 py-3 text-[#e8e8f0] focus:border-[#b5ff3e]/40 focus:outline-none transition-colors`}
                   placeholder="Your email address"
                 />
+                {errors.email && <span className="text-red-500 text-xs mt-1">{errors.email}</span>}
               </div>
               <div className="flex flex-col gap-2">
                 <label className="text-[#8888a0] text-sm font-medium">Phone</label>
@@ -122,9 +152,10 @@ export default function Contact() {
                   name="phone"
                   required
                   suppressHydrationWarning
-                  className="bg-[#000000] border border-white/[0.08] rounded-lg px-4 py-3 text-[#e8e8f0] focus:border-[#b5ff3e]/40 focus:outline-none transition-colors"
+                  className={`bg-[#000000] border ${errors.phone ? 'border-red-500' : 'border-white/[0.08]'} rounded-lg px-4 py-3 text-[#e8e8f0] focus:border-[#b5ff3e]/40 focus:outline-none transition-colors`}
                   placeholder="Your phone number"
                 />
+                {errors.phone && <span className="text-red-500 text-xs mt-1">{errors.phone}</span>}
               </div>
             </div>
 
