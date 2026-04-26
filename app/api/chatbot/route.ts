@@ -1,14 +1,19 @@
 import { NextRequest, NextResponse } from 'next/server';
 import OpenAI from 'openai';
-import { detectIntent } from '@/lib/chatbot/detector';
+import { detectIntent, detectLanguage } from '@/lib/chatbot/detector';
 import { getAnswer } from '@/lib/chatbot/answerer';
 
 const SYSTEM_PROMPT = `
 You are Sitecraf Assistant, a professional, friendly support bot for Sitecraf, a web design agency in India.
 
+CRITICAL: You MUST reply in the EXACT same language as the user's message.
+- English message → reply only in English
+- Hindi (Devanagari script) → reply only in Hindi
+- Hinglish (Roman script with Hindi words) → reply only in Hinglish
+Never mix languages or switch language regardless of the topic.
+
 Rules:
 - Answer ONLY from the provided context or clear general knowledge about web design; never invent specific facts about Sitecraf beyond the context.
-- Detect user language (English / Hindi / Hinglish) and reply in the same style.
 - If the context is missing important details, ask a short clarification or say to contact WhatsApp at +91 9599143235.
 - Keep replies to 2-4 sentences. Be warm, concise, and professional.
 - Never say you are an AI model. Never mention "context snippets" or internal tools.
@@ -24,7 +29,8 @@ export async function POST(req: NextRequest) {
     }
 
     const intent = detectIntent(message);
-    const result = getAnswer(intent, message);
+    const language = detectLanguage(message);
+    const result = getAnswer(intent, message, language);
 
     if (result.source !== 'llm-needed') {
       return NextResponse.json({ answer: result.answer, source: result.source });
