@@ -88,6 +88,18 @@ const posts = [
     seoTag: "GEO",
     author: "Sitecraf",
     image: "https://picsum.photos/seed/geochatgpt/800/600"
+  },
+  {
+    slug: "website-vs-instagram-do-you-need-a-website",
+    title: "Website vs. Instagram: Do You Actually Need a Website If You Already Have Social Media?",
+    excerpt: "Most small businesses start with Instagram — it's free, fast, and your customers are already there. But Instagram can't rank on Google, doesn't own your data, and looks less credible to high-value buyers. Here's the honest breakdown.",
+    category: "SEO",
+    readTime: "6 min read",
+    date: "April 2026",
+    featured: false,
+    seoTag: "High Intent",
+    author: "Sitecraf",
+    image: "https://picsum.photos/seed/websitevsinsta/800/600"
   }
 ];
 
@@ -138,6 +150,7 @@ export default function BlogClient() {
     "wordpress-vs-nextjs-for-seo":                 "Find the Right Stack →",
     "core-web-vitals-guide-india":                 "Fix Your Vitals →",
     "what-is-geo-generative-engine-optimization":  "Get Found by AI →",
+    "website-vs-instagram-do-you-need-a-website":  "Read the Breakdown →",
   };
 
   return (
