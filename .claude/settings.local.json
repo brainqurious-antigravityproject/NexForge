@@ -27,7 +27,8 @@
       "Bash(pkill -f \"next dev\")",
       "Bash(wait)",
       "Bash(python3 -c \"import json,sys; data=json.load\\(sys.stdin\\); [print\\(m['id']\\) for m in data['data'] if 'mistral' in m['id'].lower\\(\\)]\")",
-      "Bash(curl -s -X POST http://localhost:3000/api/chatbot -H 'Content-Type: application/json' -d '{\"message\":\"what is your pricing\"}' --max-time 10)"
+      "Bash(curl -s -X POST http://localhost:3000/api/chatbot -H 'Content-Type: application/json' -d '{\"message\":\"what is your pricing\"}' --max-time 10)",
+      "Bash(git submodule *)"
     ]
   }
 }

@@ -16,6 +16,7 @@ export default function Chatbot() {
   const [messages, setMessages] = useState<ChatMessage[]>([INITIAL_MESSAGE]);
   const [inputValue, setInputValue] = useState('');
   const [status, setStatus] = useState<ChatStatus>('idle');
+  const [isLoading, setIsLoading] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -24,56 +25,45 @@ export default function Chatbot() {
 
   const handleSend = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!inputValue.trim() || status !== 'idle') return;
+    if (!inputValue.trim() || isLoading) return;
 
+    const userMessage = inputValue.trim();
     const userMsg: ChatMessage = {
       id: crypto.randomUUID(),
       role: 'user',
-      content: inputValue.trim(),
+      content: userMessage,
       timestamp: new Date(),
     };
-    const updatedMessages = [...messages, userMsg];
-    setMessages(updatedMessages);
+    setMessages(prev => [...prev, userMsg]);
     setInputValue('');
+    setIsLoading(true);
     setStatus('loading');
 
     try {
-      const res = await fetch('/api/chat', {
+      const res = await fetch('/api/chatbot', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ messages: updatedMessages }),
+        body: JSON.stringify({ message: userMessage }),
       });
 
-      if (!res.ok || !res.body) throw new Error('Chat API error');
+      if (!res.ok) throw new Error('Chat API error');
 
-      const botMsgId = crypto.randomUUID();
-      const botMsg: ChatMessage = {
-        id: botMsgId,
+      const data = await res.json();
+      setMessages(prev => [...prev, {
+        id: crypto.randomUUID(),
         role: 'assistant',
-        content: '',
+        content: data.answer,
         timestamp: new Date(),
-      };
-      setMessages(prev => [...prev, botMsg]);
-      setStatus('streaming');
-
-      const reader = res.body.getReader();
-      const dec = new TextDecoder();
-      while (true) {
-        const { done, value } = await reader.read();
-        if (done) break;
-        const chunk = dec.decode(value);
-        setMessages(prev =>
-          prev.map(m => m.id === botMsgId ? { ...m, content: m.content + chunk } : m)
-        );
-      }
-      setStatus('idle');
+      }]);
     } catch {
       setMessages(prev => [...prev, {
         id: crypto.randomUUID(),
         role: 'assistant',
-        content: 'Something went wrong. Please try WhatsApp instead.',
+        content: 'Sorry, something went wrong. Reach us on WhatsApp at +91 9599143235! 💬',
         timestamp: new Date(),
       }]);
+    } finally {
+      setIsLoading(false);
       setStatus('idle');
     }
   };
@@ -189,7 +179,7 @@ export default function Chatbot() {
             />
             <button
               type="submit"
-              disabled={!inputValue.trim() || status !== 'idle'}
+              disabled={!inputValue.trim() || isLoading}
               suppressHydrationWarning
               className="w-10 h-10 rounded-full bg-[#b5ff3e] text-[#000000] flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed hover:bg-[#00e5e5] transition-colors"
             >
