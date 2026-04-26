@@ -100,6 +100,18 @@ const posts = [
     seoTag: "High Intent",
     author: "Sitecraf",
     image: "https://picsum.photos/seed/websitevsinsta/800/600"
+  },
+  {
+    slug: "why-your-website-isnt-getting-leads",
+    title: "Why Your Small Business Website Isn't Getting You Leads (And What to Do About It)",
+    excerpt: "You have a website, you're paying for hosting, but the enquiries aren't coming. Here are the six fixable reasons your site isn't converting visitors into leads — and exactly what to do about each one.",
+    category: "SEO",
+    readTime: "7 min read",
+    date: "April 2026",
+    featured: false,
+    seoTag: "High Intent",
+    author: "Sitecraf",
+    image: "https://picsum.photos/seed/websiteleads/800/600"
   }
 ];
 
@@ -151,6 +163,7 @@ export default function BlogClient() {
     "core-web-vitals-guide-india":                 "Fix Your Vitals →",
     "what-is-geo-generative-engine-optimization":  "Get Found by AI →",
     "website-vs-instagram-do-you-need-a-website":  "Read the Breakdown →",
+    "why-your-website-isnt-getting-leads":          "Fix Your Website →",
   };
 
   return (
