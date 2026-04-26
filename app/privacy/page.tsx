@@ -13,7 +13,7 @@ export default function PrivacyPolicy() {
           <h2 className="heading-sub mt-8 mb-4">2. Use of information</h2>
           <p>We only retain collected information for as long as necessary to provide you with your requested service.</p>
           <h2 className="heading-sub mt-8 mb-4">3. Contact Us</h2>
-          <p>If you have any questions about how we handle user data and personal information, feel free to contact us at support@sitecraf.com.</p>
+          <p>If you have any questions about how we handle user data and personal information, feel free to contact us at info@sitecraf.com.</p>
         </div>
       </div>
     </div>

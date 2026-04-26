@@ -42,7 +42,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               "name": "Sitecraf",
               "description": "Freelance web developer offering custom websites, Shopify to Wix Studio migration, AI chatbots, and AI image generation for B2B brands.",
               "url": "https://sitecraf.com",
-              "email": "support@sitecraf.com",
+              "email": "info@sitecraf.com",
               "telephone": "+919599143235",
               "address": {
                 "@type": "PostalAddress",

@@ -357,7 +357,7 @@ export default function TermsOfService() {
               <p>
                 <strong>Sitecraf</strong>
               </p>
-              <p>Email: support@sitecraf.com</p>
+              <p>Email: info@sitecraf.com</p>
               <p>Website: www.sitecraf.com</p>
               <p>Location: India</p>
             </div>
