@@ -37,6 +37,15 @@ const cannedReplies: Record<string, string> = {
 };
 
 export function getAnswer(intent: Intent, message: string, language: Language): AnswerResult {
+  if (intent === 'project_request') {
+    const chunks = searchKB(message, 3);
+    return {
+      answer: '',
+      source: 'llm-needed',
+      snippets: chunks.length > 0 ? chunks.map((c) => c.text) : [],
+    };
+  }
+
   if (language === 'en' && intent !== 'unknown' && cannedReplies[intent]) {
     return { answer: cannedReplies[intent], source: 'canned' };
   }

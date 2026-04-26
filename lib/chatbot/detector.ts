@@ -12,6 +12,7 @@ export type Intent =
   | 'images'
   | 'landing'
   | 'about'
+  | 'project_request'
   | 'unknown';
 
 export type Language = 'en' | 'hi' | 'hinglish';
@@ -24,6 +25,7 @@ const patterns: [Intent, RegExp][] = [
   ['automation', /automat|crm|google sheets|zapier|razorpay|stripe|booking integrat|workflow integrat|workflow|integration/i],
   ['images', /\bimage|product photo|ai image|visual|banner|lifestyle photo|photo banana/i],
   ['landing', /landing page|ad page|conversion page|ppc page|landing banana/i],
+  ['project_request', /\b(need|want|build|create|make|require|chahiye|banana|banao|bana do|banaiye)\b.{0,40}\b(website|site|web app|app|store|portal|page)\b/i],
   ['services', /service|website|wix|design|develop|kya karta|what do you|kya banate|website chahiye|website banana/i],
   ['pricing', /price|pricing|cost|kitna|how much|charges|fees|rate|budget|daam|kharcha/i],
   ['process', /process|timeline|steps|kaise|how does|how do|stages|kitne din|kab tak/i],
