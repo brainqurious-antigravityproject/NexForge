@@ -1,83 +1,75 @@
-import { GoogleGenAI } from '@google/genai';
+import { NextRequest, NextResponse } from 'next/server';
+import OpenAI from 'openai';
+import { detectIntent } from '@/lib/chatbot/detector';
 import { getAnswer } from '@/lib/chatbot/answerer';
 
-const SYSTEM_PROMPT = `You are the AI assistant for Sitecraf, a web development agency based in South Extension Part-2, New Delhi, India.
+const SYSTEM_PROMPT = `
+You are Sitecraf Assistant, a professional, friendly support bot for Sitecraf, a web design agency in India.
 
-About Sitecraf:
-- Services: WordPress development, Wix Studio, Shopify, Next.js development, AI Chatbot integration, SEO, Business Automation
-- Contact: WhatsApp +919599143235 | Email: info@sitecraf.com
+Rules:
+- Answer ONLY from the provided context or clear general knowledge about web design; never invent specific facts about Sitecraf beyond the context.
+- Detect user language (English / Hindi / Hinglish) and reply in the same style.
+- If the context is missing important details, ask a short clarification or say to contact WhatsApp at +91 9599143235.
+- Keep replies to 2-4 sentences. Be warm, concise, and professional.
+- Never say you are an AI model. Never mention "context snippets" or internal tools.
+`.trim();
 
-Guidelines:
-- Be concise, friendly, and professional
-- For project inquiries or pricing, encourage WhatsApp or contact form
-- Do not make up specific pricing — suggest contacting Sitecraf for custom quotes`;
-
-export async function POST(req: Request) {
-  const { messages } = await req.json();
-  const lastMessage = messages.at(-1);
-  const userText: string = lastMessage?.content ?? '';
-
-  const { answer, source } = getAnswer(userText);
-
-  if (source === 'canned' || source === 'kb') {
-    const stream = new ReadableStream({
-      start(controller) {
-        controller.enqueue(new TextEncoder().encode(answer));
-        controller.close();
-      },
-    });
-    return new Response(stream, {
-      headers: { 'Content-Type': 'text/plain; charset=utf-8' },
-    });
-  }
-
-  if (!process.env.GEMINI_API_KEY) {
-    return new Response(JSON.stringify({ error: 'GEMINI_API_KEY not configured' }), {
-      status: 500,
-      headers: { 'Content-Type': 'application/json' },
-    });
-  }
-
+export async function POST(req: NextRequest) {
   try {
-    const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
+    const body = await req.json();
+    const message: string = body?.message ?? '';
 
-    const history = messages
-      .slice(0, -1)
-      .filter((m: { role: string }) => m.role === 'user' || m.role === 'assistant')
-      .map((m: { role: string; content: string }) => ({
-        role: m.role === 'assistant' ? 'model' : 'user',
-        parts: [{ text: m.content }],
-      }));
+    if (!message.trim()) {
+      return NextResponse.json({ error: 'Message is required' }, { status: 400 });
+    }
 
-    const response = await ai.models.generateContentStream({
-      model: 'gemini-2.0-flash',
-      contents: [...history, { role: 'user', parts: [{ text: userText }] }],
-      config: { systemInstruction: SYSTEM_PROMPT },
+    const intent = detectIntent(message);
+    const result = getAnswer(intent, message);
+
+    if (result.source !== 'llm-needed') {
+      return NextResponse.json({ answer: result.answer, source: result.source });
+    }
+
+    const context =
+      result.snippets && result.snippets.length > 0
+        ? result.snippets.join('\n\n---\n\n')
+        : 'No specific info found in the knowledge base.';
+
+    if (!process.env.NVIDIA_API_KEY) {
+      return NextResponse.json(
+        { answer: 'Service temporarily unavailable. Please reach us on WhatsApp at +91 9599143235.', source: 'error' },
+        { status: 500 }
+      );
+    }
+
+    const nvidia = new OpenAI({
+      apiKey: process.env.NVIDIA_API_KEY,
+      baseURL: 'https://integrate.api.nvidia.com/v1',
     });
 
-    const stream = new ReadableStream({
-      async start(controller) {
-        const enc = new TextEncoder();
-        try {
-          for await (const chunk of response) {
-            const text = chunk.text;
-            if (text) controller.enqueue(enc.encode(text));
-          }
-        } catch (err) {
-          controller.enqueue(enc.encode(`[LLM error: ${err instanceof Error ? err.message : String(err)}]`));
-        } finally {
-          controller.close();
-        }
-      },
+    const completion = await nvidia.chat.completions.create({
+      model: 'meta/llama-3.1-8b-instruct',
+      messages: [
+        { role: 'system', content: SYSTEM_PROMPT },
+        {
+          role: 'user',
+          content: `Context:\n${context}\n\nUser message: ${message}`,
+        },
+      ],
+      max_tokens: 200,
+      temperature: 0.4,
     });
 
-    return new Response(stream, {
-      headers: { 'Content-Type': 'text/plain; charset=utf-8' },
-    });
+    const answer =
+      completion.choices[0]?.message?.content?.toString().trim() ??
+      'Sorry, something went wrong. Please reach us on WhatsApp at +91 9599143235.';
+
+    return NextResponse.json({ answer, source: 'llm' });
   } catch (err) {
-    return new Response(
-      JSON.stringify({ error: 'LLM call failed', detail: err instanceof Error ? err.message : String(err) }),
-      { status: 500, headers: { 'Content-Type': 'application/json' } }
+    console.error('[chatbot]', err);
+    return NextResponse.json(
+      { answer: 'Something went wrong. Please reach us on WhatsApp at +91 9599143235.', source: 'error' },
+      { status: 500 }
     );
   }
 }

@@ -9,7 +9,7 @@ export type Intent =
   | 'unknown';
 
 const patterns: [Intent, RegExp][] = [
-  ['greeting', /^(hi|hello|hey|namaste|hii|helo|namaskar|hy)\b/i],
+  ['greeting', /\b(hi|hello|hey|namaste|hii|helo|namaskar|hyi)\b/i],
   ['whatsapp', /whatsapp|direct chat|chat directly/i],
   ['services', /service|website|shopify|wix|design|develop|kya karta|what do you/i],
   ['pricing', /price|pricing|cost|kitna|how much|charges|fees|rate|budget/i],
@@ -19,8 +19,9 @@ const patterns: [Intent, RegExp][] = [
 ];
 
 export function detectIntent(message: string): Intent {
+  const normalized = message.toLowerCase().trim();
   for (const [intent, pattern] of patterns) {
-    if (pattern.test(message)) return intent;
+    if (pattern.test(normalized)) return intent;
   }
   return 'unknown';
 }
