@@ -112,6 +112,18 @@ const posts = [
     seoTag: "High Intent",
     author: "Sitecraf",
     image: "https://picsum.photos/seed/websiteleads/800/600"
+  },
+  {
+    slug: "5-signs-your-website-is-costing-you-customers",
+    title: "5 Signs Your Website Is Costing You Customers Right Now",
+    excerpt: "Most businesses don't lose customers dramatically — they just quietly leave. Here are five signs your website is actively costing you customers, and what to do about each one.",
+    category: "SEO",
+    readTime: "6 min read",
+    date: "April 2026",
+    featured: false,
+    seoTag: "High Intent",
+    author: "Sitecraf",
+    image: "https://picsum.photos/seed/websitesigns/800/600"
   }
 ];
 
@@ -164,6 +176,7 @@ export default function BlogClient() {
     "what-is-geo-generative-engine-optimization":  "Get Found by AI →",
     "website-vs-instagram-do-you-need-a-website":  "Read the Breakdown →",
     "why-your-website-isnt-getting-leads":          "Fix Your Website →",
+    "5-signs-your-website-is-costing-you-customers": "Check Your Site →",
   };
 
   return (
