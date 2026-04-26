@@ -32,7 +32,10 @@
       "Bash(curl -s -X POST http://localhost:3000/api/chatbot -H 'Content-Type: application/json' -d '{\"message\":\"What services do you provide?\"}')",
       "Bash(git commit -m 'feat\\(chatbot\\): add project_request intent for LLM routing *)",
       "Bash(pkill -f \"npm run dev\")",
-      "Bash(rtk lint *)"
+      "Bash(rtk lint *)",
+      "Bash(python -m json.tool)",
+      "Bash(curl -s -X POST https://sitecraf.onrender.com/api/chatbot -H 'Content-Type: application/json' -H 'Origin: https://sitecraf.com' -d '{\"message\":\"How much does a WordPress website cost?\"}')",
+      "Bash(curl -s -X POST https://sitecraf.onrender.com/api/chatbot -H 'Content-Type: application/json' -H 'Origin: https://sitecraf.com' -d '{\"message\":\"I need a Shopify store for my clothing brand\"}')"
     ]
   }
 }
