@@ -1,6 +1,5 @@
+import { GoogleGenAI } from '@google/genai';
 import { getAnswer } from '@/lib/chatbot/answerer';
-
-const NVIDIA_BASE = 'https://integrate.api.nvidia.com/v1';
 
 const SYSTEM_PROMPT = `You are the AI assistant for Sitecraf, a web development agency based in South Extension Part-2, New Delhi, India.
 
@@ -32,74 +31,53 @@ export async function POST(req: Request) {
     });
   }
 
-  if (!process.env.NVIDIA_API_KEY) {
-    return new Response(JSON.stringify({ error: 'NVIDIA_API_KEY not configured' }), {
+  if (!process.env.GEMINI_API_KEY) {
+    return new Response(JSON.stringify({ error: 'GEMINI_API_KEY not configured' }), {
       status: 500,
       headers: { 'Content-Type': 'application/json' },
     });
   }
 
-  const history = messages
-    .filter((m: { role: string }) => m.role === 'user' || m.role === 'assistant')
-    .map((m: { role: string; content: string }) => ({
-      role: m.role,
-      content: m.content,
-    }));
+  try {
+    const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
 
-  const nvidiaRes = await fetch(`${NVIDIA_BASE}/chat/completions`, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      Authorization: `Bearer ${process.env.NVIDIA_API_KEY}`,
-    },
-    body: JSON.stringify({
-      model: 'mistralai/mistral-small-4-119b',
-      messages: [{ role: 'system', content: SYSTEM_PROMPT }, ...history],
-      stream: true,
-    }),
-  });
+    const history = messages
+      .slice(0, -1)
+      .filter((m: { role: string }) => m.role === 'user' || m.role === 'assistant')
+      .map((m: { role: string; content: string }) => ({
+        role: m.role === 'assistant' ? 'model' : 'user',
+        parts: [{ text: m.content }],
+      }));
 
-  if (!nvidiaRes.ok || !nvidiaRes.body) {
-    return new Response(JSON.stringify({ error: 'NVIDIA API error' }), {
-      status: 502,
-      headers: { 'Content-Type': 'application/json' },
+    const response = await ai.models.generateContentStream({
+      model: 'gemini-2.0-flash',
+      contents: [...history, { role: 'user', parts: [{ text: userText }] }],
+      config: { systemInstruction: SYSTEM_PROMPT },
     });
-  }
 
-  const stream = new ReadableStream({
-    async start(controller) {
-      const reader = nvidiaRes.body!.getReader();
-      const dec = new TextDecoder();
-      const enc = new TextEncoder();
-
-      try {
-        while (true) {
-          const { done, value } = await reader.read();
-          if (done) break;
-
-          const raw = dec.decode(value);
-          for (const line of raw.split('\n')) {
-            const trimmed = line.trim();
-            if (!trimmed.startsWith('data:')) continue;
-            const payload = trimmed.slice(5).trim();
-            if (payload === '[DONE]') break;
-
-            try {
-              const parsed = JSON.parse(payload);
-              const delta = parsed?.choices?.[0]?.delta?.content;
-              if (delta) controller.enqueue(enc.encode(delta));
-            } catch {
-              // skip malformed SSE lines
-            }
+    const stream = new ReadableStream({
+      async start(controller) {
+        const enc = new TextEncoder();
+        try {
+          for await (const chunk of response) {
+            const text = chunk.text;
+            if (text) controller.enqueue(enc.encode(text));
           }
+        } catch (err) {
+          controller.enqueue(enc.encode(`[LLM error: ${err instanceof Error ? err.message : String(err)}]`));
+        } finally {
+          controller.close();
         }
-      } finally {
-        controller.close();
-      }
-    },
-  });
+      },
+    });
 
-  return new Response(stream, {
-    headers: { 'Content-Type': 'text/plain; charset=utf-8' },
-  });
+    return new Response(stream, {
+      headers: { 'Content-Type': 'text/plain; charset=utf-8' },
+    });
+  } catch (err) {
+    return new Response(
+      JSON.stringify({ error: 'LLM call failed', detail: err instanceof Error ? err.message : String(err) }),
+      { status: 500, headers: { 'Content-Type': 'application/json' } }
+    );
+  }
 }

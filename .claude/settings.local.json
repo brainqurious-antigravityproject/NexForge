@@ -17,7 +17,14 @@
       "Bash(where /R \"C:\\\\Users\\\\hp\\\\AppData\" claude*)",
       "Bash(xargs grep *)",
       "Bash(xargs ls *)",
-      "Bash(rtk tsc *)"
+      "Bash(rtk tsc *)",
+      "Bash(rtk git *)",
+      "Bash(rtk curl *)",
+      "Bash(node -e \"require\\('dotenv'\\).config\\(\\); console.log\\('NVIDIA key set:', !!process.env.NVIDIA_API_KEY\\)\")",
+      "Bash(echo \"EXIT: $?\")",
+      "Bash(echo \"---EXIT: $?\")",
+      "Bash(rtk wc *)",
+      "Bash(pkill -f \"next dev\")"
     ]
   }
 }
