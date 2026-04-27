@@ -16,6 +16,7 @@ export interface BlogPost {
   tags: string[]
   ogTitle?: string
   ogDescription?: string
+  faqs?: Array<{ q: string; a: string }>
   content: string
 }
 

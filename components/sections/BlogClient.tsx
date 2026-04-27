@@ -12,7 +12,7 @@ const posts = [
     category: "Platforms",
     readTime: "6 min read",
     date: "April 2026",
-    featured: true,
+    featured: false,
     seoTag: "High Intent",
     author: "Sitecraf",
     image: "https://picsum.photos/seed/shopifywix/800/600"
@@ -42,18 +42,6 @@ const posts = [
     image: "https://picsum.photos/seed/aeoguide/800/600"
   },
   {
-    slug: "when-an-ai-chatbot-is-worth-it",
-    title: "When an AI Chatbot Is Actually Worth It for a Small Business",
-    excerpt: "A chatbot that qualifies leads and answers FAQs at 2am can be a genuine growth tool. But for most small businesses, it's an expensive distraction. This guide gives you a clear framework to decide — based on your enquiry volume, not the hype.",
-    category: "AI Tools",
-    readTime: "5 min read",
-    date: "April 2026",
-    featured: false,
-    seoTag: "AI",
-    author: "Sitecraf",
-    image: "https://picsum.photos/seed/aichatbot/800/600"
-  },
-  {
     slug: "wordpress-vs-nextjs-for-seo",
     title: "WordPress vs Next.js for SEO: Which Wins for Indian Businesses?",
     excerpt: "Both platforms can rank. The real question is which one fits your team, your content volume, and your performance budget. Getting this wrong means months of migration pain later. This breaks down the decision by business type, not developer preference.",
@@ -64,18 +52,6 @@ const posts = [
     seoTag: "SEO",
     author: "Sitecraf",
     image: "https://picsum.photos/seed/wpvsnextjs/800/600"
-  },
-  {
-    slug: "core-web-vitals-guide-india",
-    title: "Core Web Vitals Explained for Indian Business Owners",
-    excerpt: "Google uses page speed as a ranking signal — and most Indian business websites built on shared hosting fail all three Core Web Vital tests. LCP, INP, and CLS explained in plain English, with the exact fixes a Delhi web developer should be making on your site.",
-    category: "Performance",
-    readTime: "5 min read",
-    date: "April 2026",
-    featured: false,
-    seoTag: "Performance",
-    author: "Sitecraf",
-    image: "https://picsum.photos/seed/corevitals/800/600"
   },
   {
     slug: "what-is-geo-generative-engine-optimization",
@@ -96,7 +72,7 @@ const posts = [
     category: "SEO",
     readTime: "6 min read",
     date: "April 2026",
-    featured: false,
+    featured: true,
     seoTag: "High Intent",
     author: "Sitecraf",
     image: "https://picsum.photos/seed/websitevsinsta/800/600"
@@ -181,8 +157,6 @@ const categories = [
   "AEO",
   "GEO",
   "Platforms",
-  "AI Tools",
-  "Performance",
 ];
 
 export default function BlogClient() {
@@ -218,9 +192,7 @@ export default function BlogClient() {
     "shopify-vs-wix-studio-for-indian-businesses": "See the Cost Breakdown →",
     "why-most-small-business-websites-dont-rank":  "Find Your SEO Gaps →",
     "what-is-aeo-answer-engine-optimization":      "Understand AEO in 5 mins →",
-    "when-an-ai-chatbot-is-worth-it":              "See If You Need One →",
     "wordpress-vs-nextjs-for-seo":                 "Find the Right Stack →",
-    "core-web-vitals-guide-india":                 "Fix Your Vitals →",
     "what-is-geo-generative-engine-optimization":  "Get Found by AI →",
     "website-vs-instagram-do-you-need-a-website":  "Read the Breakdown →",
     "why-your-website-isnt-getting-leads":          "Fix Your Website →",
@@ -285,15 +257,15 @@ export default function BlogClient() {
                 <ul className="space-y-3 mb-8 font-[family-name:var(--font-body)] text-sm text-[color:var(--color-text-muted)]">
                   <li className="flex items-start gap-2">
                     <span className="text-[color:var(--color-primary)] mt-0.5">•</span>
-                    <span><strong className="text-[color:var(--color-text)] font-medium">Who this saves money for:</strong> Manufacturers, exporters, and service businesses paying Shopify fees they don&apos;t need</span>
+                    <span><strong className="text-[color:var(--color-text)] font-medium">Who this is for:</strong> Small business owners wondering if they even need a website when they already have Instagram followers</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-[color:var(--color-primary)] mt-0.5">•</span>
-                    <span><strong className="text-[color:var(--color-text)] font-medium">What you&apos;ll walk away knowing:</strong> Exactly when Shopify is the right call — and when it&apos;s quietly costing you ₹30,000+ a year more than necessary</span>
+                    <span><strong className="text-[color:var(--color-text)] font-medium">What you&apos;ll walk away knowing:</strong> Exactly when Instagram alone is enough — and the 4 specific moments when not having a website is silently costing you customers</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-[color:var(--color-primary)] mt-0.5">•</span>
-                    <span><strong className="text-[color:var(--color-text)] font-medium">Why read this now:</strong> Platform fees compound. The sooner you&apos;re on the right one, the more margin you protect.</span>
+                    <span><strong className="text-[color:var(--color-text)] font-medium">Why read this now:</strong> Instagram reach is declining. The businesses ranking on Google right now will own the leads their competitors can&apos;t capture.</span>
                   </li>
                 </ul>
                 <div className="flex flex-wrap items-center justify-between gap-4 mt-auto pt-6 border-t border-white/[0.08]">
