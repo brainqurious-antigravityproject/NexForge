@@ -69,14 +69,13 @@ export default async function BlogPostPage(
       />
 
       <main className="flex flex-col min-h-screen bg-[#000000]">
-        {/* Hero */}
         <section className="w-full pt-32 pb-12 px-6 bg-[color:var(--color-bg)]">
           <div className="w-full md:w-[80%] max-w-4xl mx-auto">
             <Link
               href="/blog"
               className="inline-flex items-center gap-2 text-[color:var(--color-text-muted)] text-sm mb-8 hover:text-[color:var(--color-primary)] transition-colors"
             >
-              ← Back to Blog
+              &larr; Back to Blog
             </Link>
 
             <div className="flex flex-wrap items-center gap-3 mb-4">
@@ -96,14 +95,14 @@ export default async function BlogPostPage(
 
             <div className="flex flex-wrap items-center gap-4 text-[color:var(--color-text-muted)] text-sm mb-10">
               <span>{post.author}</span>
-              <span>·</span>
+              <span>&middot;</span>
               <span>{new Date(post.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
-              <span>·</span>
+              <span>&middot;</span>
               <span>{post.readTime}</span>
             </div>
 
             {post.image && (
-              <div className="relative w-full h-64 md:h-96 rounded-2xl overflow-hidden mb-12">
+              <div className="relative w-full h-64 md:h-96 rounded-[10px] overflow-hidden mb-12">
                 <Image
                   src={post.image}
                   alt={post.imageAlt ?? post.title}
@@ -117,7 +116,6 @@ export default async function BlogPostPage(
           </div>
         </section>
 
-        {/* Article Body */}
         <section className="w-full pb-24 px-6 bg-[color:var(--color-bg)]">
           <div className="w-full md:w-[80%] max-w-4xl mx-auto">
             <article className="prose prose-invert prose-lg max-w-none
@@ -134,6 +132,7 @@ export default async function BlogPostPage(
               prose-td:border prose-td:border-white/10 prose-td:px-4 prose-td:py-2 prose-td:text-[color:var(--color-text-muted)]
               prose-hr:border-white/10
               prose-code:text-[color:var(--color-primary)] prose-code:bg-[color:var(--color-surface)] prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded
+              prose-img:rounded-[10px]
             ">
               {content}
             </article>
@@ -143,13 +142,12 @@ export default async function BlogPostPage(
                 href="/blog"
                 className="inline-flex items-center gap-2 text-[color:var(--color-text-muted)] text-sm hover:text-[color:var(--color-primary)] transition-colors"
               >
-                ← Back to Blog
+                &larr; Back to Blog
               </Link>
             </div>
           </div>
         </section>
 
-        {/* FAQ — only rendered when post has faqs frontmatter */}
         {post.faqs && post.faqs.length > 0 && (
           <section aria-label="FAQ" className="w-full py-16 px-6 bg-[color:var(--color-surface)]">
             <div className="w-full md:w-[80%] max-w-4xl mx-auto">
@@ -184,14 +182,13 @@ export default async function BlogPostPage(
                   rel="noopener noreferrer"
                   className="text-[color:var(--color-primary)] border border-[color:var(--color-primary-border)] rounded-full px-5 py-2 text-[length:var(--text-sm)] font-semibold hover:bg-[color:var(--color-primary)]/[0.08] transition-colors duration-200 flex-shrink-0"
                 >
-                  Ask on WhatsApp →
+                  Ask on WhatsApp -&gt;
                 </a>
               </div>
             </div>
           </section>
         )}
 
-        {/* CTA */}
         <section aria-label="Get in Touch" className="w-full py-20 px-6 bg-[color:var(--color-bg)]">
           <div className="w-full md:w-[80%] max-w-4xl mx-auto">
             <div className="bg-[color:var(--color-surface)] border border-[color:var(--color-border)] rounded-2xl p-10 md:p-16 flex flex-col md:flex-row items-start md:items-center justify-between gap-10">
@@ -204,7 +201,7 @@ export default async function BlogPostPage(
                   <span className="text-[color:var(--color-primary)]">within 2 hours.</span>
                 </h2>
                 <p className="font-[family-name:var(--font-body)] text-[color:var(--color-text-muted)] text-[length:var(--text-base)] leading-relaxed mb-6">
-                  Tell us what you need on WhatsApp — we&apos;ll send a fixed quote, no obligation.
+                  Tell us what you need on WhatsApp - we&apos;ll send a fixed quote, no obligation.
                   No discovery calls, no lengthy forms. Just a clear price and a start date.
                 </p>
                 <div className="flex flex-wrap gap-x-6 gap-y-2">
@@ -241,7 +238,7 @@ export default async function BlogPostPage(
                   Email Us Instead
                 </a>
                 <p className="text-[color:var(--color-text-faint)] text-[length:var(--text-xs)] text-right max-w-[220px]">
-                  Typically reply within 2 hours<br />Mon–Sat, 9 AM – 9 PM IST
+                  Typically reply within 2 hours<br />Mon-Sat, 9 AM - 9 PM IST
                 </p>
               </div>
             </div>
