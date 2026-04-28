@@ -182,7 +182,7 @@ export default async function BlogPostPage(
                   rel="noopener noreferrer"
                   className="text-[color:var(--color-primary)] border border-[color:var(--color-primary-border)] rounded-full px-5 py-2 text-[length:var(--text-sm)] font-semibold hover:bg-[color:var(--color-primary)]/[0.08] transition-colors duration-200 flex-shrink-0"
                 >
-                  Ask on WhatsApp -&gt;
+                  Ask on WhatsApp →
                 </a>
               </div>
             </div>

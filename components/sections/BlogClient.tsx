@@ -177,17 +177,17 @@ export default function BlogClient() {
   };
 
   const cardCTAs: Record<string, string> = {
-    "why-most-small-business-websites-dont-rank": "Find Your SEO Gaps ->",
-    "what-is-aeo-answer-engine-optimization": "Understand AEO in 5 mins ->",
-    "wordpress-vs-nextjs-for-seo": "Find the Right Stack ->",
-    "what-is-geo-generative-engine-optimization": "Get Found by AI ->",
-    "website-vs-instagram-do-you-need-a-website": "Read the Breakdown ->",
-    "why-your-website-isnt-getting-leads": "Fix Your Website ->",
-    "5-signs-your-website-is-costing-you-customers": "Check Your Site ->",
-    "seo-aeo-geo-guide-for-small-business": "Understand All Three ->",
-    "seo-cost-small-business-malaysia-india": "See What You're Paying For ->",
-    "landing-page-vs-full-website": "Find the Right Starting Point ->",
-    "chatgpt-recommended-competitor-geo": "Get AI to Recommend You ->",
+    "why-most-small-business-websites-dont-rank": "Find Your SEO Gaps →",
+    "what-is-aeo-answer-engine-optimization": "Understand AEO in 5 mins →",
+    "wordpress-vs-nextjs-for-seo": "Find the Right Stack →",
+    "what-is-geo-generative-engine-optimization": "Get Found by AI →",
+    "website-vs-instagram-do-you-need-a-website": "Read the Breakdown →",
+    "why-your-website-isnt-getting-leads": "Fix Your Website →",
+    "5-signs-your-website-is-costing-you-customers": "Check Your Site →",
+    "seo-aeo-geo-guide-for-small-business": "Understand All Three →",
+    "seo-cost-small-business-malaysia-india": "See What You're Paying For →",
+    "landing-page-vs-full-website": "Find the Right Starting Point →",
+    "chatgpt-recommended-competitor-geo": "Get AI to Recommend You →",
   };
 
   return (
@@ -264,7 +264,7 @@ export default function BlogClient() {
                     </div>
                   </div>
                   <Link href={`/blog/${featuredPost.slug}`} className="inline-flex items-center justify-center bg-[color:var(--color-primary)] text-[color:var(--color-bg)] font-semibold px-6 py-3 rounded-full hover:bg-[color:var(--color-primary-hover)] transition-colors text-sm">
-                    Read the Full Guide -&gt;
+                    Read the Full Guide →
                   </Link>
                 </div>
               </div>
@@ -323,7 +323,7 @@ export default function BlogClient() {
                   </p>
                   <div className="flex items-center justify-between mt-auto pt-4 border-t border-white/[0.08]">
                     <span className="text-[color:var(--color-text-muted)] text-xs">{post.date}</span>
-                    <span className="text-[color:var(--color-primary)] text-sm font-medium group-hover:translate-x-1 transition-transform">{cardCTAs[post.slug] ?? "Read More ->"}</span>
+                    <span className="text-[color:var(--color-primary)] text-sm font-medium group-hover:translate-x-1 transition-transform">{cardCTAs[post.slug] ?? "Read More →"}</span>
                   </div>
                 </div>
               </Link>
@@ -441,7 +441,7 @@ export default function BlogClient() {
                     disabled={status === 'loading'}
                     className="w-full bg-[color:var(--color-primary)] text-[color:var(--color-bg)] rounded-full px-6 py-4 font-semibold hover:bg-[color:var(--color-primary-hover)] transition-colors active:scale-[0.98] disabled:opacity-70"
                   >
-                    {status === 'loading' ? 'Subscribing...' : 'Send Me the Next Issue ->'}
+                    {status === 'loading' ? 'Subscribing...' : 'Send Me the Next Issue →'}
                   </button>
                   {status === 'error' && (
                     <p className="text-red-500 text-xs text-center mt-2">Error. Please try again later.</p>
@@ -487,7 +487,7 @@ export default function BlogClient() {
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center bg-[color:var(--color-bg)] text-[color:var(--color-primary)] font-semibold rounded-full px-8 py-4 hover:opacity-90 transition-all active:scale-95 whitespace-nowrap"
             >
-              Chat on WhatsApp -&gt;
+              Chat on WhatsApp →
             </a>
             <a
               href="https://wa.me/919599143235"
